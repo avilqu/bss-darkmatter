@@ -1,0 +1,333 @@
+# Dark Matter forum research notes (raw)
+
+Working notes from a full read of the DSA Dark Matter forum (darkmatter.digitalskyacademy.com), October 2026: about 465 threads and 2,300 posts, DM 1.1 to 1.7. Each line is a fact or pattern stated or demonstrated on the forum, grouped in the order it was read: Sky-Skan staff posts first, then Jeff Nee (Sky-Skan content developer). Thread references look like t=NNN and correspond to viewtopic.php?t=NNN. Older items may be version-specific, so check them against your DM build.
+
+## Sky-Skan staff posts, part 1
+- Recenter: Scene Camera.ConvertInPlace(Earth, Position) +0.1 Scene Camera.LookAt=Earth +0.1 Scene Camera.Orient=Lookat [2:2:2]
+- DateTime: Scene DateTime=$Sunset|$Sunrise|Now|$SolarNoon|$VernalEquinox|$SummerSolstice|$AutumnalEquinox|$WinterSolstice|$NextFullMoon|$LastFullMoon|$JD2000 ; formats yyyy/mm/dd, hh:mm, "yyyy/mm/dd hh:mm"; "002019/01/01 12:00:00" (quotes needed with space); relative: DateTime += 1 (day), += 3h, += 12h15m, -= 1y5d1h. Scene Scene.DateTime == Scene DateTime.
+- Add location: Scene Add(Grand Canyon, Location, Parent=Earth, Longitude=-113.996, Latitude=36.113); Scene Remove (Grand Canyon)
+- JS variables: DigitalSky.AddVariable("Name","FuncName") then $Name in DM script, $Name+p passes param. RemoveVariable. AddEventVariable(name, decoderFunc, label) for DateTime widget events. jsEvents JS library asset example.
+- $Sunset not string -> can't feed to SlideText directly.
+- Grayscale image read as red channel only.
+- Multiple cameras: dome or inset; share universe/time. "Camera:CAMNAME" as picture source on slide; "Media:MEDIANAME" likewise.
+- Control <ref>.Abort() / .Run() ; ref includes control page name possibly. Control [ref].reset (Beth)
+- Import DMZ: File > Import (control pages and asset groups).
+- DS2DMConverter in C:\Program Files\Sky-Skan\DigitalSkyDM\DS2DMConverter (v1.1+), partial.
+- JS: every Asset Manager property accessible: DigitalSky.GetAssetInstance("Camera").GetPropertyInstance("XPos").Value ; obj.SetProperty("XPos",v,new Transition(0,0,0))
+- Attach object to camera: Scene myobject.Parent="Camera"; face camera: LookAt=Camera
+- Media files must exist on DS-Master too (to scrub / know length). Renderers need local copies of pictures (no internet).
+- Controllers: Orbital Elements, SPICE kernel, TLE, PathController (.ctr text list). Online Data Center auto-creates comet/asteroid assets. Object asset > Controller dropdown > Loaded Object > Mode 1 Position.
+- Keyframe flights: fly manually, drag Viewport "camera" icon into script window -> camera position command; add timings.
+- Dataset Explorer: Fly To + Attached, Go To arrow; loads dependencies automatically.
+- Transparent plane: color black + transparent property. PlaneXZ parented to Galactic at coords for labels.
+## Sky-Skan staff posts, part 2
+- Aurora: parent=planet, Unit=Megameters (planets scale in Mm).
+- Bridge button remote push: Control CloudsButton.Run() (pure ref name, no page name; should be unique).
+- Circular orbit: virtual point at star center, parent planet, offset, rotate point. Or Orbital Elements controller.
+- Spin object: Scene X.XRot.Rate / YRot.Rate / ZRot.Rate (deg/s). Orbit camera: Scene Camera.NavOrbit(xspeed,yspeed) [A:C:D] deg/s; C=-1 eternal; stop with NavOrbit(0,0) [decel:any]. Fly: Scene Camera.Throttle=# [A:C:D] +fwd -back, C=-1 forever; ~10x viewport DistanceFly value.
+- Slider: Scene myObject.Xrot.Rate={f} [0.2::]  ({f} = slider value). Rate not statused back to slider.
+- Scriptpad: ESC exits search bar.
+- Temp assets: Scene Add (<Name>, <Type>, Prop=value, ...) ; Scene Remove (<Name>, <Name>, ...)
+- No DS2 "offset" for slides (only labels).
+- Trails: Camera Exposure trail (doesn't flush buffer); "Earth Based Astronomy" control page Trails section; 3D history Trail asset parented to observer following object (Solar Sys Ex group). Label size via startup script LabelSize/LabelMinSize/LabelMaxSize.
+- Startup script loads JS assets vpSlideDropper, vpSlideInteract: drop picture on viewport / drop media plays fulldome.
+- Annual moon: Scene Earth.RotationModel=Annual +.1 Scene Earth.AnnualReference="Moon" +.1 Scene DateTime+=30d [1:13:1]
+- ODC files <ContentPath>\Modules\OnlineFiles\ ; Exoplanet markers <ContentPath>\Core\Astronomy\Galactic ; must copy to all renderers.
+- JS: no include/import; paste functions into JS asset.
+- OBJ: left-handed, triangulated, consistent normals. Emissive-only hack: LightSource=Scene + Sun brightness 0.
+- VLA files for lines (constellations). starshp.dat tool by B. Waller.
+- SPICE: Spice Shortcut(15); Spice Show.Open(path); Spice Show.SeekComment(LightsDown); Spice SendCue(5f25 proj abc)
+- DS2 remote: Remote DS2Control.LoadSet(NAME)/RunScript(N)/Macro(NAME)/DS2Command(CMD)/Reset=0 (UDP asset, tutorial t=104)
+- Oort.sdf loadable as stars asset. DSE (Dataset Explorer) commands: DSE AddHeader(Display, Parent, Type, pic); DSE Add(Display, AssetName, Parent, Type{Blank,Visibility,Planets,Planet,Points}, pic); DSE Remove(Display). Assets Group.Load(Asset).
+- Inset cameras: duplicate main camera, break link, rename, set Inset; use "Camera:Name" texture; orthographic for zoom. Secondary dome camera broken (some versions). No dome zoom / lock-to-sweetspot.
+- Cube maps: name_0..5.dds, pick _0.
+- Video alpha: LAV decoders no alpha; .dsi file trick (top RGB/bottom alpha) w/ slide Color mode=Alpha (1.5; buggy on slides). OBJ mtl map_Kd Media:Asteroid_Trl for video texture (1.5).
+- Codecs folder C:\Program Files\Sky-Skan\DigitalSkyDM\Codecs.
+- Shadow cone example: Scene Add(ConeShadow, Model,Parent=Moon,Model=<ShowPath>\Common\UnitCone_R-1_h-1.obj); Solidness=Transparent; Unit=mm; LookAt="Sun"; Control Text="Remove cone" Control Pause +1 Scene Remove(ConeShadow)
+- Control Text="..." + Control Pause: pause button waiting for click, text shown on button.
+## Sky-Skan staff posts, part 3
+- Model import workflow (Troy, t=128): OBJ+MTL+textures into D:\DigitalSkyDM\Core\Models\Spacecraft\<folder>; copy HST/HubbleOrbit/HubbleTLE assets to own folder (ctrl-click, drag); open+save to create unique copy; refresh asset manager (switch folder) to see new names for parenting; Model param -> .obj; Parent -> Orbit; Orbit>Orbit -> TLE; TLE injected via load script. Aim: virtual object Null parented to Orbit with LookAt=Earth; craft parented to Null; rotate craft. Explicit unload of null needed (parents auto-load, not auto-unload). Reflection: MTL line "refl -type sphere textures\\EarthRefl_Soft.dds". Kd brightness. LightSource=Camera to light independent of sun.
+- Fly-to button example: Scene Camera.ConvertInPLace(CloudSat) +0.1 Scene Camera.Orient=SouthAndDown [6:2:10] Scene Camera{Altitude=300} [3:0:8] Scene CloudSatOrbit.Visibility=0 [0:1:9] Scene CloudSat.Label.Brightness=0 [0:1:9] +11.1 Scene Camera{Altitude=10} [0:1:6] +7
+- Asset Only Load button on Spacecraft - Earth Based page. Slides behind dome with OBJ axis inversion — parent slides to Orbit/null.
+- Assets Folder.Load() loads all; Assets Folder.Load(A,B,C); Unload same. UI: drag folder onto "load on dome" bin. Drag ODC entry to control page -> load/unload button. ODC folder icon creates assets in protected "Exoplanet Systems".
+- Frame rates: 24, 29.97, 30 (+multiples). Avoid 25fps -> tearing.
+- Don't change codecs on multi-channel systems without Sky-Skan.
+- XBox controller asset XBC2020.
+- NavOrbit makes camera Orient "Free"; split Orient and Longitude changes: Scene Camera.Orient=SouthAndDown [0.3:0.3:0.3] +1 Scene Camera.Longitude=-118 [1:1:1]
+- Video: drag media asset from Asset Manager onto control page -> auto button load+play. "Video" asset type Fulldome = sliced per-channel content. Single fisheye video: Media asset + Slide with Picture "Media:name", Allsky mode Az 180 El 90 size 180x180. >3K or 60fps may desync -> slice.
+- Assets cmds = existing Asset Manager assets (Folder.Asset); Scene Add/Remove = on-the-fly objects.
+- Endless rotation: Scene Obj.XRot.Rate=deg/s [a:b:c] (no DS2 -1 syntax).
+- NavOrbit accumulates hidden motion; safer: parent camera to rotating null.
+- Kernel Channels().Overlay.FR=On/Off ; Kernel Channels(i) = viewport; Channels(1,2) specific renderers.
+- SRT (1.4+): SRT Add(Name, SRT); SRT Remove(Name); SRT X.SRTFile="..."; ClockSource=Media; MediaClock="MediaAsset"
+- JS can't access file system (older) — later DigitalSky.FileExists etc exist (JS file/folder tutorial t=479).
+- Volume max 100%.
+- Aurora: Pole Source Controller File Core/Controllers/Various/EarthMagneticNorthPole.ctr
+- Direct Command window exists (drag property into it).
+## Sky-Skan staff posts, part 4
+- Protected asset groups need secret unlock (Sky-Skan). Copy asset: drag into own folder, break link, rename (Information section), save. E.g. jsDistance Load Call params (Camera, Earth, az 200, el 20, size 4, yellow, fade 1).
+- 3D stereo: don't attach particles to camera; Camera.Stereo value.
+- Variables: $Sunrise $Sunset $SolarNoon $NextFullMoon $LastFullMoon $AutumnalEquinox $WinterSolstice $SpringEquinox(VernalEquinox?) $SummerSolstice $JD2000 ; modifiers $Sunrise-2h, $Sunset+2h. Direction ambiguous (next vs prev). SolarNoon off by 2 min reported.
+- Eclipse sky: Scene Earth.Atmosphere.Sun=20 (max 20, default 10); Scene Stars.Lum=0.1; Sun & Moon scale 1.0 for correct eclipses. Moon size 0 to remove shadows (visibility 0 still casts). Moon "Effects" property blank -> no Earth shadow.
+- Comet on-the-fly (from ODC drag): Scene Add(109P-Swift-TuttleCtl, OrbitController,Unit=au,Epoch=2448973.0588,A0=...,N0=..,E0=..,L0=..,L1=..,M0=..,G0=..) Scene Add(...Orbit, Orbit,Parent=Ecliptic,Unit=au,Controller1=...Ctl,Control1=Transform,Thickness=0.2,Style=Trailing,Red=75,Green=75,Blue=0) Scene Add(name, Comet,Parent=...Orbit,Unit=mm,Label.Text="...") +1 DSE Add(name,name,Comets,Planet,L1_Comets.bmp) Control Pause Scene Remove(a,b,c) +0.5 DSE Remove(name)
+- Parent = coordinate origin. "World" = fixed absolute (at Sun center, non-rotating). Sun rotates. Fixed systems in "Coordinate Systems" group (Ecliptic, Galactic, ...).
+- Symbol Controller: RefObject=Stars, Symbol="HIP=11767" -> point at a star; attach labels/objects.
+- Sync content to renderers button in Asset Manager.
+- SkyVision Renderer 3 (SVR3) = slicer: dome master frames -> sliced pre-warped video. DaMON July 2023 recording covers rendering dome masters in DM (t=172 p=1078).
+- Units: M, KM, MM(mega), TM (tera? Markus says 1e9 -> gigameter actually), AU, P, KP, MP. Also Lightyears.
+- ODC downloads -> E:\DigitalSkyDM\Modules\OnlineFiles\
+- Clouds: Scene Earth.Cloud.Rotate.Rate=1 [3:-1:-1] forever; stop Rate=0 [5:1:5].
+- Troy smoothness: avoid [6] linear; use [2:2:2]; prefer [5:0:5] over [1:8:1]; lengthen decel e.g. [4:3:8].
+- Time + camera: stop time (Scene Datetime.Rate=0 [2::] +2) before ConvertInPlace(, "Position Rotate"); do ConvertInPlace before starting motions; ConvertInPlace breaks overlapping motions. ConvertInPlace(, "Position Rotate") empty first arg = current parent?
+- Overlay on Earth: Sphere asset parented Earth slightly larger, "Outer Emissive" texture (NOAA SOS).
+- Fonts: Arial default; 1.4 per-label font.
+- Slider: drag property label (e.g. Moon Scale X) onto control page -> slider; edit for X,Y,Z + [0.1].
+- Slide Frame Type: Dome vs Sidereal (follows sky) vs ... Az/El.
+- Camera roll: Scene Camera.Zrot=360 [5:20:5]; dome rotate Zrot=180 [0].
+- Star profile: "Webinar 3" control page -> values into startup script.
+- Copy date/time: right-click empty part of date/time widget, Ctrl-V into script. Location similarly.
+- DM always "Nav" mode; fly toward Sweet Spot.
+- Assets location: E:\DigitalSkyDM\Assets\<folders>; create Slide asset -> auto distributed. Script-added files must be copied manually to all PCs.
+- Users/workspaces: log in DMUI as user.
+- Spout (1.5). Animated GIF -> media asset.
+- No dome camera zoom; FOV only for inset cameras.
+- Video formats: MP4/MKV H.264/H.265 best; avoid variable framerate; Handbrake. Audio WAV/MP3.
+- Double quotes in strings: use two single quotes ''. \n newline in Text.String.
+- Media must be on DS-Sound and DS-Master.
+- Time-lapse fast -> refresh steps; eclipse darkening.
+- Secondary dome camera: viewport controls only first camera; handoff trick.
+- DomeMask (1.4): Kernel DomeMask.Enabled=true; Kernel DomeMask.WhiteMask=<file in Core\Masks>
+## Sky-Skan staff posts, part 5
+- Widget picture: Control <Site>.<User>.<Page name>.<Widget Ref>.Picture=<path w/ aliases>
+- Non-DMZ zip content: copy folder into <ContentPath>\Assets\ on EVERY PC; script creates assets on the fly.
+- 360 render: 90deg inset camera rotated for 6 cube faces.
+- Eclipses: Sun & Moon default scale 2.5 -> set 1.0.
+- Troy smoothing: overlap keyframes w/ [1:0:1]; split position vs rotation commands (rotation doesn't blend); e.g. rotation 15s, position 19s, delay 15s between keyframes. ISS "Fly Into Interior" example. Camera null for endless orbit.
+- Reset: Earth.AnnualReference reset to "Sun" when RotationModel reset to Diurnal.
+- JS strings to DM: wrap in quotes: var q="\""; "Scene MusicText.Text.String="+q+name+q
+- Fonts: Scene myText.Text.Fontname="font"; global Scene FontName="font" (startup, before loading).
+- Video.OverlayAsset (one only) for SRT overlay on fulldome video. Webinar 1 page: Fulldome Video Player, "TSAB Subtitles".
+- Control referencing other pages: control <Site>.<User>.<Page>.<Ref>.Run  e.g. control Sky-Skan.Public.Climate Science.GHGStory.run ; control SSIA.Troy.z_Testing.AuroraSky.run. Page must be loaded in workspace (tab open somewhere/in memory). After copying a button with ref name, re-save it. Can build hidden "library" pages of functions.
+- Frame rates 24/48/30/60 (29.97/59.94 ok).
+- Symbol controllers for individual stars (Big Dipper script): Scene Add (Dip01,SymbolController,RefObject="Stars") Scene Dip01.Symbol="HIP=67301" ; Scene Add (Dip01Pos,Virtual,Parent="Stars",Unit=M) Scene Dip01Pos.Controller1="Dip01" Scene Dip01Pos.Control1=Position ; Scene Add (Dip01Star,Sphere,Parent="Dip01Pos",Visibility=0,Unit=TM) ...TopEmissive=White
+- No 3D line function (VLA files instead). EarthPoles asset.
+- Moon shadow: Scene Moon.EffectSpec="" ; restore Scene Moon.EffectSpec="<ContentPath>\Core\Astronomy\SolarSystem\Earth\Moon\MoonEffects.xml"
+- IAU boundaries: Constellations control page buttons.
+- Right handed models: Loading Properties > Right Handed On (applies at load).
+- WAIT: >=0.1s after heavy commands (add objects, camera moves, parent change). Control WaitForAll(objectname) waits until loaded on all channels (changes timing!).
+- Controller/Mode: Controller1 (source), Control1 (Position/Scale/Transform/Rotate). 
+- Label MinScale / Size/MinSize/MaxSize. Stars asset in "Milky Way" folder; Label Bri slider for star labels.
+- Star catalogs: .sdf (CompactView to view) or .vot (VOTable asset). GAIA in 1.5.
+- Dataset Explorer actions not capturable as buttons -> watch Asset Manager values change, drag property to make slider.
+- Galaxy asset: flat-on base images; Volumetric MilkyWay example.
+- Video On Dome page (t=278): Scene Add (videoMedia, Media, MediaFile="E:\TestMedia\MyMovie.mp4",) + slide; network path \\DS-Master\E\...; Event Viewer > renderers tab for load errors; max ~25 Mbps; don't mix >2 4K fisheyes. Fulldome video layer separate from 3D; FD Vid slider on bridge.
+- ISS TLE in ISSCtl asset.
+## Sky-Skan staff posts, part 6
+- <ContentPath> = E:\DigitalSkyDM (or D:\ / C:\ depending on system). Also <ShowPath> alias seen.
+- Planet parade: Scene Earth.RotationModel=Annual [1:1:1] +3 Scene Datetime.Rate=86400 [1::] +N Scene Datetime.Rate=0 [1::]; back: Scene Earth.RotationModel=Diurnal [1:1:1]. Or Scene DateTime="002025/03/01 12:00:00.000" [3:30:3]. Scene DateTime+=216d [1:28:1]; Scene DateTime.rate+=7.2d (endless); Scene DateTime.rate+=1d [10].
+- Unsliced 4K preview: 4096x4096@30 H.264 fisheye on allsky slide (crf 21). H.265 problematic for sync.
+- UDP remote control of DM: Tools > UDP Remote Preferences. UDP asset + JS handler for outgoing.
+- HST pin in sky: Assets Spacecraft.Load(HST) Control WaitForAll(HST) Scene HubbleOrbit.Parent="Earth" Scene HubbleTLE.DateMode=Absolute Scene HubbleTLE.DateTime=0.001
+- DMZ = zip package (content or control page); File > Import / Export.
+- Rename asset folder: right-click in Asset Manager; scripts referencing folder must be updated.
+- Fulldome (unsliced) via Media asset with Fisheye.dsi (C:\DigitalSkyDM\Core\Common\Fisheye.dsi) + Fulldome asset (source = media) -> Media Player widget. Drag asset onto page -> "Play <asset>" button. Real-T visibility 0 -> black transparent. Embedded audio + separate audio both play.
+- Planet brightness: Scene Jupiter { Red=100 Green=100 Blue=100 }; scale; Sprite property (Sprite.LumAdj).
+- Video texture on primitive: texture = "Media:Name" (e.g. TopEmissive).
+- Multiple Fulldome assets possible, crossfade; default one is "Video".
+- Latitude 90 exactly -> use 89.999.
+- Asset copy = reference until "break the chain".
+- GISPath XML (1.6).
+## Jeff Nee posts, part 0
+- JS gotcha: a ")" inside a JS comment within JS X.Execute(@" ... @") breaks it (DM ends block). Avoid ")" in comments. Also DM strips empty lines in JS.
+- JS forms: JS Remove(name) / JS Add(name) (older syntax) == JS RemoveEngine/AddEngine; JS name.execute(@" code "); call: JS name.func(args) ; JS name.FunctionAsync(func,args)
+- JS asset: Load Call "FuncName,args" and Unload Call; drag JS asset from Asset Manager into scriptpad to load.
+- DateTime math: $Sunset-1h-30m (not -1h30m — order of ops).
+- Jeff workflow: write Scene Add's then tweak in Asset Manager, drag each property into code. Tag assets (e.g. "JPL") and filter. Don't mix Asset Manager assets and Scene Add with same names. Unique descriptive names (prefix e.g. ROG-JPL-).
+- Always Control Text="..." before Control Pause so presenter knows next click.
+- Comment code with ;
+- Fully qualified asset folder: Assets Greenwich Observatory.Sky-Skan.ROG Meteors.Load(Leonids_Poly)  (Site.User.Folder?) short form Assets ROG Meteors.Load(...)
+- Moon/360 VR: sphere parented to Camera, Media asset, InnerEmissive="Media:video" (or BottomEmissiveMap); Zpos=0.5 to raise horizon; rotate sphere Z 1deg/s. Stills on sphere have pole artifacts -> use Slide "Spherical panorama" lens, or 1-sec video.
+- Sharing: buttons using Asset Manager assets need asset export (DMZ); self-contained = Scene Add + files.
+- Trails pre-1.4 workaround; Camera.Exposure: Scene Camera.Exposure=On/Off; .Clear(); .addAsset(Stars)/.removeAsset(Sun); Exposure.Visibility.
+- PlaneXZ as slide simpler. Packed-alpha MP4 via alpha.dsi (assign DSI BEFORE video file). 1.6 b15 fixed slide alpha.
+- Slide props: Picture=Media:x, Lens=AllSky|Standard|..., Slide.TextLock="Height to Width", Scale, Frame=Dome; Media.Play(), Looping=On.
+- Scene Visibility=0 [1] = global fade to black (scene visibility). Scene Scene.Visibility.
+- Scene Scene.DateTime=2461218.26 (JD accepted). Scene Scene.DateTime.rate=50000 [1::]
+## Jeff Nee posts, part 1
+- Shows shared as control page DMZ w/ all assets via Scene Add + media zip extracted to <ShowPath>\JPL\<show>\ or <ContentPath>\Assets\JPL\<show>\. <ShowPath> typically E:\DigitalSky\Shows\ (DS2 legacy).
+- SlideText: Scale (animatable), FontHeight (default 10; not animatable). Text.String; \n newline.
+- RingPlane asset (habitable zone): Parent="Sun", Unit="Astronomical Unit", TopImage, BottomImage...
+- Unit names: "Astronomical Unit", Megameter, mm (=megameter? in comet example Unit=mm), M, TM, au, Lightyears.
+- Horizons vector table for spacecraft positions (km, parent Earth).
+- Avoid NavOrbit in shows (glitchy w/ viewport); use Camera.Longitude.rate / Latitude.rate / Altitude.rate. Don't touch viewport during scripted moves. Throttle also independent of viewport.
+- Atmosphere color: Scene Earth.Atmosphere.Red=0.343 (non-intuitive RGB).
+- LightSource=Camera for models to be visible.
+- Aurora script: Scene Add(X, Aurora, Visibility=0) Parent="Earth" Unit=Megameter MagPoleSource=Controller Controller1="<ContentPath>\Core\Controllers\Various\EarthMagneticNorthPole.ctr"; south: Zscale=-1.
+- JS debugging: put 10 comment lines before JS Execute so Event Viewer line numbers map (+10). DigitalSky.LogMessage -> Event Viewer JS tab.
+- JS global vars persist across buttons using same engine name; RemoveEngine clears. Pattern: one engine button defines functions; other buttons call JS engine.func().
+- While loops in JS: running flag + DigitalSky.Wait(); stop function sets flag 0.
+- Comet code-only; parent to "World" not Sun to avoid moving with time.
+- JS: DigitalSky.CreateAssetInstance("Slide","Slide1"); obj.SetProperty("Picture","E:\\path", trans); new Transition(acc,dur,dec).
+- Twilight JS: Virtual with Parent=Camera, LookAt=Sun to compute elevation.
+- Camera {Orient=Locked}; ConvertInPLace(Sun); Scene Camera.ConvertInPlace(Earth, "Position Rotate Scale")
+- Scale tricks for zoom: Scene Neptune {Xscale=0 ...}; scale Sun down instead of flying away.
+- Video stop after N s: separate button "Play +420 Pause" so other buttons not blocked.
+- RA/Dec point: dummy points; RA/Dec "only accurate-ish at noon UTC on vernal equinox" (Earth-parented camera).
+## Jeff Nee posts, part 2
+- YawPitchRoll(yaw,pitch,roll) [t] relative to sweet spot; easing makes angles imprecise -> use Direct Command w/ single time, then grab Xrot/Yrot/Zrot; set Orient=SouthAndDown BEFORE lat/long flights. Prefer Lat/Long/Altitude flight.
+- JS FunctionAsync with params: JS Engine.FunctionAsync(InformTime, -5, 200, 10, 5, "Lime", 1.5)
+- Label a place: Virtual asset parented to Earth at Lat/Long + Label params; or TAG file.
+- Particles: ParticlePoint asset, <ContentPath>\Modules\Particles\Textures\BirdFly.dds
+- Different blend modes: duplicate asset, crossfade.
+- Sky-Skan assets locked -> own copy or preload at visibility 0 in setup. Scene 2MPZ Spec.Visibility=100 [8]
+- One button = one thing; "For testing" section; export control page backups.
+- Control Ref.Run()/Abort(): Reference Name field under button Name; unique; activates every button w/ that ref (older) / within page (newer). Unique naming template "ORG-ShowAcronym-ButtonText".
+- Universal media player pattern: generic media asset name, swap MediaFile.
+- Asset Reset can be edited (shortened to 5s).
+- Media: Scene Add(Music-JPL, Media, Volume=50); MediaFile="<SndPath>\x.mp3"; Looping=Off +0.1 Looping=On (looping bug workaround); Play(); Volume=0 [0.5] fade out then Remove. <SndPath> = E:\DigitalSky\Sound.
+- jsAstroDate bugs. $SolarNoon ~2min off.
+- Drag from Asset Manager loses quotes for values with spaces (Inherit, TextLock) -> add quotes manually.
+- Remote: VNC tablet; UDP remote.
+- JS string with comma: use JS Engine.Execute("test('I said, ...')") instead of FunctionAsync (commas split params).
+- Labels on primitives no multi-line.
+- Dome rotate: Scene Camera.YawPitchRoll(0,0,22.5) [1:3:1] or Camera.Zrot (sets Orient Free).
+- Slides: mySlide.Azimuth.rate=1 [1::]; mySlide.Azimuth+=180 [1:1:1] (relative += works on properties). Group slides as planes parented to a virtual.
+- Rotation rate: Scene Debris { Xrot=0 Yrot=0 Zrot.rate=10 } [1::] (no -1 needed). "Rotate.Rate" doesn't work for objects; use Xrot/Yrot/Zrot.rate.
+- ISS trick: parent model to camera and move model.
+- JS "Control Pause" equivalent: separate buttons / Unload Call.
+- JS: no "let" (old engine, ES5-ish). Template literals ` seen in some code though (works in newer 1.5+?).
+- SlideText Scale bug 1.4 b5/b7.
+- Earth tilt handled by EarthBC/EarthOrbit; Earth planet rotations 0. Equator_Poles asset (Earth Sun Moon folder), Xrot default 90.
+- Camera Orient=Free while moving causes drift -> set Locked/SouthAndDown.
+- Galactic log fly-in JS (LogFlyIn-JPL) t=246.
+## Jeff Nee posts, part 3
+- Navigator/Viewport flying sets Orient=Free; mixing viewport + coded flights breaks coded paths. Waypoints concept: virtual points as fly-to targets (LookAt).
+- Inset camera: Scene Add (CamJPL, Camera, Parent=Camera, Type=Inset) — changing Type outside Scene Add CRASHES DM (1.4). Slide.Picture="Camera:CamJPL".
+- Media Seek: Scene Asset.Seek=00:00:10.4 (h:m:s). Fulldome video layer: Scene Video.Source="Media:Asteroid_Trl"; Scene Video.Visibility=100 [1]; Scene Camera.Visibility=0 [1] (hide realtime). Assets Sky-Skan.Public.Trailers.Load(Asteroid_Trl) (qualified folder path Site.User.Folder).
+- RA/Dec as Longitude/Latitude of Virtual parented to EarthBC with Unit=Lightyear (Jeff's RA sign confusion; better: Symbol Controller or virtual's RA/Dec/Distance "Radial" params, parent EarthBC/World/Equatorial).
+- EffectSpec blank needs " " (1.6).
+- Earth2 trick for shadow size.
+- JS clock drifts from DM clock; DigitalSky.Wait better but still drift. Media Seek property returns object.
+- TAG asset doesn't work w/ DS2 tag files. Markers: PlaneXY with <ContentPath>\Core\Common\poly1.dds.
+- Fly to date + location: Scene DateTime="2022/12/21 00:00:00.01" ; Scene Camera.FlyTo(Earth, Orient=SouthAndUp) +0.1 Scene Camera { Latitude=34.19 Longitude=-118.175 Altitude=500 }. Scene Camera.Flyto(Here,Orient=SouthAndUp).
+- Model position on Earth: nested virtuals Longitude -> Latitude -> Distance.
+- Remove before Add habit; +1 after Add if needed; quotes around parent names.
+- VOT tables in <ContentPath>/Core/Astronomy/Extragalactic w/ XML column definitions.
+- Workspaces: presenter workspace per show; control page background image with title.
+- JS labels: JS MarkerSSJMB-JPL.FunctionAsync(MarkLabel,Sun,Sun,-1,0,100,100,100)
+- Virtual point RA/Dec/Distance for nav (parent EarthBC or World).
+- Altitude.rate: positive = away.
+- JS lunar cycle LunarCycleJS_SkySkan.FunctionAsync(FadeToNextNewMoon).
+- jsAstroDate: Assets JavaScript Library.Load(jsAstroDate); JS jsAstroDate.InformTime(local, 200, 10, 3, Lime, 1.5)
+- Planet RotationModel per planet Diurnal; Earth.Cardinal.Visibility, Earth.Ecliptic.Visibility; Scene DateTime+=1d [24] (1h/s). Precession mode RotationModel for Sun tracing ecliptic.
+- JS FunctionSync vs FunctionAsync.
+- Slideshow JS (t=299) folder of images; Copy as path; Google sheet.
+- PView (Partiview) asset: Scene Add(X, PView); X.Parent="World"; PView.PolyMinSize, PolyFadeSize.
+- Viewport "Select" tool: drag/scroll slides in viewport, right-click "select in Asset Manager".
+- MarkerSS-SkySkan (t=302), Primitives-SkySkan (t=303) Az/El primitives.
+- Sprites: Scene Mars.Sprite.ColorAdj=#E46C0A ; Scene Mars.Sprite.LumAdj=1.5
+- LMC virtual: Parent="Equatorial" Unit=Kiloparsec Xpos.. 
+- SRT Add (X, SRT) works in later versions; Scene Add(Slide, Slide, Scale=0, Picture=Media:...)
+## Jeff Nee posts, part 4
+- Here/Now: Scene Camera { Parent=Earth Orient=SouthAndUp Latitude=$Here Longitude=$Here Altitude=$Here } Scene DateTime=$Now ; DateTime+=3h; -=1d; =$Sunset+2h [3:3:3]
+- Built-in pages: Constellations, Solar System - Planets, Messier, Earth Based Astronomy, Spacecraft - Earth Based/Mars Based, Rosetta, Webinar 1/2/3, Tutorial 1, Biology Samples, Climate Science, RA Dec 2020.
+- Slide Frame=Sidereal for DSO image fixed in sky. Label.MinSize.
+- Exoplanets parented to World with galactic lat/long. ODC folder icon -> "Exoplanet Systems". OrbitController Control Details > Date offsets orbit. OrbitController props: Epoch, Unit, A0 (semi-major), E0 (ecc), N0 (incl?), L0, L1 (mean motion?), M0, G0.
+- jeff utility funcs: log(), console shim, wait(num) logs "+num" and Wait, dm() sends script & logs -> renderable script in Event Viewer log.
+- Rendering fulldome masters = frames only, no audio.
+- Video overlay: Scene Video.Layer=PreDisplay (video behind realtime); Scene Camera.Visibility (realtime layer); overlay slides PreDisplay + Alpha Blending; Video.OverlayAsset. Hemisphere parented to Camera with BottomEmissiveMap="Media:x", BottomImage, BottomColor=#FFFFFFFF to show fulldome video.
+- Default trailer: <ContentPath>\Modules\Trailers\Asteroid_Trl_30fps_2880.mkv ; <ContentPath>\Core\Tutorial\01\Sky-Skan_Logo_HD.mp4
+- JS variables inside engine.
+- CamToRADec-SkySkan JS (t=327).
+- New: Constellations Tonight show (t=329) — content via cloud.
+- Constellation line: Slide w/ Half-Line.png, Frame=Sidereal, Width, Rotation, color. VLA + Line asset via JS (starlines). Asset Manager Ctrl+Up / Shift+Up change magnitude steps.
+- Second camera trick: Scene Add(FlytoHST, Camera, Visibility=0, Parent=Earth); parent main Camera to it; NavOrbit on secondary camera.
+- EarthBC (barycenter, not rotating w/ Earth) vs Earth (geo-fixed).
+- SgrA: Assets Milky Way.Load(SgrA) Load(SgrAStars) Load(Vol Milky Way); ConvertInPlace(SgrA, Position Rotate Scale); SgrAStars.Size/Lum.
+- MTL Ns controls reflections. Refresh model: Model="" +0.1 Model="path".
+- Inset camera: planet clouds not shown -> extra sphere.
+- Jupiter textures: Scene Jupiter.SurfaceMap1="<ContentPath>\Core\Astronomy\SolarSystem\Jupiter\Jupiter_4K.dds"; SurfaceMap2 + SurfaceMap2.Visibility crossfade. Give load time (+2) before fade.
+- DSI files text: [PROJECTOR] FOV, SourceWidth/Height, DistoRadius ... [DOME] Radius ... Bad DSI can crash DM.
+- Fulldome media widget controls media loaded to Video asset: Scene Video.Source="Media:myMedia" then hide Video, show on slide.
+- Scheduler JS (Tasks-SkySkan) for automating day (t=341). Language swap JS (t=342).
+- DirectCommand FileSync (<Filepath>) = sync content to renderers. Robocopy bat (t=343).
+- Custom constellation art: Slide Frame=Sidereal Layer=Background Azimuth Elevation Rotation Width.
+- 3D text via Blender OBJ (triangulate).
+## Jeff Nee posts, part 5
+- Model parented to Camera: Longitude=azimuth, Latitude=elevation, Altitude=distance; Xrot=-elevation to face camera.
+- Stop video after N s: +300 Scene myVideo.Pause(); separate abort button. Media methods: Play(), Pause(), Seek=hh:mm:ss.ss
+- Control pages stored E:\DigitalSkyDM\Sites (find/replace with Notepad++).
+- Random supernovae JS; twinkle JS.
+- Raw position data (Horizons) for interstellar objects.
+- SDF editing via CompactView (no undo; backups).
+- Store $Sunset into JS var: set DateTime=$Sunset then read sceneTime.Value then restore.
+- UDP remote packet: #02 + 'DMTA01235234' + #07 + 'DIRECT' + #07 + 'Scene myBDText01.Text.String=Félicitation' + #03
+- HTML pages can run DM commands (Browser/HTML control pages): t=346, t=491 HTML Control Pages Tutorial, t=423 auto-grid.
+- 3D Trail asset demos t=367 (retrograde, precession Vega).
+- 3D sound: mono files; Camera Lat 0 Lon 0 = East.
+- Remote webcam: OBS + Spout2 plugin -> DM Spout receiver (1.5+).
+- Earth.RotationModel=None / Diurnal / Annual / Precession; Earth.LookAt="Sun" keeps Sun fixed. Atmosphere.RSH (Rayleigh scale height, default 0.135).
+- Light asset: Scene Add(myLight, Light) Parent="Camera" {Red Green Blue} Range.
+- Clouds: Earth.Cloud.Rotate=14.6 Activity=0.22 Cover=0.05 (need Cloud.ShowDetail on). Collections (Scene Add(x, collection)) for grouping constellations.
+- SetSidereal JS: JS SetSidereal.Functionasync(GoTo, 5:40, [2:2:2])
+- HELP: routing destinations: Assets, Scene, Control, JS, SRT, Kernel (also Remote, Spice, DSE, DirectCommand). Properties (=) vs Methods (()).
+- Star profile params: Scene Stars.HaloScale AbsShift FadePoint MinPoint MaxPoint MinHalo MaxHalo RedAbsShift Lum.
+- SlideText: don't put commas in Scene Add property strings; set Text.String after +0.1. Lens=AllSky (warping), Frame (coordinate frame: Dome/Sidereal...).
+- Jeff's approach: Scene Add + +0.1 + drag properties from Asset Manager; shows self-contained & documented.
+- Rate syntax [w::] = accelerate over w seconds to rate, indefinitely. Scene Datetime.Rate=480 [2::]
+- Frame= (2D assets) vs Parent= (3D assets) for coordinate systems.
+- DMPanel.config C:\ProgramData\Sky-Skan\DigitalSkyDM\Site\
+- Fly to star by HIP: SymbolController + Sun asset parented "Galactic" Inherit + Controller. Asset group qualified: Assets Williamsville NY.Mark.Stars.Load() (Site.User.Group).
+- Flight tips (t=393): drag camera waypoints; split flights into section buttons; shrink/grow destination objects; viewport keys R roll, Y yawpitch, Ctrl/Ctrl+Shift finer; interrupt flights to keep moving.
+- Sprite.LumAdj=3.
+## Jeff Nee posts, part 6
+- Sphere around Earth w/ media: Scene Add(EarthSphere, Sphere) Parent="Earth" TopImage="Media:EarthMedia"...; SOS overlay: TopImage, TopColor=Black, TopEmissiveMap, TopEmissive=White, Unit=Megameter, scale 6.4.
+- Bridge info widget: Control BridgeInfo.Text="..." needs bridge name in ControlPanel.xml or via JS/DirectCommand.
+- DMZ control pages install into new user folder (Control Page Manager). User folder e.g. E:\DigitalSkyDM\Sites\<Site>\<User>\Control Pages. Back up user folder regularly.
+- Event Viewer > Renderers for missing files ("Unable to load texture"). Depot folder = temp storage for dropped files; avoid long paths, commas/spaces.
+- Backups: C:\ProgramData\Sky-Skan, E:\DigitalSkyDM\Sites, E:\DigitalSkyDM\Assets (+ E:\DigitalSky\Shows, Core\HTML).
+- ISS flip: Scene ISS { Xscale=1 Yscale=-1 Zscale=1 }.
+- WGS-84; altitude above ellipsoid; Parent ER/PR.
+- Fly.To JS avoiding 180 flip: JS Fly.To(SouthAndDown, 34, -118, 1e6, [3:3:3]) (t=409).
+- Easy Skyvision JS for sliced films (t=410): media files with _* wildcards, dsi, audio; SkyVision player widget.
+- Startup script: File > Workspaces > Edit Startup Script; stored in <ContentPath>\Sites\<Site>\<User> as "Script for ..." files. Asset Reset button customizable (copy). Jeff prefers "Setup" button top-left of each show page.
+- Asset Reset script: Control Text="Reset All?" Control Pause; Scene Visibility=0 [0.5] +1; Assets Reset; waits (+1 x15 default) ...
+- UranusMoons.sdf in E:\DigitalSkyDM\Core\Libraries.
+- Earth flip tilt: Scene Earth { Xrot=180 } — unpredictable; ConvertInPlace changes rotation values -> zero them.
+- pole.x in E:\DigitalSky\Shows\SolarSys2\Common.
+- DMSettings.xml C:\ProgramData\Sky-Skan\DigitalSkyDM\DMSettings.xml: <ContentPath Index="2" Path="E:\DigitalSkyDM\Flightpaths" Alias="FpPath" />. Legacy aliases: <ShowPath>=E:\DigitalSky\Shows, <DataPath>=E:\DigitalSky\Data, <SvPath>=E:\DigitalSky\SkyVision, <SndPath>=E:\DigitalSky\Sound.
+- Don't put Camera.Zrot in reset (breaks orientation); use SS.Azimuth offset.
+- 1.6: Scene Add(X, Planet, Cloud.Altitude=0.01) MUST define nonzero cloud altitude for new Planet.
+- JS: "JS Add(name)" sufficient (no need AddEngine). Everything between @" and @" is JS; can paste into JS Asset. Eye icon empty for button-added engines.
+- Update button text from JS: DigitalSky.SendScript("Control " + thisButton + ".Text=\"...\"")
+- HTML auto-grid control pages t=423.
+- FlyTo: Scene Camera.FlyTo(Mercury, Altitude=10000000, Orient=SouthAndDown) [8:6:8] Control Text="Going to Mercury..." +22
+- Spout: Kernel Channels().Spout.Enabled=On ; renderheads.xml C:\ProgramData\Sky-Skan\DigitalSkyDM\<SITE>\<COMPUTER>\renderheads.xml; meshes/masks C:\ProgramData\Sky-Skan\DigitalSkyDM\Defaults\Targets.
+- Music: <ContentPath>\Core\Audio\Music\FreeMusic\...
+## Jeff Nee posts, part 7
+- Star scale-up via SymbolController + Sun asset: Scene Add(SiriusController, SymbolController) Scene Add(Sirius, Sun) ... RefObject="Stars" Symbol="HIP=32349" ; Sirius.Parent="Galactic" Inherit="Position Rotate Scale" Unit=Megameter; (controller Position)
+- DSX files (DS2) are text; CMB sphere: Parent=World Unit=Megaparsec...
+- Artemis 2 content <ContentPath>/Assets/SkySkan/Artemis; HTML control page http://localhost:3736/shows/Artemis2/ ; HTML pages in <ContentPath>\Core\HTML\...; port 3736 for remote tablets. DS2-style HTML presenter http://localhost:3736/DS2/
+- Asset types seen: Line (Model=<vla/.lines>), Trail, Model, Media, Slide, SlideText, Text, PlaneXY/XZ, Sphere, Hemisphere, RingPlane, Virtual, Camera, Light, Planet, Sun, Comet, Orbit, OrbitController, SymbolController, Aurora, Collection, PView, SRT, Location, Stars, StarCatalog, Galaxy, Particles, ParticlePoint, VOTable, Fulldome(Video), UDP, JavaScript.
+- ConvertInPlace(planet, Position) vs "Position Rotate": Rotate inherits planet rotation (time-dependent position). Object.ConvertInPlace(Earth, Position Rotate) for planets too. For time travel set Camera.Inherit="Position".
+- Sunlit-side waypoint: Virtual Parent=Mercury LookAt=Sun; Camera.ConvertInPlace(CamSun, Position Rotate).
+- Telescope view w/ inset camera (t=437). Clouds on inset: Planet asset duplicate instead of sphere (atmosphere blocks spheres).
+- OBJ+MTL with map_Kd Media:myMedia for video on custom models.
+- Stars vs StarCatalog (Gaia) assets: Lum multiplies brightness; AbsShift shifts absolute mag (negative brighter). Use Stars on Earth, Gaia off Earth.
+- Logs: C:\ProgramData\Sky-Skan\DigitalSkyDM\Logs (each renderer).
+- Set full spacetime coords (DateTime) for consistent views; small waits between Altitude/Latitude changes.
+- Astro trails JS (t=448).
+- Remote VideoTimecode; UDP/JS handler OnAssetConnect/OnReceive.
+- Load/unload JS engines on demand: Control LoadX.Run() +0.1 Remote Cove.Set(white,100) ... Control UnLoadX.Run(). Event Viewer > JavaScript Processor for JS errors. Assets Reset after every show. Frame Rate button above viewport.
+- jsAstroDate unload: Assets JavaScript Library.UnLoad(jsAstroDate); Scene {DateTime=$Now}
+- RotationModel Diurnal/Annual/Precess (Precess ~ no rotation). [0] optional.
+- Earth.Atmosphere.OuterPolarRadius=1.104 near poles (default ~1.02); OuterEquatorialRadius.
+- DS2->DM converter HTML tool (t=459): sidereal RA*15 for azimuth.
+- Daytime waypoint: Scene Add(SunLook, Virtual) SunLook {Parent=Earth Xpos=0 Ypos=0 Zpos=0 LookAt=Sun} ConvertInPlace(SunLook) ...
+- Pleiades flight via SymbolControllers (t=462).
+- SRT Add/Remove prefix "SRT"; srt auto-shows if same name as video.
+- Slider controlling JS global: slider script sets JS var; ({f} slider value).
+- Vol Milky Way.Gal.OverlayImage=...
+- Tidally locked: set date, switch Annual, set Zrot, then change date.
+- Lines: Scene myLineAsset.Model=<vla_filepath>; .lines files (Astro Grids, Basics folders).
+- Bridge buttons: protected from Control Ref.Run() from pages; use JS DigitalSky.SendScript("Control Ref.Run()") (t=472).
