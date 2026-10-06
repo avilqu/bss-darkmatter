@@ -30,7 +30,7 @@ The repo mirrors Dark Matter's own folders, so files map 1:1 to the dome PCs.
 
 - **One file per button.** File header gives the Reference Name, the page and the button label.
 - **Reference names:** `BSS-<Page>-<What>[-<seconds>]`, e.g. `BSS-SST-MilkyWayIntro-40`.
-  Page codes: `Lib` = BSS-Lib, `SST` = Southern Sky Tour.
+  Page codes: `Lib` = BSS-Lib, `SST` = Southern Sky Tour, `VS` = Virtual Stargazing.
 - **Asset names** created by scripts end with `-BSS-<Page>` (e.g. `GCLabel-BSS-SST`) so pages never collide.
 - **Filenames:** `src/Control Pages/<Page>/NN-<RefName>.txt` (NN = running order on the page).
 - **Segments are self-contained:** Remove → Add → animate → Remove. They must run correctly on their own or from play-all.

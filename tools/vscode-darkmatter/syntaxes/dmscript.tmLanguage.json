@@ -1,0 +1,105 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Dark Matter Script",
+  "scopeName": "source.dmscript",
+  "patterns": [
+    { "include": "#header" },
+    { "include": "#comment" },
+    { "include": "#wait" },
+    { "include": "#control-flow" },
+    { "include": "#prefix" },
+    { "include": "#line-body" }
+  ],
+  "repository": {
+    "header": {
+      "match": "^\\s*;===.*$",
+      "name": "markup.heading.dmscript entity.name.section.dmscript"
+    },
+    "comment": {
+      "begin": ";",
+      "beginCaptures": { "0": { "name": "punctuation.definition.comment.dmscript" } },
+      "end": "$",
+      "name": "comment.line.semicolon.dmscript",
+      "patterns": [
+        { "match": "\\b(UNVERIFIED|TODO|FIXME|PLACEHOLDER|XXX)\\b:?", "name": "keyword.other.todo.dmscript invalid.deprecated.dmscript" }
+      ]
+    },
+    "wait": {
+      "match": "^\\s*(\\+)\\s*(\\d*\\.?\\d+)\\s*(?=;|$)",
+      "captures": {
+        "1": { "name": "keyword.control.wait.dmscript" },
+        "2": { "name": "keyword.control.wait.dmscript constant.numeric.dmscript" }
+      }
+    },
+    "control-flow": {
+      "match": "^\\s*(Control)\\s+(Pause|Abort)\\b",
+      "captures": {
+        "1": { "name": "storage.type.prefix.dmscript" },
+        "2": { "name": "keyword.control.flow.dmscript" }
+      }
+    },
+    "prefix": {
+      "match": "^\\s*(Scene|Assets|Control|JS|SRT|Kernel|Remote|Spice|DSE|DirectCommand|Navigator|Workspace|Browser|System)\\b",
+      "name": "storage.type.prefix.dmscript"
+    },
+    "line-body": {
+      "patterns": [
+        { "include": "#string" },
+        { "include": "#comment" },
+        { "include": "#timing" },
+        { "include": "#alias" },
+        { "include": "#slider" },
+        { "include": "#color" },
+        { "include": "#method" },
+        { "include": "#property" },
+        { "include": "#number" },
+        { "include": "#operator" }
+      ]
+    },
+    "string": {
+      "begin": "\"",
+      "end": "\"",
+      "name": "string.quoted.double.dmscript",
+      "patterns": [
+        { "match": "''|\\\\n", "name": "constant.character.escape.dmscript" },
+        { "include": "#alias" }
+      ]
+    },
+    "timing": {
+      "match": "(\\[)([-\\d.:\\s]*)(\\])",
+      "captures": {
+        "1": { "name": "punctuation.section.brackets.begin.dmscript" },
+        "2": { "name": "constant.numeric.timing.dmscript" },
+        "3": { "name": "punctuation.section.brackets.end.dmscript" }
+      }
+    },
+    "alias": {
+      "match": "<[A-Za-z]+Path>",
+      "name": "variable.language.alias.dmscript"
+    },
+    "slider": {
+      "match": "\\{[fis]\\}",
+      "name": "variable.parameter.slider.dmscript"
+    },
+    "color": {
+      "match": "#[0-9A-Fa-f]{6}(?:[0-9A-Fa-f]{2})?\\b",
+      "name": "constant.other.color.dmscript"
+    },
+    "method": {
+      "match": "(?<=\\.|\\s)([A-Za-z_]\\w*)\\s*(?=\\()",
+      "captures": { "1": { "name": "entity.name.function.dmscript" } }
+    },
+    "property": {
+      "match": "([A-Za-z_][\\w.-]*?)\\s*(?=[+-]?=)",
+      "captures": { "1": { "name": "variable.other.property.dmscript" } }
+    },
+    "number": {
+      "match": "(?<![\\w.-])-?\\d*\\.?\\d+(?:[eE][-+]?\\d+)?(?![\\w-])",
+      "name": "constant.numeric.dmscript"
+    },
+    "operator": {
+      "match": "[+-]?=",
+      "name": "keyword.operator.assignment.dmscript"
+    }
+  }
+}

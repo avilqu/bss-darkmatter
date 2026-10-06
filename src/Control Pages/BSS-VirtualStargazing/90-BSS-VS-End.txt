@@ -1,0 +1,12 @@
+;=== BSS-VS-End ===
+; Page: BSS-VirtualStargazing   Button: "End"   Length: 4 s
+; End of show: fade the scene out and stop time. Remove any assets segments left
+; behind here (each segment should already clean up after itself).
+Control Text="Ending..."
+Scene Visibility=0 [1:1:1]
++3
+Scene DateTime.Rate=0 [0]
+; Scene Remove(...-BSS-VS)
++1
+; 3+1 = 4 s. Scene stays dark: next show's Setup (or BSS-Lib-SetupGround) fades it back in.
+Control Text="End"

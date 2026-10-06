@@ -1,0 +1,15 @@
+;=== BSS-VS-PlayAllSummer ===
+; Page: BSS-VirtualStargazing   Button: "Play Summer"   Length: ~10 s (grows with segments)
+; Automated summer show. Run() doesn't wait, so each call is followed by that
+; button's length. Keep the waits in sync with the segment headers and README.
+; For a Playlist Creator render, add these same buttons to the playlist one by one
+; instead of using this button (the renderer ignores nested Run).
+Control Text="Playing summer..."
+Control BSS-VS-SetupSummer.Run()
++6
+; --- segments go here, e.g. ---
+; Control BSS-VS-<What>-<s>.Run()
+; +<s>
+Control BSS-VS-End.Run()
++4
+Control Text="Play Summer"

@@ -1,0 +1,25 @@
+{
+  "name": "darkmatter-script",
+  "displayName": "Dark Matter Script",
+  "description": "Syntax highlighting for Sky-Skan DigitalSky Dark Matter button scripts",
+  "version": "0.1.0",
+  "publisher": "bss",
+  "license": "UNLICENSED",
+  "repository": { "type": "git", "url": "local" },
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [{
+      "id": "dmscript",
+      "aliases": ["Dark Matter Script", "dmscript"],
+      "extensions": [".dms"],
+      "firstLine": "^;=== ",
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "dmscript",
+      "scopeName": "source.dmscript",
+      "path": "./syntaxes/dmscript.tmLanguage.json"
+    }]
+  }
+}

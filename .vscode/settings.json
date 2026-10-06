@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "**/src/Control Pages/**/*.txt": "dmscript",
+    "**/src/Snippets/*.txt": "dmscript",
+    "**/src/Workspaces/*.txt": "dmscript"
+  }
+}

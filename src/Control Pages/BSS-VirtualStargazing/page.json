@@ -1,0 +1,63 @@
+{
+  "site": "Mt Cook",
+  "user": "Operator",
+  "pageName": "BSS-VirtualStargazing",
+  "pageGuid": "00FEB1F4-7CCA-469D-8A35-4A5D69B465EB",
+  "created": "10/06/26 19:38:10",
+  "buttons": {
+    "01-BSS-VS-SetupSpring.txt": {
+      "prefix": "WIDGETBUTTONSMALL_79a340ad_fd9d_4587_9bdf_720bb7d5dc2a",
+      "kind": "small",
+      "left": 10,
+      "top": 10
+    },
+    "02-BSS-VS-SetupSummer.txt": {
+      "prefix": "WIDGETBUTTONSMALL_de6192ef_42b1_4f42_b659_ea667e766466",
+      "kind": "small",
+      "left": 135,
+      "top": 10
+    },
+    "03-BSS-VS-SetupAutumn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_87b0700a_e089_4b4a_b548_f3e2850da4f8",
+      "kind": "small",
+      "left": 260,
+      "top": 10
+    },
+    "04-BSS-VS-SetupWinter.txt": {
+      "prefix": "WIDGETBUTTONSMALL_9b4d185f_c8db_47d3_a18b_5890d56ff62d",
+      "kind": "small",
+      "left": 385,
+      "top": 10
+    },
+    "90-BSS-VS-End.txt": {
+      "prefix": "WIDGETBUTTONSMALL_4ea823b4_4fe3_4f76_8cc5_2b99c4aa8508",
+      "kind": "small",
+      "left": 510,
+      "top": 75
+    },
+    "95-BSS-VS-PlayAllSpring.txt": {
+      "prefix": "WIDGETBUTTONSMALL_b9ff7ad4_3e35_409f_97da_ddc8ad9a3f76",
+      "kind": "small",
+      "left": 10,
+      "top": 75
+    },
+    "96-BSS-VS-PlayAllSummer.txt": {
+      "prefix": "WIDGETBUTTONSMALL_7f7a5036_0238_4fa6_8529_375fd086653e",
+      "kind": "small",
+      "left": 135,
+      "top": 75
+    },
+    "97-BSS-VS-PlayAllAutumn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_ff7c6349_f43d_46b6_8745_aa966ade484c",
+      "kind": "small",
+      "left": 260,
+      "top": 75
+    },
+    "98-BSS-VS-PlayAllWinter.txt": {
+      "prefix": "WIDGETBUTTONSMALL_733abc6d_c4e9_44bd_ba0a_68972fd05be9",
+      "kind": "small",
+      "left": 385,
+      "top": 75
+    }
+  }
+}
