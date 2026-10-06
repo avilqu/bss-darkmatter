@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Zodiac Labels</Text>
+  <Description />
+  <Created>02/12/16 13:52:41</Created>
+  <Modified>10/02/26 21:21:17</Modified>
+  <Version>201</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Control Text="Loading ....."
+Assets Constellations.Load(Aquarius Label)
+Assets Constellations.Load(Aries Label)
+Assets Constellations.Load(Cancer Label)
+Assets Constellations.Load(Capricornus Label)
+Assets Constellations.Load(Gemini Label)
+Assets Constellations.Load(Leo Label)
+Assets Constellations.Load(Pisces Label)
+Assets Constellations.Load(Libra Label)
+Assets Constellations.Load(Sagittarius Label)
+Assets Constellations.Load(Scorpius Label)
+Assets Constellations.Load(Taurus Label)
+Assets Constellations.Load(Virgo Label)
++0.5
+Scene Aquarius Label.DomeAlign=On
+Scene Aries Label.DomeAlign=On
+Scene Cancer Label.DomeAlign=On
+Scene Capricornus Label.DomeAlign=On
+Scene  Gemini Label.DomeAlign=On
+Scene Leo Label.DomeAlign=On
+Scene Pisces Label.DomeAlign=On
+Scene Libra Label.DomeAlign=On
+Scene Sagittarius Label.DomeAlign=On
+Scene Scorpius Label.DomeAlign=On
+Scene Taurus Label.DomeAlign=On
+Scene Virgo Label.DomeAlign=On
++0.2
+Scene Aquarius Label.Visibility=100 [2]
+Scene Aries Label.Visibility=100 [2]
+Scene Cancer Label.Visibility=100 [2]
+Scene Capricornus Label.Visibility=100 [2]
+Scene  Gemini Label.Visibility=100 [2]
+Scene Leo Label.Visibility=100 [2]
+Scene Pisces Label.Visibility=100 [2]
+Scene Libra Label.Visibility=100 [2]
+Scene Sagittarius Label.Visibility=100 [2]
+Scene Scorpius Label.Visibility=100 [2]
+Scene Taurus Label.Visibility=100 [2]
+Scene Virgo Label.Visibility=100 [2]
++2
+Control Text="Fade Down Zodiac Labels"
+Control Pause
+Scene Aquarius Label.Visibility=0 [2]
+Scene Aries Label.Visibility=0 [2]
+Scene Cancer Label.Visibility=0 [2]
+Scene Capricornus Label.Visibility=0 [2]
+Scene  Gemini Label.Visibility=0 [2]
+Scene Leo Label.Visibility=0 [2]
+Scene Pisces Label.Visibility=0 [2]
+Scene Libra Label.Visibility=0 [2]
+Scene Sagittarius Label.Visibility=0 [2]
+Scene Scorpius Label.Visibility=0 [2]
+Scene Taurus Label.Visibility=0 [2]
+Scene Virgo Label.Visibility=0 [2]
++2.2
+Assets Constellations.Unload(Aquarius Label)
+Assets Constellations.Unload(Aries Label)
+Assets Constellations.Unload(Cancer Label)
+Assets Constellations.Unload(Capricornus Label)
+Assets Constellations.Unload(Gemini Label)
+Assets Constellations.Unload(Leo Label)
+Assets Constellations.Unload(Pisces Label)
+Assets Constellations.Unload(Libra Label)
+Assets Constellations.Unload(Sagittarius Label)
+Assets Constellations.Unload(Scorpius Label)
+Assets Constellations.Unload(Taurus Label)
+Assets Constellations.Unload(Virgo Label)

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Stop Dynamic Camera</Text>
+  <Description />
+  <Created>05/29/25 19:05:55</Created>
+  <Modified>06/21/25 21:46:57</Modified>
+  <Version>88</Version>
+  <FriendlyName>stopDynamicCamera</FriendlyName>
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+
++0.5
+JS AddEngine(dCamStop)
++0.1
+JS dCamStop.Execute(@"
+;//Define variables
+	var tarMem = DigitalSky.GetAssetInstance("targetMemory01");
+	var tarMemParentIns = tarMem.GetPropertyInstance("Parent");
+	var tarMemParent = tarMemParentIns.Value;
+
+	var mainCam = DigitalSky.GetAssetInstance("Camera");
+
+	;//mainCam.SetProperty("Parent", camTarParent, 0)
+	mainCam.ExecuteMethod("ConvertInPlace", tarMemParent, 0);
+	
+@")
+Control startDynamicCamera.Text="Start Dynamic Camera"
++1
+
+JS RemoveEngine(dCamTest)
+JS RemoveEngine(dCamStop)
+Assets Development.Unload(camTarget, targetMemory01, cameraString)

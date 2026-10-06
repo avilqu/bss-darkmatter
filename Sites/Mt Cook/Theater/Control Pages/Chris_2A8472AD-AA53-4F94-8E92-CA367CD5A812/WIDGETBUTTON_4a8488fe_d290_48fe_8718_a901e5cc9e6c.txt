@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Show Stellar Wind</Text>
+  <Description />
+  <Created>07/14/25 23:39:49</Created>
+  <Modified>09/24/26 22:44:27</Modified>
+  <Version>53</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Aoraki.Load(sunSpawn)
++0.5
+Assets Aoraki.Load(stellarWindPart)
++0.5
+
+Scene stellarWindPart.Emit=250
++1
+Scene stellarWindPart.VelY=5
+Scene stellarWindPart.Visibility=100 [3]
+
+Control Text="Remove Stellar Wind?"
+Control Pause
+
+Scene stellarWindPart.Visibility=0 [3] 
++3
+Assets Aoraki.UnLoad(sunSpawn)
+Assets Aoraki.UnLoad(stellarWindPart)

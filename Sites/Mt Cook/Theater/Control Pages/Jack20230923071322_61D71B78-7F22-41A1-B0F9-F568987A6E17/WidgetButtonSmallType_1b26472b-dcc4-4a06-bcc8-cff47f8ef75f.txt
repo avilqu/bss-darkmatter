@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>James Webb</Text>
+  <Description>https://webbtelescope.org/contents/media/images/2022/023/01G1Q6AWRY5DW179EP6B8AJKFK?Category=08-webb-mission&amp;Category=09-miscellaneous&amp;page=1&amp;filterUUID=91dfa083-c258-4f9f-bef1-8f40c26f4c97</Description>
+  <Created>03/23/23 6:12:45</Created>
+  <Modified>09/23/23 6:10:30</Modified>
+  <Version>140</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Jack.Load(james-webb)
++2
+Scene james-webb.Visibility=100 [2]
+Control Pause
+Control Text=Unload james-webb
+Scene james-webb.Visibility=0 [2]
++2
+Assets Jack.Unload(james-webb)

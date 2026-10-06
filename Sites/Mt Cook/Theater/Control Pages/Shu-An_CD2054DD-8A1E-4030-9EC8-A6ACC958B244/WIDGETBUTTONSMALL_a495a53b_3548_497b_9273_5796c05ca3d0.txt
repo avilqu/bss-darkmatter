@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Mt Cook Pano</Text>
+  <Description>Camera State on Earth</Description>
+  <Created>09/09/26 0:27:38</Created>
+  <Modified>10/05/26 17:01:10</Modified>
+  <Version>28</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords>Camera,Camera</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Scene.DateTime="8:00"[10:10:5]
++0.1
+Scene Camera.ConvertInPlace(Earth, Position Rotate)
++0.1
+Scene Camera { Xpos=-4541911.9664583  Ypos=789293.810828139  Zpos=-4394192.32077375  Xrot=-170.01445925321  Yrot=-44.8722520905106  Zrot=96.7560051270549 }[5:10:3]
+Scene Camera.ConvertInPlace(Earth, Position Rotate)
++0.1
+Scene Camera.Yaw=-180 [5:10:5]
++6
+Assets Terrain.Load(GISEarthBing)
++5
+Scene GISEarthBing.HDRScale=2.1[3:5:3]
+Control Text=Unload Bing GIS
+
+Control Pause
++2
+Assets Terrain.Unload(GISEarthBing)[3:5:3]

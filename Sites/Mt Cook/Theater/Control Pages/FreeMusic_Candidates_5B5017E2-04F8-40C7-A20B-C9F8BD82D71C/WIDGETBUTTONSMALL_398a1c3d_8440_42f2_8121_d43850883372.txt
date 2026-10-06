@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Start Time Check</Text>
+  <Description />
+  <Created>12/04/18 15:09:33</Created>
+  <Modified>10/04/26 16:47:47</Modified>
+  <Version>264</Version>
+  <FriendlyName>StartTimeCheck</FriendlyName>
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+JS AddEngine(MusicTimeEngine)
++0.1
+control TestDuration.run
++0.1
+control TimeCheck.run

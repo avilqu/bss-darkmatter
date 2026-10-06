@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Spin dome</Text>
+  <Description />
+  <Created>02/09/19 19:47:18</Created>
+  <Modified>09/24/26 22:44:19</Modified>
+  <Version>391</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Camera.Yaw=-180 [3:5:3]
+Control Pause
+Scene Camera.Yaw=0 [3:5:3]

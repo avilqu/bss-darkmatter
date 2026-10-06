@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>ACTIVE </Text>
+  <Description />
+  <Created>05/31/25 23:56:58</Created>
+  <Modified>07/03/25 19:13:11</Modified>
+  <Version>39</Version>
+  <FriendlyName>dCamActive</FriendlyName>
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Control Text = "ACTIVE"
++0.5
+Control Text =" "
+Control testDynamicCamera.run

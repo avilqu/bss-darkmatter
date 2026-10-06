@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Stars OFF </Text>
+  <Description>This button will assume you have the entire Solar System Collections loaded in the Startup Script or elsewhere.</Description>
+  <Created>06/24/16 14:13:27</Created>
+  <Modified>03/02/24 18:42:29</Modified>
+  <Version>356</Version>
+  <FriendlyName>SkyOFFButton</FriendlyName>
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Astro_Sky_Solar.Visibility=0 [1]
+Control Text="Sky ON?"
+Control Pause
+Scene Astro_Sky_Solar.Visibility=100 [2]
+Scene Visible Milky Way.Visibility=60 [2]
+Scene Stars.Lum=1 [2]

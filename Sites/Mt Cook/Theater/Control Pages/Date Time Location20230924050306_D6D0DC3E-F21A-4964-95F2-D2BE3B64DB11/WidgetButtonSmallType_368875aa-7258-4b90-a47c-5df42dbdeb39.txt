@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Fast Planets Check</Text>
+  <Description />
+  <Created>11/17/18 4:55:11</Created>
+  <Modified>09/24/23 5:02:18</Modified>
+  <Version>484</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+; Go to the Sun
+;Go to Outer Planet Overview
+	Control Text="Going to View the Outer Planets..."
+	
+	Scene Camera.ConvertInPLace(Sun) [0:0:0]
++1.5
+	Scene Camera{Latitude=50, Altitude=5e+12} [0:0:0]
++1
+	Scene Camera.Orient=SouthAndDown [0:0:0]
++1
+	Scene MercuryOrbit.Visibility=80 [0]
+	Scene VenusOrbit.Visibility=80 [0]
+	Scene EarthOrbit.Visibility=80 [0]
+	Scene MoonOrbit.Visibility=80 [0]
+	Scene MarsOrbit.Visibility=80 [0]
+	Scene JupiterOrbit.Visibility=80 [0]
+	Scene SaturnOrbit.Visibility=80 [0]
+	Scene UranusOrbit.Visibility=80 [0]
+	Scene NeptuneOrbit.Visibility=80 [0]

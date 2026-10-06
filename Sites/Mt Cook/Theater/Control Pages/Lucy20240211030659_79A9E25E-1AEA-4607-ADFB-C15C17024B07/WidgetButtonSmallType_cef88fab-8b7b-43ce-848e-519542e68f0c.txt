@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Pano North </Text>
+  <Description />
+  <Created>01/22/24 0:59:29</Created>
+  <Modified>02/11/24 3:05:39</Modified>
+  <Version>211</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Jack.Load(hermitage pano_test1)
+Scene hermitage pano_test1.Rotation=0
+Scene Scene.Visibility=0 [1]
++1
+Scene Camera.FlyTo(Here, Orient=NorthAndUp)
+Scene Camera.SS.Elevation=90
+Scene Scene.DateTime=Now
+Scene Scene.DateTime="0:02"
+Scene Earth.Atmosphere.Visibility=0
+Scene Earth.Cloud.Visibility=0
++0.75
+Scene hermitage pano_test1.Visibility=100
++1
+Scene Scene.Visibility=100 [2]
+Scene Earth.Atmosphere.Visibility=100 [2]
+Scene Earth.Cloud.Visibility=100 [2]
++2
+Scene Stars.Lum=2.2
+Control Text=Sunset
+Control Pause
+;
+Scene Scene.DateTime="10:30" [10]
++8
+Scene hermitage pano_test1 { Red=0  Green=0  Blue=0 } [10]
+Scene Visible Milky Way.Visibility=65 [10]
++1
+Scene hermitage pano_test1.Visibility=0 [1]
+Scene Earth.Atmosphere.Visibility=0 [3]
+Scene Earth.Cloud.Visibility=0 [3]
++3
+Assets Jack.Unload(hermitage pano_test1)

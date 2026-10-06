@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Position Crab Nebula</Text>
+  <Description />
+  <Created>02/23/19 21:12:30</Created>
+  <Modified>03/02/24 18:42:29</Modified>
+  <Version>570</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Messier Earth.Load(Messier 1)
++0.3
+Scene Messier 1 { Red=49.8039215686275  Green=49.4117647058824  Blue=100 }
++0.2
+Scene Messier 1.Visibility=100 [2]
++2
+Control Text=Unload Position Crab Nebula
+Control Pause
+Scene Messier 1.Visibility=0 [2]
++2
+Assets Messier Earth.Unload(Messier 1)

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>bhnasa</Text>
+  <Description />
+  <Created>06/24/24 16:53:33</Created>
+  <Modified>12/17/24 19:43:00</Modified>
+  <Version>25</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Jack.Load(bhnasa)
++2
+Scene bhnasa.Visibility=100 [2]
+Control Text=Unload bhnasa
+Control Pause
+Scene bhnasa.Visibility=0 [2]
++2
+Assets Jack.Unload(bhnasa)

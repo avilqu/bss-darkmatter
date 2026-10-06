@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!-- Description: DM 'renderheads.xml' file lists targets and rendering heads -->
+<!-- Exported by "DigitalSky 2.5.1 808101 release" using "ds-MtCook2019.mdb" database -->
+<!-- Date: 2019/02/12 23:46:57 (13h) -->
+<!-- Copyright (c) 2017 Sky-Skan, Inc., 51 Lake Street, Nashua, NH 03060, 603-880-8500 -->
+
+<RenderheadDescriptions>
+	<TargetInstanceLists>
+		<!-- Native targets -->
+		<TargetInstanceList Name="Fisheye5">
+			<TargetInstances>
+				<TargetInstance HRES="1024" VRES="1024" />
+				<TargetInstance HRES="1024" VRES="1024" />
+				<TargetInstance HRES="1024" VRES="1024" />
+				<TargetInstance HRES="1024" VRES="1024" />
+				<TargetInstance HRES="1024" VRES="1024" />
+			</TargetInstances>
+		</TargetInstanceList>
+		<TargetInstanceList Name="Front90">
+			<TargetInstances>
+				<TargetInstance AzimCenter="180.0" ElevCenter="45.0" HFOV="90.0" VFOV="90.0" HRES="2048" VRES="2048" />
+			</TargetInstances>
+		</TargetInstanceList>
+		<!-- Exported targets -->
+		<TargetInstanceList Name="F1_3k">
+			<TargetInstances>
+				<TargetInstance HRES="3072" VRES ="3072"/>
+			</TargetInstances>
+		</TargetInstanceList>
+	</TargetInstanceLists>
+	<Renderheads>
+		<!-- Native render heads -->
+		<Renderhead>
+			<Name>Fisheye</Name>
+			<Id>1</Id>
+			<HorRes>1024</HorRes>
+			<VerRes>1024</VerRes>
+			<FS>0</FS>
+			<Left>0</Left>
+			<Top>0</Top>
+			<WindowStyle>0x04cf0000</WindowStyle>
+			<ParentHwnd>0</ParentHwnd>
+			<Mask>Fisheye.dds</Mask>
+			<DisplayMesh>MD-Fisheye5.txt</DisplayMesh>
+			<TargetListName>Fisheye5</TargetListName>
+		</Renderhead>
+		<Renderhead>
+			<Name>Dome Front</Name>
+			<Id>2</Id>
+			<HorRes>1024</HorRes>
+			<VerRes>1024</VerRes>
+			<FS>0</FS>
+			<Left>0</Left>
+			<Top>0</Top>
+			<WindowStyle>0x04cf0000</WindowStyle>
+			<ParentHwnd>0</ParentHwnd>
+			<DisplayMesh>SD-FrontCenter.txt</DisplayMesh>
+			<TargetListName>Front90</TargetListName>
+		</Renderhead>
+		<!-- Exported render heads -->
+		<Renderhead>
+			<Name>DS-01-A</Name>
+			<Id>11</Id>
+			<HorRes>1920</HorRes>
+			<VerRes>1200</VerRes>
+			<FS>1</FS>
+			<UseSwapSync>false</UseSwapSync>
+			<Left>0</Left>
+			<Top>0</Top>
+			<WindowStyle>0</WindowStyle>
+			<ParentHwnd>0</ParentHwnd>
+			<ViewportSelectable>false</ViewportSelectable>
+			<DomeMask>MtCook_Color.png</DomeMask>
+			<Mask>DMDT-DS-01-1.dds</Mask>
+			<GammaFile>Gamma-DS-01-1.txt</GammaFile>
+			<DisplayMesh>DMDT-DS-01-1.txt</DisplayMesh>
+			<TargetListName>F1_3k</TargetListName>
+		</Renderhead>
+		<Renderhead>
+			<Name>DS-02-B</Name>
+			<Id>21</Id>
+			<HorRes>1920</HorRes>
+			<VerRes>1200</VerRes>
+			<FS>1</FS>
+			<UseSwapSync>false</UseSwapSync>
+			<Left>0</Left>
+			<Top>0</Top>
+			<WindowStyle>0</WindowStyle>
+			<ParentHwnd>0</ParentHwnd>
+			<ViewportSelectable>false</ViewportSelectable>
+			<DomeMask>MtCook_Color.png</DomeMask>
+			<Mask>DMDT-DS-02-1.dds</Mask>
+			<GammaFile>Gamma-DS-02-1.txt</GammaFile>
+			<DisplayMesh>DMDT-DS-02-1.txt</DisplayMesh>
+			<TargetListName>F1_3k</TargetListName>
+		</Renderhead>
+		<Renderhead>
+			<Name>DS-03-C</Name>
+			<Id>31</Id>
+			<HorRes>1920</HorRes>
+			<VerRes>1200</VerRes>
+			<FS>1</FS>
+			<UseSwapSync>false</UseSwapSync>
+			<Left>0</Left>
+			<Top>0</Top>
+			<WindowStyle>0</WindowStyle>
+			<ParentHwnd>0</ParentHwnd>
+			<ViewportSelectable>false</ViewportSelectable>
+			<DomeMask>MtCook_Color.png</DomeMask>
+			<Mask>DMDT-DS-03-1.dds</Mask>
+			<GammaFile>Gamma-DS-03-1.txt</GammaFile>
+			<DisplayMesh>DMDT-DS-03-1.txt</DisplayMesh>
+			<TargetListName>F1_3k</TargetListName>
+		</Renderhead>
+		<Renderhead>
+			<Name>DS-04-D</Name>
+			<Id>41</Id>
+			<HorRes>1920</HorRes>
+			<VerRes>1200</VerRes>
+			<FS>1</FS>
+			<UseSwapSync>false</UseSwapSync>
+			<Left>0</Left>
+			<Top>0</Top>
+			<WindowStyle>0</WindowStyle>
+			<ParentHwnd>0</ParentHwnd>
+			<ViewportSelectable>false</ViewportSelectable>
+			<DomeMask>MtCook_Color.png</DomeMask>
+			<Mask>DMDT-DS-04-1.dds</Mask>
+			<GammaFile>Gamma-DS-04-1.txt</GammaFile>
+			<DisplayMesh>DMDT-DS-04-1.txt</DisplayMesh>
+			<TargetListName>F1_3k</TargetListName>
+		</Renderhead>
+		<Renderhead>
+			<Name>DS-05-E</Name>
+			<Id>51</Id>
+			<HorRes>1920</HorRes>
+			<VerRes>1200</VerRes>
+			<FS>1</FS>
+			<UseSwapSync>false</UseSwapSync>
+			<Left>0</Left>
+			<Top>0</Top>
+			<WindowStyle>0</WindowStyle>
+			<ParentHwnd>0</ParentHwnd>
+			<ViewportSelectable>false</ViewportSelectable>
+			<DomeMask>MtCook_Color.png</DomeMask>
+			<Mask>DMDT-DS-05-1.dds</Mask>
+			<GammaFile>Gamma-DS-05-1.txt</GammaFile>
+			<DisplayMesh>DMDT-DS-05-1.txt</DisplayMesh>
+			<TargetListName>F1_3k</TargetListName>
+		</Renderhead>
+	</Renderheads>
+</RenderheadDescriptions>

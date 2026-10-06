@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>2MPZ Spec 75</Text>
+  <Description>Flies to Earth</Description>
+  <Created>11/17/18 4:55:11</Created>
+  <Modified>10/05/26 17:01:10</Modified>
+  <Version>704</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords>Fly Go to Earth</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene 2MPZ Spec.Visibility={0} [2]
++2
+Scene 2MPZ Spec.Visibility={75} [4]
+Control Pause
+Control Text= Unload 2MPZ Spec
+Scene 2MPZ Spec.Visibility={0} [2]
++4

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Ursa Minor Stick</Text>
+  <Description />
+  <Created>02/22/23 6:22:39</Created>
+  <Modified>09/24/23 6:16:52</Modified>
+  <Version>166</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Ursa Minor Stick)
++0.5
+Scene Ursa Minor Stick.Visibility=100 [2]
++2
+Control Text=Unload Assets
+Control Pause
+Scene Ursa Minor Stick.Visibility=0 [1]
++1
+Assets Constellations.Unload(Ursa Minor Stick)

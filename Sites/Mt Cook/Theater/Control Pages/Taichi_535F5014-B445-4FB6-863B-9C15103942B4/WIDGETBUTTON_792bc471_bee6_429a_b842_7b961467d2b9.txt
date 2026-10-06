@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Earth invisible</Text>
+  <Description />
+  <Created>06/06/25 23:52:27</Created>
+  <Modified>10/02/26 18:04:44</Modified>
+  <Version>135</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Earth.Visibility=0 [5]
++5
+Control Text="Earth visible"
+Control Pause 
+Scene Earth.Visibility=100 [5]

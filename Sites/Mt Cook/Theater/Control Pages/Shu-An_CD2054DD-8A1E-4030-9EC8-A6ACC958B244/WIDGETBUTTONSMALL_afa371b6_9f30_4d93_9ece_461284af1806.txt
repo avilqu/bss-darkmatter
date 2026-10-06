@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Constellation Sticks</Text>
+  <Description />
+  <Created>02/10/19 20:46:37</Created>
+  <Modified>10/05/26 17:01:10</Modified>
+  <Version>592</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Control Text="Loading ....."
+Assets Constellations.Load(Andromeda Stick)
+Assets Constellations.Load(Aquila Stick)
+Assets Constellations.Load(Auriga Stick)
+Assets Constellations.Load(Boötes Stick)
+Assets Constellations.Load(Camelopardalis Stick)
+Assets Constellations.Load(Canes Venatici Stick)
+Assets Constellations.Load(Canis Minor Stick)
+Assets Constellations.Load(Cassiopeia Stick)
+Assets Constellations.Load(Cepheus Stick)
+Assets Constellations.Load(Coma Berenices Stick)
+Assets Constellations.Load(Corona Borealis Stick)
+Assets Constellations.Load(Cygnus Stick)
+Assets Constellations.Load(Delphinus Stick)
+Assets Constellations.Load(Draco Stick)
+Assets Constellations.Load(Equuleus Stick)
+Assets Constellations.Load(Hercules Stick)
+Assets Constellations.Load(Lacerta Stick)
+Assets Constellations.Load(Leo Minor Stick)
+Assets Constellations.Load(Lynx Stick)
+Assets Constellations.Load(Lyra Stick)
+Assets Constellations.Load(Monoceros Stick)
+Assets Constellations.Load(Ophiuchus Stick)
+Assets Constellations.Load(Orion Stick)
+Assets Constellations.Load(Pegasus Stick)
+Assets Constellations.Load(Perseus Stick)
+Assets Constellations.Load(Sagitta Stick)
+Assets Constellations.Load(Serpens Stick)
+Assets Constellations.Load(Triangulum Stick)
+Assets Constellations.Load(Ursa Major Stick)
+Assets Constellations.Load(Ursa Minor Stick)
+Assets Constellations.Load(Vulpecula Stick)
+Assets Constellations.Load(Aquarius Stick)
+Assets Constellations.Load(Aries Stick)
+Assets Constellations.Load(Cancer Stick)
+Assets Constellations.Load(Capricornus Stick)
+Assets Constellations.Load(Gemini Stick)
+Assets Constellations.Load(Leo Stick)
+Assets Constellations.Load(Pisces Stick)
+Assets Constellations.Load(Libra Stick)
+Assets Constellations.Load(Sagittarius Stick)
+Assets Constellations.Load(Scorpius Stick)
+Assets Constellations.Load(Taurus Stick)
+Assets Constellations.Load(Virgo Stick)
+Assets Constellations.Load(Antlia Stick)
+Assets Constellations.Load(Apus Stick)
+Assets Constellations.Load(Ara Stick)
+Assets Constellations.Load(Caelum Stick)
+Assets Constellations.Load(Canis Major Stick)
+Assets Constellations.Load(Carina Stick)
+Assets Constellations.Load(Centaurus Stick)
+Assets Constellations.Load(Cetus Stick)
+Assets Constellations.Load(Chamaeleon Stick)
+Assets Constellations.Load(Circinus Stick)
+Assets Constellations.Load(Columba Stick)
+Assets Constellations.Load(Corona Australis Stick)
+Assets Constellations.Load(Corvus Stick)
+Assets Constellations.Load(Crater Stick)
+Assets Constellations.Load(Crux Stick)
+Assets Constellations.Load(Dorado Stick)
+Assets Constellations.Load(Eridanus Stick)
+Assets Constellations.Load(Fornax Stick)
+Assets Constellations.Load(Grus Stick)
+Assets Constellations.Load(Horologium Stick)
+Assets Constellations.Load(Hydra Stick)
+Assets Constellations.Load(Hydrus Stick)
+Assets Constellations.Load(Indus Stick)
+Assets Constellations.Load(Lepus Stick)
+Assets Constellations.Load(Lupus Stick)
+Assets Constellations.Load(Mensa Stick)
+Assets Constellations.Load(Microscopium Stick)
+Assets Constellations.Load(Musca Stick)
+Assets Constellations.Load(Norma Stick)
+Assets Constellations.Load(Octans Stick)
+Assets Constellations.Load(Pavo Stick)
+Assets Constellations.Load(Phoenix Stick)
+Assets Constellations.Load(Pictor Stick)
+Assets Constellations.Load(Piscis Austrinus Stick)
+Assets Constellations.Load(Puppis Stick)
+Assets Constellations.Load(Pyxis Stick)
+Assets Constellations.Load(Reticulum Stick)
+Assets Constellations.Load(Sculptor Stick)
+Assets Constellations.Load(Scutum Stick)
+Assets Constellations.Load(Sextans Stick)
+Assets Constellations.Load(Telescopium Stick)
+Assets Constellations.Load(Triangulum Australe Stick)
+Assets Constellations.Load(Tucana Stick)
+Assets Constellations.Load(Vela Stick)
+Assets Constellations.Load(Volans Stick)
++3
+Scene Andromeda Stick.Visibility=100 [2]
+Scene Aquila Stick.Visibility=100 [2]
+Scene Auriga Stick.Visibility=100 [2]
+Scene Boötes Stick.Visibility=100 [2]
+Scene Camelopardalis Stick.Visibility=100 [2]
+Scene Canes Venatici Stick.Visibility=100 [2]
+Scene Canis Minor Stick.Visibility=100 [2]
+Scene Cassiopeia Stick.Visibility=100 [2]
+Scene Cepheus Stick.Visibility=100 [2]
+Scene Coma Berenices Stick.Visibility=100 [2]
+Scene Corona Borealis Stick.Visibility=100 [2]
+Scene Cygnus Stick.Visibility=100 [2]
+Scene Delphinus Stick.Visibility=100 [2]
+Scene Draco Stick.Visibility=100 [2]
+Scene Equuleus Stick.Visibility=100 [2]
+Scene Hercules Stick.Visibility=100 [2]
+Scene Lacerta Stick.Visibility=100 [2]
+Scene Leo Minor Stick.Visibility=100 [2]
+Scene Lynx Stick.Visibility=100 [2]
+Scene Lyra Stick.Visibility=100 [2]
+Scene Monoceros Stick.Visibility=100 [2]
+Scene Ophiuchus Stick.Visibility=100 [2]
+Scene Orion Stick.Visibility=100 [2]
+Scene Pegasus Stick.Visibility=100 [2]
+Scene Perseus Stick.Visibility=100 [2]
+Scene Sagitta Stick.Visibility=100 [2]
+Scene Serpens Stick.Visibility=100 [2]
+Scene Triangulum Stick.Visibility=100 [2]
+Scene Ursa Major Stick.Visibility=100 [2]
+Scene Ursa Minor Stick.Visibility=100 [2]
+Scene Vulpecula Stick.Visibility=100 [2]
+Scene Aquarius Stick.Visibility=100 [2]
+Scene Aries Stick.Visibility=100 [2]
+Scene Cancer Stick.Visibility=100 [2]
+Scene Capricornus Stick.Visibility=100 [2]
+Scene  Gemini Stick.Visibility=100 [2]
+Scene Leo Stick.Visibility=100 [2]
+Scene Pisces Stick.Visibility=100 [2]
+Scene Libra Stick.Visibility=100 [2]
+Scene Sagittarius Stick.Visibility=100 [2]
+Scene Scorpius Stick.Visibility=100 [2]
+Scene Taurus Stick.Visibility=100 [2]
+Scene Virgo Stick.Visibility=100 [2]
+Scene Antlia Stick.Visibility=100 [2]
+Scene Apus Stick.Visibility=100 [2]
+Scene Ara Stick.Visibility=100 [2]
+Scene Caelum Stick.Visibility=100 [2]
+Scene Canis Major Stick.Visibility=100 [2]
+Scene Carina Stick.Visibility=100 [2]
+Scene Centaurus Stick.Visibility=100 [2]
+Scene Cetus Stick.Visibility=100 [2]
+Scene Chamaeleon Stick.Visibility=100 [2]
+Scene Circinus Stick.Visibility=100 [2]
+Scene Columba Stick.Visibility=100 [2]
+Scene Corona Australis Stick.Visibility=100 [2]
+Scene Corvus Stick.Visibility=100 [2]
+Scene Crater Stick.Visibility=100 [2]
+Scene Crux Stick.Visibility=100 [2]
+Scene Dorado Stick.Visibility=100 [2]
+Scene Eridanus Stick.Visibility=100 [2]
+Scene Fornax Stick.Visibility=100 [2]
+Scene Grus Stick.Visibility=100 [2]
+Scene Horologium Stick.Visibility=100 [2]
+Scene Hydra Stick.Visibility=100 [2]
+Scene Hydrus Stick.Visibility=100 [2]
+Scene Indus Stick.Visibility=100 [2]
+Scene Lepus Stick.Visibility=100 [2]
+Scene Lupus Stick.Visibility=100 [2]
+Scene Mensa Stick.Visibility=100 [2]
+Scene Microscopium Stick.Visibility=100 [2]
+Scene Musca Stick.Visibility=100 [2]
+Scene Norma Stick.Visibility=100 [2]
+Scene Octans Stick.Visibility=100 [2]
+Scene Pavo Stick.Visibility=100 [2]
+Scene Phoenix Stick.Visibility=100 [2]
+Scene Pictor Stick.Visibility=100 [2]
+Scene Piscis Austrinus Stick.Visibility=100 [2]
+Scene Puppis Stick.Visibility=100 [2]
+Scene Pyxis Stick.Visibility=100 [2]
+Scene Reticulum Stick.Visibility=100 [2]
+Scene Sculptor Stick.Visibility=100 [2]
+Scene Scutum Stick.Visibility=100 [2]
+Scene Sextans Stick.Visibility=100 [2]
+Scene Telescopium Stick.Visibility=100 [2]
+Scene Triangulum Australe Stick.Visibility=100 [2]
+Scene Tucana Stick.Visibility=100 [2]
+Scene Vela Stick.Visibility=100 [2]
+Scene Volans Stick.Visibility=100 [2]
++2
+Control Text="Constellation Sticks OFF"
+Control Pause
+Scene Andromeda Stick.Visibility=0 [2]
+Scene Aquila Stick.Visibility=0 [2]
+Scene Auriga Stick.Visibility=0 [2]
+Scene Boötes Stick.Visibility=0 [2]
+Scene Camelopardalis Stick.Visibility=0 [2]
+Scene Canes Venatici Stick.Visibility=0 [2]
+Scene Canis Minor Stick.Visibility=0 [2]
+Scene Cassiopeia Stick.Visibility=0 [2]
+Scene Cepheus Stick.Visibility=0 [2]
+Scene Coma Berenices Stick.Visibility=0 [2]
+Scene Corona Borealis Stick.Visibility=0 [2]
+Scene Cygnus Stick.Visibility=0 [2]
+Scene Delphinus Stick.Visibility=0 [2]
+Scene Draco Stick.Visibility=0 [2]
+Scene Equuleus Stick.Visibility=0 [2]
+Scene Hercules Stick.Visibility=0 [2]
+Scene Lacerta Stick.Visibility=0 [2]
+Scene Leo Minor Stick.Visibility=0 [2]
+Scene Lynx Stick.Visibility=0 [2]
+Scene Lyra Stick.Visibility=0 [2]
+Scene Monoceros Stick.Visibility=0 [2]
+Scene Ophiuchus Stick.Visibility=0 [2]
+Scene Orion Stick.Visibility=0 [2]
+Scene Pegasus Stick.Visibility=0 [2]
+Scene Perseus Stick.Visibility=0 [2]
+Scene Sagitta Stick.Visibility=0 [2]
+Scene Serpens Stick.Visibility=0 [2]
+Scene Triangulum Stick.Visibility=0 [2]
+Scene Ursa Major Stick.Visibility=0 [2]
+Scene Ursa Minor Stick.Visibility=0 [2]
+Scene Vulpecula Stick.Visibility=0 [2]
+Scene Aquarius Stick.Visibility=0 [2]
+Scene Aries Stick.Visibility=0 [2]
+Scene Cancer Stick.Visibility=0 [2]
+Scene Capricornus Stick.Visibility=0 [2]
+Scene  Gemini Stick.Visibility=0 [2]
+Scene Leo Stick.Visibility=0 [2]
+Scene Pisces Stick.Visibility=0 [2]
+Scene Libra Stick.Visibility=0 [2]
+Scene Sagittarius Stick.Visibility=0 [2]
+Scene Scorpius Stick.Visibility=0 [2]
+Scene Taurus Stick.Visibility=0 [2]
+Scene Virgo Stick.Visibility=0 [2]
+Scene Antlia Stick.Visibility=0 [2]
+Scene Apus Stick.Visibility=0 [2]
+Scene Ara Stick.Visibility=0 [2]
+Scene Caelum Stick.Visibility=0 [2]
+Scene Canis Major Stick.Visibility=0 [2]
+Scene Carina Stick.Visibility=0 [2]
+Scene Centaurus Stick.Visibility=0 [2]
+Scene Cetus Stick.Visibility=0 [2]
+Scene Chamaeleon Stick.Visibility=0 [2]
+Scene Circinus Stick.Visibility=0 [2]
+Scene Columba Stick.Visibility=0 [2]
+Scene Corona Australis Stick.Visibility=0 [2]
+Scene Corvus Stick.Visibility=0 [2]
+Scene Crater Stick.Visibility=0 [2]
+Scene Crux Stick.Visibility=0 [2]
+Scene Dorado Stick.Visibility=0 [2]
+Scene Eridanus Stick.Visibility=0 [2]
+Scene Fornax Stick.Visibility=0 [2]
+Scene Grus Stick.Visibility=0 [2]
+Scene Horologium Stick.Visibility=0 [2]
+Scene Hydra Stick.Visibility=0 [2]
+Scene Hydrus Stick.Visibility=0 [2]
+Scene Indus Stick.Visibility=0 [2]
+Scene Lepus Stick.Visibility=0 [2]
+Scene Lupus Stick.Visibility=0 [2]
+Scene Mensa Stick.Visibility=0 [2]
+Scene Microscopium Stick.Visibility=0 [2]
+Scene Musca Stick.Visibility=0 [2]
+Scene Norma Stick.Visibility=0 [2]
+Scene Octans Stick.Visibility=0 [2]
+Scene Pavo Stick.Visibility=0 [2]
+Scene Phoenix Stick.Visibility=0 [2]
+Scene Pictor Stick.Visibility=0 [2]
+Scene Piscis Austrinus Stick.Visibility=0 [2]
+Scene Puppis Stick.Visibility=0 [2]
+Scene Pyxis Stick.Visibility=0 [2]
+Scene Reticulum Stick.Visibility=0 [2]
+Scene Sculptor Stick.Visibility=0 [2]
+Scene Scutum Stick.Visibility=0 [2]
+Scene Sextans Stick.Visibility=0 [2]
+Scene Telescopium Stick.Visibility=0 [2]
+Scene Triangulum Australe Stick.Visibility=0 [2]
+Scene Tucana Stick.Visibility=0 [2]
+Scene Vela Stick.Visibility=0 [2]
+Scene Volans Stick.Visibility=0 [2]

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Crab Nebula</Text>
+  <Description />
+  <Created>02/08/19 2:01:16</Created>
+  <Modified>10/02/26 21:21:17</Modified>
+  <Version>941</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets MtCook.Load(messierallsky4)
++1
+Scene messierallsky4.Visibility=90 [1]
+Control Text=Unload Crab Nebula
+Control Pause
+Scene messierallsky4.Visibility=0 [4]
++4
+Assets MtCook.Unload(messierallsky4)

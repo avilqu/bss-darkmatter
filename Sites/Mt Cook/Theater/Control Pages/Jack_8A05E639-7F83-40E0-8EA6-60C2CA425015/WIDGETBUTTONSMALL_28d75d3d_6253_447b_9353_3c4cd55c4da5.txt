@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Load Blank Media Viewer (Centered)</Text>
+  <Description />
+  <Created>06/21/17 12:27:48</Created>
+  <Modified>05/30/25 19:56:22</Modified>
+  <Version>285</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Control Text=Loading Viewer
+;Scene Camera.Yaw=-25 [3:1:3]
+;+1.5
+Assets Spacecraft.Load(DataPlaneVid)
++0.1
+Assets Spacecraft.Load(DataPlane)
++0.1
+Scene DataPlane.Azimuth=180
++0.1
+Scene DataPlane.Width=60
++0.1
++0.1
+Control Text=Viewer Ready! Select Media.
++4
+Control Text=Load Blank Media Viewer (Hidden)

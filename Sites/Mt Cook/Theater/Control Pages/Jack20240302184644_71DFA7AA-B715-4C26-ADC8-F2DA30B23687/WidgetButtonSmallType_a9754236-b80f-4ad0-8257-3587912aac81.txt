@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Ursa Major Art</Text>
+  <Description />
+  <Created>03/02/24 0:19:03</Created>
+  <Modified>03/02/24 18:42:29</Modified>
+  <Version>17</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Ursa Major Art)
++0.2
+Scene Ursa Major Art.Visibility=100 [2]
+Control Text=Unload Ursa Major Art
+Control Pause
+Scene Ursa Major Art.Visibility=0 [2]
++2
+;Assets Constellations.Unload(Ursa Major Art)

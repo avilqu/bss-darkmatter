@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Wolfmother </Text>
+  <Description />
+  <Created>02/19/19 21:34:48</Created>
+  <Modified>12/17/24 19:43:00</Modified>
+  <Version>465</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Mt Cook.Theater.Jack.Load(Wolfmother)
++2
+Scene Wolfmother.Play()
+Scene Wolfmother.Volume=100 [1]
+Scene Wolfmother.Looping=0
+Control Text="Unload Wolfmother"
+Control Pause
+Scene Wolfmother.Volume=0 [1]
+Scene Wolfmother.Stop()
++1
+Assets Mt Cook.Theater.Music.Unload(Wolfmother)

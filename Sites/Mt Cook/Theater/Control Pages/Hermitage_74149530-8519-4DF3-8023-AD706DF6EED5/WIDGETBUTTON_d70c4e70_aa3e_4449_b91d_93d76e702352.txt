@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Dome Grid</Text>
+  <Description />
+  <Created>02/02/16 16:43:08</Created>
+  <Modified>06/25/20 12:14:37</Modified>
+  <Version>121</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Calibration.Load(DomeGrid)
++1
+Scene DomeGrid.Visibility=100 [1]
+Control Text="Unload DomeGrid"
+Control Pause
+Scene DomeGrid.Visibility=0 [1]
++1
+Assets Calibration.Unload(DomeGrid)

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Diamond Crux Stick </Text>
+  <Description />
+  <Created>05/28/19 20:25:29</Created>
+  <Modified>02/03/24 2:37:31</Modified>
+  <Version>339</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Line and circle.Load(Stick diamond Crux)
+Assets Line and circle.Load(Stick diamond Crux1)
++1
+Scene Stick diamond Crux1.Visibility=100 [1]
+Scene Stick diamond Crux.Visibility=100 [1]
+Control Text=Remove Diamond Crux Stick
+Control Pause
+Scene Stick diamond Crux.Visibility=0 [1]
+Scene Stick diamond Crux1.Visibility=0 [1]
++1
+Assets Line and circle.Unload(Stick diamond Crux)
+Assets Line and circle.Unload(Stick diamond Crux1)

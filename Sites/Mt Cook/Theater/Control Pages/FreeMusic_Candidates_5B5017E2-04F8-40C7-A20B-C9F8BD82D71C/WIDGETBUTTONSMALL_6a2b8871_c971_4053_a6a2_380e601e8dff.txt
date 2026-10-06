@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Time Check</Text>
+  <Description />
+  <Created>05/29/18 13:11:29</Created>
+  <Modified>10/04/26 16:47:47</Modified>
+  <Version>582</Version>
+  <FriendlyName>TimeCheck</FriendlyName>
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+JS MusicTimeEngine.Execute(@"
+;//Define variables
+	var Music = DigitalSky.GetAssetInstance("MusicMedia");
+	var MusicTimeAttr = Music.GetPropertyInstance("Position");
+	var MusicTime = MusicTimeAttr.Value;
+	var MusicDurationAttr = Music.GetPropertyInstance("Duration");
+	var MusicDuration = MusicDurationAttr.Value;
+	var MusicNull = DigitalSky.GetAssetInstance("MusicNull");
+	var RemainingTime = MusicDuration-MusicTime;
+;//Reformat the current time for Min:Sec readout display
+	var TimePlus = Number(MusicTime)
+	var SeekTime = "1000000"+Number(TimePlus);
+	var MinSecRaw = SeekTime.slice (-7,-3);
+	var MinSec = MinSecRaw/60;
+	var MinSecFloor = Math.floor(MinSec);
+	var SecondsRaw = MinSec-MinSecFloor
+	var Seconds = Math.round(SecondsRaw*60);
+;//Ensure seconds are two digits
+if (Number(Seconds) < 10) {;
+		var Seconds  = "0" + Seconds;
+};
+	var MinSecClean = MinSecFloor + ":" + Seconds;
+;//Reformat the remaining time for Min:Sec readout display
+	var RemTimePlus = Number(RemainingTime)
+	var RemSeekTime = "1000000"+Number(RemTimePlus);
+	var RemMinSecRaw = RemSeekTime.slice (-7,-3);
+	var RemMinSec = RemMinSecRaw/60;
+	var RemMinSecFloor = Math.floor(RemMinSec);
+	var RemSecondsRaw = RemMinSec-RemMinSecFloor
+	var RemSeconds = Math.round(RemSecondsRaw*60);
+;//Ensure seconds are two digits
+if (Number(RemSeconds) < 10) {;
+		var RemSeconds  = "0" + RemSeconds;
+};
+	var RemMinSecClean = RemMinSecFloor + ":" + RemSeconds;
+;//Check for next song playback
+if (Number(RemainingTime) < 2000) {;
+		script = "Control NextSong.Run";
+		DigitalSky.SendScript(script);
+};
+;//Check if song is playing correctly, if not start playback
+if (Number(MusicTime) <= 0) {;
+		PlayScript = "Scene MusicMedia.Play()";
+		DigitalSky.SendScript(PlayScript);
+;//		MusicNull.SetProperty("Label.Text","Song Play Was Corrected",0);
+};
+;//Test Attributes
+;//		MusicNull.SetProperty("Label.Text",RemMinSecClean + "Testing?",0);
+		Remscript = "Control SongTimeLeft.Text=" + RemMinSecClean;
+		DigitalSky.SendScript(Remscript);
+		script = "Control CurrentTime.Text=" + MinSecClean;
+		DigitalSky.SendScript(script);
+@")
++0.1
+;Loop for timely repeat
+control TimeCheckLoop.run

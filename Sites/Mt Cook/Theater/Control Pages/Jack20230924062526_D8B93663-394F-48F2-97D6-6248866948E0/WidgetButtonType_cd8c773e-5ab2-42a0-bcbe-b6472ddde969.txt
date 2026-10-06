@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Ring Nebula</Text>
+  <Description />
+  <Created>02/08/19 2:01:16</Created>
+  <Modified>09/24/23 6:16:52</Modified>
+  <Version>675</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets MtCook.Load(messierallsky3)
++1
+Scene messierallsky3.Visibility=100 [3]
+Control Text=Unload Ring Nebula
+Control Pause
+Scene messierallsky3.Visibility=0 [3]
++4
+Assets MtCook.Unload(messierallsky3)

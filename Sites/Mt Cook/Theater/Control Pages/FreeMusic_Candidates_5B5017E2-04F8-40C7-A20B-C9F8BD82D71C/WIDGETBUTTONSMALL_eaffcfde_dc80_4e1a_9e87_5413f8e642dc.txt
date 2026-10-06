@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Pause Music</Text>
+  <Description>DataPlaneVid RTZ</Description>
+  <Created>06/21/17 13:44:30</Created>
+  <Modified>10/04/26 16:47:47</Modified>
+  <Version>782</Version>
+  <FriendlyName>PauseMusic</FriendlyName>
+  <Author>Mt Cook.Operator</Author>
+  <Keywords>DataPlaneVid</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene MusicMedia.Volume=0 [0.5:0.5:0.5]
++1.5
+Scene MusicMedia.Pause()
++0.1
+control StopTimeLoop.run
++0.1
+Control Text=Resume Playback
+Control Pause
+Scene MusicMedia.Play()
+control VolumeReturn.run
+;Scene MusicMedia.Volume=50 [0.5:0.5:0.5]
++0.1
+control TimeCheck.run
++1.5
+Control Text=Pause Media

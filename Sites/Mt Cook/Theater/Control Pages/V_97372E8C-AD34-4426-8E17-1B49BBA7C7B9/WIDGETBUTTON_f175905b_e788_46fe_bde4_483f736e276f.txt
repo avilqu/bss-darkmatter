@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Load Aurora</Text>
+  <Description />
+  <Created>07/28/25 22:41:51</Created>
+  <Modified>10/02/26 21:21:17</Modified>
+  <Version>49</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Aoraki.Load(southernLights1, southernLights2, northernLights1, northernLights2)
++1
+
+;// Set Altitude immediately
+Scene southernLights1.Altitude=0
+Scene southernLights1.Visibility=0
+Scene southernLights1.Activity=0.9
+Scene southernLights2.Altitude=0
+Scene southernLights2.Visibility=0
+Scene southernLights2.Activity=0.9
+Scene northernLights1.Altitude=0
+Scene northernLights1.Visibility=0
+Scene northernLights1.Activity=0.9
+Scene northernLights2.Altitude=0
+Scene northernLights2.Visibility=0
+Scene northernLights2.Activity=0.9
+
+;// Set starting parameters
+Scene southernLights1.ColorShift=1
+Scene southernLights2.ColorShift=1
+Scene northernLights1.ColorShift=1
+Scene northernLights2.ColorShift=1
++0.5
+Control animateAurora.run
+Control Text = "Remove Aurora?"
+Control Pause
+
+
+Scene southernLights1.Visibility=0 [3]
+
+
+Scene southernLights2.Visibility=0 [3]
+
+
+Scene northernLights1.Visibility=0 [3]
+
+Scene northernLights2.Visibility=0 [3]
+
++3
+Assets Aoraki.UnLoad(southernLights1, southernLights2, northernLights1, northernLights2)

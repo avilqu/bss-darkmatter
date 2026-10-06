@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>DigitalSky</Text>
+  <Description />
+  <Created>08/18/25 22:24:44</Created>
+  <Modified>09/24/26 22:24:31</Modified>
+  <Version>26</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+
+
+
+Scene Camera { Xpos=-247557827.322969  Ypos=-4958699251.26097  Zpos=-1325968131.2167 } [5]
+Scene Camera { Xrot=-115.980916223583  Yrot=-17.0491840684147  Zrot=22.2055026297924 } [5]

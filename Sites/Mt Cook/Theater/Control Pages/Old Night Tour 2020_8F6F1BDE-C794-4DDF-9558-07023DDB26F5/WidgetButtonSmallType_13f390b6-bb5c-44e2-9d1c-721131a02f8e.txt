@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Crux Art</Text>
+  <Description />
+  <Created>02/10/19 20:04:25</Created>
+  <Modified>05/17/20 15:16:44</Modified>
+  <Version>266</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Crux Art)
++0.2
+Scene Crux Art.Visibility=100 [2]
+Control Text=Unload Assets
+Control Pause
+Scene Crux Art.Visibility=0 [2]
++2
+Assets Constellations.Unload(Crux Art)

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Solar System Orbits OFF</Text>
+  <Description />
+  <Created>11/17/18 4:55:11</Created>
+  <Modified>01/09/24 3:12:06</Modified>
+  <Version>491</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene MercuryOrbit.Visibility=0 [2]
+Scene VenusOrbit.Visibility=0 [2]
+Scene EarthOrbit.Visibility=0 [2]
+Scene MoonOrbit.Visibility=0 [2]
+Scene MarsOrbit.Visibility=0 [2]
+Scene JupiterOrbit.Visibility=0 [2]
+Scene SaturnOrbit.Visibility=0 [2]
+Scene UranusOrbit.Visibility=0 [2]
+Scene NeptuneOrbit.Visibility=0 [2]
+Scene PlutoOrbit.Visibility=0 [2]

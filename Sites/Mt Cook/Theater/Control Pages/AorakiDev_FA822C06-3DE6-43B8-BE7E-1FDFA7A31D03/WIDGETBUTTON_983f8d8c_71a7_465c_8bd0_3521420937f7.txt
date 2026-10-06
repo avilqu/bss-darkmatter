@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Animate Aurora</Text>
+  <Description />
+  <Created>07/15/25 22:52:52</Created>
+  <Modified>09/24/26 22:24:31</Modified>
+  <Version>82</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+
+Scene southernLights1.Activity=1.1 [30]
+Scene southernLights1.Visibility=100 [3]
+Scene southernLights1.ColorShift=0.8 [10]
+Scene southernLights2.Activity=1.1 [30]
+Scene southernLights2.Visibility=100 [3]
+Scene southernLights2.ColorShift=0.8 [10]
+Scene northernLights1.Activity=1.1 [30]
+Scene northernLights1.Visibility=100 [3]
+Scene northernLights1.ColorShift=0.8 [10]
+Scene northernLights2.Activity=1.1 [30]
+Scene northernLights2.Visibility=100 [3]
+Scene northernLights2.ColorShift=0.8 [10]
++10
+Scene southernLights1.ColorShift=1 [10]
+Scene southernLights2.ColorShift=1 [10]
+Scene northernLights1.ColorShift=1 [10]
+Scene northernLights2.ColorShift=1 [10]
++10
+Scene southernLights1.ColorShift=0.8 [10]
+Scene southernLights2.ColorShift=0.8 [10]
+Scene northernLights1.ColorShift=0.8 [10]
+Scene northernLights2.ColorShift=0.8 [10]
++10
+Scene southernLights1.Activity=0.9 [30]
+Scene southernLights1.ColorShift=0.8 [10]
+Scene southernLights2.Activity=0.9 [30]
+Scene southernLights2.ColorShift=0.8 [10]
+Scene northernLights1.Activity=0.9 [30]
+Scene northernLights1.ColorShift=0.8 [10]
+Scene northernLights2.Activity=0.9 [30]
+Scene northernLights2.ColorShift=0.8 [10]
++10
+Scene southernLights1.ColorShift=1 [10]
+Scene southernLights2.ColorShift=1 [10]
+Scene northernLights1.ColorShift=1 [10]
+Scene northernLights2.ColorShift=1 [10]
++10
+Scene southernLights1.ColorShift=0.8 [10]
+Scene southernLights2.ColorShift=0.8 [10]
+Scene northernLights1.ColorShift=0.8 [10]
+Scene northernLights2.ColorShift=0.8 [10]
++10

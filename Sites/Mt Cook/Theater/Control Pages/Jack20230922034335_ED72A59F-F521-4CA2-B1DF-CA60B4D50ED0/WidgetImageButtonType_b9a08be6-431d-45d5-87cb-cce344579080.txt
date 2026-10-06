@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Sagittarius A</Text>
+  <Description />
+  <Created>02/04/23 2:44:30</Created>
+  <Modified>09/22/23 3:38:40</Modified>
+  <Version>168</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constel Pictures.Load(Sagittarius A)
++0.2
+Scene Sagittarius A.Visibility=100 [1]
++1.1
+Control Text="Fade down Sagittarius A"
+Control Pause
+Scene Sagittarius A.Visibility=0 [1]
++1.2
+Assets Constel Pictures.Unload(Sagittarius A)

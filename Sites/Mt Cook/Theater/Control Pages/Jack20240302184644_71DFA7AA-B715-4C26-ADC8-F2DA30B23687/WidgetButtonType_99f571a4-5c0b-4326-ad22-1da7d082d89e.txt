@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>RedCMB2</Text>
+  <Description />
+  <Created>05/18/23 23:42:48</Created>
+  <Modified>03/02/24 18:42:29</Modified>
+  <Version>184</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Jack.Load(RedCMB2)
++2
+Scene RedCMB2.Visibility=100 [3]
+Control Text=Unload RedCMB2
+Control Pause
+Scene RedCMB2.Visibility=0 [3]
++3
+Assets Jack.Unload(RedCMB2)

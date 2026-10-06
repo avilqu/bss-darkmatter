@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Cirvcle of Centaurus Omega </Text>
+  <Description />
+  <Created>10/03/19 22:15:25</Created>
+  <Modified>02/04/20 19:39:58</Modified>
+  <Version>33</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Fu.Load(yellow circle)
++0.5
+Scene yellow circle.Visibility=100 [1]
+Control Text=Unload Assets
+Control Pause
+Scene yellow circle.Visibility=0 [1]
++0.5
+Assets Fu.Unload(yellow circle)

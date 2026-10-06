@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Orion Art</Text>
+  <Description />
+  <Created>02/21/19 13:50:59</Created>
+  <Modified>05/17/20 15:16:44</Modified>
+  <Version>293</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Orion Art)
++0.2
+Scene Orion Art.Visibility=100 [0.5]
+Control Text=Unload Orion Art
+Control Pause
+Scene Orion Art.Visibility=0 [0.5]
++0.5
+Assets Constellations.Unload(Orion Art)

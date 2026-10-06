@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Projectors Off</Text>
+  <Description />
+  <Created>11/17/23 17:48:03</Created>
+  <Modified>09/06/26 11:06:35</Modified>
+  <Version>82</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Control Text="Confirm Power OFF?"
+control pause
+Spice SendCue(exec vproj poweroff jvc-1 ab)

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Regulus</Text>
+  <Description />
+  <Created>09/28/15 11:06:31</Created>
+  <Modified>12/17/24 19:43:00</Modified>
+  <Version>225</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Regulus Circle)
+Assets Constellations.Load(Regulus Leo)
++0.1
+Scene Regulus Leo.DomeAlign=On
+Scene Regulus Circle.Scale=0
+Scene Regulus Circle.Visibility=100 
++0.1
+Scene Regulus Circle.Scale=1.5 [0.3]
++0.3
+Scene Regulus Leo.Visibility=100 [0.5]
+Scene Regulus Leo.Text.String="\n Regulus"
+Scene Regulus Leo.Text.LineSpacing=1.5
+Scene Regulus Leo.FontHeight=1.5
++0.5
+Control Text="Fade down Regulus"
+Control Pause
+Scene Regulus Circle.Scale=0 [0.5]
+Scene Regulus Circle.Visibility=0 [0.5]
+Scene Regulus Leo.Visibility=0 [0.5]
++0.6
+Assets Constellations.Unload(Regulus Circle)
+Assets Constellations.UnLoad(Regulus Leo)

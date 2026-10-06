@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMButtonPageConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>test</Name>
+  <Prefix>9DF2CCC0-655D-420B-8A49-28DCFAC0F5F5</Prefix>
+  <SUGW>0606</SUGW>
+  <KeyWords />
+  <Group />
+  <Type>ControlPage</Type>
+  <MatrixTransformX>0</MatrixTransformX>
+  <MatrixTransformY>0</MatrixTransformY>
+  <Widgets />
+</DMButtonPageConfiguration>

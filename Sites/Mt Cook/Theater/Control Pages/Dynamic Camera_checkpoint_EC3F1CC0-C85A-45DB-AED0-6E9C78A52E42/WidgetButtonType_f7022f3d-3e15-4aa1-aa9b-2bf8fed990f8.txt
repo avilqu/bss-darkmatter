@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Land on Current</Text>
+  <Description />
+  <Created>06/26/25 19:21:12</Created>
+  <Modified>06/26/25 21:56:50</Modified>
+  <Version>14</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+JS AddEngine(dCamLandHere)
++1
+JS dCamLandHere.Execute(@"
+
+	;// Get Reference to target memory object's parent:
+	var tarMem = DigitalSky.GetAssetInstance("targetMemory01");
+	var tarMemParentIns = tarMem.GetPropertyInstance("Parent");
+	var tarMemParent = tarMemParentIns.Value;
+	;// Get diameter of parent's (currently focused object) body:
+	DigitalSky.SendScript("Scene Camera.FlyTo(" + tarMemParent + ", Altitude=500, Orient=SouthAndUp) [6:6:6])");
+
+@")
+
+JS RemoveEngine(dCamLandHere)
++0.5
+
+
+

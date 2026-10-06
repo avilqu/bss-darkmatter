@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Orion Horse Head(ALL SKY)</Text>
+  <Description />
+  <Created>06/11/19 22:40:24</Created>
+  <Modified>02/04/20 19:39:58</Modified>
+  <Version>83</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Shaun.Load(Orion Horse Head)
++1
+Scene Orion Horse Head.Visibility=100 [1]
+Control Text=Unload Assets
+Control Pause
+Scene Orion Horse Head.Visibility=0 [1]
++1
+Assets Shaun.Unload(Orion Horse Head)

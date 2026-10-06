@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Scene</Text>
+  <Description />
+  <Created>09/01/17 17:09:06</Created>
+  <Modified>05/17/20 15:16:44</Modified>
+  <Version>303</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>100</InitialValue>
+  <AssetTracking>
+    <TrackingAssetProperty AssetName="Scene" AssetID="" PropertyName="Visibility" AssetType="Scene" />
+  </AssetTracking>
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Scene.Visibility={f} [1]

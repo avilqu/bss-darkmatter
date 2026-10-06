@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>SpaceWars</Text>
+  <Description />
+  <Created>02/19/19 21:34:48</Created>
+  <Modified>09/23/23 6:10:30</Modified>
+  <Version>394</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Jack.Load(Southern-Ring-Nebula-NGC-3132)
+Assets Mt Cook.Theater.Jack.Load(SpaceWars)
++2
+Scene SpaceWars.Seek=00:00:00:00
+Scene SpaceWars.Play()
+Scene SpaceWars.Volume=100 [2]
++36
+Scene MercuryOrbit.Visibility=80 [2]
+Scene VenusOrbit.Visibility=80 [2]
+Scene EarthOrbit.Visibility=80 [2]
+Scene MarsOrbit.Visibility=80 [2]
+Scene JupiterOrbit.Visibility=80 [2]
+Scene SaturnOrbit.Visibility=80 [2]
+Control Text="Unload SpaceWars"
+Control Pause
+Scene SpaceWars.Volume=0 [3]
++3
+Scene SpaceWars.Stop()
++1
+Assets Mt Cook.Theater.Jack.Unload(SpaceWars)

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Mt Cook Pukaki 2</Text>
+  <Description>Camera State on Earth</Description>
+  <Created>09/09/26 0:27:38</Created>
+  <Modified>10/05/26 17:01:10</Modified>
+  <Version>25</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords>Camera,Camera</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Camera.ConvertInPlace(Earth, Position Rotate)
++0.1
+Scene Camera { Xpos=-4541911.9664583  Ypos=789293.810828139  Zpos=-4394192.32077375  Xrot=176.876672325919  Yrot=-86.338074812461  Zrot=88.4710774723909 }[10:20:10]
++5
+Scene GISEarthBing.HDRScale=2.1[3:5:3]

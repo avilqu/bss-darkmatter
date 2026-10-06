@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Remove Pod Bay doors... </Text>
+  <Description />
+  <Created>05/30/25 20:48:53</Created>
+  <Modified>10/02/26 21:21:17</Modified>
+  <Version>64</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Development.Load(pod1, pod2)
+Control Text="Loading Pod Bay Doors..."
+
+Scene pod1 { Xrot=180  Yrot=90  Zrot=90 }
+Scene pod2 { Xrot=0  Yrot=-90  Zrot=0 }
++0.5
+Control Text="Open Pod Bay Doors..."
+Control Pause
+Scene pod1 { Xrot=180  Yrot=0  Zrot=90 }[6]
+Scene pod2 { Xrot=0  Yrot=-180  Zrot=0 }[6]
+
+Control Text="Close pod bay doors?"
+Control Pause
+
+Scene pod1 { Xrot=180  Yrot=90  Zrot=90 } [6]
+Scene pod2 { Xrot=0  Yrot=-90  Zrot=0 } [6]
+
+Control Text="Remove Pod Bay doors..."
+Control Pause
+
+Assets Development.UnLoad(pod1, pod2)

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>mySun Label MaxSize</Text>
+  <Description />
+  <Created>05/30/25 19:56:22</Created>
+  <Modified>05/30/25 19:56:22</Modified>
+  <Version>2</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>200</MaxValue>
+  <InitialValue>11</InitialValue>
+  <AssetTracking>
+    <TrackingAssetProperty AssetName="mySun" AssetID="" PropertyName="Label.MaxSize" AssetType="Sun" />
+  </AssetTracking>
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene mySun.Label.MaxSize={f} [0.1]

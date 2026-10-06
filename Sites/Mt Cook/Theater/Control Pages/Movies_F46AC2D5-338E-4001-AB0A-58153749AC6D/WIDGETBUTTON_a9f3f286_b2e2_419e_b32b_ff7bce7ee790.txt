@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Waka</Text>
+  <Description />
+  <Created>03/14/23 22:59:08</Created>
+  <Modified>06/07/23 20:08:32</Modified>
+  <Version>8</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>How Waka_DS1,Media,</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Mt Cook.Theater.Skyvision.Load(How Waka_DS1)
++4
+Scene How Waka_DS1.Play()
++1
+Scene Video.Source="Media:How Waka_DS1"
+Scene Camera.Visibility=0 [1]
+Scene Video.Visibility=99 [1]
+Control Text="Unload How Waka"
+Control Pause
+Scene Camera.Visibility=100 [1]
+Scene Video.Visibility=0 [1]
+Scene How Waka_DS1.Volume=0 [1]
++1
+Assets Mt Cook.Theater.Skyvision.Unload(How Waka_DS1)

@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>88 Art</Text>
+  <Description />
+  <Created>02/10/19 20:46:39</Created>
+  <Modified>02/11/24 3:05:39</Modified>
+  <Version>481</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Control Text="Loading ....."
+Assets Constellations.Load(Andromeda Art)
+Assets Constellations.Load(Aquila Art)
+Assets Constellations.Load(Auriga Art)
+Assets Constellations.Load(Boötes Art)
+Assets Constellations.Load(Camelopardalis Art)
+Assets Constellations.Load(Canes Venatici Art)
+Assets Constellations.Load(Canis Minor Art)
+Assets Constellations.Load(Cassiopeia Art)
+Assets Constellations.Load(Cepheus Art)
+Assets Constellations.Load(Coma Berenices Art)
+Assets Constellations.Load(Corona Borealis Art)
+Assets Constellations.Load(Cygnus Art)
+Assets Constellations.Load(Delphinus Art)
+Assets Constellations.Load(Draco Art)
+Assets Constellations.Load(Equuleus Art)
+Assets Constellations.Load(Hercules Art)
+Assets Constellations.Load(Lacerta Art)
+Assets Constellations.Load(Leo Minor Art)
+Assets Constellations.Load(Lynx Art)
+Assets Constellations.Load(Lyra Art)
+Assets Constellations.Load(Monoceros Art)
+Assets Constellations.Load(Ophiuchus Art)
+Assets Constellations.Load(Orion Art)
+Assets Constellations.Load(Pegasus Art)
+Assets Constellations.Load(Perseus Art)
+Assets Constellations.Load(Sagitta Art)
+Assets Constellations.Load(Serpens Art)
+Assets Constellations.Load(Triangulum Art)
+Assets Constellations.Load(Ursa Major Art)
+Assets Constellations.Load(Ursa Minor Art)
+Assets Constellations.Load(Vulpecula Art)
+Assets Constellations.Load(Aquarius Art)
+Assets Constellations.Load(Aries Art)
+Assets Constellations.Load(Cancer Art)
+Assets Constellations.Load(Capricornus Art)
+Assets Constellations.Load(Gemini Art)
+Assets Constellations.Load(Leo Art)
+Assets Constellations.Load(Pisces Art)
+Assets Constellations.Load(Libra Art)
+Assets Constellations.Load(Sagittarius Art)
+Assets Constellations.Load(Scorpius Art)
+Assets Constellations.Load(Taurus Art)
+Assets Constellations.Load(Virgo Art)
+Assets Constellations.Load(Antlia Art)
+Assets Constellations.Load(Apus Art)
+Assets Constellations.Load(Ara Art)
+Assets Constellations.Load(Caelum Art)
+Assets Constellations.Load(Canis Major Art)
+Assets Constellations.Load(Carina Art)
+Assets Constellations.Load(Centaurus Art)
+Assets Constellations.Load(Cetus Art)
+Assets Constellations.Load(Chamaeleon Art)
+Assets Constellations.Load(Circinus Art)
+Assets Constellations.Load(Columba Art)
+Assets Constellations.Load(Corona Australis Art)
+Assets Constellations.Load(Corvus Art)
+Assets Constellations.Load(Crater Art)
+Assets Constellations.Load(Crux Art)
+Assets Constellations.Load(Dorado Art)
+Assets Constellations.Load(Eridanus Art)
+Assets Constellations.Load(Fornax Art)
+Assets Constellations.Load(Grus Art)
+Assets Constellations.Load(Horologium Art)
+Assets Constellations.Load(Hydra Art)
+Assets Constellations.Load(Hydrus Art)
+Assets Constellations.Load(Indus Art)
+Assets Constellations.Load(Lepus Art)
+Assets Constellations.Load(Lupus Art)
+Assets Constellations.Load(Mensa Art)
+Assets Constellations.Load(Microscopium Art)
+Assets Constellations.Load(Musca Art)
+Assets Constellations.Load(Norma Art)
+Assets Constellations.Load(Octans Art)
+Assets Constellations.Load(Pavo Art)
+Assets Constellations.Load(Phoenix Art)
+Assets Constellations.Load(Pictor Art)
+Assets Constellations.Load(Piscis Austrinus Art)
+Assets Constellations.Load(Puppis Art)
+Assets Constellations.Load(Pyxis Art)
+Assets Constellations.Load(Reticulum Art)
+Assets Constellations.Load(Sculptor Art)
+Assets Constellations.Load(Scutum Art)
+Assets Constellations.Load(Sextans Art)
+Assets Constellations.Load(Telescopium Art)
+Assets Constellations.Load(Triangulum Australe Art)
+Assets Constellations.Load(Tucana Art)
+Assets Constellations.Load(Vela Art)
+Assets Constellations.Load(Volans Art)
++2
+Control Text="88 colour ON"
+Control Pause
+Scene Andromeda Art.Visibility=100 [2]
+Scene Aquila Art.Visibility=100 [2]
+Scene Auriga Art.Visibility=100 [2]
+Scene Boötes Art.Visibility=100 [2]
+Scene Camelopardalis Art.Visibility=100 [2]
+Scene Canes Venatici Art.Visibility=100 [2]
+Scene Canis Minor Art.Visibility=100 [2]
+Scene Cassiopeia Art.Visibility=100 [2]
+Scene Cepheus Art.Visibility=100 [2]
+Scene Coma Berenices Art.Visibility=100 [2]
+Scene Corona Borealis Art.Visibility=100 [2]
+Scene Cygnus Art.Visibility=100 [2]
+Scene Delphinus Art.Visibility=100 [2]
+Scene Draco Art.Visibility=100 [2]
+Scene Equuleus Art.Visibility=100 [2]
+Scene Hercules Art.Visibility=100 [2]
+Scene Lacerta Art.Visibility=100 [2]
+Scene Leo Minor Art.Visibility=100 [2]
+Scene Lynx Art.Visibility=100 [2]
+Scene Lyra Art.Visibility=100 [2]
+Scene Monoceros Art.Visibility=100 [2]
+Scene Ophiuchus Art.Visibility=100 [2]
+Scene Orion Art.Visibility=100 [2]
+Scene Pegasus Art.Visibility=100 [2]
+Scene Perseus Art.Visibility=100 [2]
+Scene Sagitta Art.Visibility=100 [2]
+Scene Serpens Art.Visibility=100 [2]
+Scene Triangulum Art.Visibility=100 [2]
+Scene Ursa Major Art.Visibility=100 [2]
+Scene Ursa Minor Art.Visibility=100 [2]
+Scene Vulpecula Art.Visibility=100 [2]
+Scene Aquarius Art.Visibility=100 [2]
+Scene Aries Art.Visibility=100 [2]
+Scene Cancer Art.Visibility=100 [2]
+Scene Capricornus Art.Visibility=100 [2]
+Scene  Gemini Art.Visibility=100 [2]
+Scene Leo Art.Visibility=100 [2]
+Scene Pisces Art.Visibility=100 [2]
+Scene Libra Art.Visibility=100 [2]
+Scene Sagittarius Art.Visibility=100 [2]
+Scene Scorpius Art.Visibility=100 [2]
+Scene Taurus Art.Visibility=100 [2]
+Scene Virgo Art.Visibility=100 [2]
+Scene Antlia Art.Visibility=100 [2]
+Scene Apus Art.Visibility=100 [2]
+Scene Ara Art.Visibility=100 [2]
+Scene Caelum Art.Visibility=100 [2]
+Scene Canis Major Art.Visibility=100 [2]
+Scene Carina Art.Visibility=100 [2]
+Scene Centaurus Art.Visibility=100 [2]
+Scene Cetus Art.Visibility=100 [2]
+Scene Chamaeleon Art.Visibility=100 [2]
+Scene Circinus Art.Visibility=100 [2]
+Scene Columba Art.Visibility=100 [2]
+Scene Corona Australis Art.Visibility=100 [2]
+Scene Corvus Art.Visibility=100 [2]
+Scene Crater Art.Visibility=100 [2]
+Scene Crux Art.Visibility=100 [2]
+Scene Dorado Art.Visibility=100 [2]
+Scene Eridanus Art.Visibility=100 [2]
+Scene Fornax Art.Visibility=100 [2]
+Scene Grus Art.Visibility=100 [2]
+Scene Horologium Art.Visibility=100 [2]
+Scene Hydra Art.Visibility=100 [2]
+Scene Hydrus Art.Visibility=100 [2]
+Scene Indus Art.Visibility=100 [2]
+Scene Lepus Art.Visibility=100 [2]
+Scene Lupus Art.Visibility=100 [2]
+Scene Mensa Art.Visibility=100 [2]
+Scene Microscopium Art.Visibility=100 [2]
+Scene Musca Art.Visibility=100 [2]
+Scene Norma Art.Visibility=100 [2]
+Scene Octans Art.Visibility=100 [2]
+Scene Pavo Art.Visibility=100 [2]
+Scene Phoenix Art.Visibility=100 [2]
+Scene Pictor Art.Visibility=100 [2]
+Scene Piscis Austrinus Art.Visibility=100 [2]
+Scene Puppis Art.Visibility=100 [2]
+Scene Pyxis Art.Visibility=100 [2]
+Scene Reticulum Art.Visibility=100 [2]
+Scene Sculptor Art.Visibility=100 [2]
+Scene Scutum Art.Visibility=100 [2]
+Scene Sextans Art.Visibility=100 [2]
+Scene Telescopium Art.Visibility=100 [2]
+Scene Triangulum Australe Art.Visibility=100 [2]
+Scene Tucana Art.Visibility=100 [2]
+Scene Vela Art.Visibility=100 [2]
+Scene Volans Art.Visibility=100 [2]
++2
+Control Text="88 Colour OFF"
+Control Pause
+Scene Andromeda Art.Visibility=0 [2]
+Scene Aquila Art.Visibility=0 [2]
+Scene Auriga Art.Visibility=0 [2]
+Scene Boötes Art.Visibility=0 [2]
+Scene Camelopardalis Art.Visibility=0 [2]
+Scene Canes Venatici Art.Visibility=0 [2]
+Scene Canis Minor Art.Visibility=0 [2]
+Scene Cassiopeia Art.Visibility=0 [2]
+Scene Cepheus Art.Visibility=0 [2]
+Scene Coma Berenices Art.Visibility=0 [2]
+Scene Corona Borealis Art.Visibility=0 [2]
+Scene Cygnus Art.Visibility=0 [2]
+Scene Delphinus Art.Visibility=0 [2]
+Scene Draco Art.Visibility=0 [2]
+Scene Equuleus Art.Visibility=0 [2]
+Scene Hercules Art.Visibility=0 [2]
+Scene Lacerta Art.Visibility=0 [2]
+Scene Leo Minor Art.Visibility=0 [2]
+Scene Lynx Art.Visibility=0 [2]
+Scene Lyra Art.Visibility=0 [2]
+Scene Monoceros Art.Visibility=0 [2]
+Scene Ophiuchus Art.Visibility=0 [2]
+Scene Orion Art.Visibility=0 [2]
+Scene Pegasus Art.Visibility=0 [2]
+Scene Perseus Art.Visibility=0 [2]
+Scene Sagitta Art.Visibility=0 [2]
+Scene Serpens Art.Visibility=0 [2]
+Scene Triangulum Art.Visibility=0 [2]
+Scene Ursa Major Art.Visibility=0 [2]
+Scene Ursa Minor Art.Visibility=0 [2]
+Scene Vulpecula Art.Visibility=0 [2]
+Scene Aquarius Art.Visibility=0 [2]
+Scene Aries Art.Visibility=0 [2]
+Scene Cancer Art.Visibility=0 [2]
+Scene Capricornus Art.Visibility=0 [2]
+Scene  Gemini Art.Visibility=0 [2]
+Scene Leo Art.Visibility=0 [2]
+Scene Pisces Art.Visibility=0 [2]
+Scene Libra Art.Visibility=0 [2]
+Scene Sagittarius Art.Visibility=0 [2]
+Scene Scorpius Art.Visibility=0 [2]
+Scene Taurus Art.Visibility=0 [2]
+Scene Virgo Art.Visibility=0 [2]
+Scene Antlia Art.Visibility=0 [2]
+Scene Apus Art.Visibility=0 [2]
+Scene Ara Art.Visibility=0 [2]
+Scene Caelum Art.Visibility=0 [2]
+Scene Canis Major Art.Visibility=0 [2]
+Scene Carina Art.Visibility=0 [2]
+Scene Centaurus Art.Visibility=0 [2]
+Scene Cetus Art.Visibility=0 [2]
+Scene Chamaeleon Art.Visibility=0 [2]
+Scene Circinus Art.Visibility=0 [2]
+Scene Columba Art.Visibility=0 [2]
+Scene Corona Australis Art.Visibility=0 [2]
+Scene Corvus Art.Visibility=0 [2]
+Scene Crater Art.Visibility=0 [2]
+Scene Crux Art.Visibility=0 [2]
+Scene Dorado Art.Visibility=0 [2]
+Scene Eridanus Art.Visibility=0 [2]
+Scene Fornax Art.Visibility=0 [2]
+Scene Grus Art.Visibility=0 [2]
+Scene Horologium Art.Visibility=0 [2]
+Scene Hydra Art.Visibility=0 [2]
+Scene Hydrus Art.Visibility=0 [2]
+Scene Indus Art.Visibility=0 [2]
+Scene Lepus Art.Visibility=0 [2]
+Scene Lupus Art.Visibility=0 [2]
+Scene Mensa Art.Visibility=0 [2]
+Scene Microscopium Art.Visibility=0 [2]
+Scene Musca Art.Visibility=0 [2]
+Scene Norma Art.Visibility=0 [2]
+Scene Octans Art.Visibility=0 [2]
+Scene Pavo Art.Visibility=0 [2]
+Scene Phoenix Art.Visibility=0 [2]
+Scene Pictor Art.Visibility=0 [2]
+Scene Piscis Austrinus Art.Visibility=0 [2]
+Scene Puppis Art.Visibility=0 [2]
+Scene Pyxis Art.Visibility=0 [2]
+Scene Reticulum Art.Visibility=0 [2]
+Scene Sculptor Art.Visibility=0 [2]
+Scene Scutum Art.Visibility=0 [2]
+Scene Sextans Art.Visibility=0 [2]
+Scene Telescopium Art.Visibility=0 [2]
+Scene Triangulum Australe Art.Visibility=0 [2]
+Scene Tucana Art.Visibility=0 [2]
+Scene Vela Art.Visibility=0 [2]
+Scene Volans Art.Visibility=0 [2]
++2.2
+Assets Constellations.Unload(Andromeda Art)
+Assets Constellations.Unload(Aquila Art)
+Assets Constellations.Unload(Auriga Art)
+Assets Constellations.Unload(Boötes Art)
+Assets Constellations.Unload(Camelopardalis Art)
+Assets Constellations.Unload(Canes Venatici Art)
+Assets Constellations.Unload(Canis Minor Art)
+Assets Constellations.Unload(Cassiopeia Art)
+Assets Constellations.Unload(Cepheus Art)
+Assets Constellations.Unload(Coma Berenices Art)
+Assets Constellations.Unload(Corona Borealis Art)
+Assets Constellations.Unload(Cygnus Art)
+Assets Constellations.Unload(Delphinus Art)
+Assets Constellations.Unload(Draco Art)
+Assets Constellations.Unload(Equuleus Art)
+Assets Constellations.Unload(Hercules Art)
+Assets Constellations.Unload(Lacerta Art)
+Assets Constellations.Unload(Leo Minor Art)
+Assets Constellations.Unload(Lynx Art)
+Assets Constellations.Unload(Lyra Art)
+Assets Constellations.Unload(Monoceros Art)
+Assets Constellations.Unload(Ophiuchus Art)
+Assets Constellations.Unload(Orion Art)
+Assets Constellations.Unload(Pegasus Art)
+Assets Constellations.Unload(Perseus Art)
+Assets Constellations.Unload(Sagitta Art)
+Assets Constellations.Unload(Serpens Art)
+Assets Constellations.Unload(Triangulum Art)
+Assets Constellations.Unload(Ursa Major Art)
+Assets Constellations.Unload(Ursa Minor Art)
+Assets Constellations.Unload(Vulpecula Art)
+Assets Constellations.Unload(Aquarius Art)
+Assets Constellations.Unload(Aries Art)
+Assets Constellations.Unload(Cancer Art)
+Assets Constellations.Unload(Capricornus Art)
+Assets Constellations.Unload(Gemini Art)
+Assets Constellations.Unload(Leo Art)
+Assets Constellations.Unload(Pisces Art)
+Assets Constellations.Unload(Libra Art)
+Assets Constellations.Unload(Sagittarius Art)
+Assets Constellations.Unload(Scorpius Art)
+Assets Constellations.Unload(Taurus Art)
+Assets Constellations.Unload(Virgo Art)
+Assets Constellations.Unload(Antlia Art)
+Assets Constellations.Unload(Apus Art)
+Assets Constellations.Unload(Ara Art)
+Assets Constellations.Unload(Caelum Art)
+Assets Constellations.Unload(Canis Major Art)
+Assets Constellations.Unload(Carina Art)
+Assets Constellations.Unload(Centaurus Art)
+Assets Constellations.Unload(Cetus Art)
+Assets Constellations.Unload(Chamaeleon Art)
+Assets Constellations.Unload(Circinus Art)
+Assets Constellations.Unload(Columba Art)
+Assets Constellations.Unload(Corona Australis Art)
+Assets Constellations.Unload(Corvus Art)
+Assets Constellations.Unload(Crater Art)
+Assets Constellations.Unload(Crux Art)
+Assets Constellations.Unload(Dorado Art)
+Assets Constellations.Unload(Eridanus Art)
+Assets Constellations.Unload(Fornax Art)
+Assets Constellations.Unload(Grus Art)
+Assets Constellations.Unload(Horologium Art)
+Assets Constellations.Unload(Hydra Art)
+Assets Constellations.Unload(Hydrus Art)

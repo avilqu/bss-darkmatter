@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>BreakItTest</Text>
+  <Description />
+  <Created>12/04/18 11:05:19</Created>
+  <Modified>10/04/26 16:47:47</Modified>
+  <Version>346</Version>
+  <FriendlyName>BreakTest</FriendlyName>
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Sky-Skan.Public.Tutorial 1 - DM Basics.Load(MusicMedia)
++0.1
+Assets Tutorial 1 - DM Basics.Load(MusicText) 
++0.1 
+Assets Tutorial 1 - DM Basics.Load(MusicNull)
++0.5
+Scene MusicMedia.MediaFile="<ContentPath>\Core\Audio\Music\FreeMusic\ShortTest_1.mp3"
++1.5
+Scene MusicMedia.Play()
++0.1
+;Set songNum value
+Scene MusicNull {Ypos=67}
++0.1
+control MusicInfo.Text = "Test-1"
++0.1
+control ShowText.run
+;Run time commands
+control StartTimeCheck.run
++4
+Scene MusicMedia.Pause()
++0.1
+Scene MusicMedia.RTZ()
++0.1
+Scene MusicMedia.MediaFile="<ContentPath>\Core\Audio\Music\FreeMusic\ShortTest_2.mp3"
++1.5
+control MusicInfo.Text = "Test-2"
++0.1
+Scene MusicMedia.Play()
++0.1
+control StartTimeCheck.run
++4
+Scene MusicMedia.Pause()
++0.1
+Scene MusicMedia.RTZ()
++0.1
+Scene MusicMedia.MediaFile="<ContentPath>\Core\Audio\Music\FreeMusic\ShortTest_3.mp3"
++1.5
+control MusicInfo.Text = "Test-3"
++0.1
+Scene MusicMedia.Play()
++0.1
+control StartTimeCheck.run
++4
+Scene MusicMedia.Pause()
++0.1
+Scene MusicMedia.RTZ()
++0.1
+Scene MusicMedia.MediaFile="<ContentPath>\Core\Audio\Music\FreeMusic\ShortTest_4.mp3"
++1.5
+control MusicInfo.Text = "Test-4"
++0.1
+Scene MusicMedia.Play()
++0.1
+control StartTimeCheck.run
++4
+control BreakLoop.run
+;--Credits--
+;Sourced from dig.ccMixter.org
+;Made by Alex Beroza
+;License - CC BY 3.0
+;http://dig.ccmixter.org/files/AlexBeroza/43098

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Earth Clouds OFF</Text>
+  <Description />
+  <Created>02/24/16 18:23:01</Created>
+  <Modified>03/15/23 19:40:56</Modified>
+  <Version>221</Version>
+  <FriendlyName>CloudsButton</FriendlyName>
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Earth.Cloud.Visibility=0 [2]
+Control Text=Clouds ON
+Control Pause
+Scene Earth.Cloud.Visibility=100 [2]

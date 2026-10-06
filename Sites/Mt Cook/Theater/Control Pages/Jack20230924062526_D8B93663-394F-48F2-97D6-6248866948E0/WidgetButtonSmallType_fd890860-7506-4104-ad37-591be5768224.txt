@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Fish Constellations</Text>
+  <Description />
+  <Created>02/14/19 1:45:30</Created>
+  <Modified>09/24/23 6:16:52</Modified>
+  <Version>240</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>Big Bang,Media</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Dorado Art)
+Assets Constellations.Load(Piscis Austrinus Art)
+Assets Constellations.Load(Volans Art)
++0.2
+Scene Volans Art.Visibility=100 [2]
+Scene Piscis Austrinus Art.Visibility=100 [2]
+Scene Dorado Art.Visibility=100 [2]
+Control Text=Unload Assets
+Control Pause
+Scene Dorado Art.Visibility=0 [2]
+Scene Piscis Austrinus Art.Visibility=0 [2]
+Scene Volans Art.Visibility=0 [2]
++2
+Assets Constellations.Unload(Volans Art)
+Assets Constellations.Unload(Piscis Austrinus Art)
+Assets Constellations.Unload(Dorado Art)

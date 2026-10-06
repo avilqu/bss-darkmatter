@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Galilean Moon Orbits</Text>
+  <Description>Fades up Pluto's orbit</Description>
+  <Created>11/17/18 4:55:11</Created>
+  <Modified>09/16/23 23:45:47</Modified>
+  <Version>220</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>Pluto Orbit PlutoO</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene CallistoOrbit.Visibility=80 [2]
+Scene EuropaOrbit.Visibility=80 [2]
+Scene GanymedeOrbit.Visibility=80 [2]
+Scene IoOrbit.Visibility=80 [2]
+Control Text="Fade moon Orbit"
+Control Pause
+	
+Scene AdrasteaOrbit.Visibility=0 [2]
+Scene AmaltheaOrbit.Visibility=0 [2]
+Scene AnankeOrbit.Visibility=0 [2]
+Scene CallistoOrbit.Visibility=0 [2]
+Scene CarmeOrbit.Visibility=0 [2]
+Scene CallistoOrbit.Visibility=0 [2]
+Scene ElaraOrbit.Visibility=0 [2]
+Scene EuropaOrbit.Visibility=0 [2]
+Scene GanymedeOrbit.Visibility=0 [2]
+Scene HimaliaOrbit.Visibility=0 [2]
+Scene IoOrbit.Visibility=0 [2]
+Scene LedaOrbit.Visibility=0 [2]
+Scene LysitheaOrbit.Visibility=0 [2]
+Scene MetisOrbit.Visibility=0 [2]
+Scene PasiphaeOrbit.Visibility=0 [2]
+Scene SinopeOrbit.Visibility=0 [2]
+Scene ThebeOrbit.Visibility=0 [2]

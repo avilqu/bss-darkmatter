@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Go to moon</Text>
+  <Description />
+  <Created>02/08/19 19:18:57</Created>
+  <Modified>05/17/20 15:16:44</Modified>
+  <Version>378</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets MtCook.Load(MoonPano)
++0.5
+; Go to the Moon
+Control Text="Going to Moon..."
+Scene Camera.FlyTo(Moon, Altitude=10000000, Orient=SouthAndDown) [8:6:8]
++22
+Control Text="Land on Moon"
+Control Pause
+; Land on moon part
+Scene Camera.FlyTo(Moon, Altitude=300, Orient=SouthAndUp) [6:6:6]
+Scene Camera.SS.Elevation=90 [1:5:1]
++16
+; Bring Pano up
+Scene MoonPano.Visibility=100
+Scene MoonPano.Elevation=-35
++2
+Scene Moon Landing Quote.Play()
+Scene myMedia.Looping=Off
+Scene MoonPano.Elevation=0 [3]
+Control Text="Lift off Moon"
+Control Pause
++0.5
+Scene MoonPano.Elevation=-35 [2]
++2
+Scene Camera.FlyTo(Moon, Altitude=10000000, Orient=SouthAndDown) [6:3:6]
+Scene Camera.SS.Elevation=45 [1:5:1]
++15
+Assets MtCook.Unload(MoonPano)

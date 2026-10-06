@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Volume Return</Text>
+  <Description />
+  <Created>05/29/18 13:11:29</Created>
+  <Modified>10/04/26 16:47:47</Modified>
+  <Version>477</Version>
+  <FriendlyName>VolumeReturn</FriendlyName>
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+JS AddEngine(VolumeEngine)
++0.1
+JS VolumeEngine.Execute(@"
+;//Define variables
+	var MusicNull = DigitalSky.GetAssetInstance("MusicNull");
+	var MusicVolAttr = MusicNull.GetPropertyInstance("Visibility");
+	var MusicVol = MusicVolAttr.Value;
+	var MusicMedia = DigitalSky.GetAssetInstance("MusicMedia");
+;//Here values are defined for mathematics
+	var transitionSpeedTime = 0.5;
+	var transitionSpeed = new Transition(transitionSpeedTime,transitionSpeedTime,transitionSpeedTime);
+;//Apply volume over time
+	MusicMedia.SetProperty("Volume",MusicVol,transitionSpeed);
+;//	MusicNull.SetProperty("Label.Text",MusicVol,0);
+@")
++0.1
+JS RemoveEngine(VolumeEngine)

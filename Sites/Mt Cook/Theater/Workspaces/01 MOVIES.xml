@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMLayoutConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DockLayout>77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48TXlEb2NrQ29udHJvbD48RG9jdW1lbnRIb3N0PjxSYWRTcGxpdENvbnRhaW5lcj48SXRlbXM+PFJhZFBhbmVHcm91cCBTcGxpdHRlckNoYW5nZT0iNzY4LjIwODcwMDg0OTk2NCIgU2VsZWN0ZWRJbmRleD0iLTEiPjxJdGVtcyAvPjwvUmFkUGFuZUdyb3VwPjxSYWRTcGxpdENvbnRhaW5lciBSZWxhdGl2ZVdpZHRoPSIxMDAiIFJlbGF0aXZlSGVpZ2h0PSIxMDAiIElzQXV0b0dlbmVyYXRlZD0iVHJ1ZSIgT3JpZW50YXRpb249IlZlcnRpY2FsIj48SXRlbXM+PFJhZFBhbmVHcm91cCBSZWxhdGl2ZVdpZHRoPSIxMDAiIFJlbGF0aXZlSGVpZ2h0PSIxMDAiIElzQXV0b0dlbmVyYXRlZD0iVHJ1ZSIgU3BsaXR0ZXJDaGFuZ2U9IjcyMCIgU2VsZWN0ZWRJbmRleD0iMCI+PEl0ZW1zPjxSYWRQYW5lIFNlcmlhbGl6YXRpb25UYWc9InJwfkU6XERpZ2l0YWxTa3lETVxTSVRFU1xMYWtlU3RyZWV0XERlZmF1bHRVc2VyXENvbnRyb2wgUGFnZXNcV2ViaW5hciAyMDE1XzUxMmIwNzhkXzRmMmZfNDk2Ml9hNmQ4XzQwMDZkMWNjYTFhMH5ncm91cFRhZyIgSXNQaW5uZWQ9IlRydWUiIElzSGlkZGVuPSJUcnVlIiBJc0RvY2thYmxlPSJUcnVlIiAvPjxSYWRQYW5lIFNlcmlhbGl6YXRpb25UYWc9InJwfkU6XERpZ2l0YWxTa3lETVxTSVRFU1xMYWtlU3RyZWV0XERlZmF1bHRVc2VyXENvbnRyb2wgUGFnZXNcV2ViaW5hciAyMDE2LTAyXzQ2YzIyMjI0LTE3YTYtNDliOS05MzVlLWI5NmNkYjlhNTllYX5ncm91cFRhZyIgSXNQaW5uZWQ9IlRydWUiIElzSGlkZGVuPSJUcnVlIiBJc0RvY2thYmxlPSJUcnVlIiAvPjxSYWRQYW5lIFNlcmlhbGl6YXRpb25UYWc9InJwflJFTkRFUkVSVE9PTFdJTkRPV35ncm91cFRhZyIgSXNQaW5uZWQ9IlRydWUiIElzSGlkZGVuPSJGYWxzZSIgSXNEb2NrYWJsZT0iVHJ1ZSIgLz48L0l0ZW1zPjwvUmFkUGFuZUdyb3VwPjxSYWRQYW5lR3JvdXAgUmVsYXRpdmVXaWR0aD0iMTAwIiBSZWxhdGl2ZUhlaWdodD0iMTAwIiBJc0F1dG9HZW5lcmF0ZWQ9IlRydWUiIFNwbGl0dGVyQ2hhbmdlPSI4My45OTk5OTk5OTk5OTk5IiBTZWxlY3RlZEluZGV4PSIwIj48SXRlbXM+PFJhZFBhbmUgU2VyaWFsaXphdGlvblRhZz0icnB+RElSRUNUQ09NTUFORH5ncm91cFRhZyIgSXNQaW5uZWQ9IlRydWUiIElzSGlkZGVuPSJGYWxzZSIgSXNEb2NrYWJsZT0iVHJ1ZSIgLz48UmFkUGFuZSBTZXJpYWxpemF0aW9uVGFnPSJycH5XSURHRVR+Z3JvdXBUYWciIElzUGlubmVkPSJUcnVlIiBJc0hpZGRlbj0iRmFsc2UiIElzRG9ja2FibGU9IlRydWUiIC8+PC9JdGVtcz48L1JhZFBhbmVHcm91cD48L0l0ZW1zPjwvUmFkU3BsaXRDb250YWluZXI+PC9JdGVtcz48L1JhZFNwbGl0Q29udGFpbmVyPjwvRG9jdW1lbnRIb3N0PjxTcGxpdENvbnRhaW5lcnM+PFJhZFNwbGl0Q29udGFpbmVyIERvY2s9IkRvY2tlZFJpZ2h0IiBXaWR0aD0iNjk1IiBSZWxhdGl2ZVdpZHRoPSIxMDAiIFJlbGF0aXZlSGVpZ2h0PSIxMDAiIElzQXV0b0dlbmVyYXRlZD0iVHJ1ZSIgT3JpZW50YXRpb249IlZlcnRpY2FsIj48SXRlbXM+PFJhZFBhbmVHcm91cCBSZWxhdGl2ZVdpZHRoPSIxMDAiIFJlbGF0aXZlSGVpZ2h0PSIxMDAiIElzQXV0b0dlbmVyYXRlZD0iVHJ1ZSIgU3BsaXR0ZXJDaGFuZ2U9IjcyNCIgU2VsZWN0ZWRJbmRleD0iMCI+PEl0ZW1zPjxSYWRQYW5lIFNlcmlhbGl6YXRpb25UYWc9InJwfk5BVklHQVRPUn5ncm91cFRhZyIgSXNQaW5uZWQ9IlRydWUiIElzSGlkZGVuPSJGYWxzZSIgSXNEb2NrYWJsZT0iVHJ1ZSIgLz48L0l0ZW1zPjwvUmFkUGFuZUdyb3VwPjxSYWRQYW5lR3JvdXAgU3BsaXR0ZXJDaGFuZ2U9Ijc5Ljk5OTk5OTk5OTk5OTkiIFNlbGVjdGVkSW5kZXg9Ii0xIj48SXRlbXMgLz48L1JhZFBhbmVHcm91cD48L0l0ZW1zPjwvUmFkU3BsaXRDb250YWluZXI+PFJhZFNwbGl0Q29udGFpbmVyIERvY2s9IkRvY2tlZFJpZ2h0IiBXaWR0aD0iMjQwIiBSZWxhdGl2ZVdpZHRoPSIxMDAiIFJlbGF0aXZlSGVpZ2h0PSIxMDAiIElzQXV0b0dlbmVyYXRlZD0iVHJ1ZSI+PEl0ZW1zPjxSYWRQYW5lR3JvdXAgU2VsZWN0ZWRJbmRleD0iLTEiPjxJdGVtcyAvPjwvUmFkUGFuZUdyb3VwPjwvSXRlbXM+PC9SYWRTcGxpdENvbnRhaW5lcj48UmFkU3BsaXRDb250YWluZXIgRG9jaz0iRG9ja2VkVG9wIiBIZWlnaHQ9IjgwIj48SXRlbXM+PFJhZFBhbmVHcm91cCBTZWxlY3RlZEluZGV4PSItMSI+PEl0ZW1zIC8+PC9SYWRQYW5lR3JvdXA+PC9JdGVtcz48L1JhZFNwbGl0Q29udGFpbmVyPjxSYWRTcGxpdENvbnRhaW5lciBEb2NrPSJEb2NrZWRMZWZ0IiBXaWR0aD0iMTEwOSIgT3JpZW50YXRpb249IlZlcnRpY2FsIj48SXRlbXM+PFJhZFBhbmVHcm91cCBTZWxlY3RlZEluZGV4PSItMSI+PEl0ZW1zIC8+PC9SYWRQYW5lR3JvdXA+PFJhZFBhbmVHcm91cCBTZWxlY3RlZEluZGV4PSItMSI+PEl0ZW1zIC8+PC9SYWRQYW5lR3JvdXA+PC9JdGVtcz48L1JhZFNwbGl0Q29udGFpbmVyPjxSYWRTcGxpdENvbnRhaW5lciBEb2NrPSJEb2NrZWRUb3AiIEhlaWdodD0iMTAzIj48SXRlbXM+PFJhZFBhbmVHcm91cCBTZWxlY3RlZEluZGV4PSItMSI+PEl0ZW1zIC8+PC9SYWRQYW5lR3JvdXA+PC9JdGVtcz48L1JhZFNwbGl0Q29udGFpbmVyPjxSYWRTcGxpdENvbnRhaW5lciBEb2NrPSJEb2NrZWRMZWZ0IiBXaWR0aD0iMjQwIj48SXRlbXM+PFJhZFBhbmVHcm91cCBTZWxlY3RlZEluZGV4PSItMSI+PEl0ZW1zIC8+PC9SYWRQYW5lR3JvdXA+PC9JdGVtcz48L1JhZFNwbGl0Q29udGFpbmVyPjxSYWRTcGxpdENvbnRhaW5lciBEb2NrPSJEb2NrZWRUb3AiIEhlaWdodD0iODAiPjxJdGVtcz48UmFkUGFuZUdyb3VwIFNlbGVjdGVkSW5kZXg9Ii0xIj48SXRlbXMgLz48L1JhZFBhbmVHcm91cD48L0l0ZW1zPjwvUmFkU3BsaXRDb250YWluZXI+PFJhZFNwbGl0Q29udGFpbmVyIERvY2s9IkRvY2tlZFRvcCIgSGVpZ2h0PSI4MCI+PEl0ZW1zPjxSYWRQYW5lR3JvdXAgU2VsZWN0ZWRJbmRleD0iLTEiPjxJdGVtcyAvPjwvUmFkUGFuZUdyb3VwPjwvSXRlbXM+PC9SYWRTcGxpdENvbnRhaW5lcj48UmFkU3BsaXRDb250YWluZXIgRG9jaz0iRG9ja2VkVG9wIiBIZWlnaHQ9IjgwIj48SXRlbXM+PFJhZFBhbmVHcm91cCBTZWxlY3RlZEluZGV4PSItMSI+PEl0ZW1zIC8+PC9SYWRQYW5lR3JvdXA+PC9JdGVtcz48L1JhZFNwbGl0Q29udGFpbmVyPjxSYWRTcGxpdENvbnRhaW5lciBEb2NrPSJEb2NrZWRUb3AiIEhlaWdodD0iODAiPjxJdGVtcz48UmFkUGFuZUdyb3VwIFNlbGVjdGVkSW5kZXg9Ii0xIj48SXRlbXM+PFJhZFBhbmUgU2VyaWFsaXphdGlvblRhZz0icnB+V0lER0VUTUFOQUdFUn5ncm91cFRhZyIgSXNIaWRkZW49IlRydWUiIElzRG9ja2FibGU9IlRydWUiIC8+PC9JdGVtcz48L1JhZFBhbmVHcm91cD48L0l0ZW1zPjwvUmFkU3BsaXRDb250YWluZXI+PFJhZFNwbGl0Q29udGFpbmVyIERvY2s9IkRvY2tlZFRvcCIgSGVpZ2h0PSI4MCI+PEl0ZW1zPjxSYWRQYW5lR3JvdXAgU2VsZWN0ZWRJbmRleD0iLTEiPjxJdGVtcyAvPjwvUmFkUGFuZUdyb3VwPjwvSXRlbXM+PC9SYWRTcGxpdENvbnRhaW5lcj48UmFkU3BsaXRDb250YWluZXIgRG9jaz0iRG9ja2VkVG9wIiBIZWlnaHQ9IjgwIj48SXRlbXM+PFJhZFBhbmVHcm91cCBTZWxlY3RlZEluZGV4PSItMSI+PEl0ZW1zIC8+PC9SYWRQYW5lR3JvdXA+PC9JdGVtcz48L1JhZFNwbGl0Q29udGFpbmVyPjxSYWRTcGxpdENvbnRhaW5lciBEb2NrPSJEb2NrZWRUb3AiIEhlaWdodD0iODAiPjxJdGVtcz48UmFkUGFuZUdyb3VwIFNlbGVjdGVkSW5kZXg9Ii0xIj48SXRlbXMgLz48L1JhZFBhbmVHcm91cD48L0l0ZW1zPjwvUmFkU3BsaXRDb250YWluZXI+PFJhZFNwbGl0Q29udGFpbmVyIERvY2s9IkRvY2tlZExlZnQiIFdpZHRoPSIyNDAiPjxJdGVtcz48UmFkUGFuZUdyb3VwIFNlbGVjdGVkSW5kZXg9Ii0xIj48SXRlbXMgLz48L1JhZFBhbmVHcm91cD48L0l0ZW1zPjwvUmFkU3BsaXRDb250YWluZXI+PFJhZFNwbGl0Q29udGFpbmVyIERvY2s9IkRvY2tlZExlZnQiIFdpZHRoPSIyNDAiPjxJdGVtcz48UmFkUGFuZUdyb3VwIFNlbGVjdGVkSW5kZXg9Ii0xIj48SXRlbXMgLz48L1JhZFBhbmVHcm91cD48L0l0ZW1zPjwvUmFkU3BsaXRDb250YWluZXI+PFJhZFNwbGl0Q29udGFpbmVyIERvY2s9IkRvY2tlZExlZnQiIFdpZHRoPSIyNDAiPjxJdGVtcz48UmFkUGFuZUdyb3VwIFNlbGVjdGVkSW5kZXg9Ii0xIj48SXRlbXMgLz48L1JhZFBhbmVHcm91cD48L0l0ZW1zPjwvUmFkU3BsaXRDb250YWluZXI+PFJhZFNwbGl0Q29udGFpbmVyIERvY2s9IkRvY2tlZExlZnQiIFdpZHRoPSIyNDAiPjxJdGVtcz48UmFkUGFuZUdyb3VwIFNlbGVjdGVkSW5kZXg9Ii0xIj48SXRlbXMgLz48L1JhZFBhbmVHcm91cD48L0l0ZW1zPjwvUmFkU3BsaXRDb250YWluZXI+PFJhZFNwbGl0Q29udGFpbmVyIERvY2s9IkRvY2tlZExlZnQiIFdpZHRoPSIyNDAiPjxJdGVtcz48UmFkUGFuZUdyb3VwIFNlbGVjdGVkSW5kZXg9Ii0xIj48SXRlbXMgLz48L1JhZFBhbmVHcm91cD48L0l0ZW1zPjwvUmFkU3BsaXRDb250YWluZXI+PFJhZFNwbGl0Q29udGFpbmVyIERvY2s9IkRvY2tlZExlZnQiIFdpZHRoPSIyNDAiPjxJdGVtcz48UmFkUGFuZUdyb3VwIFNlbGVjdGVkSW5kZXg9Ii0xIj48SXRlbXMgLz48L1JhZFBhbmVHcm91cD48L0l0ZW1zPjwvUmFkU3BsaXRDb250YWluZXI+PFJhZFNwbGl0Q29udGFpbmVyIEluaXRpYWxQb3NpdGlvbj0iRmxvYXRpbmdEb2NrYWJsZSIgRmxvYXRpbmdXaWR0aD0iMTkxNSIgRmxvYXRpbmdIZWlnaHQ9IjEwNDciIEZsb2F0aW5nWD0iMjE0MyIgRmxvYXRpbmdZPSItMzY2IiBGbG9hdGluZ1dpbmRvd1N0YXRlPSJOb3JtYWwiIElzSW5PcGVuV2luZG93PSJGYWxzZSIgUmVsYXRpdmVXaWR0aD0iMTAwIiBSZWxhdGl2ZUhlaWdodD0iMTAwIiBJc0F1dG9HZW5lcmF0ZWQ9IlRydWUiPjxJdGVtcz48UmFkUGFuZUdyb3VwIFNlbGVjdGVkSW5kZXg9Ii0xIj48SXRlbXM+PFJhZFBhbmUgU2VyaWFsaXphdGlvblRhZz0icnB+RjQ2QUMyRDUtMzM4RS00MDAxLUFCMEEtNTgxNTM3NDlBQzZEfmdyb3VwVGFnIiBJc0hpZGRlbj0iVHJ1ZSIgSXNEb2NrYWJsZT0iVHJ1ZSIgLz48L0l0ZW1zPjwvUmFkUGFuZUdyb3VwPjwvSXRlbXM+PC9SYWRTcGxpdENvbnRhaW5lcj48UmFkU3BsaXRDb250YWluZXIgSW5pdGlhbFBvc2l0aW9uPSJGbG9hdGluZ0RvY2thYmxlIiBGbG9hdGluZ1dpZHRoPSIxOTA1IiBGbG9hdGluZ0hlaWdodD0iMTA0NSIgRmxvYXRpbmdYPSIxOTMwIiBGbG9hdGluZ1k9IjUiIEZsb2F0aW5nV2luZG93U3RhdGU9Ik5vcm1hbCIgSXNJbk9wZW5XaW5kb3c9IlRydWUiIFJlbGF0aXZlV2lkdGg9IjEwMCIgUmVsYXRpdmVIZWlnaHQ9IjEwMCIgSXNBdXRvR2VuZXJhdGVkPSJUcnVlIj48SXRlbXM+PFJhZFBhbmVHcm91cCBTZWxlY3RlZEluZGV4PSIwIj48SXRlbXM+PFJhZFBhbmUgU2VyaWFsaXphdGlvblRhZz0icnB+Q0QzODkyMUEtM0IyMC00RTQyLUIyMEYtNjI3RURDMjE2OEJFfmdyb3VwVGFnIiBJc0hpZGRlbj0iRmFsc2UiIElzRG9ja2FibGU9IlRydWUiIC8+PC9JdGVtcz48L1JhZFBhbmVHcm91cD48L0l0ZW1zPjwvUmFkU3BsaXRDb250YWluZXI+PC9TcGxpdENvbnRhaW5lcnM+PC9NeURvY2tDb250cm9sPg==</DockLayout>
+  <Extensions>
+    <Extension>
+      <Prefix>ASSETS</Prefix>
+      <ConfigData>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;AssetLibraryConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;MainSplitterDistance&gt;625&lt;/MainSplitterDistance&gt;
+  &lt;AssetGroupSplitterDistance&gt;125&lt;/AssetGroupSplitterDistance&gt;
+  &lt;AssetSplitterDistance&gt;400&lt;/AssetSplitterDistance&gt;
+  &lt;AssetManagerShowTemplates&gt;true&lt;/AssetManagerShowTemplates&gt;
+  &lt;ShowCommands&gt;false&lt;/ShowCommands&gt;
+  &lt;ShowBrowser&gt;false&lt;/ShowBrowser&gt;
+  &lt;AssetManagerShowAssetGroups&gt;true&lt;/AssetManagerShowAssetGroups&gt;
+&lt;/AssetLibraryConfig&gt;</ConfigData>
+      <Loaded>true</Loaded>
+    </Extension>
+    <Extension>
+      <Prefix>ASSETFACTORYTOOLWINDOW</Prefix>
+      <ConfigData />
+      <Loaded>true</Loaded>
+    </Extension>
+    <Extension>
+      <Prefix>ASTRO</Prefix>
+      <ConfigData>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;DMAstroConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;IsOtherPanelPinned&gt;false&lt;/IsOtherPanelPinned&gt;
+&lt;/DMAstroConfig&gt;</ConfigData>
+      <Loaded>true</Loaded>
+    </Extension>
+    <Extension>
+      <Prefix>AUTOMATION</Prefix>
+      <ConfigData>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;automation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;selectedtab&gt;0&lt;/selectedtab&gt;
+&lt;/automation&gt;</ConfigData>
+      <Loaded>true</Loaded>
+    </Extension>
+    <Extension>
+      <Prefix>BROWSER</Prefix>
+      <ConfigData>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;BrowserConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" /&gt;</ConfigData>
+      <Loaded>true</Loaded>
+    </Extension>
+    <Extension>
+      <Prefix>WIDGET</Prefix>
+      <ConfigData />
+      <Loaded>true</Loaded>
+    </Extension>
+    <Extension>
+      <Prefix>DIRECTCOMMAND</Prefix>
+      <ConfigData>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;DirectCommandConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;Commands /&gt;
+&lt;/DirectCommandConfig&gt;</ConfigData>
+      <Loaded>true</Loaded>
+    </Extension>
+    <Extension>
+      <Prefix>EVENTVIEWER</Prefix>
+      <ConfigData />
+      <Loaded>true</Loaded>
+    </Extension>
+    <Extension>
+      <Prefix>INTERACTIVE</Prefix>
+      <ConfigData />
+      <Loaded>true</Loaded>
+    </Extension>
+    <Extension>
+      <Prefix>NAVIGATOR</Prefix>
+      <ConfigData>&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;NavigatorPreferences xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;LeftButtonMotionType&gt;Orbit&lt;/LeftButtonMotionType&gt;
+  &lt;RightButtonMotionType&gt;DistanceFly&lt;/RightButtonMotionType&gt;
+&lt;/NavigatorPreferences&gt;</ConfigData>
+      <Loaded>true</Loaded>
+    </Extension>
+    <Extension>
+      <Prefix>PlaylistWindow</Prefix>
+      <ConfigData />
+      <Loaded>true</Loaded>
+    </Extension>
+    <Extension>
+      <Prefix>SCRIPTPAD</Prefix>
+      <ConfigData />
+      <Loaded>true</Loaded>
+    </Extension>
+    <Extension>
+      <Prefix>SHOW</Prefix>
+      <ConfigData>AAEAAAD/////AQAAAAAAAAAMAgAAAEpETVNob3dBZG1pbmlzdHJhdG9yLCBWZXJzaW9uPTEuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAUBAAAAJURNU2hvd0FkbWluaXN0cmF0b3IuRXRjLkNvbmZpZ3VyYXRpb24CAAAACl90aGVBY3Rpb24SX2lzQ2hhcHRlckxpc3RTaG93AwBtU3lzdGVtLkFjdGlvbmAxW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQECAAAACgAL</ConfigData>
+      <Loaded>true</Loaded>
+    </Extension>
+    <Extension>
+      <Prefix>SHOWTIMELINE</Prefix>
+      <ConfigData />
+      <Loaded>true</Loaded>
+    </Extension>
+    <Extension>
+      <Prefix>RENDERERTOOLWINDOW</Prefix>
+      <ConfigData />
+      <Loaded>true</Loaded>
+    </Extension>
+  </Extensions>
+  <Theme>DarkGlass</Theme>
+  <Language>en</Language>
+  <SavedMainWindowHeight>1066</SavedMainWindowHeight>
+  <SavedMainWindowWidth>1936</SavedMainWindowWidth>
+  <SavedMainWindowTop>0</SavedMainWindowTop>
+  <SavedMainWindowLeft>-7</SavedMainWindowLeft>
+  <SavedMainWindowState>Maximized</SavedMainWindowState>
+  <PaddockSplitterDistance>200</PaddockSplitterDistance>
+  <SavedDisplayScale>1</SavedDisplayScale>
+  <ActivePanes>
+    <ActivePane>RENDERERTOOLWINDOW</ActivePane>
+    <ActivePane>DIRECTCOMMAND</ActivePane>
+    <ActivePane>NAVIGATOR</ActivePane>
+    <ActivePane>CD38921A-3B20-4E42-B20F-627EDC2168BE</ActivePane>
+  </ActivePanes>
+</DMLayoutConfiguration>

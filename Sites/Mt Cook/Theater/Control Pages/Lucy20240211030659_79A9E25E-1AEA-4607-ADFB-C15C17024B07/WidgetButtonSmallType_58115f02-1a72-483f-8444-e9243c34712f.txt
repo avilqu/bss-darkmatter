@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Label Gallilean Moons</Text>
+  <Description />
+  <Created>02/20/19 16:54:23</Created>
+  <Modified>02/11/24 3:05:39</Modified>
+  <Version>644</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Io.Label.HJ=Right
+Scene Io.Label.Color=#938953
+Scene Io.Label.Size=8
+Scene Io.Label.Brightness=100 [1]
+Scene Europa.Label.HJ=Right
+Scene Europa.Label.Color=#938953
+Scene Europa.Label.Size=8
+Scene Europa.Label.Brightness=100 [1]
+Scene Callisto.Label.HJ=Right
+Scene Callisto.Label.Color=#938953
+Scene Callisto.Label.Size=8
+Scene Callisto.Label.Brightness=100 [1]
+Scene Ganymede.Label.HJ=Right
+Scene Ganymede.Label.Color=#938953
+Scene Ganymede.Label.Size=8
+Scene Ganymede.Label.Brightness=100 [1]
+Control Text="Fade Planets Label"
+Control Pause
+Scene Callisto.Label.Brightness=0 [1]
+Scene Ganymede.Label.Brightness=0 [1]
+Scene Europa.Label.Brightness=0 [1]
+Scene Io.Label.Brightness=0 [1]

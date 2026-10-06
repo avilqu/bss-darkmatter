@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Southern-Ring-Nebula-NGC-3132</Text>
+  <Description>https://webbtelescope.org/contents/media/images/2022/033/01G70BGTSYBHS69T7K3N3ASSEB</Description>
+  <Created>03/23/23 3:30:15</Created>
+  <Modified>01/09/24 3:12:06</Modified>
+  <Version>173</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+;Assets Jack.Load(Southern-Ring-Nebula-NGC-3132)
+;+2
+Scene Southern-Ring-Nebula-NGC-3132.Visibility=100 [2]
+Control Pause
+Scene Southern-Ring-Nebula-NGC-3132.Visibility=0 [2]
+;+2
+;Assets Jack.Load(Southern-Ring-Nebula-NGC-3132)

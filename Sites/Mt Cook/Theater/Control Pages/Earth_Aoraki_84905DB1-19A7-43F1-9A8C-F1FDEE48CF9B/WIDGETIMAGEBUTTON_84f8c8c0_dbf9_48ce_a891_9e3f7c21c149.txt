@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Load JWST</Text>
+  <Description />
+  <Created>04/18/16 14:52:41</Created>
+  <Modified>07/01/25 16:33:37</Modified>
+  <Version>458</Version>
+  <FriendlyName>loadOnlyJWST</FriendlyName>
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info>WIDGETIMAGEBUTTON_ba5ff8f6_b9a8_465e_8f74_a19a9b6b0fcc</Info>
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Spacecraft.Load(L2Ctl)
++0.1
+Assets Spacecraft.Load(JWSTTrail)
++0.1
+Assets Spacecraft.Load(JWST)
++2
+Scene JWSTTrail.Visibility=0
++0.1
+Scene JWST { Xrot=-90  Yrot=0  Zrot=-90 }
+Control Text=Unload JWST
+Control Pause
+Assets Spacecraft.UnLoad(L2Ctl)
++0.1
+Assets Spacecraft.UnLoad(JWSTTrail)
++0.1
+Assets Spacecraft.UnLoad(JWST)
++0.1
+Control Text=Load JWST

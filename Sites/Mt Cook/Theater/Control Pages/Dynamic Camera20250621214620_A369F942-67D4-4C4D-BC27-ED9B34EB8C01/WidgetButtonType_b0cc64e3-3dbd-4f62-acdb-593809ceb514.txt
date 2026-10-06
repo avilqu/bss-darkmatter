@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Test Javascript</Text>
+  <Description />
+  <Created>05/31/25 23:24:43</Created>
+  <Modified>06/10/25 16:16:20</Modified>
+  <Version>37</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+
++0.5
+JS AddEngine(testCommands)
++0.1
+JS testCommands.Execute(@"
+;//Define variables
+	var camTar = DigitalSky.GetAssetInstance("camTarget");
+
+	var mainCam = DigitalSky.GetAssetInstance("Camera");
+	var mainCamParentIns = mainCam.GetPropertyInstance("Parent");
+	var mainCamParent = mainCamParentIns.Value;
+
+	DigitalSky.LogMessage(mainCamParent);
+
+	if (mainCamParent == "camTarget") {
+		DigitalSky.LogMessage("Camera parent is Camera Target...");
+	} else {
+		DigitalSky.LogWarning("Camera Parent is not Camera Target");
+	}
+	
+
+@")
++0.1
+JS RemoveEngine(testCommands)

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Orion Nebula Picture</Text>
+  <Description />
+  <Created>02/08/19 2:01:16</Created>
+  <Modified>09/16/23 23:45:47</Modified>
+  <Version>358</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets MtCook.Load(messierallsky2)
++1
+Scene messierallsky2.Visibility=100 [1]
+Control Text=Unload Orion Nebula
+Control Pause
+Scene messierallsky2.Visibility=0 [4]
++4
+Assets MtCook.Unload(messierallsky2)

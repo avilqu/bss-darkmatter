@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Music Volume</Text>
+  <Description />
+  <Created>12/04/18 11:06:04</Created>
+  <Modified>12/05/20 17:19:31</Modified>
+  <Version>391</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking>
+    <TrackingAssetProperty AssetName="MusicMedia" AssetID="" PropertyName="Volume" AssetType="Media" />
+  </AssetTracking>
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene MusicMedia.Volume={f} [0.2:0.2:0.2]
+;Also set MusicNull visibility to store volume
+Scene MusicNull.Visibility={f}

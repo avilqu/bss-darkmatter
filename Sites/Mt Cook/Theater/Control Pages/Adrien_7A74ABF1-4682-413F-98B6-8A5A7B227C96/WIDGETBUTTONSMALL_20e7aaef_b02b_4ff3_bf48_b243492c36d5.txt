@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>M104 label</Text>
+  <Description />
+  <Created>09/16/15 10:15:45</Created>
+  <Modified>09/24/26 22:44:19</Modified>
+  <Version>755</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets DeepSkyPhoto.Load(m104_circle)
+Assets DeepSkyPhoto.Load(m104_label)
++0.1
+Scene m104_label.DomeAlign=On
+Scene m104_circle.Scale=10
+Scene m104_circle.Visibility=100 
++0.1
+Scene m104_label.Text.String="\n Sombrero Galaxy"
+Scene m104_label.Text.LineSpacing=2
+Scene m104_circle.Scale=1.5 [0.3]
++0.3
+Scene m104_label.Visibility=100 [0.5]
++0.5
+Control Pause
+Scene m104_circle.Scale=0 [0.5]
+Scene m104_circle.Visibility=0 [0.5]
+Scene m104_label.Visibility=0 [0.5]
++0.6
+Assets DeepSkyPhoto.Unload(m104_circle)
+Assets DeepSkyPhoto.Unload(m104_label)

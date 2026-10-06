@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Extragalactic Loaded </Text>
+  <Description />
+  <Created>02/07/19 17:47:28</Created>
+  <Modified>11/06/24 0:44:07</Modified>
+  <Version>650</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Control Text="Loading ....."
+Assets Milky Way.Load(Vol Milky Way)
++2
+Assets Extragalactic.Load(LocalGroup)
+Scene LocalGroup.Visibility=40
++2
+Assets Extragalactic.Load(LEDA200Mpc)
+Scene LEDA200Mpc.Visibility=0
++2
+Assets Extragalactic.Load(SDSSGALs)
+Scene SDSSGALs.Visibility=0
++2
+Assets Extragalactic.Load(SDSSQSOs)
+Scene SDSSQSOs.Visibility=0
++2
+Assets Jack.Load(Planck Red CMB)
+Scene Planck Red CMB.Visibility=0
++2
+Assets Jack.Load(VLT)
+Assets Jack.Load(sun-allsky)
+Assets Jack.Load(Southern-Ring-Nebula-NGC-3132)
++3
+Scene Visible Milky Way.Visibility=60
+Control Text="Extragalactic Loaded"
+Control Pause

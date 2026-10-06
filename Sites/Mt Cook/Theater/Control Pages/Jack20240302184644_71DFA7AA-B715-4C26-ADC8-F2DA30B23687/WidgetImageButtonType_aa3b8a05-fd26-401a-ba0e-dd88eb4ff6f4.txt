@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Unload Assets </Text>
+  <Description />
+  <Created>05/23/19 19:44:02</Created>
+  <Modified>03/02/24 18:42:29</Modified>
+  <Version>215</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Carina Stick)
++0.1
+Assets Constellations.Load(Puppis Stick)
++0.1
+Assets Constellations.Load(Vela Stick)
++0.2
+Scene Carina Stick.Visibility=100 [2]
+Scene Vela Stick.Visibility=100 [2]
+Scene Puppis Stick.Visibility=100 [2]
++2
+Control Text=Unload Assets
+Control Pause
+Scene Carina Stick.Visibility=0 [2]
+Scene Vela Stick.Visibility=0 [2]
+Scene Puppis Stick.Visibility=0 [2]
++2
+;Assets Constellations.Unload(Carina Stick)
+;Assets Constellations.Unload(Puppis Stick)
+;Assets Constellations.Unload(Vela Stick)

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMButtonPageConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Earth_Aoraki</Name>
+  <Prefix>84905DB1-19A7-43F1-9A8C-F1FDEE48CF9B</Prefix>
+  <SUGW>0606</SUGW>
+  <KeyWords />
+  <Group />
+  <Type>ControlPage</Type>
+  <MatrixTransformX>0</MatrixTransformX>
+  <MatrixTransformY>0</MatrixTransformY>
+  <Widgets>
+    <Widget>
+      <Prefix>WIDGETRESIZABLERECTANGLE_bb262419_f195_4087_a158_e69ffa9df431</Prefix>
+      <Type>WidgetResizableRectangleType</Type>
+      <OffsetLeft>5</OffsetLeft>
+      <OffsetRight>510</OffsetRight>
+      <OffsetTop>545</OffsetTop>
+      <OffsetBottom>695</OffsetBottom>
+      <Height>150</Height>
+      <Width>505</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETRESIZABLERECTANGLE_bb262419_f195_4087_a158_e69ffa9df431.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETRESIZABLERECTANGLE_bb262419_f195_4087_a158_e69ffa9df431</ImageButtonImageFilePath>
+      <SerializableParams>
+        <Key>RGBRGB</Key>
+        <Value>14:65:112:19:113:196</Value>
+      </SerializableParams>
+      <SerializableParams>
+        <Key>Opacity</Key>
+        <Value>100:100</Value>
+      </SerializableParams>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETLABEL_21319550_5034_4810_81dd_37fb8581c56d</Prefix>
+      <Type>WidgetLabelType</Type>
+      <OffsetLeft>200</OffsetLeft>
+      <OffsetRight>312</OffsetRight>
+      <OffsetTop>510</OffsetTop>
+      <OffsetBottom>557</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETLABEL_21319550_5034_4810_81dd_37fb8581c56d.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETLABEL_21319550_5034_4810_81dd_37fb8581c56d</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETBUTTONSMALL_e47fb4a9_2b37_4a71_9cd6_64b08a43f54d</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>1490</OffsetLeft>
+      <OffsetRight>1610</OffsetRight>
+      <OffsetTop>410</OffsetTop>
+      <OffsetBottom>455</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETBUTTONSMALL_e47fb4a9_2b37_4a71_9cd6_64b08a43f54d.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETBUTTONSMALL_e47fb4a9_2b37_4a71_9cd6_64b08a43f54d</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETBUTTONSMALL_ad494e36_c3df_4c0c_bbb1_c1b8ff4dae27</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>10</OffsetLeft>
+      <OffsetRight>130</OffsetRight>
+      <OffsetTop>645</OffsetTop>
+      <OffsetBottom>690</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETBUTTONSMALL_ad494e36_c3df_4c0c_bbb1_c1b8ff4dae27.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETBUTTONSMALL_ad494e36_c3df_4c0c_bbb1_c1b8ff4dae27</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETIMAGEBUTTON_5521c86b_26b8_4c96_b39a_47864e7dc52a</Prefix>
+      <Type>WidgetImageButtonLargeType</Type>
+      <OffsetLeft>10</OffsetLeft>
+      <OffsetRight>130</OffsetRight>
+      <OffsetTop>550</OffsetTop>
+      <OffsetBottom>640</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETIMAGEBUTTON_5521c86b_26b8_4c96_b39a_47864e7dc52a.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETIMAGEBUTTON_5521c86b_26b8_4c96_b39a_47864e7dc52a</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETIMAGEBUTTON_2175a4b2_d415_499d_9db0_deb454eac26a</Prefix>
+      <Type>WidgetImageButtonLargeType</Type>
+      <OffsetLeft>135</OffsetLeft>
+      <OffsetRight>255</OffsetRight>
+      <OffsetTop>550</OffsetTop>
+      <OffsetBottom>640</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETIMAGEBUTTON_2175a4b2_d415_499d_9db0_deb454eac26a.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETIMAGEBUTTON_2175a4b2_d415_499d_9db0_deb454eac26a</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETBUTTONSMALL_6452b30c_314c_43d8_a1d8_8aec157542df</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>135</OffsetLeft>
+      <OffsetRight>255</OffsetRight>
+      <OffsetTop>645</OffsetTop>
+      <OffsetBottom>690</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETBUTTONSMALL_6452b30c_314c_43d8_a1d8_8aec157542df.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETBUTTONSMALL_6452b30c_314c_43d8_a1d8_8aec157542df</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETIMAGEBUTTON_84f8c8c0_dbf9_48ce_a891_9e3f7c21c149</Prefix>
+      <Type>WidgetImageButtonLargeType</Type>
+      <OffsetLeft>260</OffsetLeft>
+      <OffsetRight>380</OffsetRight>
+      <OffsetTop>550</OffsetTop>
+      <OffsetBottom>640</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETIMAGEBUTTON_84f8c8c0_dbf9_48ce_a891_9e3f7c21c149.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETIMAGEBUTTON_84f8c8c0_dbf9_48ce_a891_9e3f7c21c149</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETBUTTONSMALL_c94849ab_196d_423f_8769_6e1547e7b2fc</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>260</OffsetLeft>
+      <OffsetRight>380</OffsetRight>
+      <OffsetTop>645</OffsetTop>
+      <OffsetBottom>690</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETBUTTONSMALL_c94849ab_196d_423f_8769_6e1547e7b2fc.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETBUTTONSMALL_c94849ab_196d_423f_8769_6e1547e7b2fc</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETIMAGEBUTTON_014a4c86_13c0_4038_9654_6eefde0fcbb7</Prefix>
+      <Type>WidgetImageButtonLargeType</Type>
+      <OffsetLeft>385</OffsetLeft>
+      <OffsetRight>505</OffsetRight>
+      <OffsetTop>550</OffsetTop>
+      <OffsetBottom>640</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETIMAGEBUTTON_014a4c86_13c0_4038_9654_6eefde0fcbb7.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETIMAGEBUTTON_014a4c86_13c0_4038_9654_6eefde0fcbb7</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETBUTTONSMALL_16e8522a_fff3_4912_ad82_b24cc4391c52</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>385</OffsetLeft>
+      <OffsetRight>505</OffsetRight>
+      <OffsetTop>645</OffsetTop>
+      <OffsetBottom>690</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETBUTTONSMALL_16e8522a_fff3_4912_ad82_b24cc4391c52.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETBUTTONSMALL_16e8522a_fff3_4912_ad82_b24cc4391c52</ImageButtonImageFilePath>
+    </Widget>
+  </Widgets>
+</DMButtonPageConfiguration>

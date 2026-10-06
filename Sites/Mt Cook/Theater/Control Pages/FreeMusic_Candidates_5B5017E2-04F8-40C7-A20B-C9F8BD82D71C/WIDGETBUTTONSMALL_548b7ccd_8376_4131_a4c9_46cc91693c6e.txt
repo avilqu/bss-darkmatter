@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Auto-skip wait test</Text>
+  <Description />
+  <Created>12/10/18 16:23:21</Created>
+  <Modified>10/04/26 16:47:47</Modified>
+  <Version>72</Version>
+  <FriendlyName>AutoNextWait</FriendlyName>
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
++1
+Control Text = "Waiting 10 seconds"
++1
+Control Text = "Waiting 9 seconds"
++1
+Control Text = "Waiting 8 seconds"
++1
+Control Text = "Waiting 7 seconds"
++1
+Control Text = "Waiting 6 seconds"
++1
+Control Text = "Waiting 5 seconds"
++1
+Control Text = "Waiting 4 seconds"
++1
+Control Text = "Waiting 3 seconds"
++1
+Control Text = "Waiting 2 seconds"
++1
+Control Text = "Waiting 1 seconds"
++1
+Control Text = "Auto next press"
++0.1
+control AutoNextTest.run

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Assets loaded </Text>
+  <Description />
+  <Created>02/07/19 17:47:28</Created>
+  <Modified>10/05/26 17:01:10</Modified>
+  <Version>835</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Control Text="Loading..."
+
++2
+
+Scene Visible Milky Way.Image="<ContentPath>\Core\Astronomy\AllSky\MWPAN2_4KX2K.JPG"
+
+Scene Mars.SurfaceMap1=<ContentPath>\Core\Astronomy\SolarSystem\Mars\Mars_16K.dds
+
+Scene Jupiter.SurfaceMap1="<ContentPath>\Assets\Jack\Jupiter_14K.dds"
+
+Scene Earth.CloudMap=<ContentPath>\Core\Astronomy\SolarSystem\Earth\Earth_16K-Clouds.dds
+Scene Earth.SurfaceMap1=<ContentPath>\Core\Astronomy\SolarSystem\Earth\Earth_16K-Surface.dds
+Scene Earth.EmissiveMap=<ContentPath>\Core\Astronomy\SolarSystem\Earth\Earth_16K-CityLights.dds
+
+Assets Extragalactic.Load(LocalGroup)
+Scene LocalGroup.Visibility=40
+
+Assets Milky Way.Load(Vol Milky Way)
+Assets Extragalactic.Load(LocalGroup)
+Scene LocalGroup.Visibility=40
++2
+Assets Extragalactic.Load(LEDA200Mpc)
+Scene LEDA200Mpc.Visibility=0
++2
+Assets Extragalactic.Load(SDSSGALs)
+Scene SDSSGALs.Visibility=0
++2
+Assets Extragalactic.Load(SDSSQSOs)
+Scene SDSSQSOs.Visibility=0
++2
+Assets Extragalactic.Load(2MASS)
+Scene 2MASS.Visibility=0
++2
+Assets Extragalactic.Load(2MPZ Spec)
+Scene 2MPZ Spec.Visibility=0
++2
+Assets Extragalactic.Load(Laniakea)
+Scene Laniakea.Visibility=0
++2
+Control Text="Assets loaded"
+Control Pause

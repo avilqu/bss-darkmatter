@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Fade down Altair </Text>
+  <Description />
+  <Created>09/09/15 14:47:49</Created>
+  <Modified>02/04/20 19:39:58</Modified>
+  <Version>92</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Altair Circle)
+Assets Constellations.Load(Altair Aql)
++0.1
+Scene Altair Aql.DomeAlign=On
+Scene Altair Circle.Scale=0
+Scene Altair Circle.Visibility=100 
++0.1
+Scene Altair Circle.Scale=1.5 [0.3]
++0.3
+Scene Altair Aql.Visibility=100 [0.5]
++0.5
+Control Text="Fade down Altair"
+Control Pause
+Scene Altair Circle.Scale=0 [0.5]
+Scene Altair Circle.Visibility=0 [0.5]
+Scene Altair Aql.Visibility=0 [0.5]
++0.6
+Assets Constellations.Unload(Altair Circle)
+Assets Constellations.UnLoad(Altair Aql)

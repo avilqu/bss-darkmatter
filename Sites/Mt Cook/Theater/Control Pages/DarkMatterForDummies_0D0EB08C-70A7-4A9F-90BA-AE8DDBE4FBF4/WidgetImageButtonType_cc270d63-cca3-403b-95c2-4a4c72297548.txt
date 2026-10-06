@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Sojourner Presidential Pano</Text>
+  <Description />
+  <Created>06/20/17 10:51:08</Created>
+  <Modified>07/14/25 23:44:34</Modified>
+  <Version>777</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Scene.Visibility=0 [2:1:2]
++4
+Scene DataPlane_Pano.Visibility=0 [0.5:0:0.5]
++1
+Scene Camera.Pitch=0
++0.1
+Scene Camera.SS.Elevation=45.00 [0:0:1]
++0.1
+Assets Spacecraft.Load(DataPlane_Pano)
++0.1
+Scene DataPlane_Pano.Picture="<ContentPath>\Core\Models\Environments\Mars\Panoramas\SojournerLander_marspath_presidential.jpg"
++0.1
+Scene DataPlane_Pano.Frame=Sidereal
++0.1
+Scene DataPlane_Pano.Lens=Spherical Panorama
++0.1
+Scene DataPlane_Pano.Azimuth=0
++0.1
+Scene DataPlane_Pano.Elevation=50
++0.1
+Scene DataPlane_Pano.Rotation=0
++0.1
+Scene DataPlane_Pano.Width=360
++0.1
+Scene Camera.ConvertInPLace(Mars)
++0.5
+Scene Scene.DateTime=2457972.3140362
++0.1
+Scene Scene.DateTime=2457972.3140362
++0.1
+;Double Rot to cancel Yaw
+Scene Camera { Xrot=-66.0952894481198  Yrot=-1.16359718710679  Zrot=-176.801227696484 } [0.1]
++0.1
+;
+Scene Camera { Xpos=744874.171218447  Ypos=-16268848.4084026  Zpos=1732312.94241657 } [0.1]
++0.1
+Scene Camera { Xrot=-51.0423341734204  Yrot=-2.03904862344686  Zrot=-178.352101549904 } [0.1]
+
++3
+Scene DataPlane_Pano.Rotation=220 [0.1]
++0.2
+Scene DataPlane_Pano.Visibility=100 [0.5:1:0.5]
++3
+Scene Scene.Visibility=100 [2:1:2]
+Scene DataPlane_Pano.Rotation=-140 [10:240:10]
++5
+Control Text=Remove Panorama
+Control Pause
+Scene DataPlane_Pano.Visibility=0 [2:1:2]
++5.25
+Assets Spacecraft.UnLoad(DataPlane_Pano)
++0.1

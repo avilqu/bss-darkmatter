@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>View North Island</Text>
+  <Description>Camera State on Earth</Description>
+  <Created>09/06/26 19:53:51</Created>
+  <Modified>10/05/26 18:13:15</Modified>
+  <Version>88</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords>Camera,Camera</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Camera.ConvertInPlace(Earth, Position Rotate)
++0.1
+Scene Camera { Xpos=-5164250.03522379  Ypos=494078.666822155  Zpos=-4531289.97795411  Xrot=29.54439018604  Yrot=-32.1322231655953  Zrot=-66.9214169684008 }[10:15:10]

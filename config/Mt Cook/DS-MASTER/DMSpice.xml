@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Spice xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Port>2003</Port>
+  <Host>255.255.255.255</Host>
+  <Designator>DM:A</Designator>
+</Spice>

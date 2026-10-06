@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Equatorial Grid</Text>
+  <Description />
+  <Created>09/24/23 5:13:43</Created>
+  <Modified>03/30/24 1:50:02</Modified>
+  <Version>176</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Coordinate Systems.Load(Equatorial Grid)
+Scene Equatorial Grid.Visibility=0
+Scene Equatorial Grid.Label.Brightness=0
++1
+Scene Equatorial Grid.Visibility=75 [2]
+Scene Equatorial Grid.Label.Brightness=30 [2]
++1
+Control Text=Equatorial Grid
+Control Pause
+Scene Equatorial Grid.Visibility=0 [2]
+Scene Equatorial Grid.Label.Brightness=0 [2]
++2
+Assets Coordinate Systems.Unload(Equatorial Grid)

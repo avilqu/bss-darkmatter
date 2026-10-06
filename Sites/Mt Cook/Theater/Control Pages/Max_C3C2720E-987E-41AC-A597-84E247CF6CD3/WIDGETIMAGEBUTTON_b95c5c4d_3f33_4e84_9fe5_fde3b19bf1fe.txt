@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>H Alpha</Text>
+  <Description />
+  <Created>12/08/16 16:56:20</Created>
+  <Modified>07/25/26 18:58:13</Modified>
+  <Version>265</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info>WIDGETIMAGEBUTTON_1d08f546_47e4_4cbe_95a5_841b9348e870</Info>
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Sky Maps.Load(H Alpha)
+Scene H Alpha.Visibility=0
++1
+Scene H Alpha.Visibility=60 [1]
+Control Sky-Skan.Public.Galactic - Milky Way.MultiwavelenghtSkyDisplay.Display(H Alpha,12,gray)
+Control Text=Unload H Alpha
+Control Pause
+Scene H Alpha.Visibility=0 [1]
++1.1
+Assets Sky Maps.Unload(H Alpha)
+Control Sky-Skan.Public.Galactic - Milky Way.MultiwavelenghtSkyDisplay.Display(Multiwavelenght Sky,12,gray)

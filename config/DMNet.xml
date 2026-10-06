@@ -1,0 +1,7 @@
+﻿<DMGpuNetwork>
+  <RemoteHost>DS-MASTER</RemoteHost>
+  <RemotePort>32001</RemotePort>
+  <LocalPort>31001</LocalPort>
+  <PrefNetwork>192.168.1.x</PrefNetwork>
+  <ID>1</ID>
+</DMGpuNetwork>

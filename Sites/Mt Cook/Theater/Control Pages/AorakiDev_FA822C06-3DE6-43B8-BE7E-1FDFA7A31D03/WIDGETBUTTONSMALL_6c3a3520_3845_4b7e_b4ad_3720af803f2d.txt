@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Fun Launch</Text>
+  <Description />
+  <Created>01/29/16 13:05:05</Created>
+  <Modified>09/24/26 22:24:31</Modified>
+  <Version>150</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Aoraki.Load(spacecraftBase, launchSmoke)
++0.5
+Scene launchSmoke.Visibility=0
+; Launch from Here
+
+Control Text="Begin Countdown?..."
+Control Pause
+
+; Countdown and effects:
+Control Text="T -10..."
+Spice SendCue(0 fade 50 lamp C)
++0.5
+Spice SendCue(0 fade 0 lamp C)
++0.5
+Control Text="T -9..."
+Spice SendCue(0 fade 50 lamp C)
++0.5
+Spice SendCue(0 fade 0 lamp C)
++0.5
+Control Text="T -8..."
+Spice SendCue(0 fade 50 lamp C)
++0.5
+Spice SendCue(0 fade 0 lamp C)
++0.5
+Control Text="T -7..."
+Spice SendCue(0 fade 50 lamp C)
++0.5
+Spice SendCue(0 fade 0 lamp C)
++0.5
+Control Text="T -6..."
+Spice SendCue(0 fade 50 lamp C)
++0.5
+Spice SendCue(0 fade 0 lamp C)
++0.5
+Control Text="T -5..."
+Spice SendCue(0 fade 50 lamp C)
++0.5
+Spice SendCue(0 fade 0 lamp C)
++0.5
+Control Text="T -4..."
+Spice SendCue(0 fade 50 lamp C)
++0.5
+Spice SendCue(0 fade 0 lamp C)
++0.5
+Control Text="T -3..."
+Spice SendCue(0 fade 50 lamp C)
++0.5
+Spice SendCue(0 fade 0 lamp C)
++0.5
+Control Text="T -2..."
+Spice SendCue(0 fade 50 lamp C)
++0.5
+Spice SendCue(0 fade 0 lamp C)
++0.5
+Control Text="T -1..."
+Spice SendCue(0 fade 50 lamp C)
++0.5
+;// Turn Flames On:
+Scene launchSmoke.Visibility=100 [0.5]
+Spice SendCue(0 fade 0 lamp C)
++0.5
+
+; END OF COUNTDOWN
+
+Control Text="Launcxhing from here..."
+Scene Camera{Altitude=10000000} [6:8:6]
+Scene Camera.Orient=SouthAndDown [6:8:6]
+Scene Camera.SS.Elevation=45.00 [6:8:6]
+
+Scene launchSmoke.Visibility=0 [10]
+
++10
+
+Assets Aoraki.UnLoad(spacecraftBase, launchSmoke)

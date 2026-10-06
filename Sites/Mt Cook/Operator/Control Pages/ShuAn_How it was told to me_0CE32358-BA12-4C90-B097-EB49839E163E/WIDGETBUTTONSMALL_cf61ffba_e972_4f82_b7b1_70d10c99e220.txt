@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Tautoru</Text>
+  <Description />
+  <Created>09/01/15 14:31:43</Created>
+  <Modified>10/05/26 18:13:15</Modified>
+  <Version>444</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Alnilam Ori Circle)
+Assets Constellations.Load(Alnilam Ori)
++0.1
+Scene Alnilam Ori.DomeAlign=On
+Scene Alnilam Circle.Scale=0
+Scene Alnilam Circle.Visibility=100 
++0.1
+Scene Alnilam Circle.Scale=1.5 [0.3]
++0.3
+Scene Alnilam Ori.Visibility=100 [0.5]
+Scene Alnilam Ori.Text.String="\n Tautoru"
+Scene Alnilam Ori.Text.LineSpacing=1.5
+Scene Alnilam Ori.FontHeight=1.5
++0.5
+Control Text="Fade down Tautoru"
+Control Pause
+Scene Alnilam Circle.Scale=0 [0.5]
+Scene Alnilam Circle.Visibility=0 [0.5]
+Scene Alnilam Ori.Visibility=0 [0.5]
++0.6
+Assets Constellations.Unload(Alnilam Circle)
+Assets Constellations.UnLoad(Alnilam Ori)

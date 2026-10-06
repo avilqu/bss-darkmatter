@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Jewel Box Cluster</Text>
+  <Description />
+  <Created>02/18/19 18:12:36</Created>
+  <Modified>03/02/24 18:42:29</Modified>
+  <Version>181</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constel Pictures.Load(Crux NGC 4755)
++0.5
+Scene Crux NGC 4755.Visibility=100 [1]
+Control Text="Unload Jewel Box Cluster"
+Control Pause
+Scene Crux NGC 4755.Visibility=0 [1]
++1.1
+Assets Constel Pictures.Unload(Crux NGC 4755)

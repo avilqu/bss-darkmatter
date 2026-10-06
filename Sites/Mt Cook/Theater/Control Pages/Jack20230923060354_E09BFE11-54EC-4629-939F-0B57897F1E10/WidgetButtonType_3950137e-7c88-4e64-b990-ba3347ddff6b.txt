@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Constellations  RESET </Text>
+  <Description />
+  <Created>01/25/16 12:02:00</Created>
+  <Modified>09/23/23 6:03:27</Modified>
+  <Version>190</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Unload()
+Assets Legacy Constellations.Unload()
+Assets Constel Pictures.Unload()
+Assets Messier Earth.Unload()
+Assets Line and circle.Unload(Stick diamond Crux)
+Assets Line and circle.Unload(Stick diamond Crux1)
+Assets Line and circle.Unload(Stick False Crux)
+Assets Line and circle.Unload(Stick False Crux1)
++0.1
+Scene Earth.Ecliptic.Visibility=0 [0.5]
+Scene Earth { Ecliptic.Color=white }
++0.1
+Scene Earth.Meridian.Visibility=0 [0.5]
+Scene Earth { Meridian.Color=white } 
++0.1
+Scene Earth.Equatorial.Visibility=0 [0.5]
+Scene Earth { Equatorial.Color=white } 
++0.1
+Scene Stars.Label.Brightness=0 [1]
+Control Abort

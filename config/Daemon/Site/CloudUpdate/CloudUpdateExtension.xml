@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Settings for DMDaemonCloudUpdateExtension extension-->
+<!--Original file location: C:\ProgramData\Sky-Skan\DigitalSkyDM\Daemon\Site\CloudUpdate-->
+<!--Do not modify the contents of this file-->
+<daemon_cloud_update_extension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<updated>2018-12-21T06:14:21.5293399+13:00</updated>
+	<cloudupdated>2018-12-21T06:14:21.5293399+13:00</cloudupdated>
+	<audience>Customer</audience>
+	<version>1.0</version>
+	<updates>
+		<package close="false" hide="false" id="c0f9406c24bf42a6b1bd7a7c63977df6">
+			<description>Tutorial 1 - 2018</description>
+			<available>12/21/2018 5:32:54 AM</available>
+			<notes>Updated Tutorial 1 - DM Basics (2018 Edition)</notes>
+			<items>
+				<item id="ce19c9cfbda946da81e169e90da76bc6" type="content">
+					<remote>\\BigSky3\SS_Tools\DMUpdateExplorer\Customer\Data\Calibration (Exported Asset Group) (ce19c9cfbda946da81e169e90da76bc6).dmz</remote>
+					<link>1lSncK973WjKBNN7OAggzBLD_h73WSi0g</link>
+				</item>
+				<item id="71e0f9be674746f2bbf8633c8e84902c" type="content">
+					<remote>\\BigSky3\SS_Tools\DMUpdateExplorer\Customer\Data\Trailers (Exported Asset Group) (71e0f9be674746f2bbf8633c8e84902c).dmz</remote>
+					<link>1MZiI4qHCExqeCfZbG06FwSYCqeaZv4Wu</link>
+				</item>
+				<item id="98e2d88c14e142d3a2b3f925174993d1" type="content">
+					<remote>\\BigSky3\SS_Tools\DMUpdateExplorer\Customer\Data\Tutorial 1 - DM Basics (Exported Asset Group) (98e2d88c14e142d3a2b3f925174993d1).dmz</remote>
+					<link>1DlNxZzwPa3ZOpEHSJd19vYUnZqaXqCAp</link>
+				</item>
+				<item id="9d522336df19473b897e2794aee11b62" type="content">
+					<remote>\\BigSky3\SS_Tools\DMUpdateExplorer\Customer\Data\Tutorial 1 - DM Basics (Exported Control Page) (9d522336df19473b897e2794aee11b62).dmz</remote>
+					<link>1tfSb18DQH75itTzcNb24Zs2M-QsjMVZz</link>
+				</item>
+			</items>
+		</package>
+	</updates>
+</daemon_cloud_update_extension>

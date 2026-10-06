@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Zodiac Art</Text>
+  <Description />
+  <Created>02/12/16 15:21:56</Created>
+  <Modified>02/04/20 19:39:58</Modified>
+  <Version>253</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Aquarius Art.Visibility=100 [2]
+Scene Aries Art.Visibility=100 [2]
+Scene Cancer Art.Visibility=100 [2]
+Scene Capricornus Art.Visibility=100 [2]
+Scene  Gemini Art.Visibility=100 [2]
+Scene Leo Art.Visibility=100 [2]
+Scene Pisces Art.Visibility=100 [2]
+Scene Libra Art.Visibility=100 [2]
+Scene Sagittarius Art.Visibility=100 [2]
+Scene Scorpius Art.Visibility=100 [2]
+Scene Taurus Art.Visibility=100 [2]
+Scene Virgo Art.Visibility=100 [2]
++2
+Control Text="Zodiac Art OFF"
+Control Pause
+Scene Aquarius Art.Visibility=0 [2]
+Scene Aries Art.Visibility=0 [2]
+Scene Cancer Art.Visibility=0 [2]
+Scene Capricornus Art.Visibility=0 [2]
+Scene  Gemini Art.Visibility=0 [2]
+Scene Leo Art.Visibility=0 [2]
+Scene Pisces Art.Visibility=0 [2]
+Scene Libra Art.Visibility=0 [2]
+Scene Sagittarius Art.Visibility=0 [2]
+Scene Scorpius Art.Visibility=0 [2]
+Scene Taurus Art.Visibility=0 [2]
+Scene Virgo Art.Visibility=0 [2]

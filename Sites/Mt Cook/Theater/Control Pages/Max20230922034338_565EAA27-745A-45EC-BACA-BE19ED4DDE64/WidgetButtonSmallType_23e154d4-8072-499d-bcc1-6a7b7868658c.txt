@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Go to Charon</Text>
+  <Description>Flies to Pluto</Description>
+  <Created>02/22/19 20:37:25</Created>
+  <Modified>09/17/23 18:44:36</Modified>
+  <Version>261</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>Fly Go to Pluto</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+; Go to the Charon
+	
+Scene Camera.FlyTo(Charon, Altitude=10000000, Orient=SouthAndDown) [8:6:8]
+	
+Control Text="Going to Charon..."
++22

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Ganymede Ambient</Text>
+  <Description />
+  <Created>06/10/19 15:31:54</Created>
+  <Modified>01/09/24 3:12:06</Modified>
+  <Version>104</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>100</InitialValue>
+  <AssetTracking>
+    <TrackingAssetProperty AssetName="Ganymede" AssetID="" PropertyName="Ambient" AssetType="Planet" />
+  </AssetTracking>
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Ganymede.Ambient={f} [0.1]
+Scene Io.Ambient={f} [0.1]
+Scene Europa.Ambient={f} [0.1]
+Scene Callisto.Ambient={f} [0.1]

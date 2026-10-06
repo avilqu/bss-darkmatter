@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Play Next Song Seq/Rando</Text>
+  <Description />
+  <Created>05/29/18 13:11:29</Created>
+  <Modified>10/04/26 16:47:47</Modified>
+  <Version>584</Version>
+  <FriendlyName>NextSong</FriendlyName>
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+JS MusicTimeEngine.Execute(@"
+;//Define variables
+	var MusicNull = DigitalSky.GetAssetInstance("MusicNull");
+	var AutoPlayToggleAttr = MusicNull.GetPropertyInstance("Xpos");
+	var AutoPlayToggle = AutoPlayToggleAttr.Value;
+	var SongNumAttr = MusicNull.GetPropertyInstance("Ypos");
+	var SongNum = SongNumAttr.Value;
+;//Check if song number exceeds maximum, and start over if so
+if (SongNum >= 70) {;
+	var SongNum = -1
+};
+;//Check for auto-play toggle
+switch (AutoPlayToggle) {
+	case 0:
+;//		MusicNull.SetProperty("Label.Text","nothing!",0);
+break;
+	case 1:
+		var SongNum = Number(SongNum)+1;
+		script = "Control" + " " + SongNum + ".run";
+		DigitalSky.SendScript(script);
+;//		MusicNull.SetProperty("Label.Text",script,0);
+		MusicNull.SetProperty("Ypos",SongNum,0);
+break;
+;//If random switch is set multiply by Maximum number (random is 0-1 value)
+	case 2:
+		var SongRandom=Math.floor(Math.random() * 71);
+		script = "Control" + " " + SongRandom + ".run";
+		DigitalSky.SendScript(script);
+;//		MusicNull.SetProperty("Label.Text",SongRandom,0);
+		MusicNull.SetProperty("Ypos",SongNum,0);
+};
+;//Testing variables
+@")
++0.1
+control StopTimeLoop.run
+Control MusicDurationInfo.Text = "Song Duration"
+Control CurrentTime.Text = "No Music Playing"
+control SongTimeLeft.Text = "Time Remaining"
+control MusicInfo.Text = "Music Information"

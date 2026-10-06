@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Fly to View LocalGroup </Text>
+  <Description>Camera State on LocalGroup</Description>
+  <Created>11/30/16 16:29:17</Created>
+  <Modified>12/05/20 17:19:31</Modified>
+  <Version>42</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>LocalGroup</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Camera.ConvertInPlace(LocalGroup, Position Rotate Scale)
+Scene LocalGroup.Visibility=100 [10]
+Scene milky way.label.brightness=100 [10]
++0.1
+Scene Camera { Xpos=8.2519326915956E+20  Ypos=1.05729854893543E+22  Zpos=-3.20632642584019E+19  Xrot=89.8737820542804  Yrot=-4.44130617817958  Zrot=62.3209381477866 } [20:20:20]

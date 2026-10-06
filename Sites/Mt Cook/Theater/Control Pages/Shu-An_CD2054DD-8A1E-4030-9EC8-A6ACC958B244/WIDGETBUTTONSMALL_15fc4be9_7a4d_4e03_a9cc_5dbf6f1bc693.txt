@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Eagle Nebula + Pillars</Text>
+  <Description />
+  <Created>11/14/23 1:15:09</Created>
+  <Modified>10/05/26 17:01:10</Modified>
+  <Version>123</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Jack.Load(Eagle Nebula)
++1
+Assets Jack.Load(Pillars of Creation)
++1
+Scene Eagle Nebula.Visibility=100 [2]
+Control Text=Enhance
+Control Pause
+Scene Pillars of Creation.Visibility=100 [2]
+Control Text=Unload Eagle Nebula + Pillars
+Control Pause
+Scene Pillars of Creation.Visibility=0 [2]
+Scene Eagle Nebula.Visibility=0 [2]
++2
+Assets Jack.Unload(Eagle Nebula)
+Assets Jack.Unload(Pillars of Creation)

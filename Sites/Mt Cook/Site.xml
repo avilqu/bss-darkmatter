@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SitePreferences xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="www.skyskan.com">
+  <Location Object="Earth" Latitude="-43.91144" Longitude="170.12504" Altitude="500" Name="Mt Cook" />
+</SitePreferences>

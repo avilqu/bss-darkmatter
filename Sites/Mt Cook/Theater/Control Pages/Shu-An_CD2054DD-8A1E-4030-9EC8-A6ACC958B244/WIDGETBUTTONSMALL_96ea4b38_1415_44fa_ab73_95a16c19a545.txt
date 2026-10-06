@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>View NZ</Text>
+  <Description>Camera State on Earth</Description>
+  <Created>09/06/26 19:57:11</Created>
+  <Modified>10/05/26 17:02:13</Modified>
+  <Version>19</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords>Camera,Camera</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Camera.ConvertInPlace(Earth, Position Rotate Scale)
++0.1
+Scene Camera { Xpos=-11631234.3495098  Ypos=2024746.08527181  Zpos=-11336825.8008306  Xrot=0.199268441123621  Yrot=1.14455090339222  Zrot=80.1230146294663 }[10:20:10]

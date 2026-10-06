@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Ecliptic Grid</Text>
+  <Description />
+  <Created>09/24/23 5:13:43</Created>
+  <Modified>09/24/23 6:16:37</Modified>
+  <Version>32</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Coordinate Systems.Load(Ecliptic Grid)
+Scene Ecliptic Grid.Visibility=0
+Scene Ecliptic Grid.Label.Brightness=0
++1
+Scene Ecliptic Grid.Visibility=75 [2]
+Scene Ecliptic Grid.Label.Brightness=30 [2]
++1
+Control Text=Ecliptic Grid
+Control Pause
+Scene Ecliptic Grid.Visibility=0 [2]
+Scene Ecliptic Grid.Label.Brightness=0 [2]
++2
+Assets Coordinate Systems.Unload(Ecliptic Grid)

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>GENRIC JS TESTER</Text>
+  <Description />
+  <Created>05/22/25 16:49:26</Created>
+  <Modified>06/20/25 23:31:03</Modified>
+  <Version>81</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+JS AddEngine(jsTest)
++1
+JS jsTest.Execute(@"
+
+	var camTar = DigitalSky.GetAssetInstance("camTarget");	
+	
+	camTar.SetProperty("Parent", "Earth", 0);
+
+@")
++0.1
+JS RemoveEngine(dCamStart)

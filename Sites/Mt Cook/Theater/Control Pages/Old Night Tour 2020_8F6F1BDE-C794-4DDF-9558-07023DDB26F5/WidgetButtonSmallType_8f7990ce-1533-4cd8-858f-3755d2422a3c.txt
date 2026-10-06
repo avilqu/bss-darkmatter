@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Extragalactic Loaded </Text>
+  <Description />
+  <Created>02/07/19 17:47:28</Created>
+  <Modified>05/17/20 15:16:44</Modified>
+  <Version>307</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Control Text="Loading ....."
+Assets Extragalactic.Load(LocalGroup)
+Scene LocalGroup.Visibility=0
++2
+Assets Extragalactic.Load(LEDA200Mpc)
+Scene LEDA200Mpc.Visibility=0
++3
+Assets Extragalactic.Load(2MASS)
+Scene 2MASS.Visibility=0
++3
+Assets Extragalactic.Load(Laniakea)
+Scene Laniakea.Visibility=0
++3
+Control Text="Extragalactic Loaded"
+Control Pause

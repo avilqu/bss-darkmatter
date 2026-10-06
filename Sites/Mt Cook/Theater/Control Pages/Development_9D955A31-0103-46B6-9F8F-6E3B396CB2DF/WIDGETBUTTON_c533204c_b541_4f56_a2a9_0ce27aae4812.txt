@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Check Loop - Modular Camera</Text>
+  <Description />
+  <Created>05/29/25 19:20:46</Created>
+  <Modified>06/28/25 18:54:38</Modified>
+  <Version>45</Version>
+  <FriendlyName>modCamCheck</FriendlyName>
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+JS AddEngine(modCamCheckLoop)
++0.1
+JS modCamCheckLoop.Execute(@"
+;//Define variables
+	; Get Main Camera Instance:
+	var mainCam = DigitalSky.GetAssetInstance("Camera");
+	var mainCamParentIns = mainCam.GetPropertyInstance("Parent");
+	var mainCamParent = mainCamParentIns.Value;
+	; Get camTarget Instance:
+	var camTar = DigitalSky.GetAssetInstance("camTarget");
+	var camTarParentIns = camTar.GetPropertyInstance("Parent");
+	var camTarParent = camTarParentIns.Value;
+
+	; Check if Cameras have different parents:
+	if (mainCamParent !== camTarParent){
+		;If different, update modular camera parent:
+		camTar.SetProperty("Parent", mainCamParent, 0);
+	} 
+@")
++0.1
+JS RemoveEngine(modCamCheckLoop)
++0.1
+Control callCheckLoop.run

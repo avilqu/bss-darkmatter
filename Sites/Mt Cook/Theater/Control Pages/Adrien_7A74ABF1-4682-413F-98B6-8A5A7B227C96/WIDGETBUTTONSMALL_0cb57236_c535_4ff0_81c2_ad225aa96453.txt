@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Scale up planets</Text>
+  <Description>Scales up Mercury to 2000 times</Description>
+  <Created>02/09/19 17:57:19</Created>
+  <Modified>09/24/26 22:44:19</Modified>
+  <Version>296</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords>Zoom Scale Mercury </Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Mercury  { Xscale=1000  Yscale=1000  Zscale=1000 } [1]
+Scene Venus  { Xscale=1000  Yscale=1000  Zscale=1000 } [1]
+Scene Mars  { Xscale=1000  Yscale=1000  Zscale=1000 } [1]
+Scene Jupiter  { Xscale=500  Yscale=500  Zscale=500 } [1]
+Scene Saturn  { Xscale=500  Yscale=500  Zscale=500 } [1]
+Scene Uranus  { Xscale=1000  Yscale=1000  Zscale=1000 } [1]
+Scene Neptune  { Xscale=1000  Yscale=1000  Zscale=1000 } [1]
+Control Pause
+Scene Mercury  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Venus  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Mars  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Jupiter  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Saturn  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Uranus  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Neptune  { Xscale=1  Yscale=1  Zscale=1 } [1]

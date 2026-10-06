@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Startup Script (Manual)</Text>
+  <Description />
+  <Created>02/09/16 16:36:11</Created>
+  <Modified>09/13/26 23:09:45</Modified>
+  <Version>57</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Control Text="Run Startup Script? (5s left)"
++1
+Control Text="Run Startup Script? (4s left)"
++1
+Control Text="Run Startup Script? (3s left)"
++1
+Control Text="Run Startup Script? (2s left)"
++1
+Control Text="Run Startup Script? (1s left)"
++1
+Control Text="Startup Script running..."
+Scene Visibility=0 [0.5]
++1
+Control Text="Reset current viewport..."
+Kernel Channels(i).LineScale=1
+Kernel Channels(i).PointScale=1
+Kernel Channels(i).PointMinScale=1
+Kernel Channels(i).PointMaxScale=1
+Kernel Channels(i).LabelMinScale=1
+Kernel Channels(i).LabelMaxScale=1
++1
+Control Text="Loading Fisheye viewport..."
+Navigator Gpu.View="Fisheye"
++1
+Control Text="....."
++1
+Control Text="...."
++1
+Control Text="..."
++1
+Control Text=".."
++1
+Control Text="."
++1
+Control Text="Loading Stars and Milky Way..."
+Assets Milky Way.Load(Visible Milky Way, Stars)
++1
+Control Text="..."
++1
+Control Text=".."
++1
+Control Text="."
++1
+Control Text="Loading Solar System..."
+Assets Solar System.Load()
++1
+Control Text="..... ..... ..... ....."
++1
+Control Text="..... ..... ..... ...."
++1
+Control Text="..... ..... ..... ..."
++1
+Control Text="..... ..... ..... .."
++1
+Control Text="..... ..... ..... ."
++1
+Control Text="..... ..... ....."
++1
+Control Text="..... ..... ...."
++1
+Control Text="..... ..... ..."
++1
+Control Text="..... ..... .."
++1
+Control Text="..... ..... ."
++1
+Control Text="..... ....."
++1
+Control Text="..... ...."
++1
+Control Text="..... ..."
++1
+Control Text="..... .."
++1
+Control Text="..... ."
++1
+Control Text="....."
++1
+Control Text="...."
++1
+Control Text="..."
++1
+Control Text=".."
++1
+Control Text="."
++1
+Control Text="Locking Assets..."
+Assets Milky Way.LoadLock=true
+Assets Solar System.LoadLock=true
+Assets System.LoadLock=true
+Assets Coordinate Systems.LoadLock=true
++1
+Control Text="Adding Collections..."
+;
+Scene Add(Astro_Sun_Moon, collection)
+Scene Astro_Sun_Moon.Add(Sun,Moon)
+;
+Scene Add(Astro_Planet_Internal, collection)
+Scene Astro_Planet_Internal.Add(Mercury,Venus)
+;
+Scene Add(Astro_Planet_External, collection)
+Scene Astro_Planet_External.Add(Mars,Jupiter,Saturn,Uranus,Neptune)
+;
+Scene Add(Astro_Planet_Dwarf, collection)
+Scene Astro_Planet_Dwarf.Add(Ceres,Pluto,Eris,Haumea,Makemake)
+;
+Scene Add(Astro_Planet, collection)
+Scene Astro_Planet.Add(Earth,Astro_Planet_Internal,Astro_Planet_External)
+;
+Scene Add(Astro_Mars_Moons, collection)
+Scene Astro_Mars_Moons.Add(Deimos,Phobos)
+;
+Scene Add(Astro_Jupiter_Moons, collection)
+Scene Astro_Jupiter_Moons.Add(Adrastea,Amalthea,Ananke,Callisto,Carme,Elara,Europa,Ganymede,Himalia,Io,Leda,Lysithea,Metis,Pasiphae,Sinope,Thebe)
+;
+Scene Add(Astro_Saturn_Moons, collection)
+Scene Astro_Saturn_Moons.Add(Atlas,Calypso,Dione,Enceladus,Helene,Hyperion,Iapetus,Janus,Mimas,Pan,Pandora,Phoebe,Prometheus,Rhea,Tethys,Titan)
+;
+Scene Add(Astro_Uranus_Moons, collection)
+Scene Astro_Uranus_Moons.Add(Ariel,Belinda,Bianca,Cordelia,Cressida,Desdemona,Juliet,Miranda,Oberon,Ophelia,Portia,Puck,Rosalind,Titania,Umbriel)
+;
+Scene Add(Astro_Neptune_Moons, collection)
+Scene Astro_Neptune_Moons.Add(Despina,Galatea,Larissa,Naiad,Nereid,Proteus,Thalassa,Triton)
+;
+Scene Add(Astro_Pluto_Moons, collection)
+Scene Astro_Pluto_Moons.Add(Charon,Hydra,Kerberos,Nix,Styx)
+;
+Scene Add(Astro_Solar, collection)
+Scene Astro_Solar.Add(Astro_Sun_Moon,Astro_Planet)
+;
+Scene Add(Astro_Sky_Solar, collection)
+Scene Astro_Sky_Solar.Add(Astro_Solar, Stars, Visible Milky Way)
++1
+Control Text=".."
++1
+Control Text="."
++1
+;landing on Earth and set view
+Control Text="Landing on Earth"
+Scene Camera.FlyTo(Here, Orient=SouthAndUp) [0]
+Scene Camera.SS.Azimuth=180.0
+Scene Camera.SS.Elevation=90.0
++1
+Control Text="Tuning the viewport"
+Scene Scene.TessFactor=4
+Scene Scene.DateTime=Now
++0.5
+;apply to current viewport (fisheye)
+Kernel Channels(i).LineScale=2
+Kernel Channels(i).PointScale=2
+Kernel Channels(i).PointMinScale=2
+Kernel Channels(i).PointMaxScale=2
+Kernel Channels(i).LabelMinScale=2
+Kernel Channels(i).LabelMaxScale=2
++0.5
+;star profile (global)
+Scene Stars.HaloBrightness=30
+Scene Stars.HaloScale=100
+Scene Stars.MaxHalo=0.03
+Scene Stars.MinHalo=0.003
+Scene Stars.MaxPoint=0.01
+Scene Stars.FadePoint=0.008
+Scene Stars.MinPoint=0.0001
+Scene Stars.AbsShift=-1.8
+Scene Stars.Lum=1.2
+Scene Visible Milky Way.Visibility=50
++0.5
+;loading Slide Dropper JavaScripts
+Control Text="Loading interactive assets"
+Assets JavaScript Library.Load(vpSlideDropper)
+Navigator AddDropTemplate(vpSlideDropper,bmp,dds,png,jpg)
+Assets JavaScript Library.Load(vpSlideInteract)
+Navigator AddInteractionTemplate(vpSlideInteract,Slide,SlideText)
++0.5
+Control Text="Loading Additional Assets..."
+Assets Constellations.Load(88Sticks)
++1
+; locking the Javacript library
+Assets JavaScript Library.LoadLock=true
++0.1
+Control Text="Set Scene Visibility..."
+Scene Visibility=100 [2]
++1
+Control Text="Startup Script ending..."
++1
+Control Text="."
++1

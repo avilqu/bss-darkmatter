@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Crux Stick </Text>
+  <Description />
+  <Created>02/08/19 2:01:16</Created>
+  <Modified>09/24/23 5:00:12</Modified>
+  <Version>585</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Crux Stick)
++1
+Scene Crux Stick.Visibility=100 [1]
+Control Text=Remove Crux Stick
+Control Pause
+Scene Crux Stick.Visibility=0 [1]
++2
+Assets Constellations.Unload(Crux Stick)

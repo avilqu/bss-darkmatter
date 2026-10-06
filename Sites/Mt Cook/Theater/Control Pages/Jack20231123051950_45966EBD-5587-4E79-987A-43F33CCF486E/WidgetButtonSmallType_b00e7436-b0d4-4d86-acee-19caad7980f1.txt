@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>North Pole TELEPORT</Text>
+  <Description />
+  <Created>06/24/16 14:04:06</Created>
+  <Modified>11/23/23 5:05:01</Modified>
+  <Version>727</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info>WIDGETBUTTONSMALL_e3c8eab6_5c2f_4630_ba42_5710b7cfcea3</Info>
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Scene.Visibility=0 [1]
+Scene Earth.Cardinal.Visibility=0 [1]
++1.25
+Scene Camera.FlyTo(Latitude=90, Longitude=0, Orient=SouthAndUp)
+Scene Earth.Atmosphere.Visibility=0
+Scene Earth.Cloud.Visibility=0
+Scene Visible Milky Way.Visibility=60
+Scene Stars.Lum=2
+Scene Camera.SS.Elevation=90
+Scene Scene.DateTime=Now
+Scene Scene.DateTime="12:00"
++0.75
+Scene Scene.Visibility=100 [1]

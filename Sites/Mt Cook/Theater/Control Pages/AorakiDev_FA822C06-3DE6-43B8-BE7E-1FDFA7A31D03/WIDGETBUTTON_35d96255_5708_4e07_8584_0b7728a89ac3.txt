@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Pale Blue Dot </Text>
+  <Description />
+  <Created>08/19/25 20:46:33</Created>
+  <Modified>09/24/26 22:24:31</Modified>
+  <Version>44</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets ChrisAwesomeAssets.Load (PaleBlueDot)
+Scene PaleBlueDot.Visibility=0
++0.1
+Scene PaleBlueDot.Visibility=100 [2]
+
+Control Text= "Remove Pale Blue Dot"
+Control Pause
+
++0.1
+
+Scene PaleBlueDot.Visibility=0 [1.5]
+
++1.5
+Assets ChrisAwesomeAssets.Unload (PaleBlueDot)

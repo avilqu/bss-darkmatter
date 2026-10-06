@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>HA Rey Stick</Text>
+  <Description />
+  <Created>12/05/20 16:56:13</Created>
+  <Modified>12/05/20 17:19:31</Modified>
+  <Version>14</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Carina HA Rey)
++0.1
+Assets Constellations.Load(Vela HA Rey)
++0.1
+Assets Constellations.Load(Puppis HA Rey)
++0.1
+Scene Carina HA Rey.Visibility=100 [2]
+Scene Vela HA Rey.Visibility=100 [2]
+Scene Puppis HA Rey.Visibility=100 [2]
++2
+Control Text=Unload Assets
+Control Pause
+Scene Carina HA Rey.Visibility=0 [1]
+Scene Vela HA Rey.Visibility=0 [1]
+Scene Puppis HA Rey.Visibility=0 [1]
++1
+Assets Constellations.Unload(Carina HA Rey)
+Assets Constellations.Unload(Vela HA Rey)
+Assets Constellations.Unload(Puppis HA Rey)

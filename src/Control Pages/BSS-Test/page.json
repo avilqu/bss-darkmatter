@@ -1,0 +1,21 @@
+{
+  "site": "Mt Cook",
+  "user": "Operator",
+  "pageName": "BSS-Test",
+  "pageGuid": "0D2F97AF-36FC-42A3-B48D-F2F93BD00BEB",
+  "created": "10/06/26 19:20:48",
+  "buttons": {
+    "10-BSS-TEST-Hello-10.txt": {
+      "prefix": "WIDGETBUTTONSMALL_e51b44ee_6dbe_45b9_a0b5_462c1d55861f",
+      "kind": "small",
+      "left": 10,
+      "top": 10
+    },
+    "20-BSS-TEST-CallHello.txt": {
+      "prefix": "WIDGETBUTTONSMALL_86ad2fb3_d6bb_4dcd_abd4_fcadcd86e04f",
+      "kind": "small",
+      "left": 135,
+      "top": 10
+    }
+  }
+}

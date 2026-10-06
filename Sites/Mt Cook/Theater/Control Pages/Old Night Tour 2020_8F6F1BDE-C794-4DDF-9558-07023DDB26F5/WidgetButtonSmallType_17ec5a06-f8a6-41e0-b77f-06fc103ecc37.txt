@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Label Procyon</Text>
+  <Description />
+  <Created>09/15/15 10:34:54</Created>
+  <Modified>05/17/20 15:16:44</Modified>
+  <Version>297</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load( Procyon Circle)
+Assets Constellations.Load( Procyon CMi)
++0.1
+Scene  Procyon CMi.DomeAlign=On
+Scene  Procyon Circle.Scale=0
+Scene  Procyon Circle.Visibility=100 
++0.1
+Scene  Procyon Circle.Scale=1.5 [0.3]
++0.3
+Scene  Procyon CMi.Visibility=100 [0.5]
++0.5
+Control Text="Fade down Procyon"
+Control Pause
+Scene  Procyon Circle.Scale=0 [0.5]
+Scene  Procyon Circle.Visibility=0 [0.5]
+Scene  Procyon CMi.Visibility=0 [0.5]
++0.6
+Assets Constellations.Unload( Procyon Circle)
+Assets Constellations.UnLoad( Procyon CMi)

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Unload SpaceOddity </Text>
+  <Description />
+  <Created>02/19/19 21:33:29</Created>
+  <Modified>10/02/26 18:04:44</Modified>
+  <Version>335</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Mt Cook.Theater.Music.Load(SpaceOddity)
++2
+Scene SpaceOddity.Play()
+Scene SpaceOddity.Volume=200 [5]
+Scene SpaceOddity.Looping=1
+Control Text="SpaceOddity"
+Control Pause
+Scene SpaceOddity.Volume=0 [5]
++5
+Assets Mt Cook.Theater.Music.Unload(SpaceOddity)

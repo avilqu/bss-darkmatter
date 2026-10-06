@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Voyager Flight</Text>
+  <Description />
+  <Created>02/04/26 1:48:21</Created>
+  <Modified>09/24/26 22:24:31</Modified>
+  <Version>59</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+;load voyager
+Assets Spacecraft.Load(Voyager1Ctl)
++0.2
+Assets Spacecraft.Load(Voyager1)
+;fade down screen
+Scene Scene.Visibility=0 [1:1:1]
++5
+;set initial time 1977
+Scene Scene.DateTime= "1977/09/05 15:00"
+
+Assets Spacecraft.Load(Voyager1Path)
+Assets Spacecraft.Load(Voyager1Trail)
++1
+Scene Voyager1Path.Visibility=0
+Scene Voyager1Trail.Visibility=0
+
+Scene Scene.Visibility=100 [1:1:1]
+
+;wait to fly out
+Control Text="go to jupiter"
+Control Pause
+
+Scene Scene.DateTime= "1979/03/01 05:45" [10:8:15]
+Control Text="flyby jupiter"
+Control Pause
+
+Scene Scene.DateTime= "1979/03/9 05:45" [50]
+Control Text="go to saturn"
+Control Pause
+
+Scene Scene.DateTime= "1980/11/11 05:45" [8:5:8]
+Control Text="flyby saturn"
+Control Pause
+
+Scene Scene.DateTime= "1980/11/14 05:45" [50]
+Control Text="goodbye sun"
+Control Pause
+
+Scene Scene.DateTime= "2026/09/07 05:45" [15:10:10]
+
+;jupiter 1979/3/5
+;saturn 1980/11/12

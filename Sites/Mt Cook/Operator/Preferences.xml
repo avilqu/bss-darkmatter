@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserPreferences xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="www.skyskan.com">
+  <Workspace Name="Aoraki_shu" Path="Sites\Mt Cook\Operator" />
+  <BootScripts>
+    <BootScript Name="Script for SkySkan_Demo_Advanced" Workspace="SkySkan_Demo_Advanced" />
+    <BootScript Name="Script for SkySkan_Demo_Blank" Workspace="SkySkan_Demo_Blank" />
+    <BootScript Name="Script for SkySkan_Demo_Control" Workspace="SkySkan_Demo_Control" />
+    <BootScript Name="Script for SkySkan_Demo_Create" Workspace="SkySkan_Demo_Create" />
+    <BootScript Name="Script for SkySkan_Demo_Explore" Workspace="SkySkan_Demo_Explore" />
+    <BootScript Name="Script for SkySkan_Demo_Import" Workspace="SkySkan_Demo_Import" />
+    <BootScript Name="Script for SkySkan_Demo_Science" Workspace="SkySkan_Demo_Science" />
+    <BootScript Name="Script for SkySkan_Demo_Welcome" Workspace="SkySkan_Demo_Welcome" />
+    <BootScript Name="Script for Mt_Cook_Production" Workspace="Mt_Cook_Production" />
+    <BootScript Name="Script for Mt_Cook_RunShow" Workspace="Mt_Cook_RunShow" />
+    <BootScript Name="Script for Aoraki_shu" Workspace="Aoraki_shu" />
+    <BootScript Name="Script for Aoraki_Chris" Workspace="Aoraki_Chris" />
+    <BootScript Name="Script for Aoraki_Taichi" Workspace="Aoraki_Taichi" />
+    <BootScript Name="Script for Adrien" Workspace="Adrien" />
+    <BootScript Name="Script for Aoraki_Vincent" Workspace="Aoraki_Vincent" />
+  </BootScripts>
+  <PinnedControlPages>
+    <PinnedControlPage Prefix="7267FC47-A81C-48EE-8B54-0AAD3EAE3E55" />
+    <PinnedControlPage Prefix="7DEB6649-0B14-4C4B-8DD3-6BFC37DF71D6" />
+    <PinnedControlPage Prefix="6195CB45-B2E2-4AE7-A6C2-4B81C1FABAAD" />
+    <PinnedControlPage Prefix="CD38921A-3B20-4E42-B20F-627EDC2168BE" />
+    <PinnedControlPage Prefix="386C545F-6D61-4D51-9857-FB8E08E1316B" />
+    <PinnedControlPage Prefix="B397D272-D604-4C80-A9B5-9090C993CF4C" />
+    <PinnedControlPage Prefix="BDF20CBE-5E91-4EC8-ACD6-3789D6C76217" />
+    <PinnedControlPage Prefix="7A74ABF1-4682-413F-98B6-8A5A7B227C96" />
+    <PinnedControlPage Prefix="8A05E639-7F83-40E0-8EA6-60C2CA425015" />
+    <PinnedControlPage Prefix="1E96D80D-220E-4BE2-924A-67E6814800DF" />
+  </PinnedControlPages>
+</UserPreferences>

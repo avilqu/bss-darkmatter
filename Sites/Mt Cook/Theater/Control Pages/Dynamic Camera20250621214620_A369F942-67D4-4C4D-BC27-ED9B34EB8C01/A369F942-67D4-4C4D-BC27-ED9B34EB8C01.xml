@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMButtonPageConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Dynamic Camera20250621214620</Name>
+  <Prefix>A369F942-67D4-4C4D-BC27-ED9B34EB8C01</Prefix>
+  <SUGW>0606</SUGW>
+  <KeyWords />
+  <Group />
+  <Type>ControlPage</Type>
+  <MatrixTransformX>0</MatrixTransformX>
+  <MatrixTransformY>0</MatrixTransformY>
+  <Widgets>
+    <Widget>
+      <Prefix>WidgetResizableRectangleType_cbac9b2e-7cf6-4057-9a0c-a4b3568e6759</Prefix>
+      <Type>WidgetResizableRectangleType</Type>
+      <OffsetLeft>0</OffsetLeft>
+      <OffsetRight>515</OffsetRight>
+      <OffsetTop>5</OffsetTop>
+      <OffsetBottom>585</OffsetBottom>
+      <Height>580</Height>
+      <Width>515</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetResizableRectangleType_cbac9b2e-7cf6-4057-9a0c-a4b3568e6759.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+      <SerializableParams>
+        <Key>RGBRGB</Key>
+        <Value>143:21.5686274509804:20.3921568627451:89.4117647058824:42.3529411764706:3.92156862745098</Value>
+      </SerializableParams>
+      <SerializableParams>
+        <Key>Opacity</Key>
+        <Value>100:100</Value>
+      </SerializableParams>
+    </Widget>
+    <Widget>
+      <Prefix>WidgetResizableRectangleType_54df7b7a-20dd-4f1a-9be6-ec646a28a00a</Prefix>
+      <Type>WidgetResizableRectangleType</Type>
+      <OffsetLeft>185</OffsetLeft>
+      <OffsetRight>330</OffsetRight>
+      <OffsetTop>15</OffsetTop>
+      <OffsetBottom>80</OffsetBottom>
+      <Height>65</Height>
+      <Width>145</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetResizableRectangleType_54df7b7a-20dd-4f1a-9be6-ec646a28a00a.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+      <SerializableParams>
+        <Key>RGBRGB</Key>
+        <Value>142:79:27.4509803921569:58.0392156862745:21.5686274509804:20.3921568627451</Value>
+      </SerializableParams>
+      <SerializableParams>
+        <Key>Opacity</Key>
+        <Value>100:100</Value>
+      </SerializableParams>
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_d4a90b4b-1d70-4ef3-9def-8e48ce39d24f</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>15</OffsetLeft>
+      <OffsetRight>135</OffsetRight>
+      <OffsetTop>15</OffsetTop>
+      <OffsetBottom>75</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_d4a90b4b-1d70-4ef3-9def-8e48ce39d24f.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_4372a291-4eca-4913-9e43-92d918358e1c</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>10</OffsetLeft>
+      <OffsetRight>130</OffsetRight>
+      <OffsetTop>90</OffsetTop>
+      <OffsetBottom>150</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_4372a291-4eca-4913-9e43-92d918358e1c.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_4b6b00bb-6b08-49a8-929f-863b676c5e54</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>375</OffsetLeft>
+      <OffsetRight>495</OffsetRight>
+      <OffsetTop>15</OffsetTop>
+      <OffsetBottom>75</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_4b6b00bb-6b08-49a8-929f-863b676c5e54.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_b3d9ea24-9a2a-461c-af15-90350e9c0383</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>10</OffsetLeft>
+      <OffsetRight>130</OffsetRight>
+      <OffsetTop>165</OffsetTop>
+      <OffsetBottom>225</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_b3d9ea24-9a2a-461c-af15-90350e9c0383.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_97b534fb-b9e7-4b6a-a31d-ef616f1a77e4</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>135</OffsetLeft>
+      <OffsetRight>255</OffsetRight>
+      <OffsetTop>165</OffsetTop>
+      <OffsetBottom>225</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_97b534fb-b9e7-4b6a-a31d-ef616f1a77e4.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_8df63376-1953-4268-8bbf-e6a3f55a7fde</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>260</OffsetLeft>
+      <OffsetRight>380</OffsetRight>
+      <OffsetTop>165</OffsetTop>
+      <OffsetBottom>225</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_8df63376-1953-4268-8bbf-e6a3f55a7fde.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_dcffc8f2-4909-40a6-a3cf-e0bc61a923a8</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>385</OffsetLeft>
+      <OffsetRight>505</OffsetRight>
+      <OffsetTop>165</OffsetTop>
+      <OffsetBottom>225</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_dcffc8f2-4909-40a6-a3cf-e0bc61a923a8.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonSmallType_52a2edb3-11b3-430a-b197-a31c85ece73f</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>260</OffsetLeft>
+      <OffsetRight>380</OffsetRight>
+      <OffsetTop>230</OffsetTop>
+      <OffsetBottom>275</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonSmallType_52a2edb3-11b3-430a-b197-a31c85ece73f.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonSmallType_f035ddda-8ac2-4b57-bf6e-cd9758fd91ba</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>385</OffsetLeft>
+      <OffsetRight>505</OffsetRight>
+      <OffsetTop>230</OffsetTop>
+      <OffsetBottom>275</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonSmallType_f035ddda-8ac2-4b57-bf6e-cd9758fd91ba.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonSmallType_db745e06-1784-4625-aed0-6dd63bd1dea3</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>260</OffsetLeft>
+      <OffsetRight>380</OffsetRight>
+      <OffsetTop>280</OffsetTop>
+      <OffsetBottom>325</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonSmallType_db745e06-1784-4625-aed0-6dd63bd1dea3.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonSmallType_83c7570a-81a1-42fd-8faa-4d80d8a42f71</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>385</OffsetLeft>
+      <OffsetRight>505</OffsetRight>
+      <OffsetTop>280</OffsetTop>
+      <OffsetBottom>325</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonSmallType_83c7570a-81a1-42fd-8faa-4d80d8a42f71.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_2d219477-29b8-4fe6-aea2-dd4fc99555a3</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>10</OffsetLeft>
+      <OffsetRight>130</OffsetRight>
+      <OffsetTop>330</OffsetTop>
+      <OffsetBottom>390</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_2d219477-29b8-4fe6-aea2-dd4fc99555a3.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_baf13329-aa55-4eaf-9ccf-f6f6dbcce67a</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>135</OffsetLeft>
+      <OffsetRight>255</OffsetRight>
+      <OffsetTop>330</OffsetTop>
+      <OffsetBottom>390</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_baf13329-aa55-4eaf-9ccf-f6f6dbcce67a.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_98fa06e6-c62e-4fe8-93fc-61509143aaed</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>260</OffsetLeft>
+      <OffsetRight>380</OffsetRight>
+      <OffsetTop>330</OffsetTop>
+      <OffsetBottom>390</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_98fa06e6-c62e-4fe8-93fc-61509143aaed.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_7b55c9a8-d4bf-4c4d-bf99-e86205bb5a4a</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>385</OffsetLeft>
+      <OffsetRight>505</OffsetRight>
+      <OffsetTop>330</OffsetTop>
+      <OffsetBottom>390</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_7b55c9a8-d4bf-4c4d-bf99-e86205bb5a4a.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonSmallType_4703eb09-cb52-4fe2-8728-a657946f4bc6</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>10</OffsetLeft>
+      <OffsetRight>130</OffsetRight>
+      <OffsetTop>395</OffsetTop>
+      <OffsetBottom>440</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonSmallType_4703eb09-cb52-4fe2-8728-a657946f4bc6.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonSmallType_ef9426cf-bb9f-4c28-9ec9-bf55f050a6e7</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>135</OffsetLeft>
+      <OffsetRight>255</OffsetRight>
+      <OffsetTop>395</OffsetTop>
+      <OffsetBottom>440</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonSmallType_ef9426cf-bb9f-4c28-9ec9-bf55f050a6e7.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonSmallType_0884cbda-7035-4133-a45f-be0022808054</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>10</OffsetLeft>
+      <OffsetRight>130</OffsetRight>
+      <OffsetTop>445</OffsetTop>
+      <OffsetBottom>490</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonSmallType_0884cbda-7035-4133-a45f-be0022808054.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_64350adb-e2d4-4939-9c07-1bc9aeddeed8</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>10</OffsetLeft>
+      <OffsetRight>130</OffsetRight>
+      <OffsetTop>495</OffsetTop>
+      <OffsetBottom>555</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_64350adb-e2d4-4939-9c07-1bc9aeddeed8.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_105a7e9f-5689-42db-a58b-40d38f31a14b</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>35</OffsetLeft>
+      <OffsetRight>155</OffsetRight>
+      <OffsetTop>740</OffsetTop>
+      <OffsetBottom>800</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_105a7e9f-5689-42db-a58b-40d38f31a14b.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_d4278ef6-7b36-4bb1-b765-4eb1d2f6f93f</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>285</OffsetLeft>
+      <OffsetRight>405</OffsetRight>
+      <OffsetTop>715</OffsetTop>
+      <OffsetBottom>775</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_d4278ef6-7b36-4bb1-b765-4eb1d2f6f93f.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_e9d048f0-03cf-4424-acc0-8b3eaabf0890</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>495</OffsetLeft>
+      <OffsetRight>615</OffsetRight>
+      <OffsetTop>730</OffsetTop>
+      <OffsetBottom>790</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_e9d048f0-03cf-4424-acc0-8b3eaabf0890.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_b0cc64e3-3dbd-4f62-acdb-593809ceb514</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>790</OffsetLeft>
+      <OffsetRight>910</OffsetRight>
+      <OffsetTop>580</OffsetTop>
+      <OffsetBottom>640</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_b0cc64e3-3dbd-4f62-acdb-593809ceb514.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonSmallType_948dcd9c-fd68-4c78-b5c9-c291769c9fe1</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>195</OffsetLeft>
+      <OffsetRight>315</OffsetRight>
+      <OffsetTop>25</OffsetTop>
+      <OffsetBottom>70</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonSmallType_948dcd9c-fd68-4c78-b5c9-c291769c9fe1.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonSmallType_aabf4440-87a2-4e49-8f4c-5bc48a5906f6</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>590</OffsetLeft>
+      <OffsetRight>710</OffsetRight>
+      <OffsetTop>95</OffsetTop>
+      <OffsetBottom>140</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonSmallType_aabf4440-87a2-4e49-8f4c-5bc48a5906f6.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_16c10932-7acd-492b-8d51-3c3ad36e3a3b</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>585</OffsetLeft>
+      <OffsetRight>705</OffsetRight>
+      <OffsetTop>160</OffsetTop>
+      <OffsetBottom>220</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_16c10932-7acd-492b-8d51-3c3ad36e3a3b.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_87a135f7-a088-43b7-9e1b-16642d923513</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>75</OffsetLeft>
+      <OffsetRight>195</OffsetRight>
+      <OffsetTop>615</OffsetTop>
+      <OffsetBottom>675</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_87a135f7-a088-43b7-9e1b-16642d923513.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_7ae2db87-bb26-40b4-8037-55cbd08d25ca</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>585</OffsetLeft>
+      <OffsetRight>705</OffsetRight>
+      <OffsetTop>225</OffsetTop>
+      <OffsetBottom>285</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_7ae2db87-bb26-40b4-8037-55cbd08d25ca.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_9fe38fb2-a24e-444c-8715-b75597317265</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>330</OffsetLeft>
+      <OffsetRight>450</OffsetRight>
+      <OffsetTop>625</OffsetTop>
+      <OffsetBottom>685</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_9fe38fb2-a24e-444c-8715-b75597317265.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_7e7619a5-bd15-4022-9247-e7c5a7b0287b</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>1792</OffsetLeft>
+      <OffsetRight>1912</OffsetRight>
+      <OffsetTop>574</OffsetTop>
+      <OffsetBottom>634</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_7e7619a5-bd15-4022-9247-e7c5a7b0287b.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+    <Widget>
+      <Prefix>WidgetButtonType_0766db56-6a85-4ca5-85cc-c3e5c7175703</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>1051</OffsetLeft>
+      <OffsetRight>1171</OffsetRight>
+      <OffsetTop>142</OffsetTop>
+      <OffsetBottom>202</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WidgetButtonType_0766db56-6a85-4ca5-85cc-c3e5c7175703.txt</ScriptFilePath>
+      <ImageButtonImageFilePath />
+    </Widget>
+  </Widgets>
+</DMButtonPageConfiguration>

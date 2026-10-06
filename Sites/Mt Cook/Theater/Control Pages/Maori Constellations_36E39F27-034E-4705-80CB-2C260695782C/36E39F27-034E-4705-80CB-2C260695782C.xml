@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMButtonPageConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Maori Constellations</Name>
+  <Prefix>36E39F27-034E-4705-80CB-2C260695782C</Prefix>
+  <SUGW>0606</SUGW>
+  <KeyWords />
+  <Group />
+  <Type>ControlPage</Type>
+  <MatrixTransformX>0</MatrixTransformX>
+  <MatrixTransformY>0</MatrixTransformY>
+  <Widgets>
+    <Widget>
+      <Prefix>WIDGETBUTTON_81dfd856_3fab_441c_afa5_63ca6b60ed7a</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>20</OffsetLeft>
+      <OffsetRight>140</OffsetRight>
+      <OffsetTop>20</OffsetTop>
+      <OffsetBottom>80</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETBUTTON_81dfd856_3fab_441c_afa5_63ca6b60ed7a.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETBUTTON_81dfd856_3fab_441c_afa5_63ca6b60ed7a</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETBUTTON_7e997044_f8e2_4c42_adf3_ab3d4579f9bc</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>20</OffsetLeft>
+      <OffsetRight>140</OffsetRight>
+      <OffsetTop>95</OffsetTop>
+      <OffsetBottom>155</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETBUTTON_7e997044_f8e2_4c42_adf3_ab3d4579f9bc.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETBUTTON_7e997044_f8e2_4c42_adf3_ab3d4579f9bc</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETBUTTON_31543603_4710_4c3c_8366_d2aeb5ea3bd7</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>20</OffsetLeft>
+      <OffsetRight>140</OffsetRight>
+      <OffsetTop>170</OffsetTop>
+      <OffsetBottom>230</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETBUTTON_31543603_4710_4c3c_8366_d2aeb5ea3bd7.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETBUTTON_31543603_4710_4c3c_8366_d2aeb5ea3bd7</ImageButtonImageFilePath>
+    </Widget>
+  </Widgets>
+</DMButtonPageConfiguration>

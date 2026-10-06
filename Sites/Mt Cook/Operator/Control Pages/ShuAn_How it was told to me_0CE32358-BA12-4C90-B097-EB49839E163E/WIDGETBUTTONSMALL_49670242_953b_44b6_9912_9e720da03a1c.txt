@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>View Edge on Earth -Moon-Sun-System</Text>
+  <Description />
+  <Created>11/17/18 4:55:11</Created>
+  <Modified>10/05/26 18:13:15</Modified>
+  <Version>598</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Camera.ConvertInPlace(Earth, Position)
++0.1
+Scene Camera { Xpos=481829323.944754  Ypos=-206682604.085921  Zpos=621444225.332231  Xrot=-105.588357149476  Yrot=-34.6395709138175  Zrot=-161.084994959905 }[10:10:10]

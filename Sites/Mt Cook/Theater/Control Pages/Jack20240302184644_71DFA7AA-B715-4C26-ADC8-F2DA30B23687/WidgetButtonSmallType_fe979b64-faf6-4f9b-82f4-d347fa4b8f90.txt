@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Max Pano</Text>
+  <Description />
+  <Created>03/23/23 1:21:23</Created>
+  <Modified>03/02/24 18:42:29</Modified>
+  <Version>208</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Jack.Load(valley-pano)
++2
+Scene valley-pano.Visibility=100 [2]
+Control Pause
+Control Text=Unload Pano
+Scene valley-pano.Visibility=0 [2]
++2
+Assets Jack.Unload(valley-pano)

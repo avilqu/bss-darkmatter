@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<!-- Description: DM 'network.xml' file lists renderers -->
+<!-- Exported by "DigitalSky 2.5.1 808101 release" using "ds-MtCook2019.mdb" database -->
+<!-- Date: 2019/02/12 23:46:57 (13h) -->
+<!-- Copyright (c) 2017 Sky-Skan, Inc., 51 Lake Street, Nashua, NH 03060, 603-880-8500 -->
+
+<Network>
+	<!-- Exported renderers -->
+	<Renderer>
+		<Id>1</Id>
+		<Hostname>DS-01</Hostname>
+		<LocalPort>24001</LocalPort>
+		<RemotePort>24051</RemotePort>
+		<Heads>
+			<Head>DS-01-A</Head>
+		</Heads>
+	</Renderer>
+	<Renderer>
+		<Id>2</Id>
+		<Hostname>DS-02</Hostname>
+		<LocalPort>24002</LocalPort>
+		<RemotePort>24052</RemotePort>
+		<Heads>
+			<Head>DS-02-B</Head>
+		</Heads>
+	</Renderer>
+	<Renderer>
+		<Id>3</Id>
+		<Hostname>DS-03</Hostname>
+		<LocalPort>24003</LocalPort>
+		<RemotePort>24053</RemotePort>
+		<Heads>
+			<Head>DS-03-C</Head>
+		</Heads>
+	</Renderer>
+	<Renderer>
+		<Id>4</Id>
+		<Hostname>DS-04</Hostname>
+		<LocalPort>24004</LocalPort>
+		<RemotePort>24054</RemotePort>
+		<Heads>
+			<Head>DS-04-D</Head>
+		</Heads>
+	</Renderer>
+	<Renderer>
+		<Id>5</Id>
+		<Hostname>DS-05</Hostname>
+		<LocalPort>24005</LocalPort>
+		<RemotePort>24055</RemotePort>
+		<Heads>
+			<Head>DS-05-E</Head>
+		</Heads>
+	</Renderer>
+</Network>

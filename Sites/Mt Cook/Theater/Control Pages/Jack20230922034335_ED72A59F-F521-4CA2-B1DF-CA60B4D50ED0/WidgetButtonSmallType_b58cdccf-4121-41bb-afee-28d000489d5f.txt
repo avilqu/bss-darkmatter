@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Polaris </Text>
+  <Description />
+  <Created>10/21/15 10:20:51</Created>
+  <Modified>09/22/23 3:38:40</Modified>
+  <Version>145</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Polaris Circle)
+Assets Constellations.Load(Polaris Umi)
++0.1
+Scene Polaris Umi.DomeAlign=On
+Scene Polaris Circle.Scale=0
+Scene Polaris Circle.Visibility=100 
++0.1
+Scene Polaris Circle.Scale=1.5 [0.3]
++0.3
+Scene Polaris Umi.Visibility=100 [0.5]
+Scene Polaris Umi.Text.String="\n Polaris"
+Scene Polaris Umi.Text.LineSpacing=1.5
+Scene Polaris Umi.FontHeight=1.5
++0.5
+Control Text="Fade down Polaris"
+Control Pause
+Scene Polaris Circle.Scale=0 [0.5]
+Scene Polaris Circle.Visibility=0 [0.5]
+Scene Polaris Umi.Visibility=0 [0.5]
++0.6
+Assets Constellations.Unload(Polaris Circle)
+Assets Constellations.UnLoad(Polaris Umi)

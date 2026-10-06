@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Scientific Constellations</Text>
+  <Description />
+  <Created>02/14/19 1:45:30</Created>
+  <Modified>04/26/24 0:38:45</Modified>
+  <Version>339</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>Big Bang,Media</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Antlia Art)
+Assets Constellations.Load(Caelum Art)
+Assets Constellations.Load(Carina Art)
+Assets Constellations.Load(Circinus Art)
+Assets Constellations.Load(Horologium Art)
+Assets Constellations.Load(Microscopium Art)
+Assets Constellations.Load(Norma Art)
+Assets Constellations.Load(Octans Art)
+Assets Constellations.Load(Puppis Art)
+Assets Constellations.Load(Pyxis Art)
+Assets Constellations.Load(Reticulum Art)
+Assets Constellations.Load(Sextans Art)
+Assets Constellations.Load(Telescopium Art)
+Assets Constellations.Load(Triangulum Australe Art)
+Assets Constellations.Load(Vela Art)
++0.2
+Scene Vela Art.Visibility=100 [2]
+Scene Triangulum Australe Art.Visibility=100 [2]
+Scene Telescopium Art.Visibility=100 [2]
+Scene Sextans Art.Visibility=100 [2]
+Scene Reticulum Art.Visibility=100 [2]
+Scene Pyxis Art.Visibility=100 [2]
+Scene Puppis Art.Visibility=100 [2]
+Scene  Octans Art.Visibility=100 [2]
+Scene Norma Art.Visibility=100 [2]
+Scene Microscopium Art.Visibility=100 [2]
+Scene Horologium Art.Visibility=100 [2]
+Scene Circinus Art.Visibility=100 [2]
+Scene Carina Art.Visibility=100 [2]
+Scene Antlia Art.Visibility=100 [2]
+Scene Caelum Art.Visibility=100 [2]
+Control Text=Unload Assets
+Control Pause
+Scene Triangulum Australe Art.Visibility=0 [2]
+Scene Antlia Art.Visibility=0 [2]
+Scene Caelum Art.Visibility=0 [2]
+Scene Carina Art.Visibility=0 [2]
+Scene Circinus Art.Visibility=0 [2]
+Scene Horologium Art.Visibility=0 [2]
+Scene Microscopium Art.Visibility=0 [2]
+Scene Norma Art.Visibility=0 [2]
+Scene Octans Art.Visibility=0 [2]
+Scene Puppis Art.Visibility=0 [2]
+Scene Pyxis Art.Visibility=0 [2]
+Scene Reticulum Art.Visibility=0 [2]
+Scene Sextans Art.Visibility=0 [2]
+Scene Telescopium Art.Visibility=0 [2]
+Scene Vela Art.Visibility=0 [2]
++2
+;Assets Constellations.Unload(Vela Art)
+;Assets Constellations.Unload(Triangulum Australe Art)
+;Assets Constellations.Unload(Telescopium Art)
+;Assets Constellations.Unload(Sextans Art)
+;Assets Constellations.Unload(Reticulum Art)
+;Assets Constellations.Unload(Pyxis Art)
+;Assets Constellations.Unload(Puppis Art)
+;Assets Constellations.Unload(Octans Art)
+;Assets Constellations.Unload(Norma Art)
+;Assets Constellations.Unload(Microscopium Art)
+;Assets Constellations.Unload(Horologium Art)
+;Assets Constellations.Unload(Circinus Art)
+;Assets Constellations.Unload(Carina Art)
+;Assets Constellations.Unload(Antlia Art)
+;Assets Constellations.Unload(Caelum Art)

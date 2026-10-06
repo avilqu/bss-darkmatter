@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Label Antares</Text>
+  <Description />
+  <Created>10/06/15 12:06:58</Created>
+  <Modified>09/16/23 23:45:47</Modified>
+  <Version>132</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Antares Circle)
+Assets Constellations.Load(Antares Sco)
++0.1
+Scene Antares Sco.DomeAlign=On
+Scene Antares Circle.Scale=0
+Scene Antares Circle.Visibility=100 
++0.1
+Scene Antares Circle.Scale=1.5 [0.3]
++0.3
+Scene Antares Sco.Visibility=100 [0.5]
++0.5
+Control Text="Fade down Antares"
+Control Pause
+Scene Antares Circle.Scale=0 [0.5]
+Scene Antares Circle.Visibility=0 [0.5]
+Scene Antares Sco.Visibility=0 [0.5]
++0.6
+Assets Constellations.Unload(Antares Circle)
+Assets Constellations.UnLoad(Antares Sco)

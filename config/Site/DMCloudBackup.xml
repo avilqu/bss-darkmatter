@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Settings for DMDMDaemonCloudBackupExtension extension.-->
+<!--Do not modify the contents.  Just don't.-->
+<settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<suspended>no</suspended>
+	<start>2018-10-17T00:00:00+13:00</start>
+	<started>0001-01-01T00:00:00</started>
+	<hourly>0001-01-01T00:00:00</hourly>
+	<daily>0001-01-01T00:00:00</daily>
+	<weekly>0001-01-01T00:00:00</weekly>
+	<monthly>0001-01-01T00:00:00</monthly>
+	<master>0001-01-01T00:00:00</master>
+	<connected>0001-01-01T00:00:00</connected>
+</settings>

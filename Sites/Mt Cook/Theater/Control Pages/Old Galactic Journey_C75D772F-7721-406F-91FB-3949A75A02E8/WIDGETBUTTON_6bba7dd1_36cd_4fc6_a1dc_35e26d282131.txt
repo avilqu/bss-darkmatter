@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Look SOUTH</Text>
+  <Description />
+  <Created>06/24/16 14:04:06</Created>
+  <Modified>03/15/23 19:40:56</Modified>
+  <Version>410</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info>WIDGETBUTTONSMALL_e3c8eab6_5c2f_4630_ba42_5710b7cfcea3</Info>
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Camera.FlyTo(Here, Orient=SouthAndUp) [10]
+Scene Earth.Atmosphere.Visibility=0 [0]
+Scene Earth.Cloud.Visibility=0 [0]
+;Scene Scene.DateTime=Now [4]
+Scene Visible Milky Way.Visibility=60

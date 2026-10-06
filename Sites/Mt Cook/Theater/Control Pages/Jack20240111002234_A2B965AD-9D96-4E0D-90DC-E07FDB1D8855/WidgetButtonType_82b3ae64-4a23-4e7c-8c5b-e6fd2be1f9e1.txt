@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>M57</Text>
+  <Description />
+  <Created>11/17/18 4:55:11</Created>
+  <Modified>01/09/24 3:12:06</Modified>
+  <Version>529</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Jack.Load(Messier 57 All Sky)
++0.2
+Scene Messier 57 All Sky.Visibility=100 [2]
++2
+Control Pause
+Scene Messier 57 All Sky.Visibility=0 [1]
++1
+Assets Jack.Unload(Messier 57 All Sky)

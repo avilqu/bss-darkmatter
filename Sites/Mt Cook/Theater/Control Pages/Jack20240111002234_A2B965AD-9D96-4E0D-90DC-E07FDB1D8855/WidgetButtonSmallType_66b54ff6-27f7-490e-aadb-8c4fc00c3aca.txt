@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Carina-Nebula-NGC-3324</Text>
+  <Description>https://webbtelescope.org/contents/media/images/2022/031/01G77PKB8NKR7S8Z6HBXMYATGJ</Description>
+  <Created>03/23/23 6:24:13</Created>
+  <Modified>01/09/24 3:12:06</Modified>
+  <Version>156</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Jack.Load(Carina-Nebula-NGC-3324)
++2
+Scene Carina-Nebula-NGC-3324.Visibility=100 [2]
+Control Pause
+Control Text=Unload Carina-Nebula-NGC-3324
+Scene Carina-Nebula-NGC-3324.Visibility=0 [2]
++2
+Assets Jack.Unload(Carina-Nebula-NGC-3324)

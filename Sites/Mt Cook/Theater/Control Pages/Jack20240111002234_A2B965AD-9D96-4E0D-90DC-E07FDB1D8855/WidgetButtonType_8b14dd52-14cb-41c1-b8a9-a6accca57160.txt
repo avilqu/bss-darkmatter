@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>meme cmb</Text>
+  <Description />
+  <Created>03/17/23 1:52:35</Created>
+  <Modified>01/09/24 3:12:06</Modified>
+  <Version>172</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Jack.Load(mySphere1)
+Control Text=Unload Assets
++2
+Scene mySphere1.Visibility=100 [2]
+Control Pause
+Assets Jack.Unload(mySphere1)

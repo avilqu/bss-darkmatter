@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Fly to Matariki</Text>
+  <Description>Flies to Earth</Description>
+  <Created>09/27/18 16:14:37</Created>
+  <Modified>09/13/26 23:09:45</Modified>
+  <Version>48</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords>Fly Go to Earth</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+; Go to the Matariki
+	
+Scene Camera.FlyTo(MatarikiLocation, Altitude=608589172226239000.0, Orient=SouthAndDown) [3:4:3]
+	
+Control Text="Flying to Matariki..."
++10

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Taniwha Art</Text>
+  <Description />
+  <Created>02/18/19 20:57:55</Created>
+  <Modified>02/04/20 19:39:58</Modified>
+  <Version>307</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Hydra Art)
++0.2
+Scene Hydra Art.Visibility=100 [2]
+Control Text=Unload Assets
+Control Pause
+Scene Hydra Art.Visibility=0 [2]
++2
+Assets Constellations.Unload(Hydra Art)

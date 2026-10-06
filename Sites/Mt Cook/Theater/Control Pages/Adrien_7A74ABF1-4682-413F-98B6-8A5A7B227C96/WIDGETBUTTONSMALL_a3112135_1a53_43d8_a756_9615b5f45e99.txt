@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Pluto orbit </Text>
+  <Description>Fades up Pluto's orbit</Description>
+  <Created>11/17/18 4:55:11</Created>
+  <Modified>09/24/26 22:44:19</Modified>
+  <Version>635</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords>Pluto Orbit PlutoO</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene PlutoOrbit.Visibility=80 [2]
+	
+Control Pause
+	
+Scene PlutoOrbit.Visibility=0 [2]

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Start Dynamic Camera (4s)</Text>
+  <Description />
+  <Created>05/29/25 19:05:55</Created>
+  <Modified>06/21/25 21:25:19</Modified>
+  <Version>236</Version>
+  <FriendlyName>startDynamicCamera</FriendlyName>
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Development.Load(camTarget, targetMemory01, cameraString)
+; Big orange axis indicator, only for testing:
+; Assets Development.Load(camTargetIndicator)
+JS AddEngine(dCamStart)
++1
+JS dCamStart.Execute(@"
+
+	DigitalSky.LogMessage("Dynamic Camera System engine started...");
+	;//Define variables
+	;// Get reference to main camera and its current parent object:
+	var mainCam = DigitalSky.GetAssetInstance("Camera");
+	var mainCamParentIns = mainCam.GetPropertyInstance("Parent");
+	var mainCamParent = mainCamParentIns.Value;
+
+	;//Debugging Checkpoint:
+	DigitalSky.LogMessage("Checkpoint 1");
+	DigitalSky.Wait(1);
+	;// Get reference to Camera target and Camera Target Memory objects:
+	var camTar = DigitalSky.GetAssetInstance("camTarget");
+	var targetMemory = DigitalSky.GetAssetInstance("targetMemory01");
+
+	;// Debugging checkpoint:
+	DigitalSky.LogMessage("Checkpoint 2");
+
+	;// Set camTarget parent to current Camera parent:
+	camTar.SetProperty("Parent", mainCamParent, 0);
+	DigitalSky.SendScript("Scene targetMemory01.Parent=" + mainCamParent)
+
+	;// Send current parent of main camera to log:
+	DigitalSky.LogMessage("mainCamParent Value is: " + mainCamParent + ". ");
+
+@")
++3
+JS RemoveEngine(dCamStart)
+Control Text="SYSTEM ACTIVE"
+Scene Camera.ConvertInPlace(camTarget)
++1
+Control testDynamicCamera.run

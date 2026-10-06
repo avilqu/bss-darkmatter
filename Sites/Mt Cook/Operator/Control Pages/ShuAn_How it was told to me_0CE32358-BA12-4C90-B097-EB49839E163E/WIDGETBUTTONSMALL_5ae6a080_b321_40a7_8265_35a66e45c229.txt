@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Land</Text>
+  <Description />
+  <Created>01/29/16 13:05:05</Created>
+  <Modified>10/05/26 18:13:15</Modified>
+  <Version>115</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords>land</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+; Land on Earth
+Scene Camera.ConvertInPLace(Earth)
++0.5
+Scene Camera{Altitude=800} [4:3:3]
++1
+Scene Camera.Orient=SouthAndUp [3:3:3]
+Scene Camera.SS.Elevation=90.00 [3:3:3]

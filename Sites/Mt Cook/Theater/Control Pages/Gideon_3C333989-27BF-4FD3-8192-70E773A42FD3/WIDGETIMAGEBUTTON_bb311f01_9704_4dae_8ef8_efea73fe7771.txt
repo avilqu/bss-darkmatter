@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Unload JWST </Text>
+  <Description />
+  <Created>04/18/16 14:52:41</Created>
+  <Modified>04/26/24 0:38:45</Modified>
+  <Version>455</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info>WIDGETIMAGEBUTTON_ba5ff8f6_b9a8_465e_8f74_a19a9b6b0fcc</Info>
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Spacecraft.Load(L2Ctl)
++0.1
+Assets Spacecraft.Load(JWSTTrail)
++0.1
+Assets Spacecraft.Load(JWST)
++2
+Scene JWSTTrail.Visibility=0
++0.1
+Scene Scene.Visibility=0 [0:0:1]
++1.1
+Scene Camera.NavOrbit(0,0)
++0.1
+Scene Camera.ConvertInPLace(JWST)
++0.2
+Scene Camera { Xpos=10.9388840961175  Ypos=10.6425011795987  Zpos=14.5578098846945 } [0.1]
++0.15
+Scene Camera { Xrot=-174.461910529307  Yrot=-35.0479634365151  Zrot=-179.406929049807 } [0.1]
++0.3
+Scene Camera.SS.Elevation=60
++0.1
+Scene Scene.DateTime=2457985.989
++0.1
+Scene JWST { Xrot=-90  Yrot=0  Zrot=-90 }
++0.1
+Scene Datetime.Rate=1 [1::]
++0.1
+Scene Scene.Visibility=100 [0:0:2]
++0.1
+Control Text=Unload JWST
+Control Pause
+Scene Scene.Visibility=0 [0:0:1]
++1.1
+Scene Datetime.Rate=0 [1::]
++0.1
+Scene Camera.ConvertInPLace(Earth)
++0.5
+;Double Rot to cancel Yaw
+Scene Camera { Xrot=-66.0952894481198  Yrot=-1.16359718710679  Zrot=-176.801227696484 } [0.1]
++0.1
+;
+Scene Camera { Xpos=744874.171218447  Ypos=-16268848.4084026  Zpos=1732312.94241657 } [0.1]
++0.1
+Scene Camera { Xrot=-51.0423341734204  Yrot=-2.03904862344686  Zrot=-178.352101549904 } [0.1]
++0.1
+Scene Camera.Pitch=0
++0.1
+Scene Camera.SS.Elevation=45.00 [0:0:1]
++1.5
+Assets Spacecraft.UnLoad(L2Ctl)
++0.1
+Assets Spacecraft.UnLoad(JWSTTrail)
++0.1
+Assets Spacecraft.UnLoad(JWST)
++0.1
+Scene Scene.Visibility=100 [0:0:4]
++3
+Control Text=Load JWST

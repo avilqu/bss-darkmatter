@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Stop and Unload Music</Text>
+  <Description />
+  <Created>12/04/18 11:12:58</Created>
+  <Modified>12/05/20 17:19:31</Modified>
+  <Version>393</Version>
+  <FriendlyName>StopMusic</FriendlyName>
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene MusicMedia.Volume=0 [3:3:3]
++1.5
+Scene MusicMedia.Pause()
++0.2
+Scene MusicMedia.RTZ()
++0.2
+;Repeatedly send a halt to the Time Loop
+control TimeCheckLoop.reset
+control TimeCheck.reset
++0.1
+control StopTimeCheck.run
++0.2
+control StopTimeCheck.run
++0.1
+control PauseMusic.reset
++0.1
+control AutoPlay.reset
++0.1
+control ShufflePlay.reset
+;Reset info windows
+Control MusicDurationInfo.Text = "Song Duration"
+Control CurrentTime.Text = "No Music Playing"
+control SongTimeLeft.Text = "Time Remaining"
+control MusicInfo.Text = "Music Information"
++0.1
+;Unload assets
+Assets Sky-Skan.Public.Tutorial 1 - DM Basics.Unload(MusicMedia)
++0.1
+Assets Sky-Skan.Public.Tutorial 1 - DM Basics.Unload(MusicNull)
++0.1
+Assets Sky-Skan.Public.Tutorial 1 - DM Basics.Unload(MusicText)
++0.1
+JS RemoveEngine(MusicTimeEngine)
++0.1
+JS RemoveEngine(VolumeEngine)

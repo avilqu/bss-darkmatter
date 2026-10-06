@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Go To Hawaii</Text>
+  <Description>Camera State on Earth</Description>
+  <Created>09/06/26 19:53:51</Created>
+  <Modified>10/05/26 17:01:10</Modified>
+  <Version>28</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords>Camera,Camera</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Camera.ConvertInPlace(Earth, Position Rotate)
++0.1
+Scene Camera.ConvertInPlace(Earth, Position Rotate)
++0.1
+Scene Camera { Xpos=-6101517.26377386  Ypos=-2050229.49920854  Zpos=1859938.44120173  Xrot=49.4045541801549  Yrot=-6.18577204952784  Zrot=78.5664925334028 }[5:20:5]

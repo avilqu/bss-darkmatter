@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>TL Tasman Valley North</Text>
+  <Description />
+  <Created>03/15/23 22:22:33</Created>
+  <Modified>09/25/23 0:54:28</Modified>
+  <Version>12</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Jack.Load(TL-TasmanValley-North)
+Assets Jack.Load(Fullframe-canvas)
++2
+
+Scene Fullframe-canvas.Visibility=100 [1]
+Scene TL-TasmanValley-North.Play()
+
+Control Text=20sec play...
+;Control Pause
++19
+Scene Fullframe-canvas.Visibility=0 [1]
++1
+Assets Jack.Unload(TL-TasmanValley-North)
+Assets Jack.Unload(Fullframe-canvas)

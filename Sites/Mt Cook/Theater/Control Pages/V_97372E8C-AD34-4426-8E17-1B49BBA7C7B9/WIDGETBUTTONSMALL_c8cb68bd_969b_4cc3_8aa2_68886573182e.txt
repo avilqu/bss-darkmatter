@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Label Planets</Text>
+  <Description />
+  <Created>02/20/19 16:54:23</Created>
+  <Modified>10/02/26 21:21:17</Modified>
+  <Version>276</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Mercury.Label.HJ=Right
+Scene Mercury.Label.Color=#938953
+Scene Mercury.Label.Size=12
+Scene Mercury.Label.Brightness=100 [1]
+Scene Venus.Label.HJ=Right
+Scene Venus.Label.Color=#938953
+Scene Venus.Label.Size=12
+Scene Venus.Label.Brightness=100 [1]
+Scene Earth.Label.HJ=Right
+Scene Earth.Label.Color=#938953
+Scene Earth.Label.Size=12
+Scene Earth.Label.Brightness=100 [1]
+Scene Mars.Label.HJ=Right
+Scene Mars.Label.Color=#938953
+Scene Mars.Label.Size=12
+Scene Mars.Label.Brightness=100 [1]
+Scene Jupiter.Label.HJ=Right
+Scene Jupiter.Label.Color=#938953
+Scene Jupiter.Label.Size=12
+Scene Jupiter.Label.Brightness=100 [1]
+Scene Saturn.Label.HJ=Right
+Scene Saturn.Label.Color=#938953
+Scene Saturn.Label.Size=12
+Scene Saturn.Label.Brightness=100 [1]
+Scene Uranus.Label.HJ=Right
+Scene Uranus.Label.Color=#938953
+Scene Uranus.Label.Size=12
+Scene Uranus.Label.Brightness=100 [1]
+Scene Neptune.Label.HJ=Right
+Scene Neptune.Label.Color=#938953
+Scene Neptune.Label.Size=12
+Scene Neptune.Label.Brightness=100 [1]
+Control Text="Fade Planets Label"
+Control Pause
+Scene Mercury.Label.Brightness=0 [1]
+Scene Venus.Label.Brightness=0 [1]
+Scene Earth.Label.Brightness=0 [1]
+Scene Mars.Label.Brightness=0 [1]
+Scene Jupiter.Label.Brightness=0 [1]
+Scene Saturn.Label.Brightness=0 [1]
+Scene Uranus.Label.Brightness=0 [1]
+Scene Neptune.Label.Brightness=0 [1]

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Sun Red Giant Slow</Text>
+  <Description />
+  <Created>02/09/19 17:57:19</Created>
+  <Modified>10/02/26 18:04:44</Modified>
+  <Version>703</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords>Zoom Scale Sun</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Sun  { Xscale=225  Yscale=225  Zscale=225 } [90]
++1
+Scene Sun.StellarClass=K
++2
+Scene Sun.StellarClass=M
+Control Text= Back to normal
+Control Pause
+Scene Sun { Xscale=2.5  Yscale=2.5  Zscale=2.5 } [10]
++10
+Scene Sun.StellarClass=G
+Scene Southern-Ring-Nebula-NGC-3132.Visibility=0 [2]

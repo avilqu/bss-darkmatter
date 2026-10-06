@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Label Canopus</Text>
+  <Description />
+  <Created>09/15/15 12:49:21</Created>
+  <Modified>05/17/20 15:16:44</Modified>
+  <Version>315</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Canopus Circle)
+Assets Constellations.Load(Canopus Car)
++0.1
+Scene Canopus Car.DomeAlign=On
+Scene Canopus Circle.Scale=0
+Scene Canopus Circle.Visibility=100 
++0.1
+Scene Canopus Circle.Scale=1.5 [0.3]
++0.3
+Scene Canopus Car.Visibility=100 [0.5]
++0.5
+Control Text="Fade down Canopus"
+Control Pause
+Scene Canopus Circle.Scale=0 [0.5]
+Scene Canopus Circle.Visibility=0 [0.5]
+Scene Canopus Car.Visibility=0 [0.5]
++0.6
+Assets Constellations.Unload(Canopus Circle)
+Assets Constellations.UnLoad(Canopus Car)

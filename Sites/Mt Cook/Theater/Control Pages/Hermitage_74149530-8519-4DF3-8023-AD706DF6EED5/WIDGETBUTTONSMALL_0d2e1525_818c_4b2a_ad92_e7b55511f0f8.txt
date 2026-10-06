@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Salmon</Text>
+  <Description />
+  <Created>02/20/19 16:20:58</Created>
+  <Modified>06/25/20 12:14:37</Modified>
+  <Version>28</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Spice SendCue(3 fadecolor 98 56 33 cove a)

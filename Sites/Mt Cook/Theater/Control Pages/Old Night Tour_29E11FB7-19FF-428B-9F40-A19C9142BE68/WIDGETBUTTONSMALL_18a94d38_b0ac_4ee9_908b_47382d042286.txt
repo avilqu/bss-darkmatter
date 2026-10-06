@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Zodiac Stick</Text>
+  <Description />
+  <Created>02/12/16 13:52:41</Created>
+  <Modified>02/04/20 19:39:58</Modified>
+  <Version>260</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Aquarius Stick.Visibility=100 [2]
+Scene Aries Stick.Visibility=100 [2]
+Scene Cancer Stick.Visibility=100 [2]
+Scene Capricornus Stick.Visibility=100 [2]
+Scene  Gemini Stick.Visibility=100 [2]
+Scene Leo Stick.Visibility=100 [2]
+Scene Pisces Stick.Visibility=100 [2]
+Scene Libra Stick.Visibility=100 [2]
+Scene Sagittarius Stick.Visibility=100 [2]
+Scene Scorpius Stick.Visibility=100 [2]
+Scene Taurus Stick.Visibility=100 [2]
+Scene Virgo Stick.Visibility=100 [2]
++2
+Control Text="Zodiac Stick OFF"
+Control Pause
+Scene Aquarius Stick.Visibility=0 [2]
+Scene Aries Stick.Visibility=0 [2]
+Scene Cancer Stick.Visibility=0 [2]
+Scene Capricornus Stick.Visibility=0 [2]
+Scene  Gemini Stick.Visibility=0 [2]
+Scene Leo Stick.Visibility=0 [2]
+Scene Pisces Stick.Visibility=0 [2]
+Scene Libra Stick.Visibility=0 [2]
+Scene Sagittarius Stick.Visibility=0 [2]
+Scene Scorpius Stick.Visibility=0 [2]
+Scene Taurus Stick.Visibility=0 [2]
+Scene Virgo Stick.Visibility=0 [2]

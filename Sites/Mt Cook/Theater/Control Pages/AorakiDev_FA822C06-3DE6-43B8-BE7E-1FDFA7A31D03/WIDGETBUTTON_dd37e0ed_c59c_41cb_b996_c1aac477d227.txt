@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Voyager Encounter</Text>
+  <Description />
+  <Created>08/19/25 18:44:17</Created>
+  <Modified>09/24/26 22:24:31</Modified>
+  <Version>66</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+;load voyager
+Assets Spacecraft.Load(Voyager1Ctl)
++0.2
+Assets Spacecraft.Load(Voyager1)
+;fade down screen
+Scene Scene.Visibility=0 [1:1:1]
++5
+;set initial time 1977
+Scene Scene.DateTime= "1977/09/05 15:00"
+
+Assets Spacecraft.Load(Voyager1Path)
+Assets Spacecraft.Load(Voyager1Trail)
++1
+Scene Voyager1Path.Visibility=0
+Scene Voyager1Trail.Visibility=0
+
+Scene Camera { Xpos=-21875871.0273521  Ypos=-3422875.01858784  Zpos=-12672181.3576273  Xrot=-41.8278278038548  Yrot=18.4287191013559  Zrot=70.9081843666028 }
+;fade in screen
+Scene Scene.Visibility=100 [1:1:1]
++1
+;move camera to voyager start
+Scene targetMemory01.Parent="Voyager1"
+ 
+Scene Camera { Xpos=-464.781096929889  Ypos=397.291219770129  Zpos=-1.67569442276402  Xrot=44.6964424067001  Yrot=21.65923675061  Zrot=49.4232846195414 }[9]
++9
+Scene Camera { Xpos=-15.4840429567469  Ypos=13.2356412256259  Zpos=-0.0558242840716486  Xrot=44.6964424067001  Yrot=21.65923675061  Zrot=49.4232846195414 } [5]
+
+;wait to fly out
+Control Text="1st stage flyout"
+Control Pause
+
+Scene Scene.DateTime= "1977/09/07 05:45" [4:4:2]
++10
+Scene Scene.DateTime= "1979/02/11 00:00" [5:20:5]
++30
+Scene Scene.DateTime= "1979/03/04 00:00" [1:4:5]
++10
+Scene Scene.DateTime= "1979/03/06" [20]
++20

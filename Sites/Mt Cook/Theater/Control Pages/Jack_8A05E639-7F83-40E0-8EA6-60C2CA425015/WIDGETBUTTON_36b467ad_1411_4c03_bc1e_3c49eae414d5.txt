@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>neptune-jwst</Text>
+  <Description>https://webbtelescope.org/contents/media/images/2022/046/01GCCVQ72QM3D8CM2MRFGZ94HB</Description>
+  <Created>03/23/23 6:07:01</Created>
+  <Modified>05/30/25 19:56:22</Modified>
+  <Version>232</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Jack.Load(neptune-jwst)
++2
+Scene neptune-jwst.Visibility=100 [2]
+Control Pause
+Control Text=Unload neptune-jwst
+Scene neptune-jwst.Visibility=0 [2]
++2
+Assets Jack.Unload(neptune-jwst)

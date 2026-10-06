@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Vega</Text>
+  <Description />
+  <Created>09/29/15 15:17:52</Created>
+  <Modified>10/02/26 21:21:17</Modified>
+  <Version>60</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Vega Circle)
+Assets Constellations.Load(Vega Lyr)
++0.1
+Scene Vega Lyr.DomeAlign=On
+Scene Vega Circle.Scale=0
+Scene Vega Circle.Visibility=100 
++0.1
+Scene Vega Circle.Scale=1.5 [0.3]
++0.3
+Scene Vega Lyr.Visibility=100 [0.5]
+Scene Vega Lyr.Text.String="\n Vega"
+Scene Vega Lyr.Text.LineSpacing=1.5
+Scene Vega Lyr.FontHeight=1.5
++0.5
+Control Text="Fade down Vega"
+Control Pause
+Scene Vega Circle.Scale=0 [0.5]
+Scene Vega Circle.Visibility=0 [0.5]
+Scene Vega Lyr.Visibility=0 [0.5]
++0.6
+Assets Constellations.Unload(Vega Circle)
+Assets Constellations.UnLoad(Vega Lyr)

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Unload Constellations </Text>
+  <Description />
+  <Created>12/07/16 16:34:13</Created>
+  <Modified>02/04/20 19:39:58</Modified>
+  <Version>170</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info>WIDGETIMAGEBUTTON_1edb54a3_6247_4e6e_bc40_d43ca2187e1f</Info>
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(12ZodiacSticks,88Sticks)
++2
+Scene 88Sticks.Visibility=100 [1]
+Control Text=Unload Constellations
+Control Pause
+Scene 12ZodiacSticks.Visibility=0 [1]
+Scene 88Sticks.Visibility=0 [1]
++1.1
+Assets Constellations.Unload(12ZodiacSticks,88Sticks)
+Control Sky-Skan.Public.Galactic - Milky Way.ChangeColorGreenZodiac.Abort()

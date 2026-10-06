@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Max's MilkyWay</Text>
+  <Description>Flies to Earth</Description>
+  <Created>11/17/18 4:55:11</Created>
+  <Modified>07/25/26 18:58:13</Modified>
+  <Version>507</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>Fly Go to Earth</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+;Scene Visible Milky Way.Image="<ContentPath>\Core\Astronomy\AllSky\MilkyWayMellingerDM_Cleaned_16K.dds"
+
+Scene Visible Milky Way.Image="<ContentPath>\Core\Astronomy\AllSky\MWPAN2_4KX2K.JPG"
+
+;Scene Stars.AbsShift=-0.9
+;Scene Stars.RedAbsShift=0.7

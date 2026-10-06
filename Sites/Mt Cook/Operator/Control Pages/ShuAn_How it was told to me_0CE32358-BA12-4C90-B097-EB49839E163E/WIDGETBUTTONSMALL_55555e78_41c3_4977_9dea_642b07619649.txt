@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Go to the moon</Text>
+  <Description>Camera State on Earth</Description>
+  <Created>09/06/26 19:57:11</Created>
+  <Modified>10/05/26 18:13:15</Modified>
+  <Version>74</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords>Camera,Camera</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Scene.DateTime=2027/06/17 
+Scene Scene.DateTime="11:00"
+Scene Camera.ConvertInPlace(camTarget, Position)
++0.1
+Scene Camera { Xpos=-4134386.41531304  Ypos=-1049720.41158263  Zpos=-913550.303527633  Xrot=106.328892937576  Yrot=62.5429281720626  Zrot=100.87170362417 }

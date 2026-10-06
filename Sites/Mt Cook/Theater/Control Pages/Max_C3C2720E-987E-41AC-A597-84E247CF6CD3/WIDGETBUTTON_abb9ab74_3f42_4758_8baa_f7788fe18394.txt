@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Hermitage 360 mw core</Text>
+  <Description />
+  <Created>01/10/24 19:42:29</Created>
+  <Modified>07/25/26 18:58:13</Modified>
+  <Version>64</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Testing.Load(hermitageMW)
+
++2
+Scene hermitageMW.Visibility=100 [2]
+
+Control Text=Unload Assets
+Control Pause
+Scene hermitageMW.Visibility=0 [2]
++2
+Assets Testing.Unload(hermitageMW)

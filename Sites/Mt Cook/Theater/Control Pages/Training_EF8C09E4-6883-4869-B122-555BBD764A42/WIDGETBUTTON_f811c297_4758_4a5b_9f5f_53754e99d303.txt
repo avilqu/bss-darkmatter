@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Trappist Exoplanet</Text>
+  <Description />
+  <Created>11/05/24 23:10:09</Created>
+  <Modified>11/06/24 0:44:07</Modified>
+  <Version>4</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Exoplanet Systems.Load(TRAPPIST-1)
+Assets Exoplanet Systems.Load(TRAPPIST-1 b)
+Assets Exoplanet Systems.Load(TRAPPIST-1 bCtl)
+Assets Exoplanet Systems.Load(TRAPPIST-1 bOrbit)
+Assets Exoplanet Systems.Load(TRAPPIST-1 c)
+Assets Exoplanet Systems.Load(TRAPPIST-1 cCtl)
+Assets Exoplanet Systems.Load(TRAPPIST-1 cOrbit)
+Assets Exoplanet Systems.Load(TRAPPIST-1 d)
+Assets Exoplanet Systems.Load(TRAPPIST-1 dCtl)
+Assets Exoplanet Systems.Load(TRAPPIST-1 dOrbit)
+Assets Exoplanet Systems.Load(TRAPPIST-1 e)
+Assets Exoplanet Systems.Load(TRAPPIST-1 eCtl)
+Assets Exoplanet Systems.Load(TRAPPIST-1 eOrbit)
+Assets Exoplanet Systems.Load(TRAPPIST-1 f)
+Assets Exoplanet Systems.Load(TRAPPIST-1 fCtl)
+Assets Exoplanet Systems.Load(TRAPPIST-1 fOrbit)
+Assets Exoplanet Systems.Load(TRAPPIST-1 g)
+Assets Exoplanet Systems.Load(TRAPPIST-1 gCtl)
+Assets Exoplanet Systems.Load(TRAPPIST-1 gOrbit)
+Assets Exoplanet Systems.Load(TRAPPIST-1 h)
+Assets Exoplanet Systems.Load(TRAPPIST-1 hCtl)
+Assets Exoplanet Systems.Load(TRAPPIST-1 hOrbit)
+Assets Exoplanet Systems.Load(TRAPPIST-1Star)
+Control Text=Unload Assets
+Control Pause
+Assets Exoplanet Systems.Unload(TRAPPIST-1)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 b)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 bCtl)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 bOrbit)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 c)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 cCtl)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 cOrbit)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 d)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 dCtl)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 dOrbit)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 e)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 eCtl)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 eOrbit)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 f)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 fCtl)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 fOrbit)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 g)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 gCtl)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 gOrbit)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 h)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 hCtl)
+Assets Exoplanet Systems.Unload(TRAPPIST-1 hOrbit)
+Assets Exoplanet Systems.Unload(TRAPPIST-1Star)

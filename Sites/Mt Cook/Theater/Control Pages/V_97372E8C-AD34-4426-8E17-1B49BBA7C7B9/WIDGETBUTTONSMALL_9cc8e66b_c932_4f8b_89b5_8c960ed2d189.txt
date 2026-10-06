@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Scale Moon in sky</Text>
+  <Description>Scales up Mercury to 2000 times</Description>
+  <Created>02/09/19 17:57:19</Created>
+  <Modified>10/02/26 21:21:17</Modified>
+  <Version>643</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords>Zoom Scale Mercury </Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Moon  { Xscale=50  Yscale=50  Zscale=50 } [1]
+Control Text=MoonScale 1
+Control Pause
+Scene Moon { Xscale=1  Yscale=1  Zscale=1 } [1]

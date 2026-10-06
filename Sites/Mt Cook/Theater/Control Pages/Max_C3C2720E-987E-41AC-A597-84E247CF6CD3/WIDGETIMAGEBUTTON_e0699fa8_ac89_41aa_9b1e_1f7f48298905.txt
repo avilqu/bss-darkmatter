@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Unload RadioSphere </Text>
+  <Description />
+  <Created>12/09/16 12:47:16</Created>
+  <Modified>07/25/26 18:58:13</Modified>
+  <Version>84</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>RadioSphere</Keywords>
+  <Info>WIDGETIMAGEBUTTON_c7f4b30d_9bc9_4e06_ab50_b7b4aff2c362</Info>
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Astro Grids.Load(RadioSphere)
+Scene RadioSphere.Visibility=0
++2
+Scene RadioSphere.Visibility=50 [1]
+Control Text=Unload RadioSphere
+Control Pause
+Scene RadioSphere.Visibility=0 [1]
++1.1
+Assets Astro Grids.Unload(RadioSphere)
+Control Sky-Skan.Public.Galactic - Milky Way.ChangeColorGreenRadioSphere.Abort()

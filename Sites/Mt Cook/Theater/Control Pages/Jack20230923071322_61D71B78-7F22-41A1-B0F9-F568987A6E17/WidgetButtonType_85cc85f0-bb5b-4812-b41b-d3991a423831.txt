@@ -1,0 +1,1507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Brightest Stars Distances </Text>
+  <Description />
+  <Created>09/22/23 21:38:58</Created>
+  <Modified>09/23/23 6:10:30</Modified>
+  <Version>96</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+; Only loads 73 of the 92 brightest stars in the sky 
+; (below +2.5 mag) - Dark Matter does not have assets for the
+; remaining 19 (as at Sept 2023).
+; https://en.wikipedia.org/wiki/List_of_brightest_stars 
+; Note: Dark Matter has quite a few naming inconsistencies and
+; spelling mistakes in the hardcoded names of the star assets.
+; Be careful!
+; First label set (names only) seems to lag when moving dome view.
+; Second label set (names + distances) doesn't seem to lag.
+; **Needed to add blank Unicode characters (U+2800) to either side
+; of the text in the first label set - apparently Dark Matter lags 
+; if the label strings are too short!** Lag issue FIXED.
+Control Text="Loading ....."
+Assets Constellations.Load(Achernar Circle)
+Assets Constellations.Load(Acrux Circle)
+Assets Constellations.Load(Adhara Circle)
+Assets Constellations.Load(Aldebaran Circle)
+Assets Constellations.Load(Algieba Circle)
+Assets Constellations.Load(Algol Circle)
+Assets Constellations.Load(Alioth Circle)
+Assets Constellations.Load(Alkaid Circle)
+Assets Constellations.Load(Almaak Circle)
+Assets Constellations.Load(Alnair Circle)
+Assets Constellations.Load(Alnath Circle)
+Assets Constellations.Load(Alnilam Circle)
+Assets Constellations.Load(Alpha TrA Circle)
+Assets Constellations.Load(Alphard Circle)
+Assets Constellations.Load(Alphekka North Circle)
+Assets Constellations.Load(Alpheratz Circle)
+Assets Constellations.Load(Altair Circle)
+Assets Constellations.Load(Anitak Circle)
+Assets Constellations.Load(Ankaa Circle)
+Assets Constellations.Load(Antares Circle)
+Assets Constellations.Load(Arcturus Circle)
+Assets Constellations.Load(Athena Circle)
+Assets Constellations.Load(Bellatrix Circle)
+Assets Constellations.Load(Betelgeuse Circle)
+Assets Constellations.Load(Canopus Circle)
+Assets Constellations.Load(Capella Circle)
+Assets Constellations.Load(Caph Circle)
+Assets Constellations.Load(Castor Circle)
+Assets Constellations.Load(Deneb Circle)
+Assets Constellations.Load(Denebola Circle)
+Assets Constellations.Load(Dipdha Circle)
+Assets Constellations.Load(Dubhe Circle)
+Assets Constellations.Load(Enif Circle)
+Assets Constellations.Load(Etamin Circle)
+Assets Constellations.Load(Fomalhaut Circle)
+Assets Constellations.Load(Hadar Circle)
+Assets Constellations.Load(Hamal Circle)
+Assets Constellations.Load(Izar Circle)
+Assets Constellations.Load(Kaus Australis Circle)
+Assets Constellations.Load(Kochab Circle)
+Assets Constellations.Load(Koo She Circle)
+Assets Constellations.Load(Markab Circle)
+Assets Constellations.Load(Men Circle)
+Assets Constellations.Load(Menkalinan Circle)
+Assets Constellations.Load(Merak Circle)
+Assets Constellations.Load(Miaplacidus Circle)
+Assets Constellations.Load(Mimosa Circle)
+Assets Constellations.Load(Mintaka Circle)
+Assets Constellations.Load(Mirach Circle)
+Assets Constellations.Load(Mirfak Circle)
+Assets Constellations.Load(Mizar Circle)
+Assets Constellations.Load(Naos Circle)
+Assets Constellations.Load(Nunki Circle)
+Assets Constellations.Load(Peacock Circle)
+Assets Constellations.Load(Phad Circle)
+Assets Constellations.Load(Polaris Circle)
+Assets Constellations.Load(Pollux Circle)
+Assets Constellations.Load(Procyon Circle)
+Assets Constellations.Load(Proxima Circle)
+Assets Constellations.Load(Rasalhague Circle)
+Assets Constellations.Load(Regor Circle)
+Assets Constellations.Load(Regulus Circle)
+Assets Constellations.Load(Rigel Circle)
+Assets Constellations.Load(Sabik Circle)
+Assets Constellations.Load(Sadr Circle)
+Assets Constellations.Load(Saiph Circle)
+Assets Constellations.Load(Scheat Circle)
+Assets Constellations.Load(Shaula Circle)
+Assets Constellations.Load(Shedir Circle)
+Assets Constellations.Load(Sirius Circle)
+Assets Constellations.Load(Spica Circle)
+Assets Constellations.Load(Suhail Circle)
+Assets Constellations.Load(Vega Circle)
+Assets Constellations.Load(Achernar Eri)
+Assets Constellations.Load(Acrux Cru)
+Assets Constellations.Load(Adhara CMa)
+Assets Constellations.Load(Aldebaran Tau)
+Assets Constellations.Load(Algieba Leo)
+Assets Constellations.Load(Algol Per)
+Assets Constellations.Load(Alioth Uma)
+Assets Constellations.Load(Alkaid Uma)
+Assets Constellations.Load(Almaak And)
+Assets Constellations.Load(Alnair Gru)
+Assets Constellations.Load(Alnath Tau)
+Assets Constellations.Load(Alnilam Ori)
+Assets Constellations.Load(Alpha TrA)
+Assets Constellations.Load(Alphard Hya)
+Assets Constellations.Load(Alphekka North CrB)
+Assets Constellations.Load(Alpheratz And)
+Assets Constellations.Load(Altair Aql)
+Assets Constellations.Load(Alnitak Ori)
+Assets Constellations.Load(Ankaa Phe)
+Assets Constellations.Load(Antares Sco)
+Assets Constellations.Load(Arcturus Boo)
+Assets Constellations.Load(Athena Gem)
+Assets Constellations.Load(Bellatrix Ori)
+Assets Constellations.Load(Betelgeuse Ori)
+Assets Constellations.Load(Canopus Car)
+Assets Constellations.Load(Capella Aur)
+Assets Constellations.Load(Caph Cas)
+Assets Constellations.Load(Castor Gem)
+Assets Constellations.Load(Deneb Cyg)
+Assets Constellations.Load(Denebola Leo)
+Assets Constellations.Load(Dipdha Cet)
+Assets Constellations.Load(Dubhe Uma)
+Assets Constellations.Load(Enif Peg)
+Assets Constellations.Load(Etamin Dra)
+Assets Constellations.Load(Fomalhaut PsA)
+Assets Constellations.Load(Hadar Cen)
+Assets Constellations.Load(Hamal Ari)
+Assets Constellations.Load(Izar Boo)
+Assets Constellations.Load(Kaus Australis Sag)
+Assets Constellations.Load(Kochab Umi)
+Assets Constellations.Load(Koo She Vel)
+Assets Constellations.Load(Markab Peg)
+Assets Constellations.Load(Men Lup)
+Assets Constellations.Load(Menkalinan Aur)
+Assets Constellations.Load(Merak Uma)
+Assets Constellations.Load(Miaplacidus Car)
+Assets Constellations.Load(Mimosa Cru)
+Assets Constellations.Load(Mintaka Ori)
+Assets Constellations.Load(Mirach And)
+Assets Constellations.Load(Mirfak Per)
+Assets Constellations.Load(Mizar Uma)
+Assets Constellations.Load(Naos Pup)
+Assets Constellations.Load(Nunki Sag)
+Assets Constellations.Load(Peacock Pav)
+Assets Constellations.Load(Phad Uma)
+Assets Constellations.Load(Polaris Umi)
+Assets Constellations.Load(Pollux Gem)
+Assets Constellations.Load(Procyon CMi)
+Assets Constellations.Load(Proxima Cen)
+Assets Constellations.Load(Rasalhague Oph)
+Assets Constellations.Load(Regor Vel)
+Assets Constellations.Load(Regulus Leo)
+Assets Constellations.Load(Rigel Ori)
+Assets Constellations.Load(Sabik Oph)
+Assets Constellations.Load(Sadr Cyg)
+Assets Constellations.Load(Saiph Ori)
+Assets Constellations.Load(Scheat Peg)
+Assets Constellations.Load(Shaula Sco)
+Assets Constellations.Load(Shedir Cas)
+Assets Constellations.Load(Sirius CMa)
+Assets Constellations.Load(Spica Vir)
+Assets Constellations.Load(Suhail Vel)
+Assets Constellations.Load(Vega Lyr)
++8
+Scene Achernar Circle.Scale=0
+Scene Acrux Circle.Scale=0
+Scene Adhara Circle.Scale=0
+Scene Aldebaran Circle.Scale=0
+Scene Algieba Circle.Scale=0
+Scene Algol Circle.Scale=0
+Scene Alioth Circle.Scale=0
+Scene Alkaid Circle.Scale=0
+Scene Almaak Circle.Scale=0
+Scene Alnair Circle.Scale=0
+Scene Alnath Circle.Scale=0
+Scene Alnilam Circle.Scale=0
+Scene Alpha TrA Circle.Scale=0
+Scene Alphard Circle.Scale=0
+Scene Alphekka North Circle.Scale=0
+Scene Alpheratz Circle.Scale=0
+Scene Altair Circle.Scale=0
+Scene Anitak Circle.Scale=0
+Scene Ankaa Circle.Scale=0
+Scene Antares Circle.Scale=0
+Scene Arcturus Circle.Scale=0
+Scene Athena Circle.Scale=0
+Scene Bellatrix Circle.Scale=0
+Scene Betelgeuse Circle.Scale=0
+Scene Canopus Circle.Scale=0
+Scene Capella Circle.Scale=0
+Scene Caph Circle.Scale=0
+Scene Castor Circle.Scale=0
+Scene Deneb Circle.Scale=0
+Scene Denebola Circle.Scale=0
+Scene Dipdha Circle.Scale=0
+Scene Dubhe Circle.Scale=0
+Scene Enif Circle.Scale=0
+Scene Etamin Circle.Scale=0
+Scene Fomalhaut Circle.Scale=0
+Scene Hadar Circle.Scale=0
+Scene Hamal Circle.Scale=0
+Scene Izar Circle.Scale=0
+Scene Kaus Australis Circle.Scale=0
+Scene Kochab Circle.Scale=0
+Scene Koo She Circle.Scale=0
+Scene Markab Circle.Scale=0
+Scene Men Circle.Scale=0
+Scene Menkalinan Circle.Scale=0
+Scene Merak Circle.Scale=0
+Scene Miaplacidus Circle.Scale=0
+Scene Mimosa Circle.Scale=0
+Scene Mintaka Circle.Scale=0
+Scene Mirach Circle.Scale=0
+Scene Mirfak Circle.Scale=0
+Scene Mizar Circle.Scale=0
+Scene Naos Circle.Scale=0
+Scene Nunki Circle.Scale=0
+Scene Peacock Circle.Scale=0
+Scene Phad Circle.Scale=0
+Scene Polaris Circle.Scale=0
+Scene Pollux Circle.Scale=0
+Scene Procyon Circle.Scale=0
+Scene Proxima Circle.Scale=0
+Scene Rasalhague Circle.Scale=0
+Scene Regor Circle.Scale=0
+Scene Regulus Circle.Scale=0
+Scene Rigel Circle.Scale=0
+Scene Sabik Circle.Scale=0
+Scene Sadr Circle.Scale=0
+Scene Saiph Circle.Scale=0
+Scene Scheat Circle.Scale=0
+Scene Shaula Circle.Scale=0
+Scene Shedir Circle.Scale=0
+Scene Sirius Circle.Scale=0
+Scene Spica Circle.Scale=0
+Scene Suhail Circle.Scale=0
+Scene Vega Circle.Scale=0
++1
+Scene Achernar Circle.Visibility=100
+Scene Acrux Circle.Visibility=100
+Scene Adhara Circle.Visibility=100
+Scene Aldebaran Circle.Visibility=100
+Scene Algieba Circle.Visibility=100
+Scene Algol Circle.Visibility=100
+Scene Alioth Circle.Visibility=100
+Scene Alkaid Circle.Visibility=100
+Scene Almaak Circle.Visibility=100
+Scene Alnair Circle.Visibility=100
+Scene Alnath Circle.Visibility=100
+Scene Alnilam Circle.Visibility=100
+Scene Alpha TrA Circle.Visibility=100
+Scene Alphard Circle.Visibility=100
+Scene Alphekka North Circle.Visibility=100
+Scene Alpheratz Circle.Visibility=100
+Scene Altair Circle.Visibility=100
+Scene Anitak Circle.Visibility=100
+Scene Ankaa Circle.Visibility=100
+Scene Antares Circle.Visibility=100
+Scene Arcturus Circle.Visibility=100
+Scene Athena Circle.Visibility=100
+Scene Bellatrix Circle.Visibility=100
+Scene Betelgeuse Circle.Visibility=100
+Scene Canopus Circle.Visibility=100
+Scene Capella Circle.Visibility=100
+Scene Caph Circle.Visibility=100
+Scene Castor Circle.Visibility=100
+Scene Deneb Circle.Visibility=100
+Scene Denebola Circle.Visibility=100
+Scene Dipdha Circle.Visibility=100
+Scene Dubhe Circle.Visibility=100
+Scene Enif Circle.Visibility=100
+Scene Etamin Circle.Visibility=100
+Scene Fomalhaut Circle.Visibility=100
+Scene Hadar Circle.Visibility=100
+Scene Hamal Circle.Visibility=100
+Scene Izar Circle.Visibility=100
+Scene Kaus Australis Circle.Visibility=100
+Scene Kochab Circle.Visibility=100
+Scene Koo She Circle.Visibility=100
+Scene Markab Circle.Visibility=100
+Scene Men Circle.Visibility=100
+Scene Menkalinan Circle.Visibility=100
+Scene Merak Circle.Visibility=100
+Scene Miaplacidus Circle.Visibility=100
+Scene Mimosa Circle.Visibility=100
+Scene Mintaka Circle.Visibility=100
+Scene Mirach Circle.Visibility=100
+Scene Mirfak Circle.Visibility=100
+Scene Mizar Circle.Visibility=100
+Scene Naos Circle.Visibility=100
+Scene Nunki Circle.Visibility=100
+Scene Peacock Circle.Visibility=100
+Scene Phad Circle.Visibility=100
+Scene Polaris Circle.Visibility=100
+Scene Pollux Circle.Visibility=100
+Scene Procyon Circle.Visibility=100
+Scene Proxima Circle.Visibility=100
+Scene Rasalhague Circle.Visibility=100
+Scene Regor Circle.Visibility=100
+Scene Regulus Circle.Visibility=100
+Scene Rigel Circle.Visibility=100
+Scene Sabik Circle.Visibility=100
+Scene Sadr Circle.Visibility=100
+Scene Saiph Circle.Visibility=100
+Scene Scheat Circle.Visibility=100
+Scene Shaula Circle.Visibility=100
+Scene Shedir Circle.Visibility=100
+Scene Sirius Circle.Visibility=100
+Scene Spica Circle.Visibility=100
+Scene Suhail Circle.Visibility=100
+Scene Vega Circle.Visibility=100
++1
+Scene Achernar Circle.Scale=1.5 [1]
+Scene Acrux Circle.Scale=1.5 [1]
+Scene Adhara Circle.Scale=1.5 [1]
+Scene Aldebaran Circle.Scale=1.5 [1]
+Scene Algieba Circle.Scale=1.5 [1]
+Scene Algol Circle.Scale=1.5 [1]
+Scene Alioth Circle.Scale=1.5 [1]
+Scene Alkaid Circle.Scale=1.5 [1]
+Scene Almaak Circle.Scale=1.5 [1]
+Scene Alnair Circle.Scale=1.5 [1]
+Scene Alnath Circle.Scale=1.5 [1]
+Scene Alnilam Circle.Scale=1.5 [1]
+Scene Alpha TrA Circle.Scale=1.5 [1]
+Scene Alphard Circle.Scale=1.5 [1]
+Scene Alphekka North Circle.Scale=1.5 [1]
+Scene Alpheratz Circle.Scale=1.5 [1]
+Scene Altair Circle.Scale=1.5 [1]
+Scene Anitak Circle.Scale=1.5 [1]
+Scene Ankaa Circle.Scale=1.5 [1]
+Scene Antares Circle.Scale=1.5 [1]
+Scene Arcturus Circle.Scale=1.5 [1]
+Scene Athena Circle.Scale=1.5 [1]
+Scene Bellatrix Circle.Scale=1.5 [1]
+Scene Betelgeuse Circle.Scale=1.5 [1]
+Scene Canopus Circle.Scale=1.5 [1]
+Scene Capella Circle.Scale=1.5 [1]
+Scene Caph Circle.Scale=1.5 [1]
+Scene Castor Circle.Scale=1.5 [1]
+Scene Deneb Circle.Scale=1.5 [1]
+Scene Denebola Circle.Scale=1.5 [1]
+Scene Dipdha Circle.Scale=1.5 [1]
+Scene Dubhe Circle.Scale=1.5 [1]
+Scene Enif Circle.Scale=1.5 [1]
+Scene Etamin Circle.Scale=1.5 [1]
+Scene Fomalhaut Circle.Scale=1.5 [1]
+Scene Hadar Circle.Scale=1.5 [1]
+Scene Hamal Circle.Scale=1.5 [1]
+Scene Izar Circle.Scale=1.5 [1]
+Scene Kaus Australis Circle.Scale=1.5 [1]
+Scene Kochab Circle.Scale=1.5 [1]
+Scene Koo She Circle.Scale=1.5 [1]
+Scene Markab Circle.Scale=1.5 [1]
+Scene Men Circle.Scale=1.5 [1]
+Scene Menkalinan Circle.Scale=1.5 [1]
+Scene Merak Circle.Scale=1.5 [1]
+Scene Miaplacidus Circle.Scale=1.5 [1]
+Scene Mimosa Circle.Scale=1.5 [1]
+Scene Mintaka Circle.Scale=1.5 [1]
+Scene Mirach Circle.Scale=1.5 [1]
+Scene Mirfak Circle.Scale=1.5 [1]
+Scene Mizar Circle.Scale=1.5 [1]
+Scene Naos Circle.Scale=1.5 [1]
+Scene Nunki Circle.Scale=1.5 [1]
+Scene Peacock Circle.Scale=1.5 [1]
+Scene Phad Circle.Scale=1.5 [1]
+Scene Polaris Circle.Scale=1.5 [1]
+Scene Pollux Circle.Scale=1.5 [1]
+Scene Procyon Circle.Scale=1.5 [1]
+Scene Proxima Circle.Scale=1.5 [1]
+Scene Rasalhague Circle.Scale=1.5 [1]
+Scene Regor Circle.Scale=1.5 [1]
+Scene Regulus Circle.Scale=1.5 [1]
+Scene Rigel Circle.Scale=1.5 [1]
+Scene Sabik Circle.Scale=1.5 [1]
+Scene Sadr Circle.Scale=1.5 [1]
+Scene Saiph Circle.Scale=1.5 [1]
+Scene Scheat Circle.Scale=1.5 [1]
+Scene Shaula Circle.Scale=1.5 [1]
+Scene Shedir Circle.Scale=1.5 [1]
+Scene Sirius Circle.Scale=1.5 [1]
+Scene Spica Circle.Scale=1.5 [1]
+Scene Suhail Circle.Scale=1.5 [1]
+Scene Vega Circle.Scale=1.5 [1]
++1
+Scene Achernar Eri.Visibility=0 
+Scene Acrux Cru.Visibility=0 
+Scene Adhara CMa.Visibility=0 
+Scene Aldebaran Tau.Visibility=0 
+Scene Algieba Leo.Visibility=0 
+Scene Algol Per.Visibility=0 
+Scene Alioth Uma.Visibility=0 
+Scene Alkaid Uma.Visibility=0 
+Scene Almaak And.Visibility=0 
+Scene Alnair Gru.Visibility=0 
+Scene Alnath Tau.Visibility=0 
+Scene Alnilam Ori.Visibility=0 
+Scene Alpha TrA.Visibility=0 
+Scene Alphard Hya.Visibility=0 
+Scene Alphekka North CrB.Visibility=0 
+Scene Alpheratz And.Visibility=0 
+Scene Altair Aql.Visibility=0 
+Scene Alnitak Ori.Visibility=0 
+Scene Ankaa Phe.Visibility=0 
+Scene Antares Sco.Visibility=0 
+Scene Arcturus Boo.Visibility=0 
+Scene Athena Gem.Visibility=0 
+Scene Bellatrix Ori.Visibility=0 
+Scene Betelgeuse Ori.Visibility=0 
+Scene Canopus Car.Visibility=0 
+Scene Capella Aur.Visibility=0 
+Scene Caph Cas.Visibility=0 
+Scene Castor Gem.Visibility=0 
+Scene Deneb Cyg.Visibility=0 
+Scene Denebola Leo.Visibility=0 
+Scene Dipdha Cet.Visibility=0 
+Scene Dubhe Uma.Visibility=0 
+Scene Enif Peg.Visibility=0 
+Scene Etamin Dra.Visibility=0 
+Scene Fomalhaut PsA.Visibility=0 
+Scene Hadar Cen.Visibility=0 
+Scene Hamal Ari.Visibility=0 
+Scene Izar Boo.Visibility=0 
+Scene Kaus Australis Sag.Visibility=0 
+Scene Kochab Umi.Visibility=0 
+Scene Koo She Vel.Visibility=0 
+Scene Markab Peg.Visibility=0 
+Scene Men Lup.Visibility=0 
+Scene Menkalinan Aur.Visibility=0 
+Scene Merak Uma.Visibility=0 
+Scene Miaplacidus Car.Visibility=0 
+Scene Mimosa Cru.Visibility=0 
+Scene Mintaka Ori.Visibility=0 
+Scene Mirach And.Visibility=0 
+Scene Mirfak Per.Visibility=0 
+Scene Mizar Uma.Visibility=0 
+Scene Naos Pup.Visibility=0 
+Scene Nunki Sag.Visibility=0 
+Scene Peacock Pav.Visibility=0 
+Scene Phad Uma.Visibility=0 
+Scene Polaris Umi.Visibility=0 
+Scene Pollux Gem.Visibility=0 
+Scene Procyon CMi.Visibility=0 
+Scene Proxima Cen.Visibility=0 
+Scene Rasalhague Oph.Visibility=0 
+Scene Regor Vel.Visibility=0 
+Scene Regulus Leo.Visibility=0 
+Scene Rigel Ori.Visibility=0 
+Scene Sabik Oph.Visibility=0 
+Scene Sadr Cyg.Visibility=0 
+Scene Saiph Ori.Visibility=0 
+Scene Scheat Peg.Visibility=0 
+Scene Shaula Sco.Visibility=0 
+Scene Shedir Cas.Visibility=0 
+Scene Sirius CMa.Visibility=0 
+Scene Spica Vir.Visibility=0 
+Scene Suhail Vel.Visibility=0 
+Scene Vega Lyr.Visibility=0 
++1
+Scene Achernar Eri.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Achernar⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Acrux Cru.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Acrux⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Adhara CMa.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Adhara⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Aldebaran Tau.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Aldebaran⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Algieba Leo.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Algieba⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Algol Per.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Algol⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Alioth Uma.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Alioth⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Alkaid Uma.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Alkaid⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Almaak And.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Almach⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Alnair Gru.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Alnair⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Alnath Tau.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Elnath⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Alnilam Ori.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Alnilam⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Alpha TrA.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Atria⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Alphard Hya.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Alphard⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Alphekka North CrB.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Alphecca⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Alpheratz And.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Alpheratz⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Altair Aql.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Altair⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Alnitak Ori.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Alnitak⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Ankaa Phe.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Ankaa⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Antares Sco.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Antares⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Arcturus Boo.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Arcturus⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Athena Gem.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Alhena⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Bellatrix Ori.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Bellatrix⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Betelgeuse Ori.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Betelgeuse⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Canopus Car.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Canopus⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Capella Aur.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Capella⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Caph Cas.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Caph⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Castor Gem.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Castor⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Deneb Cyg.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Deneb⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Denebola Leo.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Denebola⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Dipdha Cet.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Diphda⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Dubhe Uma.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Dubhe⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Enif Peg.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Enif⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Etamin Dra.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Eltanin⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Fomalhaut PsA.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Fomalhaut⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Hadar Cen.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Hadar⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Hamal Ari.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Hamal⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Izar Boo.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Izar⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Kaus Australis Sag.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Kaus Australis⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Kochab Umi.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Kochab⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Koo She Vel.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Alsephina⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Markab Peg.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Markab⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Men Lup.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Alpha Lupi⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Menkalinan Aur.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Menkalinan⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Merak Uma.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Merak⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Miaplacidus Car.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Miaplacidus⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Mimosa Cru.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Mimosa⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Mintaka Ori.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Mintaka⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Mirach And.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Mirach⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Mirfak Per.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Mirfak⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Mizar Uma.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Mizar⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Naos Pup.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Naos⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Nunki Sag.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Nunki⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Peacock Pav.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Peacock⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Phad Uma.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Phecda⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Polaris Umi.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Polaris⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Pollux Gem.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Pollux⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Procyon CMi.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Procyon⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Proxima Cen.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Alpha Centauri⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Rasalhague Oph.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Rasalhague⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Regor Vel.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Regor⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Regulus Leo.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Regulus⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Rigel Ori.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Rigel⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Sabik Oph.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Sabik⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Sadr Cyg.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Sadr⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Saiph Ori.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Saiph⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Scheat Peg.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Scheat⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Shaula Sco.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Shaula⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Shedir Cas.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Schedar⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Sirius CMa.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Sirius⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Spica Vir.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Spica⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Suhail Vel.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Suhail⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Vega Lyr.Text.String="\n ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Vega⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀"
+Scene Achernar Eri.Text.LineSpacing=1.5
+Scene Acrux Cru.Text.LineSpacing=1.5
+Scene Adhara CMa.Text.LineSpacing=1.5
+Scene Aldebaran Tau.Text.LineSpacing=1.5
+Scene Algieba Leo.Text.LineSpacing=1.5
+Scene Algol Per.Text.LineSpacing=1.5
+Scene Alioth Uma.Text.LineSpacing=1.5
+Scene Alkaid Uma.Text.LineSpacing=1.5
+Scene Almaak And.Text.LineSpacing=1.5
+Scene Alnair Gru.Text.LineSpacing=1.5
+Scene Alnath Tau.Text.LineSpacing=1.5
+Scene Alnilam Ori.Text.LineSpacing=1.5
+Scene Alpha TrA.Text.LineSpacing=1.5
+Scene Alphard Hya.Text.LineSpacing=1.5
+Scene Alphekka North CrB.Text.LineSpacing=1.5
+Scene Alpheratz And.Text.LineSpacing=1.5
+Scene Altair Aql.Text.LineSpacing=1.5
+Scene Alnitak Ori.Text.LineSpacing=1.5
+Scene Ankaa Phe.Text.LineSpacing=1.5
+Scene Antares Sco.Text.LineSpacing=1.5
+Scene Arcturus Boo.Text.LineSpacing=1.5
+Scene Athena Gem.Text.LineSpacing=1.5
+Scene Bellatrix Ori.Text.LineSpacing=1.5
+Scene Betelgeuse Ori.Text.LineSpacing=1.5
+Scene Canopus Car.Text.LineSpacing=1.5
+Scene Capella Aur.Text.LineSpacing=1.5
+Scene Caph Cas.Text.LineSpacing=1.5
+Scene Castor Gem.Text.LineSpacing=1.5
+Scene Deneb Cyg.Text.LineSpacing=1.5
+Scene Denebola Leo.Text.LineSpacing=1.5
+Scene Dipdha Cet.Text.LineSpacing=1.5
+Scene Dubhe Uma.Text.LineSpacing=1.5
+Scene Enif Peg.Text.LineSpacing=1.5
+Scene Etamin Dra.Text.LineSpacing=1.5
+Scene Fomalhaut PsA.Text.LineSpacing=1.5
+Scene Hadar Cen.Text.LineSpacing=1.5
+Scene Hamal Ari.Text.LineSpacing=1.5
+Scene Izar Boo.Text.LineSpacing=1.5
+Scene Kaus Australis Sag.Text.LineSpacing=1.5
+Scene Kochab Umi.Text.LineSpacing=1.5
+Scene Koo She Vel.Text.LineSpacing=1.5
+Scene Markab Peg.Text.LineSpacing=1.5
+Scene Men Lup.Text.LineSpacing=1.5
+Scene Menkalinan Aur.Text.LineSpacing=1.5
+Scene Merak Uma.Text.LineSpacing=1.5
+Scene Miaplacidus Car.Text.LineSpacing=1.5
+Scene Mimosa Cru.Text.LineSpacing=1.5
+Scene Mintaka Ori.Text.LineSpacing=1.5
+Scene Mirach And.Text.LineSpacing=1.5
+Scene Mirfak Per.Text.LineSpacing=1.5
+Scene Mizar Uma.Text.LineSpacing=1.5
+Scene Naos Pup.Text.LineSpacing=1.5
+Scene Nunki Sag.Text.LineSpacing=1.5
+Scene Peacock Pav.Text.LineSpacing=1.5
+Scene Phad Uma.Text.LineSpacing=1.5
+Scene Polaris Umi.Text.LineSpacing=1.5
+Scene Pollux Gem.Text.LineSpacing=1.5
+Scene Procyon CMi.Text.LineSpacing=1.5
+Scene Proxima Cen.Text.LineSpacing=1.5
+Scene Rasalhague Oph.Text.LineSpacing=1.5
+Scene Regor Vel.Text.LineSpacing=1.5
+Scene Regulus Leo.Text.LineSpacing=1.5
+Scene Rigel Ori.Text.LineSpacing=1.5
+Scene Sabik Oph.Text.LineSpacing=1.5
+Scene Sadr Cyg.Text.LineSpacing=1.5
+Scene Saiph Ori.Text.LineSpacing=1.5
+Scene Scheat Peg.Text.LineSpacing=1.5
+Scene Shaula Sco.Text.LineSpacing=1.5
+Scene Shedir Cas.Text.LineSpacing=1.5
+Scene Sirius CMa.Text.LineSpacing=1.5
+Scene Spica Vir.Text.LineSpacing=1.5
+Scene Suhail Vel.Text.LineSpacing=1.5
+Scene Vega Lyr.Text.LineSpacing=1.5
+Scene Achernar Eri.FontHeight=1.5
+Scene Acrux Cru.FontHeight=1.5
+Scene Adhara CMa.FontHeight=1.5
+Scene Aldebaran Tau.FontHeight=1.5
+Scene Algieba Leo.FontHeight=1.5
+Scene Algol Per.FontHeight=1.5
+Scene Alioth Uma.FontHeight=1.5
+Scene Alkaid Uma.FontHeight=1.5
+Scene Almaak And.FontHeight=1.5
+Scene Alnair Gru.FontHeight=1.5
+Scene Alnath Tau.FontHeight=1.5
+Scene Alnilam Ori.FontHeight=1.5
+Scene Alpha TrA.FontHeight=1.5
+Scene Alphard Hya.FontHeight=1.5
+Scene Alphekka North CrB.FontHeight=1.5
+Scene Alpheratz And.FontHeight=1.5
+Scene Altair Aql.FontHeight=1.5
+Scene Alnitak Ori.FontHeight=1.5
+Scene Ankaa Phe.FontHeight=1.5
+Scene Antares Sco.FontHeight=1.5
+Scene Arcturus Boo.FontHeight=1.5
+Scene Athena Gem.FontHeight=1.5
+Scene Bellatrix Ori.FontHeight=1.5
+Scene Betelgeuse Ori.FontHeight=1.5
+Scene Canopus Car.FontHeight=1.5
+Scene Capella Aur.FontHeight=1.5
+Scene Caph Cas.FontHeight=1.5
+Scene Castor Gem.FontHeight=1.5
+Scene Deneb Cyg.FontHeight=1.5
+Scene Denebola Leo.FontHeight=1.5
+Scene Dipdha Cet.FontHeight=1.5
+Scene Dubhe Uma.FontHeight=1.5
+Scene Enif Peg.FontHeight=1.5
+Scene Etamin Dra.FontHeight=1.5
+Scene Fomalhaut PsA.FontHeight=1.5
+Scene Hadar Cen.FontHeight=1.5
+Scene Hamal Ari.FontHeight=1.5
+Scene Izar Boo.FontHeight=1.5
+Scene Kaus Australis Sag.FontHeight=1.5
+Scene Kochab Umi.FontHeight=1.5
+Scene Koo She Vel.FontHeight=1.5
+Scene Markab Peg.FontHeight=1.5
+Scene Men Lup.FontHeight=1.5
+Scene Menkalinan Aur.FontHeight=1.5
+Scene Merak Uma.FontHeight=1.5
+Scene Miaplacidus Car.FontHeight=1.5
+Scene Mimosa Cru.FontHeight=1.5
+Scene Mintaka Ori.FontHeight=1.5
+Scene Mirach And.FontHeight=1.5
+Scene Mirfak Per.FontHeight=1.5
+Scene Mizar Uma.FontHeight=1.5
+Scene Naos Pup.FontHeight=1.5
+Scene Nunki Sag.FontHeight=1.5
+Scene Peacock Pav.FontHeight=1.5
+Scene Phad Uma.FontHeight=1.5
+Scene Polaris Umi.FontHeight=1.5
+Scene Pollux Gem.FontHeight=1.5
+Scene Procyon CMi.FontHeight=1.5
+Scene Proxima Cen.FontHeight=1.5
+Scene Rasalhague Oph.FontHeight=1.5
+Scene Regor Vel.FontHeight=1.5
+Scene Regulus Leo.FontHeight=1.5
+Scene Rigel Ori.FontHeight=1.5
+Scene Sabik Oph.FontHeight=1.5
+Scene Sadr Cyg.FontHeight=1.5
+Scene Saiph Ori.FontHeight=1.5
+Scene Scheat Peg.FontHeight=1.5
+Scene Shaula Sco.FontHeight=1.5
+Scene Shedir Cas.FontHeight=1.5
+Scene Sirius CMa.FontHeight=1.5
+Scene Spica Vir.FontHeight=1.5
+Scene Suhail Vel.FontHeight=1.5
+Scene Vega Lyr.FontHeight=1.5
++1
+Scene Achernar Eri.Visibility=100 [0.5]
+Scene Acrux Cru.Visibility=100 [0.5]
+Scene Adhara CMa.Visibility=100 [0.5]
+Scene Aldebaran Tau.Visibility=100 [0.5]
+Scene Algieba Leo.Visibility=100 [0.5]
+Scene Algol Per.Visibility=100 [0.5]
+Scene Alioth Uma.Visibility=100 [0.5]
+Scene Alkaid Uma.Visibility=100 [0.5]
+Scene Almaak And.Visibility=100 [0.5]
+Scene Alnair Gru.Visibility=100 [0.5]
+Scene Alnath Tau.Visibility=100 [0.5]
+Scene Alnilam Ori.Visibility=100 [0.5]
+Scene Alpha TrA.Visibility=100 [0.5]
+Scene Alphard Hya.Visibility=100 [0.5]
+Scene Alphekka North CrB.Visibility=100 [0.5]
+Scene Alpheratz And.Visibility=100 [0.5]
+Scene Altair Aql.Visibility=100 [0.5]
+Scene Alnitak Ori.Visibility=100 [0.5]
+Scene Ankaa Phe.Visibility=100 [0.5]
+Scene Antares Sco.Visibility=100 [0.5]
+Scene Arcturus Boo.Visibility=100 [0.5]
+Scene Athena Gem.Visibility=100 [0.5]
+Scene Bellatrix Ori.Visibility=100 [0.5]
+Scene Betelgeuse Ori.Visibility=100 [0.5]
+Scene Canopus Car.Visibility=100 [0.5]
+Scene Capella Aur.Visibility=100 [0.5]
+Scene Caph Cas.Visibility=100 [0.5]
+Scene Castor Gem.Visibility=100 [0.5]
+Scene Deneb Cyg.Visibility=100 [0.5]
+Scene Denebola Leo.Visibility=100 [0.5]
+Scene Dipdha Cet.Visibility=100 [0.5]
+Scene Dubhe Uma.Visibility=100 [0.5]
+Scene Enif Peg.Visibility=100 [0.5]
+Scene Etamin Dra.Visibility=100 [0.5]
+Scene Fomalhaut PsA.Visibility=100 [0.5]
+Scene Hadar Cen.Visibility=100 [0.5]
+Scene Hamal Ari.Visibility=100 [0.5]
+Scene Izar Boo.Visibility=100 [0.5]
+Scene Kaus Australis Sag.Visibility=100 [0.5]
+Scene Kochab Umi.Visibility=100 [0.5]
+Scene Koo She Vel.Visibility=100 [0.5]
+Scene Markab Peg.Visibility=100 [0.5]
+Scene Men Lup.Visibility=100 [0.5]
+Scene Menkalinan Aur.Visibility=100 [0.5]
+Scene Merak Uma.Visibility=100 [0.5]
+Scene Miaplacidus Car.Visibility=100 [0.5]
+Scene Mimosa Cru.Visibility=100 [0.5]
+Scene Mintaka Ori.Visibility=100 [0.5]
+Scene Mirach And.Visibility=100 [0.5]
+Scene Mirfak Per.Visibility=100 [0.5]
+Scene Mizar Uma.Visibility=100 [0.5]
+Scene Naos Pup.Visibility=100 [0.5]
+Scene Nunki Sag.Visibility=100 [0.5]
+Scene Peacock Pav.Visibility=100 [0.5]
+Scene Phad Uma.Visibility=100 [0.5]
+Scene Polaris Umi.Visibility=100 [0.5]
+Scene Pollux Gem.Visibility=100 [0.5]
+Scene Procyon CMi.Visibility=100 [0.5]
+Scene Proxima Cen.Visibility=100 [0.5]
+Scene Rasalhague Oph.Visibility=100 [0.5]
+Scene Regor Vel.Visibility=100 [0.5]
+Scene Regulus Leo.Visibility=100 [0.5]
+Scene Rigel Ori.Visibility=100 [0.5]
+Scene Sabik Oph.Visibility=100 [0.5]
+Scene Sadr Cyg.Visibility=100 [0.5]
+Scene Saiph Ori.Visibility=100 [0.5]
+Scene Scheat Peg.Visibility=100 [0.5]
+Scene Shaula Sco.Visibility=100 [0.5]
+Scene Shedir Cas.Visibility=100 [0.5]
+Scene Sirius CMa.Visibility=100 [0.5]
+Scene Spica Vir.Visibility=100 [0.5]
+Scene Suhail Vel.Visibility=100 [0.5]
+Scene Vega Lyr.Visibility=100 [0.5]
++1
+Control Text="Brightest Stars Distances"
+Control Pause
+Scene Achernar Eri.Visibility=0 [0.5]
+Scene Acrux Cru.Visibility=0 [0.5]
+Scene Adhara CMa.Visibility=0 [0.5]
+Scene Aldebaran Tau.Visibility=0 [0.5]
+Scene Algieba Leo.Visibility=0 [0.5]
+Scene Algol Per.Visibility=0 [0.5]
+Scene Alioth Uma.Visibility=0 [0.5]
+Scene Alkaid Uma.Visibility=0 [0.5]
+Scene Almaak And.Visibility=0 [0.5]
+Scene Alnair Gru.Visibility=0 [0.5]
+Scene Alnath Tau.Visibility=0 [0.5]
+Scene Alnilam Ori.Visibility=0 [0.5]
+Scene Alpha TrA.Visibility=0 [0.5]
+Scene Alphard Hya.Visibility=0 [0.5]
+Scene Alphekka North CrB.Visibility=0 [0.5]
+Scene Alpheratz And.Visibility=0 [0.5]
+Scene Altair Aql.Visibility=0 [0.5]
+Scene Alnitak Ori.Visibility=0 [0.5]
+Scene Ankaa Phe.Visibility=0 [0.5]
+Scene Antares Sco.Visibility=0 [0.5]
+Scene Arcturus Boo.Visibility=0 [0.5]
+Scene Athena Gem.Visibility=0 [0.5]
+Scene Bellatrix Ori.Visibility=0 [0.5]
+Scene Betelgeuse Ori.Visibility=0 [0.5]
+Scene Canopus Car.Visibility=0 [0.5]
+Scene Capella Aur.Visibility=0 [0.5]
+Scene Caph Cas.Visibility=0 [0.5]
+Scene Castor Gem.Visibility=0 [0.5]
+Scene Deneb Cyg.Visibility=0 [0.5]
+Scene Denebola Leo.Visibility=0 [0.5]
+Scene Dipdha Cet.Visibility=0 [0.5]
+Scene Dubhe Uma.Visibility=0 [0.5]
+Scene Enif Peg.Visibility=0 [0.5]
+Scene Etamin Dra.Visibility=0 [0.5]
+Scene Fomalhaut PsA.Visibility=0 [0.5]
+Scene Hadar Cen.Visibility=0 [0.5]
+Scene Hamal Ari.Visibility=0 [0.5]
+Scene Izar Boo.Visibility=0 [0.5]
+Scene Kaus Australis Sag.Visibility=0 [0.5]
+Scene Kochab Umi.Visibility=0 [0.5]
+Scene Koo She Vel.Visibility=0 [0.5]
+Scene Markab Peg.Visibility=0 [0.5]
+Scene Men Lup.Visibility=0 [0.5]
+Scene Menkalinan Aur.Visibility=0 [0.5]
+Scene Merak Uma.Visibility=0 [0.5]
+Scene Miaplacidus Car.Visibility=0 [0.5]
+Scene Mimosa Cru.Visibility=0 [0.5]
+Scene Mintaka Ori.Visibility=0 [0.5]
+Scene Mirach And.Visibility=0 [0.5]
+Scene Mirfak Per.Visibility=0 [0.5]
+Scene Mizar Uma.Visibility=0 [0.5]
+Scene Naos Pup.Visibility=0 [0.5]
+Scene Nunki Sag.Visibility=0 [0.5]
+Scene Peacock Pav.Visibility=0 [0.5]
+Scene Phad Uma.Visibility=0 [0.5]
+Scene Polaris Umi.Visibility=0 [0.5]
+Scene Pollux Gem.Visibility=0 [0.5]
+Scene Procyon CMi.Visibility=0 [0.5]
+Scene Proxima Cen.Visibility=0 [0.5]
+Scene Rasalhague Oph.Visibility=0 [0.5]
+Scene Regor Vel.Visibility=0 [0.5]
+Scene Regulus Leo.Visibility=0 [0.5]
+Scene Rigel Ori.Visibility=0 [0.5]
+Scene Sabik Oph.Visibility=0 [0.5]
+Scene Sadr Cyg.Visibility=0 [0.5]
+Scene Saiph Ori.Visibility=0 [0.5]
+Scene Scheat Peg.Visibility=0 [0.5]
+Scene Shaula Sco.Visibility=0 [0.5]
+Scene Shedir Cas.Visibility=0 [0.5]
+Scene Sirius CMa.Visibility=0 [0.5]
+Scene Spica Vir.Visibility=0 [0.5]
+Scene Suhail Vel.Visibility=0 [0.5]
+Scene Vega Lyr.Visibility=0 [0.5]
++1
+Scene Achernar Eri.Text.String="\n Achernar (139 ly)"
+Scene Acrux Cru.Text.String="\n Acrux (320 ly)"
+Scene Adhara CMa.Text.String="\n Adhara (430 ly)"
+Scene Aldebaran Tau.Text.String="\n Aldebaran (65 ly)"
+Scene Algieba Leo.Text.String="\n Algieba (130 ly)"
+Scene Algol Per.Text.String="\n Algol (93 ly)"
+Scene Alioth Uma.Text.String="\n Alioth (83 ly)"
+Scene Alkaid Uma.Text.String="\n Alkaid (100 ly)"
+Scene Almaak And.Text.String="\n Almach (350 ly)"
+Scene Alnair Gru.Text.String="\n Alnair (100 ly)"
+Scene Alnath Tau.Text.String="\n Elnath (130 ly)"
+Scene Alnilam Ori.Text.String="\n Alnilam (2000 ly)"
+Scene Alpha TrA.Text.String="\n Atria (390 ly)"
+Scene Alphard Hya.Text.String="\n Alphard (180 ly)"
+Scene Alphekka North CrB.Text.String="\n Alphecca (75 ly)"
+Scene Alpheratz And.Text.String="\n Alpheratz (97 ly)"
+Scene Altair Aql.Text.String="\n Altair (17 ly)"
+Scene Alnitak Ori.Text.String="\n Alnitak (1300 ly)"
+Scene Ankaa Phe.Text.String="\n Ankaa (77 ly)"
+Scene Antares Sco.Text.String="\n Antares (550 ly)"
+Scene Arcturus Boo.Text.String="\n Arcturus (37 ly)"
+Scene Athena Gem.Text.String="\n Alhena (100 ly)"
+Scene Bellatrix Ori.Text.String="\n Bellatrix (250 ly)"
+Scene Betelgeuse Ori.Text.String="\n Betelgeuse (550 ly)"
+Scene Canopus Car.Text.String="\n Canopus (310 ly)"
+Scene Capella Aur.Text.String="\n Capella (43 ly)"
+Scene Caph Cas.Text.String="\n Caph (54 ly)"
+Scene Castor Gem.Text.String="\n Castor (51 ly)"
+Scene Deneb Cyg.Text.String="\n Deneb (2600 ly)"
+Scene Denebola Leo.Text.String="\n Denebola (36 ly)"
+Scene Dipdha Cet.Text.String="\n Diphda (96 ly)"
+Scene Dubhe Uma.Text.String="\n Dubhe (120 ly)"
+Scene Enif Peg.Text.String="\n Enif (670 ly)"
+Scene Etamin Dra.Text.String="\n Eltanin (150 ly)"
+Scene Fomalhaut PsA.Text.String="\n Fomalhaut (25 ly)"
+Scene Hadar Cen.Text.String="\n Hadar (390 ly)"
+Scene Hamal Ari.Text.String="\n Hamal (66 ly)"
+Scene Izar Boo.Text.String="\n Izar (202 ly)"
+Scene Kaus Australis Sag.Text.String="\n Kaus Australis (140 ly)"
+Scene Kochab Umi.Text.String="\n Kochab (130 ly)"
+Scene Koo She Vel.Text.String="\n Alsephina (80 ly)"
+Scene Markab Peg.Text.String="\n Markab (140 ly)"
+Scene Men Lup.Text.String="\n Alpha Lupi (550 ly)"
+Scene Menkalinan Aur.Text.String="\n Menkalinan (80 ly)"
+Scene Merak Uma.Text.String="\n Merak (79 ly)"
+Scene Miaplacidus Car.Text.String="\n Miaplacidus (110 ly)"
+Scene Mimosa Cru.Text.String="\n Mimosa (280 ly)"
+Scene Mintaka Ori.Text.String="\n Mintaka (900 ly)"
+Scene Mirach And.Text.String="\n Mirach (200 ly)"
+Scene Mirfak Per.Text.String="\n Mirfak (510 ly)"
+Scene Mizar Uma.Text.String="\n Mizar (83 ly)"
+Scene Naos Pup.Text.String="\n Naos (1080 ly)"
+Scene Nunki Sag.Text.String="\n Nunki (230 ly)"
+Scene Peacock Pav.Text.String="\n Peacock (180 ly)"
+Scene Phad Uma.Text.String="\n Phecda (84 ly)"
+Scene Polaris Umi.Text.String="\n Polaris (430 ly)"
+Scene Pollux Gem.Text.String="\n Pollux (34 ly)"
+Scene Procyon CMi.Text.String="\n Procyon (11 ly)"
+Scene Proxima Cen.Text.String="\n Alpha Centauri (4.34 ly)"
+Scene Rasalhague Oph.Text.String="\n Rasalhague (47 ly)"
+Scene Regor Vel.Text.String="\n Regor (840 ly)"
+Scene Regulus Leo.Text.String="\n Regulus (79 ly)"
+Scene Rigel Ori.Text.String="\n Rigel (860 ly)"
+Scene Sabik Oph.Text.String="\n Sabik (88 ly)"
+Scene Sadr Cyg.Text.String="\n Sadr (1500 ly)"
+Scene Saiph Ori.Text.String="\n Saiph (720 ly)"
+Scene Scheat Peg.Text.String="\n Scheat (200 ly)"
+Scene Shaula Sco.Text.String="\n Shaula (570 ly)"
+Scene Shedir Cas.Text.String="\n Schedar (230 ly)"
+Scene Sirius CMa.Text.String="\n Sirius (8.6 ly)"
+Scene Spica Vir.Text.String="\n Spica (250 ly)"
+Scene Suhail Vel.Text.String="\n Suhail (570 ly)"
+Scene Vega Lyr.Text.String="\n Vega (25 ly)"
+Scene Achernar Eri.Text.LineSpacing=1.5
+Scene Acrux Cru.Text.LineSpacing=1.5
+Scene Adhara CMa.Text.LineSpacing=1.5
+Scene Aldebaran Tau.Text.LineSpacing=1.5
+Scene Algieba Leo.Text.LineSpacing=1.5
+Scene Algol Per.Text.LineSpacing=1.5
+Scene Alioth Uma.Text.LineSpacing=1.5
+Scene Alkaid Uma.Text.LineSpacing=1.5
+Scene Almaak And.Text.LineSpacing=1.5
+Scene Alnair Gru.Text.LineSpacing=1.5
+Scene Alnath Tau.Text.LineSpacing=1.5
+Scene Alnilam Ori.Text.LineSpacing=1.5
+Scene Alpha TrA.Text.LineSpacing=1.5
+Scene Alphard Hya.Text.LineSpacing=1.5
+Scene Alphekka North CrB.Text.LineSpacing=1.5
+Scene Alpheratz And.Text.LineSpacing=1.5
+Scene Altair Aql.Text.LineSpacing=1.5
+Scene Alnitak Ori.Text.LineSpacing=1.5
+Scene Ankaa Phe.Text.LineSpacing=1.5
+Scene Antares Sco.Text.LineSpacing=1.5
+Scene Arcturus Boo.Text.LineSpacing=1.5
+Scene Athena Gem.Text.LineSpacing=1.5
+Scene Bellatrix Ori.Text.LineSpacing=1.5
+Scene Betelgeuse Ori.Text.LineSpacing=1.5
+Scene Canopus Car.Text.LineSpacing=1.5
+Scene Capella Aur.Text.LineSpacing=1.5
+Scene Caph Cas.Text.LineSpacing=1.5
+Scene Castor Gem.Text.LineSpacing=1.5
+Scene Deneb Cyg.Text.LineSpacing=1.5
+Scene Denebola Leo.Text.LineSpacing=1.5
+Scene Dipdha Cet.Text.LineSpacing=1.5
+Scene Dubhe Uma.Text.LineSpacing=1.5
+Scene Enif Peg.Text.LineSpacing=1.5
+Scene Etamin Dra.Text.LineSpacing=1.5
+Scene Fomalhaut PsA.Text.LineSpacing=1.5
+Scene Hadar Cen.Text.LineSpacing=1.5
+Scene Hamal Ari.Text.LineSpacing=1.5
+Scene Izar Boo.Text.LineSpacing=1.5
+Scene Kaus Australis Sag.Text.LineSpacing=1.5
+Scene Kochab Umi.Text.LineSpacing=1.5
+Scene Koo She Vel.Text.LineSpacing=1.5
+Scene Markab Peg.Text.LineSpacing=1.5
+Scene Men Lup.Text.LineSpacing=1.5
+Scene Menkalinan Aur.Text.LineSpacing=1.5
+Scene Merak Uma.Text.LineSpacing=1.5
+Scene Miaplacidus Car.Text.LineSpacing=1.5
+Scene Mimosa Cru.Text.LineSpacing=1.5
+Scene Mintaka Ori.Text.LineSpacing=1.5
+Scene Mirach And.Text.LineSpacing=1.5
+Scene Mirfak Per.Text.LineSpacing=1.5
+Scene Mizar Uma.Text.LineSpacing=1.5
+Scene Naos Pup.Text.LineSpacing=1.5
+Scene Nunki Sag.Text.LineSpacing=1.5
+Scene Peacock Pav.Text.LineSpacing=1.5
+Scene Phad Uma.Text.LineSpacing=1.5
+Scene Polaris Umi.Text.LineSpacing=1.5
+Scene Pollux Gem.Text.LineSpacing=1.5
+Scene Procyon CMi.Text.LineSpacing=1.5
+Scene Proxima Cen.Text.LineSpacing=1.5
+Scene Rasalhague Oph.Text.LineSpacing=1.5
+Scene Regor Vel.Text.LineSpacing=1.5
+Scene Regulus Leo.Text.LineSpacing=1.5
+Scene Rigel Ori.Text.LineSpacing=1.5
+Scene Sabik Oph.Text.LineSpacing=1.5
+Scene Sadr Cyg.Text.LineSpacing=1.5
+Scene Saiph Ori.Text.LineSpacing=1.5
+Scene Scheat Peg.Text.LineSpacing=1.5
+Scene Shaula Sco.Text.LineSpacing=1.5
+Scene Shedir Cas.Text.LineSpacing=1.5
+Scene Sirius CMa.Text.LineSpacing=1.5
+Scene Spica Vir.Text.LineSpacing=1.5
+Scene Suhail Vel.Text.LineSpacing=1.5
+Scene Vega Lyr.Text.LineSpacing=1.5
+Scene Achernar Eri.FontHeight=1.5
+Scene Acrux Cru.FontHeight=1.5
+Scene Adhara CMa.FontHeight=1.5
+Scene Aldebaran Tau.FontHeight=1.5
+Scene Algieba Leo.FontHeight=1.5
+Scene Algol Per.FontHeight=1.5
+Scene Alioth Uma.FontHeight=1.5
+Scene Alkaid Uma.FontHeight=1.5
+Scene Almaak And.FontHeight=1.5
+Scene Alnair Gru.FontHeight=1.5
+Scene Alnath Tau.FontHeight=1.5
+Scene Alnilam Ori.FontHeight=1.5
+Scene Alpha TrA.FontHeight=1.5
+Scene Alphard Hya.FontHeight=1.5
+Scene Alphekka North CrB.FontHeight=1.5
+Scene Alpheratz And.FontHeight=1.5
+Scene Altair Aql.FontHeight=1.5
+Scene Alnitak Ori.FontHeight=1.5
+Scene Ankaa Phe.FontHeight=1.5
+Scene Antares Sco.FontHeight=1.5
+Scene Arcturus Boo.FontHeight=1.5
+Scene Athena Gem.FontHeight=1.5
+Scene Bellatrix Ori.FontHeight=1.5
+Scene Betelgeuse Ori.FontHeight=1.5
+Scene Canopus Car.FontHeight=1.5
+Scene Capella Aur.FontHeight=1.5
+Scene Caph Cas.FontHeight=1.5
+Scene Castor Gem.FontHeight=1.5
+Scene Deneb Cyg.FontHeight=1.5
+Scene Denebola Leo.FontHeight=1.5
+Scene Dipdha Cet.FontHeight=1.5
+Scene Dubhe Uma.FontHeight=1.5
+Scene Enif Peg.FontHeight=1.5
+Scene Etamin Dra.FontHeight=1.5
+Scene Fomalhaut PsA.FontHeight=1.5
+Scene Hadar Cen.FontHeight=1.5
+Scene Hamal Ari.FontHeight=1.5
+Scene Izar Boo.FontHeight=1.5
+Scene Kaus Australis Sag.FontHeight=1.5
+Scene Kochab Umi.FontHeight=1.5
+Scene Koo She Vel.FontHeight=1.5
+Scene Markab Peg.FontHeight=1.5
+Scene Men Lup.FontHeight=1.5
+Scene Menkalinan Aur.FontHeight=1.5
+Scene Merak Uma.FontHeight=1.5
+Scene Miaplacidus Car.FontHeight=1.5
+Scene Mimosa Cru.FontHeight=1.5
+Scene Mintaka Ori.FontHeight=1.5
+Scene Mirach And.FontHeight=1.5
+Scene Mirfak Per.FontHeight=1.5
+Scene Mizar Uma.FontHeight=1.5
+Scene Naos Pup.FontHeight=1.5
+Scene Nunki Sag.FontHeight=1.5
+Scene Peacock Pav.FontHeight=1.5
+Scene Phad Uma.FontHeight=1.5
+Scene Polaris Umi.FontHeight=1.5
+Scene Pollux Gem.FontHeight=1.5
+Scene Procyon CMi.FontHeight=1.5
+Scene Proxima Cen.FontHeight=1.5
+Scene Rasalhague Oph.FontHeight=1.5
+Scene Regor Vel.FontHeight=1.5
+Scene Regulus Leo.FontHeight=1.5
+Scene Rigel Ori.FontHeight=1.5
+Scene Sabik Oph.FontHeight=1.5
+Scene Sadr Cyg.FontHeight=1.5
+Scene Saiph Ori.FontHeight=1.5
+Scene Scheat Peg.FontHeight=1.5
+Scene Shaula Sco.FontHeight=1.5
+Scene Shedir Cas.FontHeight=1.5
+Scene Sirius CMa.FontHeight=1.5
+Scene Spica Vir.FontHeight=1.5
+Scene Suhail Vel.FontHeight=1.5
+Scene Vega Lyr.FontHeight=1.5
++1
+Scene Achernar Eri.Visibility=100 [0.5]
+Scene Acrux Cru.Visibility=100 [0.5]
+Scene Adhara CMa.Visibility=100 [0.5]
+Scene Aldebaran Tau.Visibility=100 [0.5]
+Scene Algieba Leo.Visibility=100 [0.5]
+Scene Algol Per.Visibility=100 [0.5]
+Scene Alioth Uma.Visibility=100 [0.5]
+Scene Alkaid Uma.Visibility=100 [0.5]
+Scene Almaak And.Visibility=100 [0.5]
+Scene Alnair Gru.Visibility=100 [0.5]
+Scene Alnath Tau.Visibility=100 [0.5]
+Scene Alnilam Ori.Visibility=100 [0.5]
+Scene Alpha TrA.Visibility=100 [0.5]
+Scene Alphard Hya.Visibility=100 [0.5]
+Scene Alphekka North CrB.Visibility=100 [0.5]
+Scene Alpheratz And.Visibility=100 [0.5]
+Scene Altair Aql.Visibility=100 [0.5]
+Scene Alnitak Ori.Visibility=100 [0.5]
+Scene Ankaa Phe.Visibility=100 [0.5]
+Scene Antares Sco.Visibility=100 [0.5]
+Scene Arcturus Boo.Visibility=100 [0.5]
+Scene Athena Gem.Visibility=100 [0.5]
+Scene Bellatrix Ori.Visibility=100 [0.5]
+Scene Betelgeuse Ori.Visibility=100 [0.5]
+Scene Canopus Car.Visibility=100 [0.5]
+Scene Capella Aur.Visibility=100 [0.5]
+Scene Caph Cas.Visibility=100 [0.5]
+Scene Castor Gem.Visibility=100 [0.5]
+Scene Deneb Cyg.Visibility=100 [0.5]
+Scene Denebola Leo.Visibility=100 [0.5]
+Scene Dipdha Cet.Visibility=100 [0.5]
+Scene Dubhe Uma.Visibility=100 [0.5]
+Scene Enif Peg.Visibility=100 [0.5]
+Scene Etamin Dra.Visibility=100 [0.5]
+Scene Fomalhaut PsA.Visibility=100 [0.5]
+Scene Hadar Cen.Visibility=100 [0.5]
+Scene Hamal Ari.Visibility=100 [0.5]
+Scene Izar Boo.Visibility=100 [0.5]
+Scene Kaus Australis Sag.Visibility=100 [0.5]
+Scene Kochab Umi.Visibility=100 [0.5]
+Scene Koo She Vel.Visibility=100 [0.5]
+Scene Markab Peg.Visibility=100 [0.5]
+Scene Men Lup.Visibility=100 [0.5]
+Scene Menkalinan Aur.Visibility=100 [0.5]
+Scene Merak Uma.Visibility=100 [0.5]
+Scene Miaplacidus Car.Visibility=100 [0.5]
+Scene Mimosa Cru.Visibility=100 [0.5]
+Scene Mintaka Ori.Visibility=100 [0.5]
+Scene Mirach And.Visibility=100 [0.5]
+Scene Mirfak Per.Visibility=100 [0.5]
+Scene Mizar Uma.Visibility=100 [0.5]
+Scene Naos Pup.Visibility=100 [0.5]
+Scene Nunki Sag.Visibility=100 [0.5]
+Scene Peacock Pav.Visibility=100 [0.5]
+Scene Phad Uma.Visibility=100 [0.5]
+Scene Polaris Umi.Visibility=100 [0.5]
+Scene Pollux Gem.Visibility=100 [0.5]
+Scene Procyon CMi.Visibility=100 [0.5]
+Scene Proxima Cen.Visibility=100 [0.5]
+Scene Rasalhague Oph.Visibility=100 [0.5]
+Scene Regor Vel.Visibility=100 [0.5]
+Scene Regulus Leo.Visibility=100 [0.5]
+Scene Rigel Ori.Visibility=100 [0.5]
+Scene Sabik Oph.Visibility=100 [0.5]
+Scene Sadr Cyg.Visibility=100 [0.5]
+Scene Saiph Ori.Visibility=100 [0.5]
+Scene Scheat Peg.Visibility=100 [0.5]
+Scene Shaula Sco.Visibility=100 [0.5]
+Scene Shedir Cas.Visibility=100 [0.5]
+Scene Sirius CMa.Visibility=100 [0.5]
+Scene Spica Vir.Visibility=100 [0.5]
+Scene Suhail Vel.Visibility=100 [0.5]
+Scene Vega Lyr.Visibility=100 [0.5]
++1
+Control Text="Fade down Brightest Stars"
+Control Pause
+Scene Achernar Eri.Visibility=0 [0.5]
+Scene Acrux Cru.Visibility=0 [0.5]
+Scene Adhara CMa.Visibility=0 [0.5]
+Scene Aldebaran Tau.Visibility=0 [0.5]
+Scene Algieba Leo.Visibility=0 [0.5]
+Scene Algol Per.Visibility=0 [0.5]
+Scene Alioth Uma.Visibility=0 [0.5]
+Scene Alkaid Uma.Visibility=0 [0.5]
+Scene Almaak And.Visibility=0 [0.5]
+Scene Alnair Gru.Visibility=0 [0.5]
+Scene Alnath Tau.Visibility=0 [0.5]
+Scene Alnilam Ori.Visibility=0 [0.5]
+Scene Alpha TrA.Visibility=0 [0.5]
+Scene Alphard Hya.Visibility=0 [0.5]
+Scene Alphekka North CrB.Visibility=0 [0.5]
+Scene Alpheratz And.Visibility=0 [0.5]
+Scene Altair Aql.Visibility=0 [0.5]
+Scene Alnitak Ori.Visibility=0 [0.5]
+Scene Ankaa Phe.Visibility=0 [0.5]
+Scene Antares Sco.Visibility=0 [0.5]
+Scene Arcturus Boo.Visibility=0 [0.5]
+Scene Athena Gem.Visibility=0 [0.5]
+Scene Bellatrix Ori.Visibility=0 [0.5]
+Scene Betelgeuse Ori.Visibility=0 [0.5]
+Scene Canopus Car.Visibility=0 [0.5]
+Scene Capella Aur.Visibility=0 [0.5]
+Scene Caph Cas.Visibility=0 [0.5]
+Scene Castor Gem.Visibility=0 [0.5]
+Scene Deneb Cyg.Visibility=0 [0.5]
+Scene Denebola Leo.Visibility=0 [0.5]
+Scene Dipdha Cet.Visibility=0 [0.5]
+Scene Dubhe Uma.Visibility=0 [0.5]
+Scene Enif Peg.Visibility=0 [0.5]
+Scene Etamin Dra.Visibility=0 [0.5]
+Scene Fomalhaut PsA.Visibility=0 [0.5]
+Scene Hadar Cen.Visibility=0 [0.5]
+Scene Hamal Ari.Visibility=0 [0.5]
+Scene Izar Boo.Visibility=0 [0.5]
+Scene Kaus Australis Sag.Visibility=0 [0.5]
+Scene Kochab Umi.Visibility=0 [0.5]
+Scene Koo She Vel.Visibility=0 [0.5]
+Scene Markab Peg.Visibility=0 [0.5]
+Scene Men Lup.Visibility=0 [0.5]
+Scene Menkalinan Aur.Visibility=0 [0.5]
+Scene Merak Uma.Visibility=0 [0.5]
+Scene Miaplacidus Car.Visibility=0 [0.5]
+Scene Mimosa Cru.Visibility=0 [0.5]
+Scene Mintaka Ori.Visibility=0 [0.5]
+Scene Mirach And.Visibility=0 [0.5]
+Scene Mirfak Per.Visibility=0 [0.5]
+Scene Mizar Uma.Visibility=0 [0.5]
+Scene Naos Pup.Visibility=0 [0.5]
+Scene Nunki Sag.Visibility=0 [0.5]
+Scene Peacock Pav.Visibility=0 [0.5]
+Scene Phad Uma.Visibility=0 [0.5]
+Scene Polaris Umi.Visibility=0 [0.5]
+Scene Pollux Gem.Visibility=0 [0.5]
+Scene Procyon CMi.Visibility=0 [0.5]
+Scene Proxima Cen.Visibility=0 [0.5]
+Scene Rasalhague Oph.Visibility=0 [0.5]
+Scene Regor Vel.Visibility=0 [0.5]
+Scene Regulus Leo.Visibility=0 [0.5]
+Scene Rigel Ori.Visibility=0 [0.5]
+Scene Sabik Oph.Visibility=0 [0.5]
+Scene Sadr Cyg.Visibility=0 [0.5]
+Scene Saiph Ori.Visibility=0 [0.5]
+Scene Scheat Peg.Visibility=0 [0.5]
+Scene Shaula Sco.Visibility=0 [0.5]
+Scene Shedir Cas.Visibility=0 [0.5]
+Scene Sirius CMa.Visibility=0 [0.5]
+Scene Spica Vir.Visibility=0 [0.5]
+Scene Suhail Vel.Visibility=0 [0.5]
+Scene Vega Lyr.Visibility=0 [0.5]
++0.75
+Scene Achernar Circle.Scale=0 [0.5]
+Scene Acrux Circle.Scale=0 [0.5]
+Scene Adhara Circle.Scale=0 [0.5]
+Scene Aldebaran Circle.Scale=0 [0.5]
+Scene Algieba Circle.Scale=0 [0.5]
+Scene Algol Circle.Scale=0 [0.5]
+Scene Alioth Circle.Scale=0 [0.5]
+Scene Alkaid Circle.Scale=0 [0.5]
+Scene Almaak Circle.Scale=0 [0.5]
+Scene Alnair Circle.Scale=0 [0.5]
+Scene Alnath Circle.Scale=0 [0.5]
+Scene Alnilam Circle.Scale=0 [0.5]
+Scene Alpha TrA Circle.Scale=0 [0.5]
+Scene Alphard Circle.Scale=0 [0.5]
+Scene Alphekka North Circle.Scale=0 [0.5]
+Scene Alpheratz Circle.Scale=0 [0.5]
+Scene Altair Circle.Scale=0 [0.5]
+Scene Anitak Circle.Scale=0 [0.5]
+Scene Ankaa Circle.Scale=0 [0.5]
+Scene Antares Circle.Scale=0 [0.5]
+Scene Arcturus Circle.Scale=0 [0.5]
+Scene Athena Circle.Scale=0 [0.5]
+Scene Bellatrix Circle.Scale=0 [0.5]
+Scene Betelgeuse Circle.Scale=0 [0.5]
+Scene Canopus Circle.Scale=0 [0.5]
+Scene Capella Circle.Scale=0 [0.5]
+Scene Caph Circle.Scale=0 [0.5]
+Scene Castor Circle.Scale=0 [0.5]
+Scene Deneb Circle.Scale=0 [0.5]
+Scene Denebola Circle.Scale=0 [0.5]
+Scene Dipdha Circle.Scale=0 [0.5]
+Scene Dubhe Circle.Scale=0 [0.5]
+Scene Enif Circle.Scale=0 [0.5]
+Scene Etamin Circle.Scale=0 [0.5]
+Scene Fomalhaut Circle.Scale=0 [0.5]
+Scene Hadar Circle.Scale=0 [0.5]
+Scene Hamal Circle.Scale=0 [0.5]
+Scene Izar Circle.Scale=0 [0.5]
+Scene Kaus Australis Circle.Scale=0 [0.5]
+Scene Kochab Circle.Scale=0 [0.5]
+Scene Koo She Circle.Scale=0 [0.5]
+Scene Markab Circle.Scale=0 [0.5]
+Scene Men Circle.Scale=0 [0.5]
+Scene Menkalinan Circle.Scale=0 [0.5]
+Scene Merak Circle.Scale=0 [0.5]
+Scene Miaplacidus Circle.Scale=0 [0.5]
+Scene Mimosa Circle.Scale=0 [0.5]
+Scene Mintaka Circle.Scale=0 [0.5]
+Scene Mirach Circle.Scale=0 [0.5]
+Scene Mirfak Circle.Scale=0 [0.5]
+Scene Mizar Circle.Scale=0 [0.5]
+Scene Naos Circle.Scale=0 [0.5]
+Scene Nunki Circle.Scale=0 [0.5]
+Scene Peacock Circle.Scale=0 [0.5]
+Scene Phad Circle.Scale=0 [0.5]
+Scene Polaris Circle.Scale=0 [0.5]
+Scene Pollux Circle.Scale=0 [0.5]
+Scene Procyon Circle.Scale=0 [0.5]
+Scene Proxima Circle.Scale=0 [0.5]
+Scene Rasalhague Circle.Scale=0 [0.5]
+Scene Regor Circle.Scale=0 [0.5]
+Scene Regulus Circle.Scale=0 [0.5]
+Scene Rigel Circle.Scale=0 [0.5]
+Scene Sabik Circle.Scale=0 [0.5]
+Scene Sadr Circle.Scale=0 [0.5]
+Scene Saiph Circle.Scale=0 [0.5]
+Scene Scheat Circle.Scale=0 [0.5]
+Scene Shaula Circle.Scale=0 [0.5]
+Scene Shedir Circle.Scale=0 [0.5]
+Scene Sirius Circle.Scale=0 [0.5]
+Scene Spica Circle.Scale=0 [0.5]
+Scene Suhail Circle.Scale=0 [0.5]
+Scene Vega Circle.Scale=0 [0.5]
++0.75
+Scene Achernar Circle.Visibility=0 [0.5]
+Scene Acrux Circle.Visibility=0 [0.5]
+Scene Adhara Circle.Visibility=0 [0.5]
+Scene Aldebaran Circle.Visibility=0 [0.5]
+Scene Algieba Circle.Visibility=0 [0.5]
+Scene Algol Circle.Visibility=0 [0.5]
+Scene Alioth Circle.Visibility=0 [0.5]
+Scene Alkaid Circle.Visibility=0 [0.5]
+Scene Almaak Circle.Visibility=0 [0.5]
+Scene Alnair Circle.Visibility=0 [0.5]
+Scene Alnath Circle.Visibility=0 [0.5]
+Scene Alnilam Circle.Visibility=0 [0.5]
+Scene Alpha TrA Circle.Visibility=0 [0.5]
+Scene Alphard Circle.Visibility=0 [0.5]
+Scene Alphekka North Circle.Visibility=0 [0.5]
+Scene Alpheratz Circle.Visibility=0 [0.5]
+Scene Altair Circle.Visibility=0 [0.5]
+Scene Anitak Circle.Visibility=0 [0.5]
+Scene Ankaa Circle.Visibility=0 [0.5]
+Scene Antares Circle.Visibility=0 [0.5]
+Scene Arcturus Circle.Visibility=0 [0.5]
+Scene Athena Circle.Visibility=0 [0.5]
+Scene Bellatrix Circle.Visibility=0 [0.5]
+Scene Betelgeuse Circle.Visibility=0 [0.5]
+Scene Canopus Circle.Visibility=0 [0.5]
+Scene Capella Circle.Visibility=0 [0.5]
+Scene Caph Circle.Visibility=0 [0.5]
+Scene Castor Circle.Visibility=0 [0.5]
+Scene Deneb Circle.Visibility=0 [0.5]
+Scene Denebola Circle.Visibility=0 [0.5]
+Scene Dipdha Circle.Visibility=0 [0.5]
+Scene Dubhe Circle.Visibility=0 [0.5]
+Scene Enif Circle.Visibility=0 [0.5]
+Scene Etamin Circle.Visibility=0 [0.5]
+Scene Fomalhaut Circle.Visibility=0 [0.5]
+Scene Hadar Circle.Visibility=0 [0.5]
+Scene Hamal Circle.Visibility=0 [0.5]
+Scene Izar Circle.Visibility=0 [0.5]
+Scene Kaus Australis Circle.Visibility=0 [0.5]
+Scene Kochab Circle.Visibility=0 [0.5]
+Scene Koo She Circle.Visibility=0 [0.5]
+Scene Markab Circle.Visibility=0 [0.5]
+Scene Men Circle.Visibility=0 [0.5]
+Scene Menkalinan Circle.Visibility=0 [0.5]
+Scene Merak Circle.Visibility=0 [0.5]
+Scene Miaplacidus Circle.Visibility=0 [0.5]
+Scene Mimosa Circle.Visibility=0 [0.5]
+Scene Mintaka Circle.Visibility=0 [0.5]
+Scene Mirach Circle.Visibility=0 [0.5]
+Scene Mirfak Circle.Visibility=0 [0.5]
+Scene Mizar Circle.Visibility=0 [0.5]
+Scene Naos Circle.Visibility=0 [0.5]
+Scene Nunki Circle.Visibility=0 [0.5]
+Scene Peacock Circle.Visibility=0 [0.5]
+Scene Phad Circle.Visibility=0 [0.5]
+Scene Polaris Circle.Visibility=0 [0.5]
+Scene Pollux Circle.Visibility=0 [0.5]
+Scene Procyon Circle.Visibility=0 [0.5]
+Scene Proxima Circle.Visibility=0 [0.5]
+Scene Rasalhague Circle.Visibility=0 [0.5]
+Scene Regor Circle.Visibility=0 [0.5]
+Scene Regulus Circle.Visibility=0 [0.5]
+Scene Rigel Circle.Visibility=0 [0.5]
+Scene Sabik Circle.Visibility=0 [0.5]
+Scene Sadr Circle.Visibility=0 [0.5]
+Scene Saiph Circle.Visibility=0 [0.5]
+Scene Scheat Circle.Visibility=0 [0.5]
+Scene Shaula Circle.Visibility=0 [0.5]
+Scene Shedir Circle.Visibility=0 [0.5]
+Scene Sirius Circle.Visibility=0 [0.5]
+Scene Spica Circle.Visibility=0 [0.5]
+Scene Suhail Circle.Visibility=0 [0.5]
+Scene Vega Circle.Visibility=0 [0.5]
++1
+Assets Constellations.Unload(Achernar Circle)
+Assets Constellations.Unload(Acrux Circle)
+Assets Constellations.Unload(Adhara Circle)
+Assets Constellations.Unload(Aldebaran Circle)
+Assets Constellations.Unload(Algieba Circle)
+Assets Constellations.Unload(Algol Circle)
+Assets Constellations.Unload(Alioth Circle)
+Assets Constellations.Unload(Alkaid Circle)
+Assets Constellations.Unload(Almaak Circle)
+Assets Constellations.Unload(Alnair Circle)
+Assets Constellations.Unload(Alnath Circle)
+Assets Constellations.Unload(Alnilam Circle)
+Assets Constellations.Unload(Alpha TrA Circle)
+Assets Constellations.Unload(Alphard Circle)
+Assets Constellations.Unload(Alphekka North Circle)
+Assets Constellations.Unload(Alpheratz Circle)
+Assets Constellations.Unload(Altair Circle)
+Assets Constellations.Unload(Anitak Circle)
+Assets Constellations.Unload(Ankaa Circle)
+Assets Constellations.Unload(Antares Circle)
+Assets Constellations.Unload(Arcturus Circle)
+Assets Constellations.Unload(Athena Circle)
+Assets Constellations.Unload(Bellatrix Circle)
+Assets Constellations.Unload(Betelgeuse Circle)
+Assets Constellations.Unload(Canopus Circle)
+Assets Constellations.Unload(Capella Circle)
+Assets Constellations.Unload(Caph Circle)
+Assets Constellations.Unload(Castor Circle)
+Assets Constellations.Unload(Deneb Circle)
+Assets Constellations.Unload(Denebola Circle)
+Assets Constellations.Unload(Dipdha Circle)
+Assets Constellations.Unload(Dubhe Circle)
+Assets Constellations.Unload(Enif Circle)
+Assets Constellations.Unload(Etamin Circle)
+Assets Constellations.Unload(Fomalhaut Circle)
+Assets Constellations.Unload(Hadar Circle)
+Assets Constellations.Unload(Hamal Circle)
+Assets Constellations.Unload(Izar Circle)
+Assets Constellations.Unload(Kaus Australis Circle)
+Assets Constellations.Unload(Kochab Circle)
+Assets Constellations.Unload(Koo She Circle)
+Assets Constellations.Unload(Markab Circle)
+Assets Constellations.Unload(Men Circle)
+Assets Constellations.Unload(Menkalinan Circle)
+Assets Constellations.Unload(Merak Circle)
+Assets Constellations.Unload(Miaplacidus Circle)
+Assets Constellations.Unload(Mimosa Circle)
+Assets Constellations.Unload(Mintaka Circle)
+Assets Constellations.Unload(Mirach Circle)
+Assets Constellations.Unload(Mirfak Circle)
+Assets Constellations.Unload(Mizar Circle)
+Assets Constellations.Unload(Naos Circle)
+Assets Constellations.Unload(Nunki Circle)
+Assets Constellations.Unload(Peacock Circle)
+Assets Constellations.Unload(Phad Circle)
+Assets Constellations.Unload(Polaris Circle)
+Assets Constellations.Unload(Pollux Circle)
+Assets Constellations.Unload(Procyon Circle)
+Assets Constellations.Unload(Proxima Circle)
+Assets Constellations.Unload(Rasalhague Circle)
+Assets Constellations.Unload(Regor Circle)
+Assets Constellations.Unload(Regulus Circle)
+Assets Constellations.Unload(Rigel Circle)
+Assets Constellations.Unload(Sabik Circle)
+Assets Constellations.Unload(Sadr Circle)
+Assets Constellations.Unload(Saiph Circle)
+Assets Constellations.Unload(Scheat Circle)
+Assets Constellations.Unload(Shaula Circle)
+Assets Constellations.Unload(Shedir Circle)
+Assets Constellations.Unload(Sirius Circle)
+Assets Constellations.Unload(Spica Circle)
+Assets Constellations.Unload(Suhail Circle)
+Assets Constellations.Unload(Vega Circle)
+Assets Constellations.Unload(Achernar Eri)
+Assets Constellations.Unload(Acrux Cru)
+Assets Constellations.Unload(Adhara CMa)
+Assets Constellations.Unload(Aldebaran Tau)
+Assets Constellations.Unload(Algieba Leo)
+Assets Constellations.Unload(Algol Per)
+Assets Constellations.Unload(Alioth Uma)
+Assets Constellations.Unload(Alkaid Uma)
+Assets Constellations.Unload(Almaak And)
+Assets Constellations.Unload(Alnair Gru)
+Assets Constellations.Unload(Alnath Tau)
+Assets Constellations.Unload(Alnilam Ori)
+Assets Constellations.Unload(Alpha TrA)
+Assets Constellations.Unload(Alphard Hya)
+Assets Constellations.Unload(Alphekka North CrB)
+Assets Constellations.Unload(Alpheratz And)
+Assets Constellations.Unload(Altair Aql)
+Assets Constellations.Unload(Alnitak Ori)
+Assets Constellations.Unload(Ankaa Phe)
+Assets Constellations.Unload(Antares Sco)
+Assets Constellations.Unload(Arcturus Boo)
+Assets Constellations.Unload(Athena Gem)
+Assets Constellations.Unload(Bellatrix Ori)
+Assets Constellations.Unload(Betelgeuse Ori)
+Assets Constellations.Unload(Canopus Car)
+Assets Constellations.Unload(Capella Aur)
+Assets Constellations.Unload(Caph Cas)
+Assets Constellations.Unload(Castor Gem)
+Assets Constellations.Unload(Deneb Cyg)
+Assets Constellations.Unload(Denebola Leo)
+Assets Constellations.Unload(Dipdha Cet)
+Assets Constellations.Unload(Dubhe Uma)
+Assets Constellations.Unload(Enif Peg)
+Assets Constellations.Unload(Etamin Dra)
+Assets Constellations.Unload(Fomalhaut PsA)
+Assets Constellations.Unload(Hadar Cen)
+Assets Constellations.Unload(Hamal Ari)
+Assets Constellations.Unload(Izar Boo)
+Assets Constellations.Unload(Kaus Australis Sag)
+Assets Constellations.Unload(Kochab Umi)
+Assets Constellations.Unload(Koo She Vel)
+Assets Constellations.Unload(Markab Peg)
+Assets Constellations.Unload(Men Lup)
+Assets Constellations.Unload(Menkalinan Aur)
+Assets Constellations.Unload(Merak Uma)
+Assets Constellations.Unload(Miaplacidus Car)
+Assets Constellations.Unload(Mimosa Cru)
+Assets Constellations.Unload(Mintaka Ori)
+Assets Constellations.Unload(Mirach And)
+Assets Constellations.Unload(Mirfak Per)
+Assets Constellations.Unload(Mizar Uma)
+Assets Constellations.Unload(Naos Pup)
+Assets Constellations.Unload(Nunki Sag)
+Assets Constellations.Unload(Peacock Pav)
+Assets Constellations.Unload(Phad Uma)
+Assets Constellations.Unload(Polaris Umi)
+Assets Constellations.Unload(Pollux Gem)
+Assets Constellations.Unload(Procyon CMi)
+Assets Constellations.Unload(Proxima Cen)
+Assets Constellations.Unload(Rasalhague Oph)
+Assets Constellations.Unload(Regor Vel)
+Assets Constellations.Unload(Regulus Leo)
+Assets Constellations.Unload(Rigel Ori)
+Assets Constellations.Unload(Sabik Oph)
+Assets Constellations.Unload(Sadr Cyg)
+Assets Constellations.Unload(Saiph Ori)
+Assets Constellations.Unload(Scheat Peg)
+Assets Constellations.Unload(Shaula Sco)
+Assets Constellations.Unload(Shedir Cas)
+Assets Constellations.Unload(Sirius CMa)
+Assets Constellations.Unload(Spica Vir)
+Assets Constellations.Unload(Suhail Vel)
+Assets Constellations.Unload(Vega Lyr)

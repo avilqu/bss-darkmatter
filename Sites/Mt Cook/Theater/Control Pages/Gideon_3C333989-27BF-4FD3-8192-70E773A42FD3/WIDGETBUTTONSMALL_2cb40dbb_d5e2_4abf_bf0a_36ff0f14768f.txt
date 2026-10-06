@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Teleport to JWST</Text>
+  <Description>Teleports to Earth</Description>
+  <Created>04/18/16 17:01:03</Created>
+  <Modified>04/26/24 0:38:45</Modified>
+  <Version>443</Version>
+  <FriendlyName>JWSTTeleport</FriendlyName>
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>Fly Go to teleport Earth</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Scene.Visibility=0 [0:0:1]
++1.1
+; Go to the ISS
+Scene Camera.ConvertInPLace(JWST)
++0.333
+Scene Camera.NavOrbit(0,0)
++0.1
+Scene Camera.SS.Elevation=60
++0.1
+Scene Scene.DateTime=2457985.980
++0.33
+;Double The Cam Locate to ensure right position
+;Scene Camera { Xrot=-174.461910529307  Yrot=-35.0479634365151  Zrot=-179.406929049807 } [0.1]
+;+0.1
+;Scene Camera { Xrot=-174.461910529307  Yrot=-35.0479634365151  Zrot=-179.406929049807 } [0.1]
+;+0.1
+;
+Scene Camera { Xpos=10.9388840961175  Ypos=10.6425011795987  Zpos=14.5578098846945 } [0.2]
++0.3
+Scene Camera { Xrot=-174.461910529307  Yrot=-35.0479634365151  Zrot=-179.406929049807 } [0.2]
++0.3
+Scene Scene.Visibility=100 [0:0:1]
++0.1

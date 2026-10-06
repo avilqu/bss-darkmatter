@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Dwarf Planet Orbits ON</Text>
+  <Description>Fades up Pluto's orbit</Description>
+  <Created>11/17/18 4:55:11</Created>
+  <Modified>11/06/24 0:44:07</Modified>
+  <Version>629</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>Pluto Orbit PlutoO</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+;Scene PlutoOrbit { Red=75  Green=30  Blue=30 }
+Scene PlutoOrbit.Visibility=80 [2]
+Scene CeresOrbit.Visibility=80 [2]
+Scene ErisOrbit.Visibility=80 [2]
+Scene HaumeaOrbit.Visibility=80 [2]
+Scene MakeMakeOrbit.Visibility=80 [2]
+	
+Control Text="Dwarf Planet Orbits OFF"
+Control Pause
+	
+Scene PlutoOrbit.Visibility=0 [2]
+Scene CeresOrbit.Visibility=0 [2]
+Scene ErisOrbit.Visibility=0 [2]
+Scene HaumeaOrbit.Visibility=0 [2]
+Scene MakeMakeOrbit.Visibility=00 [2]

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Label Beta Centauri</Text>
+  <Description />
+  <Created>09/16/15 10:15:45</Created>
+  <Modified>09/16/23 23:45:47</Modified>
+  <Version>242</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(hadar Circle)
+Assets Constellations.Load(hadar Cen)
++0.1
+Scene hadar Cen.DomeAlign=On
+Scene hadar Circle.Scale=0
+Scene hadar Circle.Visibility=100 
++0.1
+Scene hadar Cen.Text.String="Beta Centauri"
+Scene hadar Circle.Scale=1.5 [0.3]
++0.3
+Scene hadar Cen.Visibility=100 [0.5]
++0.5
+Control Text="Fade down Beta Cen"
+Control Pause
+Scene hadar Circle.Scale=0 [0.5]
+Scene hadar Circle.Visibility=0 [0.5]
+Scene hadar Cen.Visibility=0 [0.5]
++0.6
+Assets Constellations.Unload(hadar Circle)
+Assets Constellations.UnLoad(hadar Cen)

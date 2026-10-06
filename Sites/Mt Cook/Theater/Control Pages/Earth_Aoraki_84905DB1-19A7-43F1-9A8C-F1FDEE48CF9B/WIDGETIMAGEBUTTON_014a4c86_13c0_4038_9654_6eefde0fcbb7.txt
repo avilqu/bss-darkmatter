@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Unload Tiangong-1 Station</Text>
+  <Description />
+  <Created>04/18/16 14:52:41</Created>
+  <Modified>07/01/25 16:33:37</Modified>
+  <Version>476</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info>WIDGETIMAGEBUTTON_ba5ff8f6_b9a8_465e_8f74_a19a9b6b0fcc</Info>
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Spacecraft.Load(Tiangong_1_TLE)
++0.3
+;
+;Force TLE data entry to correct field entry shortening
+Scene Tiangong_1_TLE.TLE1="1 37820U 11053A   17313.39276691  .00099031  11767-4  31143-3 0  9991"
++0.1
+Scene Tiangong_1_TLE.TLE2="2 37820  42.7571  24.5084 0018597  34.3689  64.6598 15.90627734350992"
++0.1
+;Load ISS Assets
+Assets Spacecraft.Load(Tiangong_1Orbit)
++0.1
+Assets Spacecraft.Load(Tiangong_1)
++3.5
+
+Control Text=Unload Tiangong-1
+Control Pause
+
++1.1
+
+Assets Spacecraft.UnLoad(Tiangong_1_TLE)
++0.1
+Assets Spacecraft.UnLoad(Tiangong_1Orbit)
++0.1
+Assets Spacecraft.UnLoad(Tiangong_1)
++0.1
+
+Control Text=Load Tiangong-1

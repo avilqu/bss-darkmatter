@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Proxima Exoplanet</Text>
+  <Description />
+  <Created>11/05/24 23:09:04</Created>
+  <Modified>11/06/24 0:44:07</Modified>
+  <Version>5</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Exoplanet Systems.Load(Proxima CenStar)
+Assets Exoplanet Systems.Load(Proxima Cen)
+Assets Exoplanet Systems.Load(Proxima Cen b)
+Assets Exoplanet Systems.Load(Proxima Cen bCtl)
+Assets Exoplanet Systems.Load(Proxima Cen bOrbit)
+Control Text=Unload Assets
+Control Pause
+Assets Exoplanet Systems.Unload(Proxima CenStar)
+Assets Exoplanet Systems.Unload(Proxima Cen)
+Assets Exoplanet Systems.Unload(Proxima Cen b)
+Assets Exoplanet Systems.Unload(Proxima Cen bCtl)
+Assets Exoplanet Systems.Unload(Proxima Cen bOrbit)

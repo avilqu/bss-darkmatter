@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Tasman Valley 360</Text>
+  <Description />
+  <Created>12/25/23 1:02:18</Created>
+  <Modified>07/25/26 18:58:13</Modified>
+  <Version>65</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Testing.Load(Tasman360)
++2
+Scene Tasman360.Visibility=100 [2]
+Control Text=Unload Assets
+Control Pause
+Scene Tasman360.Visibility=0 [2]
++2
+Assets Testing.Unload(Tasman360)

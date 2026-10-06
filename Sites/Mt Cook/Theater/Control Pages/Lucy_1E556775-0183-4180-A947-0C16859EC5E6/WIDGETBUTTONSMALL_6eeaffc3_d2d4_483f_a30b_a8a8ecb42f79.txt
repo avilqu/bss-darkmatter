@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Sirius </Text>
+  <Description />
+  <Created>09/15/15 9:38:28</Created>
+  <Modified>03/05/24 1:39:20</Modified>
+  <Version>573</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Sirius Circle)
+Assets Constellations.Load(Sirius CMa)
++0.1
+Scene Sirius CMa.DomeAlign=On
+Scene Sirius Circle.Scale=0
+Scene Sirius Circle.Visibility=100 
++0.1
+Scene Sirius Circle.Scale=1.5 [0.3]
++0.3
+Scene Sirius CMa.Visibility=100 [0.5]
+Scene Sirius CMa.Text.String="\n Sirius"
+Scene Sirius CMa.Text.LineSpacing=1.5
+Scene Sirius CMa.FontHeight=1.5
++0.5
+Control Text="Fade down Sirius"
+Control Pause
+Scene Sirius Circle.Scale=0 [0.5]
+Scene Sirius Circle.Visibility=0 [0.5]
+Scene Sirius CMa.Visibility=0 [0.5]
++0.6
+Assets Constellations.Unload(Sirius Circle)
+Assets Constellations.UnLoad(Sirius CMa)

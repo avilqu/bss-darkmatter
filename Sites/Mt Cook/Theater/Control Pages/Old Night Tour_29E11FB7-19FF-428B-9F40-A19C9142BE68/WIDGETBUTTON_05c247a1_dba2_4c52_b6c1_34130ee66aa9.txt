@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>fishhook art</Text>
+  <Description />
+  <Created>08/20/19 19:35:45</Created>
+  <Modified>02/04/20 19:39:58</Modified>
+  <Version>94</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Fu.Load(Fishhook)
++0.2
+Scene Fishhook.Visibility=50 [1]
++1.1
+Control Text=Unload hook
+Control Pause
+Scene Fishhook.Visibility=0 [1]
++1.2
+Assets Fu.Unload(Fishhook)

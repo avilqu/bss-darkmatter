@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Bed (38:53)</Text>
+  <Description />
+  <Created>12/04/18 11:05:19</Created>
+  <Modified>02/11/24 3:05:39</Modified>
+  <Version>284</Version>
+  <FriendlyName>51</FriendlyName>
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+control stopTimeLoop.run
++0.1
+Scene MusicMedia.Volume=0 [0.333:0.333:0.333]
++1.1
+Assets Sky-Skan.Public.Tutorial 1 - DM Basics.unLoad(MusicMedia) 
++0.2 
+Assets Sky-Skan.Public.Tutorial 1 - DM Basics.Load(MusicMedia)
++0.1
+Assets Tutorial 1 - DM Basics.Load(MusicText) 
++0.1 
+Assets Tutorial 1 - DM Basics.Load(MusicNull)
++0.5
+Scene MusicMedia.MediaFile="<ContentPath>\Core\Audio\Music\Jonn Serrie\Serrie_bed_320.mp3"
++1.5
+control VolumeReturn.run
++0.5
+Scene MusicMedia.Play()
++0.1
+;Set songNum value
+Scene MusicNull {Ypos=51}
++0.1
+control MusicInfo.Text = "'Bed'  by John Serrie"
+Scene MusicText.Text.String="'Bed' \n by John Serrie"
++0.1
+control ShowText.run
+;Run time commands
+control StartTimeCheck.run
+;--Credits--
+;Sourced from Sky-Skan Inc.
+;Made by John Serrie
+;Licensed for use in Dark Matter

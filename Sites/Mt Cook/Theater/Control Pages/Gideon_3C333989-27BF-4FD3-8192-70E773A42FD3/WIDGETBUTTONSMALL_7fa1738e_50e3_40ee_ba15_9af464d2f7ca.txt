@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Asset Only Load (No Fade)</Text>
+  <Description />
+  <Created>06/20/17 10:49:49</Created>
+  <Modified>04/26/24 0:38:45</Modified>
+  <Version>341</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Spacecraft.Load(L2Ctl)
++0.1
+Assets Spacecraft.Load(JWSTTrail)
++0.1
+Assets Spacecraft.Load(JWST)
++2
+Scene JWSTTrail.Visibility=0
++0.1
+Scene JWST { Xrot=-90  Yrot=0  Zrot=-90 }
+Control Text=Unload JWST
+Control Pause
+Assets Spacecraft.UnLoad(L2Ctl)
++0.1
+Assets Spacecraft.UnLoad(JWSTTrail)
++0.1
+Assets Spacecraft.UnLoad(JWST)
++0.1
+Control Text=Load JWST

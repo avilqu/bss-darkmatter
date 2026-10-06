@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Go to Mercury</Text>
+  <Description>Flies to the Mercury</Description>
+  <Created>11/17/18 4:55:11</Created>
+  <Modified>09/16/23 23:45:47</Modified>
+  <Version>202</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>Fly Go to Mercury</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+; Go to  Mercury
+	
+Scene Camera.FlyTo(Mercury, Altitude=10000000, Orient=SouthAndDown) [8:6:8]
+	
+Control Text="Going to Mercury..."
++22

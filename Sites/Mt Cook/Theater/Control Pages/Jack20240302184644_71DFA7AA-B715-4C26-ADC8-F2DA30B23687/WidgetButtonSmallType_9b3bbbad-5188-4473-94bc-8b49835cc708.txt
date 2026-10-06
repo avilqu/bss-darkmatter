@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Saturn's Major Moons Scale 50</Text>
+  <Description />
+  <Created>02/22/19 20:08:34</Created>
+  <Modified>03/02/24 18:42:29</Modified>
+  <Version>199</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Mimas { Xscale=50  Yscale=50  Zscale=50 } [1]
+Scene Enceladus { Xscale=50  Yscale=50  Zscale=50 } [1]
+Scene Tethys { Xscale=50  Yscale=50  Zscale=50 } [1]
+Scene Dione { Xscale=50  Yscale=50  Zscale=50 } [1]
+Scene Rhea { Xscale=50  Yscale=50  Zscale=50 } [1]
+Scene Titan { Xscale=50  Yscale=50  Zscale=50 } [1]
+Scene Iapetus { Xscale=50  Yscale=50  Zscale=50 } [1]
+Control Text=Scale Saturn's Moons to 1
+Control Pause
+Scene Mimas { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Enceladus { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Tethys { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Dione { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Rhea { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Titan { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Iapetus { Xscale=1  Yscale=1  Zscale=1 } [1]

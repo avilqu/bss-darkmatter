@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Unload Music (Jonn Serrie) </Text>
+  <Description>Playing music by Jonn Serrie</Description>
+  <Created>02/24/16 14:39:26</Created>
+  <Modified>12/17/24 19:43:00</Modified>
+  <Version>489</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>Music-Serrie,Media,</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Sky-Skan.Public.Tutorial 1 - DM Basics.Load(Music-Serrie)
++1
+Scene Music-Serrie.Play()
+Scene Music-Serrie.Volume=50
+Scene Music-Serrie.Looping=1
+Control Text="Unload Music (Jonn Serrie)"
+Control Pause
+Scene Music-Serrie.Volume=0 [3]
++1
+Assets Sky-Skan.Public.Tutorial 1 - DM Basics.Unload(Music-Serrie)

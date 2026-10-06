@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Go To Western Pacific</Text>
+  <Description>Camera State on Earth</Description>
+  <Created>09/06/26 19:57:11</Created>
+  <Modified>10/05/26 17:01:10</Modified>
+  <Version>17</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords>Camera,Camera</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Camera.ConvertInPlace(Earth, Position Rotate)
++0.1
+Scene Camera { Xpos=-6627436.37371211  Ypos=8930606.32302129  Zpos=3464914.75639479  Xrot=63.7778897728389  Yrot=18.4457100292229  Zrot=31.0006210497522 } [10:3:5]

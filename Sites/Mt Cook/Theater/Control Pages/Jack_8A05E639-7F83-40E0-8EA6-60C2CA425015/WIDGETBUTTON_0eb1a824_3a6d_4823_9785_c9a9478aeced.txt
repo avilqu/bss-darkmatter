@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>l2-jwst</Text>
+  <Description>https://webbtelescope.org/contents/media/images/01F4STZH25YJH07WTN7XJYQP8P?Category=08-webb-mission&amp;Category=09-miscellaneous&amp;page=2&amp;filterUUID=91dfa083-c258-4f9f-bef1-8f40c26f4c97</Description>
+  <Created>03/23/23 6:17:48</Created>
+  <Modified>05/30/25 19:56:22</Modified>
+  <Version>231</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Jack.Load(l2-jwst)
++2
+Scene l2-jwst.Visibility=100 [2]
+Control Pause
+Control Text=Unload l2-jwst
+Scene l2-jwst.Visibility=0 [2]
++2
+Assets Jack.Unload(l2-jwst)

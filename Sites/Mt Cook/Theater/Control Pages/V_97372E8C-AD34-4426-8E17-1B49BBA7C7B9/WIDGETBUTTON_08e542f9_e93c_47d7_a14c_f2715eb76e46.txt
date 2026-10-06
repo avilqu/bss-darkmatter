@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Go to Saturn</Text>
+  <Description>Flies to Saturn</Description>
+  <Created>11/17/18 4:55:11</Created>
+  <Modified>10/02/26 21:21:17</Modified>
+  <Version>686</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords>Fly Go to Saturn</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Scene.Visibility=0 [2]
++3
+Scene Scene.Visibility=100
+; Go to the Saturn
+	
+Scene Camera.FlyTo(Saturn, Altitude=190000000, Orient=NorthAndDown) [6:8:6]
+Control Text="Going to Saturn..."
+Scene Camera.SS.Elevation=45 [1:5:1]
++22

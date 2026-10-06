@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>loadOnlyISS</Text>
+  <Description />
+  <Created>04/18/16 14:52:41</Created>
+  <Modified>07/01/25 16:33:37</Modified>
+  <Version>480</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info>WIDGETIMAGEBUTTON_ba5ff8f6_b9a8_465e_8f74_a19a9b6b0fcc</Info>
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Spacecraft.Load(ISS_TLE)
++0.3
+;
+;Force TLE data entry to correct field entry shortening
+Scene ISS_TLE.TLE1="1 25544U 98067A   18351.62823071 -.00000261  00000-0  33403-5 0  9995"
++0.1
+Scene ISS_TLE.TLE2="2 25544  51.6392 184.5398 0005270 156.9792 276.9897 15.54073666147046"
++0.1
+;Load ISS Assets
+Assets Spacecraft.Load(ISSOrbit)
++0.1
+Assets Spacecraft.Load(ISS)
++10
+Assets Spacecraft.Load(ISSInterior) 
++5
+Control Text="Unload ISS"
+Control Pause
+;Unload Time
+Assets Spacecraft.UnLoad(ISS_TLE)
++0.1
+Assets Spacecraft.UnLoad(ISSOrbit)
++0.1
+Assets Spacecraft.UnLoad(ISSInterior)
++0.1
+Assets Spacecraft.UnLoad(ISS)
++0.1
+Control Text=Load ISS

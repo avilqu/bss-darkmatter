@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Pre-show Images</Text>
+  <Description />
+  <Created>06/10/23 16:47:44</Created>
+  <Modified>03/02/24 18:42:29</Modified>
+  <Version>200</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Jack.Load(jwst-8k-galaxies)
+Assets Jack.Load(core-pano)
+Assets Jack.Load(neptune-jwst)
+Assets Jack.Load(Tarantula-Nebula-NGC-2070)
+Assets Jack.Load(valley-pano)
+Assets Jack.Load(Eagle Nebula)
+Assets Jack.Load(Pillars of Creation)
+Assets Messier Earth.Load(Messier 51 All Sky)
+Assets Jack.Load(01-Viking-Lander-2)
+Assets Jack.Load(02-Apollo-15-Lunar-Module-and-Rover)
+Assets Jack.Load(03-Venera-14-March-1982)
+Assets Jack.Load(04-67P-Churyumov-Gerasimenko)
+Assets Jack.Load(05-titan-surface-huygens)
+Assets Jack.Load(06-Taylor-Glacier)
++10
+Scene Messier 51 All Sky.Visibility=100 [2]
++60
+Scene Messier 51 All Sky.Visibility=0 [2]
+Scene Eagle Nebula.Visibility=100 [2]
++15
+Scene Pillars of Creation.Visibility=100 [2]
++30
+Scene Pillars of Creation.Visibility=0 [2]
+Scene Eagle Nebula.Visibility=0 [2]
+Scene valley-pano.Visibility=100 [2]
++60
+Scene valley-pano.Visibility=0 [2]
+Scene Tarantula-Nebula-NGC-2070.Visibility=100 [2]
++60
+Scene Tarantula-Nebula-NGC-2070.Visibility=0 [2]
+Scene jwst-8k-galaxies.Visibility=100 [2]
++60
+Scene jwst-8k-galaxies.Visibility=0 [2]
+Scene core-pano.Visibility=100 [2]
++60
+Scene core-pano.Visibility=0 [2]
+Scene neptune-jwst.Visibility=100 [2]
++60
+Scene neptune-jwst.Visibility=0 [2]
+Scene  01-Viking-Lander-2.Visibility=100 [2]
++30
+Scene  02-Apollo-15-Lunar-Module-and-Rover.Visibility=100 [2]
++30
+Scene  04-67P-Churyumov-Gerasimenko.Visibility=100 [2]
++30
+Scene  05-titan-surface-huygens.Visibility=100 [2]
++30
+Scene  03-Venera-14-March-1982.Visibility=100 [2]
++30
+Scene  06-Taylor-Glacier.Visibility=100 [2]
+Control Pause
+Scene  01-Viking-Lander-2.Visibility=0 [2]
+Scene  02-Apollo-15-Lunar-Module-and-Rover.Visibility=0 [2]
+Scene  03-Venera-14-March-1982.Visibility=0 [2]
+Scene  04-67P-Churyumov-Gerasimenko.Visibility=0 [2]
+Scene  05-titan-surface-huygens.Visibility=0 [2]
+Scene  06-Taylor-Glacier.Visibility=0 [2]
++3
+Assets Jack.Unload(jwst-8k-galaxies)
+Assets Jack.Unload(core-pano)
+Assets Jack.Unload(neptune-jwst)
+Assets Jack.Unload(Tarantula-Nebula-NGC-2070)
+Assets Jack.Unload(valley-pano)
+Assets Jack.Unload(Eagle Nebula)
+Assets Jack.Unload(Pillars of Creation)
+Assets Messier Earth.Unload(Messier 51 All Sky)
+Assets Jack.Unload(01-Viking-Lander-2)
+Assets Jack.Unload(02-Apollo-15-Lunar-Module-and-Rover)
+Assets Jack.Unload(03-Venera-14-March-1982)
+Assets Jack.Unload(04-67P-Churyumov-Gerasimenko)
+Assets Jack.Unload(05-titan-surface-huygens)
+Assets Jack.Unload(06-Taylor-Glacier)

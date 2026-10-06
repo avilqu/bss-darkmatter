@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Close Pod Bay Doors... </Text>
+  <Description />
+  <Created>05/30/25 20:48:53</Created>
+  <Modified>07/14/25 23:39:05</Modified>
+  <Version>77</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Development.Load(pod1, pod2)
+Scene pod1.Visibility=100
+Scene pod2.Visibility=100
+
+Control Text="Loading Pod Bay Doors..."
+Scene pod1 { Xrot=180  Yrot=0  Zrot=90 }
+Scene pod2 { Xrot=0  Yrot=-180  Zrot=0 }
++0.1
+Control Text="Closing Pod Bay Doors..."
+Scene pod1 { Xrot=180  Yrot=90  Zrot=90 } [6]
+Scene pod2 { Xrot=0  Yrot=-90  Zrot=0 } [6]
++0.5
+Control Text="Open Pod Bay Doors..."
+Control Pause
+Control Text="Pod Bay Doors opening..."
+Scene pod1 { Xrot=180  Yrot=0  Zrot=90 }[6]
+Scene pod2 { Xrot=0  Yrot=-180  Zrot=0 }[6]
++6
+Scene pod1.Visibility=0
+Scene pod2.Visibility=0
+Control Text="Pod Bay Doors Closed."

@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>IAU Bounderies</Text>
+  <Description />
+  <Created>02/12/16 13:52:41</Created>
+  <Modified>04/26/24 0:38:45</Modified>
+  <Version>432</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Control Text="Loading ....."
++1
+Assets Constellations.Load(Andromeda IAU)
+Assets Constellations.Load(Aquila IAU)
+Assets Constellations.Load(Auriga IAU)
+Assets Constellations.Load(Boötes IAU)
+Assets Constellations.Load(Camelopardalis IAU)
+Assets Constellations.Load(Canes Venatici IAU)
+Assets Constellations.Load(Canis Minor IAU)
+Assets Constellations.Load(Cassiopeia IAU)
+Assets Constellations.Load(Cepheus IAU)
+Assets Constellations.Load(Coma Berenices IAU)
+Assets Constellations.Load(Corona Borealis IAU)
+Assets Constellations.Load(Cygnus IAU)
+Assets Constellations.Load(Delphinus IAU)
+Assets Constellations.Load(Draco IAU)
+Assets Constellations.Load(Equuleus IAU)
+Assets Constellations.Load(Hercules IAU)
+Assets Constellations.Load(Lacerta IAU)
+Assets Constellations.Load(Leo Minor IAU)
+Assets Constellations.Load(Lynx IAU)
+Assets Constellations.Load(Lyra IAU)
+Assets Constellations.Load(Monoceros IAU)
+Assets Constellations.Load(Ophiuchus IAU)
+Assets Constellations.Load(Orion IAU)
+Assets Constellations.Load(Pegasus IAU)
+Assets Constellations.Load(Perseus IAU)
+Assets Constellations.Load(Sagitta IAU)
+Assets Constellations.Load(Serpens Caput IAU)
+Assets Constellations.Load(Serpens Cauda IAU)
+Assets Constellations.Load(Triangulum IAU)
+Assets Constellations.Load(Ursa Major IAU)
+Assets Constellations.Load(Ursa Minor IAU)
+Assets Constellations.Load(Vulpecula IAU)
+Assets Constellations.Load(Aquarius IAU)
+Assets Constellations.Load(Aries IAU)
+Assets Constellations.Load(Cancer IAU)
+Assets Constellations.Load(Capricornus IAU)
+Assets Constellations.Load(Gemini IAU)
+Assets Constellations.Load(Leo IAU)
+Assets Constellations.Load(Pisces IAU)
+Assets Constellations.Load(Libra IAU)
+Assets Constellations.Load(Sagittarius IAU)
+Assets Constellations.Load(Scorpius IAU)
+Assets Constellations.Load(Taurus IAU)
+Assets Constellations.Load(Virgo IAU)
+Assets Constellations.Load(Antlia IAU)
+Assets Constellations.Load(Apus IAU)
+Assets Constellations.Load(Ara IAU)
+Assets Constellations.Load(Caelum IAU)
+Assets Constellations.Load(Canis Major IAU)
+Assets Constellations.Load(Carina IAU)
+Assets Constellations.Load(Centaurus IAU)
+Assets Constellations.Load(Cetus IAU)
+Assets Constellations.Load(Chamaeleon IAU)
+Assets Constellations.Load(Circinus IAU)
+Assets Constellations.Load(Columba IAU)
+Assets Constellations.Load(Corona Australis IAU)
+Assets Constellations.Load(Corvus IAU)
+Assets Constellations.Load(Crater IAU)
+Assets Constellations.Load(Crux IAU)
+Assets Constellations.Load(Dorado IAU)
+Assets Constellations.Load(Eridanus IAU)
+Assets Constellations.Load(Fornax IAU)
+Assets Constellations.Load(Grus IAU)
+Assets Constellations.Load(Horologium IAU)
+Assets Constellations.Load(Hydra IAU)
+Assets Constellations.Load(Hydrus IAU)
+Assets Constellations.Load(Indus IAU)
+Assets Constellations.Load(Lepus IAU)
+Assets Constellations.Load(Lupus IAU)
+Assets Constellations.Load(Mensa IAU)
+Assets Constellations.Load(Microscopium IAU)
+Assets Constellations.Load(Musca IAU)
+Assets Constellations.Load(Norma IAU)
+Assets Constellations.Load(Octans IAU)
+Assets Constellations.Load(Pavo IAU)
+Assets Constellations.Load(Phoenix IAU)
+Assets Constellations.Load(Pictor IAU)
+Assets Constellations.Load(Piscis Austrinus IAU)
+Assets Constellations.Load(Puppis IAU)
+Assets Constellations.Load(Pyxis IAU)
+Assets Constellations.Load(Reticulum IAU)
+Assets Constellations.Load(Sculptor IAU)
+Assets Constellations.Load(Scutum IAU)
+Assets Constellations.Load(Sextans IAU)
+Assets Constellations.Load(Telescopium IAU)
+Assets Constellations.Load(Triangulum Australe IAU)
+Assets Constellations.Load(Tucana IAU)
+Assets Constellations.Load(Vela IAU)
+Assets Constellations.Load(Volans IAU)
++1
+Scene Andromeda IAU.Visibility=100 [2]
+Scene Aquila IAU.Visibility=100 [2]
+Scene Auriga IAU.Visibility=100 [2]
+Scene Boötes IAU.Visibility=100 [2]
+Scene Camelopardalis IAU.Visibility=100 [2]
+Scene Canes Venatici IAU.Visibility=100 [2]
+Scene Canis Minor IAU.Visibility=100 [2]
+Scene Cassiopeia IAU.Visibility=100 [2]
+Scene Cepheus IAU.Visibility=100 [2]
+Scene Coma Berenices IAU.Visibility=100 [2]
+Scene Corona Borealis IAU.Visibility=100 [2]
+Scene Cygnus IAU.Visibility=100 [2]
+Scene Delphinus IAU.Visibility=100 [2]
+Scene Draco IAU.Visibility=100 [2]
+Scene Equuleus IAU.Visibility=100 [2]
+Scene Hercules IAU.Visibility=100 [2]
+Scene Lacerta IAU.Visibility=100 [2]
+Scene Leo Minor IAU.Visibility=100 [2]
+Scene Lynx IAU.Visibility=100 [2]
+Scene Lyra IAU.Visibility=100 [2]
+Scene Monoceros IAU.Visibility=100 [2]
+Scene Ophiuchus IAU.Visibility=100 [2]
+Scene Orion IAU.Visibility=100 [2]
+Scene Pegasus IAU.Visibility=100 [2]
+Scene Perseus IAU.Visibility=100 [2]
+Scene Sagitta IAU.Visibility=100 [2]
+Scene Serpens Caput IAU.Visibility=100 [2]
+Scene Serpens Cauda IAU.Visibility=100 [2]
+Scene Triangulum IAU.Visibility=100 [2]
+Scene Ursa Major IAU.Visibility=100 [2]
+Scene Ursa Minor IAU.Visibility=100 [2]
+Scene Vulpecula IAU.Visibility=100 [2]
+Scene Aquarius IAU.Visibility=100 [2]
+Scene Aries IAU.Visibility=100 [2]
+Scene Cancer IAU.Visibility=100 [2]
+Scene Capricornus IAU.Visibility=100 [2]
+Scene  Gemini IAU.Visibility=100 [2]
+Scene Leo IAU.Visibility=100 [2]
+Scene Pisces IAU.Visibility=100 [2]
+Scene Libra IAU.Visibility=100 [2]
+Scene Sagittarius IAU.Visibility=100 [2]
+Scene Scorpius IAU.Visibility=100 [2]
+Scene Taurus IAU.Visibility=100 [2]
+Scene Virgo IAU.Visibility=100 [2]
+Scene Antlia IAU.Visibility=100 [2]
+Scene Apus IAU.Visibility=100 [2]
+Scene Ara IAU.Visibility=100 [2]
+Scene Caelum IAU.Visibility=100 [2]
+Scene Canis Major IAU.Visibility=100 [2]
+Scene Carina IAU.Visibility=100 [2]
+Scene Centaurus IAU.Visibility=100 [2]
+Scene Cetus IAU.Visibility=100 [2]
+Scene Chamaeleon IAU.Visibility=100 [2]
+Scene Circinus IAU.Visibility=100 [2]
+Scene Columba IAU.Visibility=100 [2]
+Scene Corona Australis IAU.Visibility=100 [2]
+Scene Corvus IAU.Visibility=100 [2]
+Scene Crater IAU.Visibility=100 [2]
+Scene Crux IAU.Visibility=100 [2]
+Scene Dorado IAU.Visibility=100 [2]
+Scene Eridanus IAU.Visibility=100 [2]
+Scene Fornax IAU.Visibility=100 [2]
+Scene Grus IAU.Visibility=100 [2]
+Scene Horologium IAU.Visibility=100 [2]
+Scene Hydra IAU.Visibility=100 [2]
+Scene Hydrus IAU.Visibility=100 [2]
+Scene Indus IAU.Visibility=100 [2]
+Scene Lepus IAU.Visibility=100 [2]
+Scene Lupus IAU.Visibility=100 [2]
+Scene Mensa IAU.Visibility=100 [2]
+Scene Microscopium IAU.Visibility=100 [2]
+Scene Musca IAU.Visibility=100 [2]
+Scene Norma IAU.Visibility=100 [2]
+Scene Octans IAU.Visibility=100 [2]
+Scene Pavo IAU.Visibility=100 [2]
+Scene Phoenix IAU.Visibility=100 [2]
+Scene Pictor IAU.Visibility=100 [2]
+Scene Piscis Austrinus IAU.Visibility=100 [2]
+Scene Puppis IAU.Visibility=100 [2]
+Scene Pyxis IAU.Visibility=100 [2]
+Scene Reticulum IAU.Visibility=100 [2]
+Scene Sculptor IAU.Visibility=100 [2]
+Scene Scutum IAU.Visibility=100 [2]
+Scene Sextans IAU.Visibility=100 [2]
+Scene Telescopium IAU.Visibility=100 [2]
+Scene Triangulum Australe IAU.Visibility=100 [2]
+Scene Tucana IAU.Visibility=100 [2]
+Scene Vela IAU.Visibility=100 [2]
+Scene Volans IAU.Visibility=100 [2]
++1
+Control Text="Fade Down 88 IAU Bounderies"
+Control Pause
+Scene Andromeda IAU.Visibility=0 [2]
+Scene Aquila IAU.Visibility=0 [2]
+Scene Auriga IAU.Visibility=0 [2]
+Scene Boötes IAU.Visibility=0 [2]
+Scene Camelopardalis IAU.Visibility=0 [2]
+Scene Canes Venatici IAU.Visibility=0 [2]
+Scene Canis Minor IAU.Visibility=0 [2]
+Scene Cassiopeia IAU.Visibility=0 [2]
+Scene Cepheus IAU.Visibility=0 [2]
+Scene Coma Berenices IAU.Visibility=0 [2]
+Scene Corona Borealis IAU.Visibility=0 [2]
+Scene Cygnus IAU.Visibility=0 [2]
+Scene Delphinus IAU.Visibility=0 [2]
+Scene Draco IAU.Visibility=0 [2]
+Scene Equuleus IAU.Visibility=0 [2]
+Scene Hercules IAU.Visibility=0 [2]
+Scene Lacerta IAU.Visibility=0 [2]
+Scene Leo Minor IAU.Visibility=0 [2]
+Scene Lynx IAU.Visibility=0 [2]
+Scene Lyra IAU.Visibility=0 [2]
+Scene Monoceros IAU.Visibility=0 [2]
+Scene Ophiuchus IAU.Visibility=0 [2]
+Scene Orion IAU.Visibility=0 [2]
+Scene Pegasus IAU.Visibility=0 [2]
+Scene Perseus IAU.Visibility=0 [2]
+Scene Sagitta IAU.Visibility=0 [2]
+Scene Serpens Caput IAU.Visibility=0 [2]
+Scene Serpens Cauda IAU.Visibility=0 [2]
+Scene Triangulum IAU.Visibility=0 [2]
+Scene Ursa Major IAU.Visibility=0 [2]
+Scene Ursa Minor IAU.Visibility=0 [2]
+Scene Vulpecula IAU.Visibility=0 [2]
+Scene Aquarius IAU.Visibility=0 [2]
+Scene Aries IAU.Visibility=0 [2]
+Scene Cancer IAU.Visibility=0 [2]
+Scene Capricornus IAU.Visibility=0 [2]
+Scene  Gemini IAU.Visibility=0 [2]
+Scene Leo IAU.Visibility=0 [2]
+Scene Pisces IAU.Visibility=0 [2]
+Scene Libra IAU.Visibility=0 [2]
+Scene Sagittarius IAU.Visibility=0 [2]
+Scene Scorpius IAU.Visibility=0 [2]
+Scene Taurus IAU.Visibility=0 [2]
+Scene Virgo IAU.Visibility=0 [2]
+Scene Antlia IAU.Visibility=0 [2]
+Scene Apus IAU.Visibility=0 [2]
+Scene Ara IAU.Visibility=0 [2]
+Scene Caelum IAU.Visibility=0 [2]
+Scene Canis Major IAU.Visibility=0 [2]
+Scene Carina IAU.Visibility=0 [2]
+Scene Centaurus IAU.Visibility=0 [2]
+Scene Cetus IAU.Visibility=0 [2]
+Scene Chamaeleon IAU.Visibility=0 [2]
+Scene Circinus IAU.Visibility=0 [2]
+Scene Columba IAU.Visibility=0 [2]
+Scene Corona Australis IAU.Visibility=0 [2]
+Scene Corvus IAU.Visibility=0 [2]
+Scene Crater IAU.Visibility=0 [2]
+Scene Crux IAU.Visibility=0 [2]
+Scene Dorado IAU.Visibility=0 [2]
+Scene Eridanus IAU.Visibility=0 [2]
+Scene Fornax IAU.Visibility=0 [2]
+Scene Grus IAU.Visibility=0 [2]
+Scene Horologium IAU.Visibility=0 [2]
+Scene Hydra IAU.Visibility=0 [2]
+Scene Hydrus IAU.Visibility=0 [2]
+Scene Indus IAU.Visibility=0 [2]
+Scene Lepus IAU.Visibility=0 [2]
+Scene Lupus IAU.Visibility=0 [2]
+Scene Mensa IAU.Visibility=0 [2]
+Scene Microscopium IAU.Visibility=0 [2]
+Scene Musca IAU.Visibility=0 [2]
+Scene Norma IAU.Visibility=0 [2]
+Scene Octans IAU.Visibility=0 [2]
+Scene Pavo IAU.Visibility=0 [2]
+Scene Phoenix IAU.Visibility=0 [2]
+Scene Pictor IAU.Visibility=0 [2]
+Scene Piscis Austrinus IAU.Visibility=0 [2]
+Scene Puppis IAU.Visibility=0 [2]
+Scene Pyxis IAU.Visibility=0 [2]
+Scene Reticulum IAU.Visibility=0 [2]
+Scene Sculptor IAU.Visibility=0 [2]
+Scene Scutum IAU.Visibility=0 [2]
+Scene Sextans IAU.Visibility=0 [2]
+Scene Telescopium IAU.Visibility=0 [2]
+Scene Triangulum Australe IAU.Visibility=0 [2]
+Scene Tucana IAU.Visibility=0 [2]
+Scene Vela IAU.Visibility=0 [2]
+Scene Volans IAU.Visibility=0 [2]
++2.2
+Assets Constellations.Unload(Andromeda IAU)
+Assets Constellations.Unload(Aquila IAU)
+Assets Constellations.Unload(Auriga IAU)
+Assets Constellations.Unload(Boötes IAU)
+Assets Constellations.Unload(Camelopardalis IAU)
+Assets Constellations.Unload(Canes Venatici IAU)
+Assets Constellations.Unload(Canis Minor IAU)
+Assets Constellations.Unload(Cassiopeia IAU)
+Assets Constellations.Unload(Cepheus IAU)
+Assets Constellations.Unload(Coma Berenices IAU)
+Assets Constellations.Unload(Corona Borealis IAU)
+Assets Constellations.Unload(Cygnus IAU)
+Assets Constellations.Unload(Delphinus IAU)
+Assets Constellations.Unload(Draco IAU)
+Assets Constellations.Unload(Equuleus IAU)
+Assets Constellations.Unload(Hercules IAU)
+Assets Constellations.Unload(Lacerta IAU)
+Assets Constellations.Unload(Leo Minor IAU)
+Assets Constellations.Unload(Lynx IAU)
+Assets Constellations.Unload(Lyra IAU)
+Assets Constellations.Unload(Monoceros IAU)
+Assets Constellations.Unload(Ophiuchus IAU)
+Assets Constellations.Unload(Orion IAU)
+Assets Constellations.Unload(Pegasus IAU)
+Assets Constellations.Unload(Perseus IAU)
+Assets Constellations.Unload(Sagitta IAU)
+Assets Constellations.UnLoad(Serpens Caput IAU)
+Assets Constellations.UnLoad(Serpens Cauda IAU)
+Assets Constellations.Unload(Triangulum IAU)
+Assets Constellations.Unload(Ursa Major IAU)
+Assets Constellations.Unload(Ursa Minor IAU)
+Assets Constellations.Unload(Vulpecula IAU)
+Assets Constellations.Unload(Aquarius IAU)
+Assets Constellations.Unload(Aries IAU)
+Assets Constellations.Unload(Cancer IAU)
+Assets Constellations.Unload(Capricornus IAU)
+Assets Constellations.Unload(Gemini IAU)
+Assets Constellations.Unload(Leo IAU)
+Assets Constellations.Unload(Pisces IAU)
+Assets Constellations.Unload(Libra IAU)
+Assets Constellations.Unload(Sagittarius IAU)
+Assets Constellations.Unload(Scorpius IAU)
+Assets Constellations.Unload(Taurus IAU)
+Assets Constellations.Unload(Virgo IAU)
+Assets Constellations.Unload(Antlia IAU)
+Assets Constellations.Unload(Apus IAU)
+Assets Constellations.Unload(Ara IAU)
+Assets Constellations.Unload(Caelum IAU)
+Assets Constellations.Unload(Canis Major IAU)
+Assets Constellations.Unload(Carina IAU)
+Assets Constellations.Unload(Centaurus IAU)
+Assets Constellations.Unload(Cetus IAU)
+Assets Constellations.Unload(Chamaeleon IAU)
+Assets Constellations.Unload(Circinus IAU)
+Assets Constellations.Unload(Columba IAU)
+Assets Constellations.Unload(Corona Australis IAU)
+Assets Constellations.Unload(Corvus IAU)
+Assets Constellations.Unload(Crater IAU)
+Assets Constellations.Unload(Crux IAU)
+Assets Constellations.Unload(Dorado IAU)
+Assets Constellations.Unload(Eridanus IAU)
+Assets Constellations.Unload(Fornax IAU)
+Assets Constellations.Unload(Grus IAU)
+Assets Constellations.Unload(Horologium IAU)
+Assets Constellations.Unload(Hydra IAU)
+Assets Constellations.Unload(Hydrus IAU)
+Assets Constellations.Unload(Indus IAU)
+Assets Constellations.Unload(Lepus IAU)
+Assets Constellations.Unload(Lupus IAU)
+Assets Constellations.Unload(Mensa IAU)
+Assets Constellations.Unload(Microscopium IAU)
+Assets Constellations.Unload(Musca IAU)
+Assets Constellations.Unload(Norma IAU)
+Assets Constellations.Unload(Octans IAU)
+Assets Constellations.Unload(Pavo IAU)
+Assets Constellations.Unload(Phoenix IAU)
+Assets Constellations.Unload(Pictor IAU)
+Assets Constellations.Unload(Piscis Austrinus IAU)
+Assets Constellations.Unload(Puppis IAU)
+Assets Constellations.Unload(Pyxis IAU)
+Assets Constellations.Unload(Reticulum IAU)
+Assets Constellations.Unload(Sculptor IAU)
+Assets Constellations.Unload(Scutum IAU)
+Assets Constellations.Unload(Sextans IAU)
+Assets Constellations.Unload(Telescopium IAU)
+Assets Constellations.Unload(Triangulum Australe IAU)
+Assets Constellations.Unload(Tucana IAU)
+Assets Constellations.Unload(Vela IAU)
+Assets Constellations.Unload(Volans IAU)

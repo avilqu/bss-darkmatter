@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Launch from Here</Text>
+  <Description />
+  <Created>01/29/16 13:05:05</Created>
+  <Modified>10/05/26 17:01:10</Modified>
+  <Version>134</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+; Launch from Here
+Scene Camera{Altitude=10000000} [6:8:6]
+
++1
+Scene Camera.Orient=SouthAndDown [6:8:6]
+Scene Camera.SS.Elevation=45.00 [6:8:6]

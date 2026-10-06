@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Label Sun</Text>
+  <Description>Adds a label to the Sun</Description>
+  <Created>11/17/18 4:55:10</Created>
+  <Modified>03/02/24 18:42:29</Modified>
+  <Version>306</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>Sun Label</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Sun.Label.HJ=Right
+Scene Sun.Label.Color=#938953
+Scene Sun.Label.Size=8
+Scene Sun.Label.Brightness=100 [2]
+	
+Control Text="Fade Sun Label"
+Control Pause
+	
+Scene Sun.Label.Brightness=0 [2]

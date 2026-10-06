@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Atmosphere ON </Text>
+  <Description />
+  <Created>11/07/16 16:23:24</Created>
+  <Modified>09/16/23 23:45:47</Modified>
+  <Version>210</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Earth.Atmosphere.Visibility=0 [2]
++2
+Scene Earth { Atmosphere=0 }
+Control Text="Atmosphere ON"
+Control Pause
+Scene Earth { Atmosphere=1 }
++0.1
+Scene Earth.Atmosphere.Visibility=100 [2]

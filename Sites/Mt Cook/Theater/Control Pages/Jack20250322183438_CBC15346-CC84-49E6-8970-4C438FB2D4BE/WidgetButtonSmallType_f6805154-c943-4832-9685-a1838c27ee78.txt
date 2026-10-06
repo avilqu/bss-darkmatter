@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Titan Orbit</Text>
+  <Description>Fades up Pluto's orbit</Description>
+  <Created>11/17/18 4:55:11</Created>
+  <Modified>12/17/24 19:43:00</Modified>
+  <Version>373</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>Pluto Orbit PlutoO</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene TitanOrbit.Visibility=80 [2]
+Control Text="Fade Titan Orbit"
+Control Pause
+Scene TitanOrbit.Visibility=0 [2]

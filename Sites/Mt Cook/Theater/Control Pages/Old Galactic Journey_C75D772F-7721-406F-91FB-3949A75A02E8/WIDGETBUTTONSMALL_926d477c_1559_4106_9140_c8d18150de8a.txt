@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Show HST and Saturn's Aurora</Text>
+  <Description />
+  <Created>06/20/17 10:29:20</Created>
+  <Modified>03/15/23 19:40:56</Modified>
+  <Version>337</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Camera.Yaw=-25 [3:1:3]
++1.5
+Assets Spacecraft.Load(DataPlane)
++0.1
+Scene DataPlane.Picture="<ContentPath>\Core\Models\Spacecraft\HST\HubbleImages\HST_Release_Discovery_1999.jpg"
++0.1
+Scene DataPlane.Width=45 [2:1:3]
++0.1
+Scene DataPlane.Visibility=100 [2:1:3]
++0.1
+Scene DataPlane.Width=30 [2:1:2]
++0.1
+Control Text=Show Saturn's Aurora
+Control Pause
++0.1
+Scene DataPlane.Visibility=0 [1:0:3]
++4.1
+Scene DataPlane.Picture="<ContentPath>\Core\Models\Spacecraft\HST\HubbleImages\Saturn.Aurora.HST.UV-Vis.jpg"
++0.1
+Scene DataPlane.Width=45 [2:1:2]
++0.1
+Scene DataPlane.Visibility=100 [1:0:4]
++0.1
+Control Text=Remove Media Viewer
+Control Pause
+Scene Camera.Yaw=0 [3:1:3]
++0.1
+Scene DataPlane.Width=20 [4:1:0]
++0.1
+Scene DataPlane.Visibility=0 [2:1:2]
++7.1
+Assets Spacecraft.UnLoad(DataPlane)

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Test Dynamic Camera</Text>
+  <Description />
+  <Created>05/31/25 23:24:43</Created>
+  <Modified>07/03/25 19:13:11</Modified>
+  <Version>121</Version>
+  <FriendlyName>testDynamicCamera</FriendlyName>
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+
+JS AddEngine(dCamTest)
+JS dCamTest.Execute(@"
+;//Define variables
+	DigitalSky.LogMessage("dCamTest started...");
+	;// Get reference to camera String holder:
+	var cameraStringHolder = DigitalSky.GetAssetInstance("cameraString");
+	var cameraStringIns = cameraStringHolder.GetPropertyInstance("Text.String");
+	var cameraStringValue = cameraStringIns.Value;
+
+	;//Get reference to camera target and its parent:
+	var camTar = DigitalSky.GetAssetInstance("camTarget");
+	var camTarParentIns = camTar.GetPropertyInstance("Parent");
+	var camTarParent = camTarParentIns.Value;
+
+	;//Get reference to camera target memory and its parent:
+	var tarMem = DigitalSky.GetAssetInstance("targetMemory01");
+	var tarMemParentIns = tarMem.GetPropertyInstance("Parent");
+	var tarMemParent = tarMemParentIns.Value;
+	;// Log Parent Value:
+	DigitalSky.LogMessage("Target Memory 01 parent = " + tarMemParent);
+	DigitalSky.Wait(0.5);
+ 	;// Transition buttons change the target Memory
+	;// If target memory is different to cam target's parent, update camTarget parent to new object:
+	if (tarMemParent != camTarParent) {
+		DigitalSky.LogMessage("Updating camTarget parent (" + camTarParent + ") to: " + tarMemParent);
+		camTar.ExecuteMethod("ConvertInPlace", tarMemParent, "Position", 0);
+		DigitalSky.SendScript("Scene camTarget { Xpos=0  Ypos=0  Zpos=0 } [5:1:3]");
+	}
+
+	;// Get main camera. Find object camera is currently focused on.
+	var mainCam = DigitalSky.GetAssetInstance("Camera");
+	var mainCamParentIns = mainCam.GetPropertyInstance("Parent");
+	var mainCamParent = mainCamParentIns.Value; 
+
+	;// If the main camera is not on the camera target. Disable the system.
+	if (mainCamParent == "camTarget") {
+		DigitalSky.LogMessage("Camera parent is Camera Target...");
+		DigitalSky.SendScript("Control dCamActive.run"); 
+	} else {
+		DigitalSky.LogWarning("Camera Parent is not Camera Target");
+		DigitalSky.SendScript("Control stopDynamicCamera.run");
+	}	
+
+	if (cameraStringValue == "Stop") {
+		DigitalSky.SendScript("Control stopDynamicCamera.run");
+	}
+
+@")

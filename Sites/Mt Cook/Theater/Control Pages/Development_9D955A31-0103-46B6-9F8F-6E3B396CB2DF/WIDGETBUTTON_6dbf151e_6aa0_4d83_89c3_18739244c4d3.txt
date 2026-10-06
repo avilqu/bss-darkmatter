@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Change Rot</Text>
+  <Description />
+  <Created>06/06/25 18:09:49</Created>
+  <Modified>06/28/25 18:54:38</Modified>
+  <Version>5</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Development.Load(targetMemory01)
+
+Scene Camera { Xrot=-170.8  Yrot=-45.3967902609399  Zrot=104.13650526039 }
+Scene Camera.Xrot=0

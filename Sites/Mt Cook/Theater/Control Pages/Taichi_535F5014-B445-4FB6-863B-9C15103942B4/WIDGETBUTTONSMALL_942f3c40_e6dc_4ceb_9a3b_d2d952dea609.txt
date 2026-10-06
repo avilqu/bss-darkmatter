@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Fulldome Aurora</Text>
+  <Description />
+  <Created>03/23/23 1:21:23</Created>
+  <Modified>10/02/26 18:04:44</Modified>
+  <Version>378</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Taichi.Load(FulldomeAurora)
+Scene FulldomeAurora.Seek=00:00:00.00
++4
+Scene FulldomeAurora.State.Play()
++1
+Scene Video.Source="Media:FulldomeAurora"
+Scene Camera.Visibility=0 [1]
+Scene Video.Visibility=100 [1]
+Control Text="Unload FulldomeAurora"
+Control Pause
+Scene Camera.Visibility=100 [1]
+Scene Video.Visibility=0 [1]
++1
+Assets Taichi.Unload(FulldomeAurora)

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Milky Way Jump</Text>
+  <Description />
+  <Created>11/17/18 4:55:11</Created>
+  <Modified>09/17/23 18:44:36</Modified>
+  <Version>437</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+; View MW galaxy from above
+;Assets Milky Way.Load(Vol Milky Way)
+Scene Camera.FlyTo(Milky Way, Orient=SouthAndDown, Altitude=300000000000000000000)[0:0:0]
+Scene Camera.SS.Elevation=45 [0:0:0]

@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>All Maori Movies</Text>
+  <Description />
+  <Created>05/14/20 10:51:49</Created>
+  <Modified>06/07/23 20:08:32</Modified>
+  <Version>97</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>How Ram_DS5,Media,</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+; Start How It Was Told To Me
+Assets Mt Cook.Theater.Skyvision.Load(How It Was Told To Me_DS1)
+
+Assets Skyvision.Load(How It Was_DS1)
+
++2
+Scene How It Was Told To Me_DS1.Play()
+
++1
+Scene Video.Source="Media:How It Was Told To Me_DS1"
+
+Scene Camera.Visibility=0 [1]
+Scene Video.Visibility=99 [1]
++410
++1
+Scene How It Was Told To Me_DS1.Volume=0 [1]
+
++1
+Assets Mt Cook.Theater.Skyvision.Unload(How It Was Told To Me_DS1)
+
+Assets Skyvision.Unload(How It Was_DS1)
+
+; Finish How It Was Told To Me
++1
+; Start Ram
+Assets Mt Cook.Theater.Skyvision.Load(How Ram_DS1)
+
+Assets Skyvision.Load(Ram_DS1)
+
++2
+Scene How Ram_DS1.Play()
+
++1
+Scene Video.Source="Media:How Ram_DS1"
+
+Scene Camera.Visibility=0 [1]
+Scene Video.Visibility=99 [1]
++336
++1
+Scene How Ram_DS1.Volume=0 [1]
++1
+Assets Mt Cook.Theater.Skyvision.Unload(How Ram_DS1)
+
+Assets Skyvision.Unload(Ram_DS1)
+
+; Finish Ram
++1
+; Start Waka
+Assets Mt Cook.Theater.Skyvision.Load(How Waka_DS1)
+
+Assets Skyvision.Load(Waka_DS1)
+
++2
+Scene How Waka_DS1.Play()
+
++1
+Scene Video.Source="Media:How Waka_DS1"
+
+Scene Camera.Visibility=0 [1]
+Scene Video.Visibility=99 [1]
++300
++1
+Scene Camera.Visibility=100 [1]
+Scene Video.Visibility=0 [1]
+Scene How Waka_DS1.Volume=0 [1]
++1
+Assets Mt Cook.Theater.Skyvision.Unload(How Waka_DS1)
+
+Assets Skyvision.Unload(Waka_DS1)
+
+;Finish Waka
++1
+;Lights on
+Spice SendCue(0 fade 100 lamp i)
++1
+Spice SendCue(2 fade 50 lamp ab)

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Earth Cloud Activity</Text>
+  <Description />
+  <Created>02/08/24 2:33:19</Created>
+  <Modified>02/11/24 3:05:39</Modified>
+  <Version>7</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>1</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking>
+    <TrackingAssetProperty AssetName="Earth" AssetID="" PropertyName="Cloud.Activity" AssetType="Planet" />
+  </AssetTracking>
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Earth.Cloud.Activity={f} [0.1]

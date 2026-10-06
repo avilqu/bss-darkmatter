@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Stop TimeCheck Loop</Text>
+  <Description />
+  <Created>12/04/18 12:25:55</Created>
+  <Modified>10/04/26 16:47:47</Modified>
+  <Version>268</Version>
+  <FriendlyName>StopTimeLoop</FriendlyName>
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Control MusicDurationInfo.Text = "Song Duration"
+Control CurrentTime.Text = "No Music Playing"
+control SongTimeLeft.Text = "Time Remaining"
+control MusicInfo.Text = "Music Information"
+control TimeCheckLoop.reset
+control TimeCheck.reset
++0.05
+control TimeCheckLoop.reset
+control TimeCheck.reset
++0.05
+control TimeCheckLoop.reset
+control TimeCheck.reset
++0.05

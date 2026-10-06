@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Between Worlds (2:27)</Text>
+  <Description />
+  <Created>12/04/18 11:05:19</Created>
+  <Modified>09/28/26 20:36:42</Modified>
+  <Version>327</Version>
+  <FriendlyName>4</FriendlyName>
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+control stopTimeLoop.run
++0.1
+Scene MusicMedia.Volume=0 [0.333:0.333:0.333]
++1.1
+Assets Sky-Skan.Public.Tutorial 1 - DM Basics.unLoad(MusicMedia) 
++0.2 
+Assets Sky-Skan.Public.Tutorial 1 - DM Basics.Load(MusicMedia)
++0.1
+Assets Tutorial 1 - DM Basics.Load(MusicText) 
++0.1 
+Assets Tutorial 1 - DM Basics.Load(MusicNull)
++0.5
+Scene MusicMedia.MediaFile="<ContentPath>\Core\Audio\Music\FreeMusic\tobias_weber_-_Between_Worlds_(Instrumental).mp3"
++1.5
+control VolumeReturn.run
++0.5
+Scene MusicMedia.Play()
++0.1
+;Set songNum value
+Scene MusicNull {Ypos=4}
++0.1
+control MusicInfo.Text = "'Between Worlds (Instrumental)' by Tobias Weber and Aussens@iter"
+Scene MusicText.Text.String="'Between Worlds (Instrumental)' \n by Tobias Weber and Aussens@iter"
++0.1
+control ShowText.run
+;Run time commands
+control StartTimeCheck.run
+;--Credits--
+;Sourced from dig.ccMixter.org
+;Made by Tobias Weber and Aussens@iter
+;License - CC BY 3.0
+;http://dig.ccmixter.org/files/tobias_weber/56664

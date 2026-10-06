@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>NGC3372 label</Text>
+  <Description />
+  <Created>09/16/15 10:15:45</Created>
+  <Modified>09/24/26 22:44:19</Modified>
+  <Version>752</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets DeepSkyPhoto.Load(ngc3372_circle)
+Assets DeepSkyPhoto.Load(ngc3372_label)
++0.1
+Scene ngc3372_label.DomeAlign=On
+Scene ngc3372_circle.Scale=10
+Scene ngc3372_circle.Visibility=100 
++0.1
+Scene ngc3372_label.Text.String="\n Carina Nebula"
+Scene ngc3372_label.Text.LineSpacing=2
+Scene ngc3372_circle.Scale=3.8 [0.3]
++0.3
+Scene ngc3372_label.Visibility=100 [0.5]
++0.5
+Control Pause
+Scene ngc3372_circle.Scale=0 [0.5]
+Scene ngc3372_circle.Visibility=0 [0.5]
+Scene ngc3372_label.Visibility=0 [0.5]
++0.6
+Assets DeepSkyPhoto.Unload(ngc3372_circle)
+Assets DeepSkyPhoto.Unload(ngc3372_label)

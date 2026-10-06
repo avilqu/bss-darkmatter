@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>PLANETS orbit</Text>
+  <Description />
+  <Created>02/08/19 19:12:14</Created>
+  <Modified>02/04/20 19:39:58</Modified>
+  <Version>149</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+	Scene MercuryOrbit.Visibility=80 [5]
+	Scene VenusOrbit.Visibility=80 [5]
+	Scene MarsOrbit.Visibility=80 [5]
+	Scene JupiterOrbit.Visibility=80 [5]
+	Scene SaturnOrbit.Visibility=80 [5]
+	Scene UranusOrbit.Visibility=80 [5]
+	Scene NeptuneOrbit.Visibility=80 [5]
+Control Text="Fade Planets Orbit"
+Control Pause
+	
+Scene MercuryOrbit.Visibility=0 [2]
+Scene VenusOrbit.Visibility=0 [2]
+Scene MarsOrbit.Visibility=0 [2]
+Scene JupiterOrbit.Visibility=0 [2]
+Scene SaturnOrbit.Visibility=0 [2]
+Scene UranusOrbit.Visibility=0 [2]
+Scene NeptuneOrbit.Visibility=0 [2]

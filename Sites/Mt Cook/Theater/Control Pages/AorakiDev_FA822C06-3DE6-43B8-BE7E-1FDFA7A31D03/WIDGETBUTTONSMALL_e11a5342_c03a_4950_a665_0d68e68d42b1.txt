@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>NZ Eclipse</Text>
+  <Description />
+  <Created>06/24/16 14:04:06</Created>
+  <Modified>09/24/26 22:24:31</Modified>
+  <Version>903</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info>WIDGETBUTTONSMALL_e3c8eab6_5c2f_4630_ba42_5710b7cfcea3</Info>
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Scene.Visibility=0 [1]
++1.25
+Scene Camera.FlyTo(Here, Orient=NorthAndUp)
+Scene Earth.Atmosphere.Visibility=100
+Scene Earth.Cloud.Visibility=100
+Scene Visible Milky Way.Visibility=60
+Scene Stars.Lum=2
+Scene Camera.SS.Elevation=90
+Scene Scene.DateTime="2028/07/22 00:00"
++0.75
+Scene Scene.Visibility=100 [1]
+
+Control Text="Go to Totality..."
+Control Pause
+
+Scene Scene.DateTime="2028/07/22 04:15" [5:10:5]

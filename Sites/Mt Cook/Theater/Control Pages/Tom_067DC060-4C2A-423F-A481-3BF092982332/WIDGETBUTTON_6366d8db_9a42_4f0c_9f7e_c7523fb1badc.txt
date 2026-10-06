@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Go to Sun</Text>
+  <Description>Flies to the Sun</Description>
+  <Created>11/17/18 4:55:10</Created>
+  <Modified>02/03/24 2:37:31</Modified>
+  <Version>584</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>Fly Go to Sun</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+; Go to the Sun
+scene sun.visibility = 100
+Scene sun.stellarclass = G
+Scene Camera.FlyTo(Sun, Altitude=2500000000, Orient=SouthAndDown) [8:6:8]
+Scene Sun.Layer = photo
+Scene Sun.Corona = 1
+Scene Sun.SolarActivity = 50
+Scene Sun.SolarActivityRate = 500
+Scene Sun.Halo.Visibility = 100
+Control Text="Going to Sun..."

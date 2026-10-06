@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Ecliptic OFF </Text>
+  <Description />
+  <Created>02/22/19 20:25:19</Created>
+  <Modified>12/17/24 19:43:00</Modified>
+  <Version>480</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+;Scene Earth.Ecliptic.Color=#00B0F0
+Scene Earth.Ecliptic.Color=CornflowerBlue
+Scene Earth.Ecliptic.Visibility=100 [1]
+Control Text="Ecliptic OFF"
+Control Pause
+	
+Scene Earth.Ecliptic.Visibility=0 [1]

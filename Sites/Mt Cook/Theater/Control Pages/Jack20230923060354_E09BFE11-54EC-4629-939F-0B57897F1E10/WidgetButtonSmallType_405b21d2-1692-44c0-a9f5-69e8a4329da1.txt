@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>A Minor Waltz</Text>
+  <Description />
+  <Created>12/04/18 11:05:19</Created>
+  <Modified>09/23/23 6:03:27</Modified>
+  <Version>344</Version>
+  <FriendlyName>0</FriendlyName>
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Mt Cook.Theater.Jack.Load(Waltz)
++2
+Scene Waltz.Play()
+Scene Waltz.Looping=0
+Control Text="Unload Waltz"
+Control Pause
+Scene Waltz.Volume=0 [1]
+Scene Waltz.Stop()
++1
+Assets Mt Cook.Theater.Jack.Unload(Waltz)

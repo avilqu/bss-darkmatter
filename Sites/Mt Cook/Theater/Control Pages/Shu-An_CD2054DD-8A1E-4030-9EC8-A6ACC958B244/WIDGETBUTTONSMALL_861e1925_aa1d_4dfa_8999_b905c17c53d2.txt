@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Scorpius Stick</Text>
+  <Description />
+  <Created>02/21/19 19:31:31</Created>
+  <Modified>10/05/26 17:01:10</Modified>
+  <Version>482</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Scorpius Stick)
++0.5
+Scene Scorpius Stick.Visibility=100 [2]
++2
+Control Text=Unload Scorpius Stick
+Control Pause
+Scene Scorpius Stick.Visibility=0 [1]

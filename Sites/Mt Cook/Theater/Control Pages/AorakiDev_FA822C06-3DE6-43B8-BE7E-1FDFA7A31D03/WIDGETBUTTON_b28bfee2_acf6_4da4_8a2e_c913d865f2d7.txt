@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Light Test</Text>
+  <Description />
+  <Created>07/14/25 23:51:04</Created>
+  <Modified>09/24/26 22:24:31</Modified>
+  <Version>44</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Spice SendCue(0 fade 100 lamp e)
++0.5
+Spice SendCue(0 fade 0 lamp e)
++0.5
+Spice SendCue(0 fade 100 lamp e)
++0.5
+Spice SendCue(0 fade 0 lamp e)
++0.5
+Spice SendCue(0 fade 100 lamp e)
++0.5
+Spice SendCue(0 fade 0 lamp e)
++0.5
+Spice SendCue(0 fade 100 lamp e)
++0.5
+Spice SendCue(0 fade 0 lamp e)
++0.5
+Spice SendCue(0 fade 100 lamp e)
++0.5
+Spice SendCue(0 fade 0 lamp e)
++0.5
+Spice SendCue(0 fade 100 lamp e)
++0.5
+Spice SendCue(0 fade 0 lamp e)
++0.5
+Spice SendCue(0 fade 100 lamp e)
++0.5
+Spice SendCue(0 fade 0 lamp e)
++0.5
+Spice SendCue(0 fade 100 lamp e)
++0.5
+Spice SendCue(0 fade 0 lamp e)
++0.5
+Spice SendCue(0 fade 100 lamp e)
++0.5
+Spice SendCue(0 fade 0 lamp e)
++0.5
+Spice SendCue(0 fade 100 lamp e)
++0.5
+Spice SendCue(0 fade 0 lamp e)
++0.5
+Spice SendCue(0 fade 100 lamp e)
++0.5
+Spice SendCue(0 fade 0 lamp e)
++0.5
+Spice SendCue(0 fade 100 lamp e)
++0.5
+Spice SendCue(0 fade 0 lamp e)
++0.5
+Spice SendCue(0 fade 100 lamp e)
++0.5
+Spice SendCue(0 fade 0 lamp e)
++0.5
+Spice SendCue(0 fade 100 lamp e)
++0.5
+Spice SendCue(0 fade 0 lamp e)
++0.5
+Spice SendCue(0 fade 100 lamp e)
++0.5
+Spice SendCue(0 fade 0 lamp e)
++0.5
+Spice SendCue(0 fade 100 lamp e)
++0.5
+Spice SendCue(0 fade 0 lamp e)
++0.5

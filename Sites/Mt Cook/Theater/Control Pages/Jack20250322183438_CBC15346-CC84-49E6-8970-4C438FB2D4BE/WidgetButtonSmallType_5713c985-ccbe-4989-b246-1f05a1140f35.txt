@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Saturn Cassini</Text>
+  <Description />
+  <Created>11/23/23 6:26:33</Created>
+  <Modified>12/17/24 19:43:00</Modified>
+  <Version>82</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Jack.Load(Saturn Cassini)
+Assets Jack.Load(Saturn Cassini1)
++2
+Scene Saturn Cassini.Visibility=100 [2]
+Control Text="Annotated"
+Control Pause
+Scene Saturn Cassini.Visibility=0 [10]
+Scene Saturn Cassini1.Visibility=100 [2]
++2
+Control Text="Unload Saturn Cassini"
+Control Pause
+Scene Saturn Cassini1.Visibility=0 [2]
+Scene Saturn Cassini.Visibility=0 [2]
++2
+Assets Jack.Unload(Saturn Cassini)
+Assets Jack.Load(Saturn Cassini1)

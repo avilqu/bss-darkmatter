@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DarkMatterConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <LogFolder>Logs</LogFolder>
+  <LogLevel>4</LogLevel>
+  <MaxKernelMsgSendPerTick>10</MaxKernelMsgSendPerTick>
+  <PreferredNetworkString>192.168.1.x</PreferredNetworkString>
+  <LocalRTstartPortBase>59173</LocalRTstartPortBase>
+  <RemoteRTstartPort>59172</RemoteRTstartPort>
+  <PreferredStatusChannel>localhost</PreferredStatusChannel>
+  <WidgetButtonFontSize>14</WidgetButtonFontSize>
+  <DMAstroFontSize>14</DMAstroFontSize>
+  <WidgetSliderFontSize>14</WidgetSliderFontSize>
+  <CloudServerUNC>C:\DarkCloud\DropZone</CloudServerUNC>
+  <CloudServerURL>C:\DarkCloud\index.html</CloudServerURL>
+  <DaemonRTStartPort>60172</DaemonRTStartPort>
+  <LocalDaemonRTStartPortBase>60173</LocalDaemonRTStartPortBase>
+  <BrowserStartupURL>&lt;ContentPath&gt;\\Core\HTML\Index.html</BrowserStartupURL>
+  <DaemonRemotePortDefault>32001</DaemonRemotePortDefault>
+  <DaemonLocalPortDefault>31001</DaemonLocalPortDefault>
+  <DaemonNetworkDelayStartSecs>0</DaemonNetworkDelayStartSecs>
+</DarkMatterConfig>

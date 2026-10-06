@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>New Horizons Jump</Text>
+  <Description />
+  <Created>09/24/23 6:06:32</Created>
+  <Modified>09/24/23 6:16:37</Modified>
+  <Version>6</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Spacecraft.Load(NewHorizons)
+Scene Camera.FlyTo(NewHorizons, Altitude=10, Orient=NorthAndDown) [0:0:0]
+Scene Camera.SS.Elevation=45 [0:0:0]

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Label Alpha Centauri</Text>
+  <Description />
+  <Created>09/16/15 10:15:45</Created>
+  <Modified>02/04/20 19:39:58</Modified>
+  <Version>206</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Proxima Circle)
+Assets Constellations.Load(Proxima Cen)
++0.1
+Scene Proxima Cen.DomeAlign=On
+Scene Proxima Circle.Scale=0
+Scene Proxima Circle.Visibility=100 
++0.1
+Scene Proxima Cen.Text.String="Alpha Centauri"
+Scene Proxima Circle.Scale=1.5 [0.3]
++0.3
+Scene Proxima Cen.Visibility=100 [0.5]
++0.5
+Control Text="Fade down Proxima Cen"
+Control Pause
+Scene Proxima Circle.Scale=0 [0.5]
+Scene Proxima Circle.Visibility=0 [0.5]
+Scene Proxima Cen.Visibility=0 [0.5]
++0.6
+Assets Constellations.Unload(Proxima Circle)
+Assets Constellations.UnLoad(Proxima Cen)

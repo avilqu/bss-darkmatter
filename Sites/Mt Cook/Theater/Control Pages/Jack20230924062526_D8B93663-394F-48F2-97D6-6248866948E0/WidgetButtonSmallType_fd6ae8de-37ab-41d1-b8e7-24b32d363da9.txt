@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>small-mag-jwst</Text>
+  <Description>https://webbtelescope.org/contents/media/images/2023/101/01GNYHXG26ZPW9DW7KTXQH116G</Description>
+  <Created>03/23/23 6:01:07</Created>
+  <Modified>09/24/23 6:16:52</Modified>
+  <Version>145</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Jack.Load(small-mag-jwst)
++2
+Scene small-mag-jwst.Visibility=100 [2]
+Control Pause
+Control Text=Unload small-mag-jwst
+Scene small-mag-jwst.Visibility=0 [2]
++2
+Assets Jack.Unload(small-mag-jwst)

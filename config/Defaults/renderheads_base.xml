@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<RenderheadDescriptions>
+  <TargetInstanceLists>
+	  <TargetInstanceList Name="Zen90">
+	    <TargetInstances>
+		  <TargetInstance AzimCenter="180.0" ElevCenter="90.0" HFOV="90.0" VFOV="90.0" HRES="1024" VRES="1024" Mesh="SD-FlatGeneric.txt"/>
+		</TargetInstances>
+	  </TargetInstanceList>
+	  <TargetInstanceList Name="Front90">
+	    <TargetInstances>
+		  <TargetInstance AzimCenter="180.0" ElevCenter="45.0" HFOV="90.0" VFOV="90.0" HRES="1024" VRES="1024" Mesh="SD-FlatGeneric.txt"/>
+		</TargetInstances>
+	  </TargetInstanceList>
+      <TargetInstanceList Name="East90">
+	    <TargetInstances>
+		  <TargetInstance AzimCenter="90.0" ElevCenter="45.0" HFOV="90.0" VFOV="90.0" HRES="1024" VRES="1024" Mesh="SD-FlatGeneric.txt"/>
+		</TargetInstances>
+	  </TargetInstanceList>	  
+      <TargetInstanceList Name="West90">
+	    <TargetInstances>
+		  <TargetInstance AzimCenter="270.0" ElevCenter="45.0" HFOV="90.0" VFOV="90.0" HRES="1024" VRES="1024" Mesh="SD-FlatGeneric.txt"/>
+		</TargetInstances>
+	  </TargetInstanceList>	  
+      <TargetInstanceList Name="North90">
+	    <TargetInstances>
+		  <TargetInstance AzimCenter="0.0" ElevCenter="45.0" HFOV="90.0" VFOV="90.0" HRES="1024" VRES="1024" Mesh="SD-FlatGeneric.txt"/>
+		</TargetInstances>
+	  </TargetInstanceList>	
+	  <!-- geometry specified per target... no DSI support -->
+      <TargetInstanceList Name="Fisheye">
+	    <TargetInstances>
+		  <TargetInstance AzimCenter="180.0" ElevCenter="90.0" HFOV="90.0" VFOV="90.0" HRES="1024" VRES="1024" Mesh="FE_Zenith.txt"/>
+		  <TargetInstance AzimCenter="180.0" ElevCenter="0.0" HFOV="90.0" VFOV="90.0" HRES="1024" VRES="1024" Mesh="FE_South.txt"/>
+		  <TargetInstance AzimCenter="270.0" ElevCenter="0.0" HFOV="90.0" VFOV="90.0" HRES="1024" VRES="1024" Mesh="FE_West.txt"/>
+		  <TargetInstance AzimCenter="90.0" ElevCenter="0.0" HFOV="90.0" VFOV="90.0" HRES="1024" VRES="1024" Mesh="FE_East.txt"/>
+		  <TargetInstance AzimCenter="0.0" ElevCenter="0.0" HFOV="90.0" VFOV="90.0" HRES="1024" VRES="1024" Mesh="FE_North.txt"/>
+		</TargetInstances>
+	  </TargetInstanceList>	  
+	  <!-- geometry specified in RenderHeads. This is the preferred and standard option. -->
+	  <TargetInstanceList Name="Fisheye5">
+      <TargetInstances>
+        <TargetInstance HRES="1024" VRES="1024" />
+        <TargetInstance HRES="1024" VRES="1024" />
+        <TargetInstance HRES="1024" VRES="1024" />
+        <TargetInstance HRES="1024" VRES="1024" />
+        <TargetInstance HRES="1024" VRES="1024" />
+      </TargetInstances>
+    </TargetInstanceList>
+	</TargetInstanceLists>
+  <Renderheads>
+	  <Renderhead>
+		<Name>Dome Zenith</Name>
+		<Id>1</Id>
+		<HorRes>1024</HorRes>
+		<VerRes>1024</VerRes>
+		<FS>0</FS>
+		<Left>0</Left>
+		<Top>0</Top>
+		<WindowStyle>0x04cf0000</WindowStyle>
+		<ParentHwnd>0</ParentHwnd>
+		<TargetListName>Zen90</TargetListName>
+	  </Renderhead>
+	  <Renderhead>
+		<Name>Dome South</Name>
+		<Id>2</Id>
+		<HorRes>1024</HorRes>
+		<VerRes>1024</VerRes>
+		<FS>0</FS>
+		<Left>0</Left>
+		<Top>0</Top>
+		<WindowStyle>0x04cf0000</WindowStyle>
+		<ParentHwnd>0</ParentHwnd>
+		<TargetListName>Front90</TargetListName>
+	  </Renderhead>
+	  <Renderhead>
+		<Name>Dome East</Name>
+		<Id>3</Id>
+		<HorRes>1024</HorRes>
+		<VerRes>1024</VerRes>
+		<FS>0</FS>
+		<Left>0</Left>
+		<Top>0</Top>
+		<WindowStyle>0x04cf0000</WindowStyle>
+		<ParentHwnd>0</ParentHwnd>
+		<TargetListName>East90</TargetListName>
+	  </Renderhead>
+	  <Renderhead>
+		<Name>Dome West</Name>
+		<Id>4</Id>
+		<HorRes>1024</HorRes>
+		<VerRes>1024</VerRes>
+		<FS>0</FS>
+		<Left>0</Left>
+		<Top>0</Top>
+		<WindowStyle>0x04cf0000</WindowStyle>
+		<ParentHwnd>0</ParentHwnd>
+		<TargetListName>West90</TargetListName>
+	  </Renderhead>
+	  <Renderhead>
+		<Name>Dome North</Name>
+		<Id>5</Id>
+		<HorRes>1024</HorRes>
+		<VerRes>1024</VerRes>
+		<FS>0</FS>
+		<Left>0</Left>
+		<Top>0</Top>
+		<WindowStyle>0x04cf0000</WindowStyle>
+		<ParentHwnd>0</ParentHwnd>
+		<TargetListName>North90</TargetListName>
+	  </Renderhead>
+	  <Renderhead>
+		<Name>Fisheye</Name>
+		<Id>6</Id>
+		<HorRes>1024</HorRes>
+		<VerRes>1024</VerRes>
+		<FS>0</FS>
+		<Left>0</Left>
+		<Top>0</Top>
+		<WindowStyle>0x04cf0000</WindowStyle>
+        <ViewportScaling LineScale="3.0" PointScale="2.0" PointMinScale="2.0" PointMaxScale="2.0" LabelMinScale="2.0" LabelMaxScale="2.0"/>
+		<ParentHwnd>0</ParentHwnd>
+		<Mask>Fisheye.dds</Mask>
+		<DisplayMesh>MD-Fisheye5.txt</DisplayMesh>
+		<TargetListName>Fisheye5</TargetListName>
+	  </Renderhead>
+	  <RenderHead>
+	    <Name>DemoHead</Name>
+		<Id>7</Id>
+		<HorRes>1920</HorRes>
+		<Verres>1080</VerRes>
+		<FS>1</FS>
+		<!-- only relevant for windowed mode -->
+		<Left>0</Left>
+		<Top>0</Top>
+		<!-- do not list in viewport selection list -->
+		<ViewportSelectable>false</ViewportSelectable>
+		<WindowStyle>0</WindowStyle>
+		<TargetListName>Fisheye5</TargetListName>
+		<!-- Gamma settings only apply in fullscreen mode -->
+		<GammaFile>Gamma-DS-07-1.txt</GammaFile>
+		<!-- Mesh built using DS2 and FREE System DMSaveGeo -->
+		<DisplayMesh>DMDT-DS-07-1.txt</DisplayMesh>
+	  </RenderHead>
+  </Renderheads>
+</RenderheadDescriptions>

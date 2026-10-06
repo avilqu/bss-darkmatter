@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>High Quality (16K) Mars</Text>
+  <Description />
+  <Created>07/10/17 11:37:42</Created>
+  <Modified>09/24/23 5:00:12</Modified>
+  <Version>570</Version>
+  <FriendlyName>16KMars</FriendlyName>
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Mars.SurfaceMap1=<ContentPath>\Core\Astronomy\SolarSystem\Mars\Mars_16K.dds
++0.1
+Control Text=Return to 8K Mars
+Control Pause
+Scene Mars.SurfaceMap1=<ContentPath>\Core\Astronomy\SolarSystem\Mars\Mars_8K.dds
++0.1
+Control Text=High Quality (16K) Mars

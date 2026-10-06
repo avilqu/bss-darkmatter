@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Spacecraft Paths</Text>
+  <Description />
+  <Created>09/24/23 6:16:37</Created>
+  <Modified>09/24/23 6:24:01</Modified>
+  <Version>8</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Spacecraft.Load(Voyager1Path)
+Assets Spacecraft.Load(Voyager2Path)
+Assets Spacecraft.Load(Pioneer10Path)
+Assets Spacecraft.Load(Pioneer11Path)
+Scene Voyager1Path.Visibility=0
+Scene Voyager2Path.Visibility=0
+Scene Pioneer10Path.Visibility=0
+Scene Pioneer11Path.Visibility=0
++1
+Scene Voyager1Path.Visibility=80 [2]
+Scene Voyager2Path.Visibility=80 [2]
+Scene Pioneer10Path.Visibility=80 [2]
+Scene Pioneer11Path.Visibility=80 [2]
+Control Text=Unload Spacecraft Paths
+Control Pause
+Scene Voyager1Path.Visibility=0 [2]
+Scene Voyager2Path.Visibility=0 [2]
+Scene Pioneer10Path.Visibility=0 [2]
+Scene Pioneer11Path.Visibility=0 [2]
++2
+Assets Spacecraft.Unload(Voyager1Path)
+Assets Spacecraft.Unload(Voyager2Path)
+Assets Spacecraft.Unload(Pioneer10Path)
+Assets Spacecraft.Unload(Pioneer11Path)

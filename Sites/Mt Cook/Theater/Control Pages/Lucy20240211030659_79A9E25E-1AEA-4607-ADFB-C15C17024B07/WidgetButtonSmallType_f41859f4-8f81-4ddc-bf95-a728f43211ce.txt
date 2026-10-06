@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Mimosa</Text>
+  <Description />
+  <Created>10/06/15 12:06:58</Created>
+  <Modified>02/11/24 3:05:39</Modified>
+  <Version>466</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Mimosa Circle)
+Assets Constellations.Load(Mimosa Cru)
++0.1
+Scene Mimosa Cru.DomeAlign=On
+Scene Mimosa Circle.Scale=0
+Scene Mimosa Circle.Visibility=100 
++0.1
+Scene Mimosa Circle.Scale=1.5 [0.3]
++0.3
+Scene Mimosa Cru.Visibility=100 [0.5]
+Scene Mimosa Cru.Text.String="\n Mimosa"
+Scene Mimosa Cru.Text.LineSpacing=1.5
+Scene Mimosa Cru.FontHeight=1.5
++0.5
+Control Text="Fade down Mimosa"
+Control Pause
+Scene Mimosa Circle.Scale=0 [0.5]
+Scene Mimosa Circle.Visibility=0 [0.5]
+Scene Mimosa Cru.Visibility=0 [0.5]
++0.6
+Assets Constellations.Unload(Mimosa Circle)
+Assets Constellations.UnLoad(Mimosa Cru)

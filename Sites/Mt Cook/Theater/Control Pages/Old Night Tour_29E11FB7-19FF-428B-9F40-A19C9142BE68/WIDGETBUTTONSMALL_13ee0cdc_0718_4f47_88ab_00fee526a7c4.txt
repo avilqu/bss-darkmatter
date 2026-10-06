@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Track 1 </Text>
+  <Description />
+  <Created>02/14/19 1:44:45</Created>
+  <Modified>02/04/20 19:39:58</Modified>
+  <Version>178</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>Track 1,Media</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Mt Cook.Theater.Music.Load(Track 1)
++2
+Scene Track 1.Play()
+Scene myMedia.Looping=On
+Control Text="Unload Track 1"
+Control Pause
+Scene Track 1.Volume=0 [1]
++1
+Assets Mt Cook.Theater.Music.Unload(Track 1)

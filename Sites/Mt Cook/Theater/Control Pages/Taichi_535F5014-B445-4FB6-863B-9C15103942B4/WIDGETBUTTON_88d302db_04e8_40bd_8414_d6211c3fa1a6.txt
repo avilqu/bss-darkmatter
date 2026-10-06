@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>turn Mars back to normal </Text>
+  <Description />
+  <Created>06/07/25 0:13:28</Created>
+  <Modified>10/02/26 18:04:44</Modified>
+  <Version>127</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Mars.Atmosphere.Green=1 [5]
+Scene Mars.Atmosphere.Blue=1 [5]
++5
+Control Text="turn Mars back to normal"
+Control Pause 
+
+Scene Mars.Atmosphere.Green=0.56 [5]
+Scene Mars.Atmosphere.Blue=0.62 [5]

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Go to solar system</Text>
+  <Description />
+  <Created>02/08/19 19:12:14</Created>
+  <Modified>06/22/19 17:41:56</Modified>
+  <Version>13</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Richard</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+; Go to the Sun
+	Control Text="Going to View the Inner Planets..."
+	
+	Scene Camera.ConvertInPLace(Sun)
++1.5
+	Scene Camera{Latitude=30, Altitude=270e+9} [8:5:2]
++1
+	Scene Camera.Orient=SouthAndDown [5:4:5]
++2
+	Scene MercuryOrbit.Visibility=0 [5]
+	Scene VenusOrbit.Visibility=0 [5]
+	Scene EarthOrbit.Visibility=0 [5]
+	Scene MoonOrbit.Visibility=0 [5]
+	Scene MarsOrbit.Visibility=0 [5]
+	Scene JupiterOrbit.Visibility=0 [5]
+	Scene SaturnOrbit.Visibility=0 [5]
+	Scene UranusOrbit.Visibility=0 [5]
+	Scene NeptuneOrbit.Visibility=0 [5]
+	Scene PlutoOrbit.Visibility=0 [5]
++60

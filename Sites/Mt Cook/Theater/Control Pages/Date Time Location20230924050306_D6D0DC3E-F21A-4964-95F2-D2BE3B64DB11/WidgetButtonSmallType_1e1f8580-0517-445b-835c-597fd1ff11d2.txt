@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Cardinal Points OFF </Text>
+  <Description />
+  <Created>02/24/16 17:25:06</Created>
+  <Modified>09/24/23 5:02:18</Modified>
+  <Version>720</Version>
+  <FriendlyName>CarbinalPointsButton</FriendlyName>
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>cardinal points, js</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Earth.Cardinal.Visibility=75 [1]
+Scene Earth.Cardinal.Color=Red
+Control Text="Cardinal Points OFF"
+Control Pause
+Scene Earth.Cardinal.Visibility=0 [1]

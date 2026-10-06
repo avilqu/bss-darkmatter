@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Reset All? </Text>
+  <Description>Resets all locked Assets, unloads any unlocked assets, and puts you back on Earth.</Description>
+  <Created>02/11/16 17:55:49</Created>
+  <Modified>11/06/24 0:44:07</Modified>
+  <Version>376</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>reset</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Control Text="Reset All?"
+Control Pause
+; fade down scene
+Control Text="Assets Reset running..."
+Scene Visibility=0 [0]
+Control Text="Resetting All Assets..."
+Assets Reset
+; Land on Earth
++5
+Control Text="Loading JavaScripts..."
+Assets JavaScript Library.Load(vpSlideDropper)
+Navigator AddDropTemplate(vpSlideDropper,bmp,dds,png,jpg)
+Assets JavaScript Library.Load(vpSlideInteract)
+Navigator AddInteractionTemplate(vpSlideInteract,Slide,SlideText)
++1
+Scene Camera.FlyTo(Here, Orient=SouthAndUp) [0]
+Scene Camera.SS.Azimuth=180.0
+Scene Camera.SS.Elevation=90.0
+Scene Scene.DateTime=Now
+Scene Scene.DateTime="9:00"
+; fade up scene
+Control Abort

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Poles ON</Text>
+  <Description />
+  <Created>09/19/16 15:00:00</Created>
+  <Modified>11/23/23 5:05:01</Modified>
+  <Version>422</Version>
+  <FriendlyName>PolesButton</FriendlyName>
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>Pole,Circles</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Basics.Load(PoleCircles)
++0.5
+Scene PoleCircles.Visibility=75 [1]
+Control Text=Poles OFF
+Control Pause
+Scene PoleCircles.Visibility=0 [1]
++1
+Assets Basics.Unload(PoleCircles)

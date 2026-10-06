@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Bird Constellations</Text>
+  <Description />
+  <Created>02/14/19 1:45:30</Created>
+  <Modified>12/17/24 19:43:00</Modified>
+  <Version>326</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>Big Bang,Media</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Apus Art)
+Assets Constellations.Load(Columba Art)
+Assets Constellations.Load(Corvus Art)
+Assets Constellations.Load(Grus Art)
+Assets Constellations.Load(Pavo Art)
+Assets Constellations.Load(Phoenix Art)
+Assets Constellations.Load(Tucana Art)
++0.2
+Scene Tucana Art.Visibility=100 [2]
+Scene  Phoenix Art.Visibility=100 [2]
+Scene Pavo Art.Visibility=100 [2]
+Scene Grus Art.Visibility=100 [2]
+Scene Corvus Art.Visibility=100 [2]
+Scene Columba Art.Visibility=100 [2]
+Scene Apus Art.Visibility=100 [2]
+Control Text=Unload Assets
+Control Pause
+Scene Apus Art.Visibility=0 [2]
+Scene Columba Art.Visibility=0 [2]
+Scene Corvus Art.Visibility=0 [2]
+Scene Grus Art.Visibility=0 [2]
+Scene Pavo Art.Visibility=0 [2]
+Scene Phoenix Art.Visibility=0 [2]
+Scene Tucana Art.Visibility=0 [2]
++2
+;Assets Constellations.Unload(Tucana Art)
+;Assets Constellations.Unload(Phoenix Art)
+;Assets Constellations.Unload(Pavo Art)
+;Assets Constellations.Unload(Grus Art)
+;Assets Constellations.Unload(Corvus Art)
+;Assets Constellations.Unload(Columba Art)
+;Assets Constellations.Unload(Apus Art)

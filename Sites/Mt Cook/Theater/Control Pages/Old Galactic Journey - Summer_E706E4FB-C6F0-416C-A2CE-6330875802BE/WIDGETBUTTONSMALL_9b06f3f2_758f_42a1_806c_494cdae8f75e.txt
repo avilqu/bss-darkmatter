@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Label Mercury</Text>
+  <Description>Adds a label to Mercury</Description>
+  <Created>11/17/18 4:55:10</Created>
+  <Modified>12/05/20 17:19:31</Modified>
+  <Version>107</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>Mercury Label</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Mercury.Label.HJ=Right
+Scene Mercury.Label.Color=#938953
+Scene Mercury.Label.Size=8
+Scene Mercury.Label.Brightness=100 [2]
+Control Text="Fade Mercury Label"
+Control Pause
+Scene Mercury.Label.Brightness=0 [2]

@@ -1,0 +1,5 @@
+# Files copied from the dome must stay byte-identical (CRLF, UTF-8 BOM) so they
+# can be copied straight back into <ContentPath>\Sites and C:\ProgramData.
+Sites/** -text
+config/** -text
+*.dmz binary

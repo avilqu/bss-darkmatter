@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Cassini</Text>
+  <Description />
+  <Created>05/22/25 16:49:26</Created>
+  <Modified>06/10/25 16:16:20</Modified>
+  <Version>76</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+
+;Move camTarget:
+Scene camTarget.ConvertInPlace(Cassini)
++1
+Scene camTarget { Xpos=0  Ypos=0  Zpos=0 } [5:1:3] 

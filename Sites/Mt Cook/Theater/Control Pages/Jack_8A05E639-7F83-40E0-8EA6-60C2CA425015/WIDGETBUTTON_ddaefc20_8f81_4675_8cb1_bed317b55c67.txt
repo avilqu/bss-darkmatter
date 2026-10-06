@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Wishing Well</Text>
+  <Description />
+  <Created>09/11/24 17:39:21</Created>
+  <Modified>05/30/25 19:56:22</Modified>
+  <Version>17</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Jack.Load(WishingWell)
++2
+Scene WishingWell.Visibility=100 [2]
+Control Pause
+Control Text=Unload WishingWell
+Scene WishingWell.Visibility=0 [2]
++2
+Assets Jack.Unload(WishingWell)

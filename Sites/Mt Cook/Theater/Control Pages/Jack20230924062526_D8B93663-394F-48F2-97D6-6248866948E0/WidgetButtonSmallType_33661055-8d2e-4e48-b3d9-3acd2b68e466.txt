@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Stars Preset</Text>
+  <Description />
+  <Created>02/09/19 1:55:36</Created>
+  <Modified>09/24/23 6:16:52</Modified>
+  <Version>276</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Extragalactic.Load(LocalGroup)
++0.5
+Scene Stars.MinPoint=0.0005
+Scene Stars.Lum=1 [2]
+Scene Stars.FadePoint=0.008
+Scene Stars.MaxPoint=0.0115
+Scene LocalGroup.SizeScale=0.297
+Scene Visible Milky Way.Visibility=45 [2]
+Scene Visible Milky Way { Red=100  Green=100  Blue=90 }
+Scene LocalGroup.Visibility=44

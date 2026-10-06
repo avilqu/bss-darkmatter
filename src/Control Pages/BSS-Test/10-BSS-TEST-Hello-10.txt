@@ -1,0 +1,18 @@
+;=== BSS-TEST-Hello-10 ===
+; Page: BSS-Test   Button: "Hello (10s)"   Length: ~10 s
+; Test page for tools/build-page.py. Shows a text in the south and cleans up after itself.
+Control Text="Hello - running"
+Scene Remove(HelloText-BSS-TEST)
++0.1
+Scene Add(HelloText-BSS-TEST, SlideText, Scale=0)
++0.1
+Scene HelloText-BSS-TEST.Text.String="Hello from git"
+Scene HelloText-BSS-TEST { Lens=AllSky Azimuth=180 Elevation=40 }
+Scene HelloText-BSS-TEST.Scale=0.3 [1:1:1]
++3
+; hold
++4
+Scene HelloText-BSS-TEST.Scale=0 [1:1:1]
++3
+Scene Remove(HelloText-BSS-TEST)
+Control Text="Hello (10s)"

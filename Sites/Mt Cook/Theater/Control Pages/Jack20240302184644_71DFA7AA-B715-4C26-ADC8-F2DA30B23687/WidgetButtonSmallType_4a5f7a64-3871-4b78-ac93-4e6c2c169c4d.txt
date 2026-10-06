@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Achernar </Text>
+  <Description />
+  <Created>09/22/15 11:38:39</Created>
+  <Modified>03/02/24 18:42:29</Modified>
+  <Version>576</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Achernar Circle)
+Assets Constellations.Load(Achernar Eri)
++0.1
+Scene Achernar Eri.DomeAlign=On
+Scene Achernar Circle.Scale=0
+Scene Achernar Circle.Visibility=100 
++0.1
+Scene Achernar Circle.Scale=1.5 [0.3]
++0.3
+Scene Achernar Eri.Visibility=100 [0.5]
+Scene Achernar Eri.Text.String="\n Achernar"
+Scene Achernar Eri.Text.LineSpacing=1.5
+Scene Achernar Eri.FontHeight=1.5
++0.5
+Control Text="Fade down Achernar"
+Control Pause
+Scene Achernar Circle.Scale=0 [0.5]
+Scene Achernar Circle.Visibility=0 [0.5]
+Scene Achernar Eri.Visibility=0 [0.5]
++0.6
+Assets Constellations.Unload(Achernar Circle)
+Assets Constellations.UnLoad(Achernar Eri)

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Saturn's Rings</Text>
+  <Description>Camera State on Saturn</Description>
+  <Created>02/09/19 20:58:35</Created>
+  <Modified>01/09/24 3:12:06</Modified>
+  <Version>172</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>Camera,Camera</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Camera.ConvertInPlace(Saturn, Position Rotate)
++0.1
+Scene Camera { Xpos=62540386.3043184  Ypos=-94140100.7042623  Zpos=220.661469557367  Xrot=-38.5424119283279  Yrot=-25.5912449954261  Zrot=-157.123204778827 } [3:2:3]

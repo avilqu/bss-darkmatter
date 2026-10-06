@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Deneb </Text>
+  <Description />
+  <Created>09/21/15 13:36:48</Created>
+  <Modified>10/02/26 21:21:17</Modified>
+  <Version>89</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Deneb Circle)
+Assets Constellations.Load(Deneb Cyg)
++0.1
+Scene Deneb Boo.DomeAlign=On
+Scene Deneb Circle.Scale=0
+Scene Deneb Circle.Visibility=100 
++0.1
+Scene Deneb Circle.Scale=1.5 [0.3]
++0.3
+Scene Deneb Cyg.Visibility=100 [0.5]
+Scene Deneb Cyg.Text.String="\n Deneb"
+Scene Deneb Cyg.Text.LineSpacing=1.5
+Scene Deneb Cyg.FontHeight=1.5
++0.5
+Control Text="Fade down Deneb"
+Control Pause
+Scene Deneb Circle.Scale=0 [0.5]
+Scene Deneb Circle.Visibility=0 [0.5]
+Scene Deneb Cyg.Visibility=0 [0.5]
++0.6
+Assets Constellations.Unload(Deneb Circle)
+Assets Constellations.UnLoad(Deneb Cyg)

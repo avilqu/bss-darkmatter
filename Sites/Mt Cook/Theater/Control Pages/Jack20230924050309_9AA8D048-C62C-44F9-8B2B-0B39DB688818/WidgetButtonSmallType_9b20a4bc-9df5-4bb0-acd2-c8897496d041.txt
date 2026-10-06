@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Aldebaran </Text>
+  <Description />
+  <Created>10/08/15 11:59:18</Created>
+  <Modified>09/24/23 5:00:12</Modified>
+  <Version>434</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Aldebaran Circle)
+Assets Constellations.Load(Aldebaran Tau)
++0.1
+Scene Aldebaran Tau.DomeAlign=On
+Scene Aldebaran Circle.Scale=0
+Scene Aldebaran Circle.Visibility=100 
++0.1
+Scene Aldebaran Circle.Scale=1.5 [0.3]
++0.3
+Scene Aldebaran Tau.Visibility=100 [0.5]
+Scene Aldebaran Tau.Text.String="\n Aldebaran"
+Scene Aldebaran Tau.Text.LineSpacing=1.5
+Scene Aldebaran Tau.FontHeight=1.5
++0.5
+Control Text="Fade down Aldebaran"
+Control Pause
+Scene Aldebaran Circle.Scale=0 [0.5]
+Scene Aldebaran Circle.Visibility=0 [0.5]
+Scene Aldebaran Tau.Visibility=0 [0.5]
++0.6
+Assets Constellations.Unload(Aldebaran Circle)
+Assets Constellations.UnLoad(Aldebaran Tau)

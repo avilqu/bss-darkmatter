@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Winter Hexagon</Text>
+  <Description />
+  <Created>09/23/23 2:48:34</Created>
+  <Modified>05/30/25 19:56:22</Modified>
+  <Version>108</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Winter Hexagon)
+Scene Winter Hexagon.Visibility=100 [2]
++2
+Control Text=Unload Assets
+Control Pause
+Assets Constellations.Unload(Winter Hexagon)

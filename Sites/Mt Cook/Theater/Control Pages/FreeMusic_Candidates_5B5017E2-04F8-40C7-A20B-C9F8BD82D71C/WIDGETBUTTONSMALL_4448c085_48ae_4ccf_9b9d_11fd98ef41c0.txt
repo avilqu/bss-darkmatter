@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Duration</Text>
+  <Description />
+  <Created>05/29/18 13:11:29</Created>
+  <Modified>10/04/26 16:47:47</Modified>
+  <Version>550</Version>
+  <FriendlyName>TestDuration</FriendlyName>
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+JS MusicTimeEngine.Execute(@"
+;//Define variables
+	var Music = DigitalSky.GetAssetInstance("MusicMedia");
+	var MusicTimeAttr = Music.GetPropertyInstance("Position");
+	var MusicTime = MusicTimeAttr.Value;
+	var MusicDurationAttr = Music.GetPropertyInstance("Duration");
+	var MusicDuration = MusicDurationAttr.Value;
+	var MusicNull = DigitalSky.GetAssetInstance("MusicNull");
+	var RemainingTime = MusicDuration-MusicTime;
+;//Reformat the time for the 'seek' attribute injection
+	var TimePlus = Number(MusicDuration)
+	var SeekTime = "1000000"+Number(TimePlus);
+	var MinSecRaw = SeekTime.slice (-7,-3);
+	var MinSec = MinSecRaw/60;
+	var MinSecFloor = Math.floor(MinSec);
+	var SecondsRaw = MinSec-MinSecFloor
+	var Seconds = Math.round(SecondsRaw*60);
+;//Ensure seconds are two digits
+if (Number(Seconds) < 10) {;
+		var Seconds  = "0" + Seconds;
+};
+	var MinSecClean = MinSecFloor + ":" + Seconds;
+;//Test Attributes
+		script = "Control MusicDurationInfo.Text=" + MinSecClean;
+		DigitalSky.SendScript(script);
+@")

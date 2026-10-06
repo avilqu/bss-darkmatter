@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>My Star Profile 1</Text>
+  <Description />
+  <Created>02/02/16 16:59:59</Created>
+  <Modified>09/24/26 22:44:27</Modified>
+  <Version>96</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Stars.HaloBrightness=44
+Scene Stars.HaloScale=8
+Scene Stars.MaxHalo=0.02
+Scene Stars.MinHalo=0.010
+Scene Stars.MaxPoint=0.012
+Scene Stars.FadePoint=0.008
+Scene Stars.MinPoint=0.0008
+Scene Stars.Lum=1.2
+Scene Stars.Size=2
+Scene Visible Milky Way.Visibility=70
+Scene Stars.AbsShift=0
+Scene Stars.RedAbsShift=0
+Scene Stars.Dayshine=0

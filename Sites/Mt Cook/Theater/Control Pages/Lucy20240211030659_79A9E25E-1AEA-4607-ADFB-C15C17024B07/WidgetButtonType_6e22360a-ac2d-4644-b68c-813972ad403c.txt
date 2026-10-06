@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>High Quality (16K) Earth</Text>
+  <Description />
+  <Created>07/10/17 11:37:42</Created>
+  <Modified>02/11/24 3:05:39</Modified>
+  <Version>362</Version>
+  <FriendlyName>16KEarth</FriendlyName>
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Earth.CloudMap=<ContentPath>\Core\Astronomy\SolarSystem\Earth\Earth_16K-Clouds.dds
++0.1
+Scene Earth.SurfaceMap1=<ContentPath>\Core\Astronomy\SolarSystem\Earth\Earth_16K-Surface.dds
++0.1
+Scene Earth.EmissiveMap=<ContentPath>\Core\Astronomy\SolarSystem\Earth\Earth_16K-CityLights.dds
++0.1
+Control Text=Return to 8K Earth
+Control Pause
+Scene Earth.CloudMap=<ContentPath>\Core\Astronomy\SolarSystem\Earth\Earth_8K-Clouds.dds
++0.1
+Scene Earth.SurfaceMap1=<ContentPath>\Core\Astronomy\SolarSystem\Earth\Earth_8K-Surface.dds
++0.1
+;Scene Earth.SurfaceMap1=<ContentPath>\Core\Astronomy\SolarSystem\Earth\Earth_8K-Surface.dds
+;+0.1
+Scene Earth.EmissiveMap=<ContentPath>\Core\Astronomy\SolarSystem\Earth\Earth_8K-CityLights-2012.dds
++0.1
+Control Text=High Quality (16K) Earth

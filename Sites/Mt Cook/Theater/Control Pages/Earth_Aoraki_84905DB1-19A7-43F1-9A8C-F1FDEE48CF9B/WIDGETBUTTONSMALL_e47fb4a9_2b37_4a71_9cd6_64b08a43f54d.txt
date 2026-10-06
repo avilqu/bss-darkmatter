@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Show GPS Fleet and Orbits</Text>
+  <Description />
+  <Created>06/23/17 10:49:57</Created>
+  <Modified>07/01/25 16:33:37</Modified>
+  <Version>214</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Satellites.Load(GPS Operational)
+Scene GPS Operational.Visibility=0
++0.1
+Scene GPS Operational.Lines.TrailTime=0.06
++0.1
+Scene GPS Operational.Lines.TrailLen=1.0
++0.5
+Scene GPS Operational.Lines.TrailWidth=0.5
++0.1
+Scene GPS Operational.Visibility=100 [1:0:3]
++1
+Scene GPS Operational.Lines.Visibility=100 [0:0:3]
++0.1
+;
+Control Text=Unload GPS Fleet
+Control Pause
+;
+Scene GPS Operational.Lines.Visibility=0 [0:0:3]
++1
+Scene GPS Operational.Visibility=0 [1:0:3]
++4.25
+Assets Satellites.Unload(GPS Operational)
+Control Text=Show GPS FLeet
++0.1

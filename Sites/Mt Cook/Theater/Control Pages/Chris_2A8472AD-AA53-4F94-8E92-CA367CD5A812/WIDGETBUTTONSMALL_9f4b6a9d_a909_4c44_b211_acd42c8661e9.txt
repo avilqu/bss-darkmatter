@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Sky settings (bright)</Text>
+  <Description />
+  <Created>03/03/26 1:44:52</Created>
+  <Modified>09/24/26 22:44:27</Modified>
+  <Version>121</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Stars.MinPoint=5E-05 [7]
+Scene Stars.FadePoint=0.00676 [7]
+Scene Stars.MaxPoint=0.0105 [7]
+Scene Stars.MinHalo=0.001 [7]
+Scene Stars.MaxHalo=0.01 [7]
+Scene Stars.HaloScale=1 [7]
+Scene Stars.HaloBrightness=0 [7]
+Scene Stars.AbsShift=-1.9 [7]
+Scene Stars.RedAbsShift=-0.1 [7]
+Scene Stars.Lum=0.80 [7]
+Scene Visible Milky Way.Visibility=50 [7]
+Scene LocalGroup.Visibility=35 [7]

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Milky Way Flyout</Text>
+  <Description />
+  <Created>11/17/18 4:55:11</Created>
+  <Modified>10/02/26 21:21:17</Modified>
+  <Version>668</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+; View MW galaxy from above
+;Assets Milky Way.Load(Vol Milky Way)
+Scene Camera.FlyTo(Milky Way, Orient=SouthAndDown) [3:30:5]
+Scene Camera.SS.Elevation=45 [1:5:1]
++30
+Scene Camera.FlyTo(Milky Way, Altitude=1005000000000000000000)[8:140:8]
+Control Text="Going to Milky Way"

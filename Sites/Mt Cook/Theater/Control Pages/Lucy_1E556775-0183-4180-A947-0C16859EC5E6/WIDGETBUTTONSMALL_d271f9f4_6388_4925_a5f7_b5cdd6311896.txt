@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>88 Labels </Text>
+  <Description />
+  <Created>02/12/16 13:52:41</Created>
+  <Modified>03/11/24 0:49:34</Modified>
+  <Version>264</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Control Text="Loading ....."
+Assets Constellations.Load(Antlia Label)
+Assets Constellations.Load(Apus Label)
+Assets Constellations.Load(Ara Label)
+Assets Constellations.Load(Caelum Label)
+Assets Constellations.Load(Canis Major Label)
+Assets Constellations.Load(Carina Label)
+Assets Constellations.Load(Centaurus Label)
+Assets Constellations.Load(Cetus Label)
+Assets Constellations.Load(Chamaeleon Label)
+Assets Constellations.Load(Circinus Label)
+Assets Constellations.Load(Columba Label)
+Assets Constellations.Load(Corona Australis Label)
+Assets Constellations.Load(Corvus Label)
+Assets Constellations.Load(Crater Label)
+Assets Constellations.Load(Crux Label)
+Assets Constellations.Load(Dorado Label)
+Assets Constellations.Load(Eridanus Label)
+Assets Constellations.Load(Fornax Label)
+Assets Constellations.Load(Grus Label)
+Assets Constellations.Load(Horologium Label)
+Assets Constellations.Load(Hydra Label)
+Assets Constellations.Load(Hydrus Label)
+Assets Constellations.Load(Indus Label)
+Assets Constellations.Load(Lepus Label)
+Assets Constellations.Load(Lupus Label)
+Assets Constellations.Load(Mensa Label)
+Assets Constellations.Load(Microscopium Label)
+Assets Constellations.Load(Musca Label)
+Assets Constellations.Load(Norma Label)
+Assets Constellations.Load(Octans Label)
+Assets Constellations.Load(Pavo Label)
+Assets Constellations.Load(Phoenix Label)
+Assets Constellations.Load(Pictor Label)
+Assets Constellations.Load(Piscis Austrinus Label)
+Assets Constellations.Load(Puppis Label)
+Assets Constellations.Load(Pyxis Label)
+Assets Constellations.Load(Reticulum Label)
+Assets Constellations.Load(Sculptor Label)
+Assets Constellations.Load(Scutum Label)
+Assets Constellations.Load(Sextans Label)
+Assets Constellations.Load(Telescopium Label)
+Assets Constellations.Load(Triangulum Australe Label)
+Assets Constellations.Load(Tucana Label)
+Assets Constellations.Load(Vela Label)
+Assets Constellations.Load(Volans Label)
+Assets Constellations.Load(Andromeda Label)
+Assets Constellations.Load(Aquila Label)
+Assets Constellations.Load(Auriga Label)
+Assets Constellations.Load(Boötes Label)
+Assets Constellations.Load(Camelopardalis Label)
+Assets Constellations.Load(Canes Venatici Label)
+Assets Constellations.Load(Canis Minor Label)
+Assets Constellations.Load(Cassiopeia Label)
+Assets Constellations.Load(Cepheus Label)
+Assets Constellations.Load(Coma Berenices Label)
+Assets Constellations.Load(Corona Borealis Label)
+Assets Constellations.Load(Cygnus Label)
+Assets Constellations.Load(Delphinus Label)
+Assets Constellations.Load(Draco Label)
+Assets Constellations.Load(Equuleus Label)
+Assets Constellations.Load(Hercules Label)
+Assets Constellations.Load(Lacerta Label)
+Assets Constellations.Load(Leo Minor Label)
+Assets Constellations.Load(Lynx Label)
+Assets Constellations.Load(Lyra Label)
+Assets Constellations.Load(Monoceros Label)
+Assets Constellations.Load(Ophiuchus Label)
+Assets Constellations.Load(Orion Label)
+Assets Constellations.Load(Pegasus Label)
+Assets Constellations.Load(Perseus Label)
+Assets Constellations.Load(Sagitta Label)
+Assets Constellations.Load(Serpens Label)
+Assets Constellations.Load(Triangulum Label)
+Assets Constellations.Load(Ursa Major Label)
+Assets Constellations.Load(Ursa Minor Label)
+Assets Constellations.Load(Vulpecula Label)
+Assets Constellations.Load(Aquarius Label)
+Assets Constellations.Load(Aries Label)
+Assets Constellations.Load(Cancer Label)
+Assets Constellations.Load(Capricornus Label)
+Assets Constellations.Load(Gemini Label)
+Assets Constellations.Load(Leo Label)
+Assets Constellations.Load(Pisces Label)
+Assets Constellations.Load(Libra Label)
+Assets Constellations.Load(Sagittarius Label)
+Assets Constellations.Load(Scorpius Label)
+Assets Constellations.Load(Taurus Label)
+Assets Constellations.Load(Virgo Label)
++3
+Scene Antlia Label.DomeAlign=On
+Scene Apus Label.DomeAlign=On
+Scene Ara Label.DomeAlign=On
+Scene Caelum Label.DomeAlign=On
+Scene Canis Major Label.DomeAlign=On
+Scene Carina Label.DomeAlign=On
+Scene Centaurus Label.DomeAlign=On
+Scene Cetus Label.DomeAlign=On
+Scene Chamaeleon Label.DomeAlign=On
+Scene Circinus Label.DomeAlign=On
+Scene Columba Label.DomeAlign=On
+Scene Corona Australis Label.DomeAlign=On
+Scene Corvus Label.DomeAlign=On
+Scene Crater Label.DomeAlign=On
+Scene Crux Label.DomeAlign=On
+Scene Dorado Label.DomeAlign=On
+Scene Eridanus Label.DomeAlign=On
+Scene Fornax Label.DomeAlign=On
+Scene Grus Label.DomeAlign=On
+Scene Horologium Label.DomeAlign=On
+Scene Hydra Label.DomeAlign=On
+Scene Hydrus Label.DomeAlign=On
+Scene Indus Label.DomeAlign=On
+Scene Lepus Label.DomeAlign=On
+Scene Lupus Label.DomeAlign=On
+Scene Mensa Label.DomeAlign=On
+Scene Microscopium Label.DomeAlign=On
+Scene Musca Label.DomeAlign=On
+Scene Norma Label.DomeAlign=On
+Scene Octans Label.DomeAlign=On
+Scene Pavo Label.DomeAlign=On
+Scene Phoenix Label.DomeAlign=On
+Scene Pictor Label.DomeAlign=On
+Scene Piscis Austrinus Label.DomeAlign=On
+Scene Puppis Label.DomeAlign=On
+Scene Pyxis Label.DomeAlign=On
+Scene Reticulum Label.DomeAlign=On
+Scene Sculptor Label.DomeAlign=On
+Scene Scutum Label.DomeAlign=On
+Scene Sextans Label.DomeAlign=On
+Scene Telescopium Label.DomeAlign=On
+Scene Triangulum Australe Label.DomeAlign=On
+Scene Tucana Label.DomeAlign=On
+Scene Vela Label.DomeAlign=On
+Scene Volans Label.DomeAlign=On
+Scene Andromeda Label.DomeAlign=On 
+Scene Aquila Label.DomeAlign=On 
+Scene Auriga Label.DomeAlign=On 
+Scene Boötes Label.DomeAlign=On 
+Scene Camelopardalis Label.DomeAlign=On 
+Scene Canes Venatici Label.DomeAlign=On 
+Scene Canis Minor Label.DomeAlign=On 
+Scene Cassiopeia Label.DomeAlign=On 
+Scene Cepheus Label.DomeAlign=On 
+Scene Coma Berenices Label.DomeAlign=On 
+Scene Corona Borealis Label.DomeAlign=On 
+Scene Cygnus Label.DomeAlign=On 
+Scene Delphinus Label.DomeAlign=On 
+Scene Draco Label.DomeAlign=On 
+Scene Equuleus Label.DomeAlign=On 
+Scene Hercules Label.DomeAlign=On 
+Scene Lacerta Label.DomeAlign=On 
+Scene Leo Minor Label.DomeAlign=On 
+Scene Lynx Label.DomeAlign=On 
+Scene Lyra Label.DomeAlign=On 
+Scene Monoceros Label.DomeAlign=On 
+Scene Ophiuchus Label.DomeAlign=On 
+Scene Orion Label.DomeAlign=On 
+Scene Pegasus Label.DomeAlign=On 
+Scene Perseus Label.DomeAlign=On 
+Scene Sagitta Label.DomeAlign=On 
+Scene Serpens Label.DomeAlign=On 
+Scene Triangulum Label.DomeAlign=On 
+Scene Ursa Major Label.DomeAlign=On 
+Scene Ursa Minor Label.DomeAlign=On 
+Scene Vulpecula Label.DomeAlign=On
+Scene Aquarius Label.DomeAlign=On
+Scene Aries Label.DomeAlign=On
+Scene Cancer Label.DomeAlign=On
+Scene Capricornus Label.DomeAlign=On
+Scene Gemini Label.DomeAlign=On
+Scene Leo Label.DomeAlign=On
+Scene Pisces Label.DomeAlign=On
+Scene Libra Label.DomeAlign=On
+Scene Sagittarius Label.DomeAlign=On
+Scene Scorpius Label.DomeAlign=On
+Scene Taurus Label.DomeAlign=On
+Scene Virgo Label.DomeAlign=On 
++1
+Scene Antlia Label.Visibility=100 [2]
+Scene Apus Label.Visibility=100 [2]
+Scene Ara Label.Visibility=100 [2]
+Scene Caelum Label.Visibility=100 [2]
+Scene Canis Major Label.Visibility=100 [2]
+Scene Carina Label.Visibility=100 [2]
+Scene Centaurus Label.Visibility=100 [2]
+Scene Cetus Label.Visibility=100 [2]
+Scene Chamaeleon Label.Visibility=100 [2]
+Scene Circinus Label.Visibility=100 [2]
+Scene Columba Label.Visibility=100 [2]
+Scene Corona Australis Label.Visibility=100 [2]
+Scene Corvus Label.Visibility=100 [2]
+Scene Crater Label.Visibility=100 [2]
+Scene Crux Label.Visibility=100 [2]
+Scene Dorado Label.Visibility=100 [2]
+Scene Eridanus Label.Visibility=100 [2]
+Scene Fornax Label.Visibility=100 [2]
+Scene Grus Label.Visibility=100 [2]
+Scene Horologium Label.Visibility=100 [2]
+Scene Hydra Label.Visibility=100 [2]
+Scene Hydrus Label.Visibility=100 [2]
+Scene Indus Label.Visibility=100 [2]
+Scene Lepus Label.Visibility=100 [2]
+Scene Lupus Label.Visibility=100 [2]
+Scene Mensa Label.Visibility=100 [2]
+Scene Microscopium Label.Visibility=100 [2]
+Scene Musca Label.Visibility=100 [2]
+Scene Norma Label.Visibility=100 [2]
+Scene Octans Label.Visibility=100 [2]
+Scene Pavo Label.Visibility=100 [2]
+Scene Phoenix Label.Visibility=100 [2]
+Scene Pictor Label.Visibility=100 [2]
+Scene Piscis Austrinus Label.Visibility=100 [2]
+Scene Puppis Label.Visibility=100 [2]
+Scene Pyxis Label.Visibility=100 [2]
+Scene Reticulum Label.Visibility=100 [2]
+Scene Sculptor Label.Visibility=100 [2]
+Scene Scutum Label.Visibility=100 [2]
+Scene Sextans Label.Visibility=100 [2]
+Scene Telescopium Label.Visibility=100 [2]
+Scene Triangulum Australe Label.Visibility=100 [2]
+Scene Tucana Label.Visibility=100 [2]
+Scene Vela Label.Visibility=100 [2]
+Scene Volans Label.Visibility=100 [2]
+Scene Andromeda Label.Visibility=100 [2]
+Scene Aquila Label.Visibility=100 [2]
+Scene Auriga Label.Visibility=100 [2]
+Scene Boötes Label.Visibility=100 [2]
+Scene Camelopardalis Label.Visibility=100 [2]
+Scene Canes Venatici Label.Visibility=100 [2]
+Scene Canis Minor Label.Visibility=100 [2]
+Scene Cassiopeia Label.Visibility=100 [2]
+Scene Cepheus Label.Visibility=100 [2]
+Scene Coma Berenices Label.Visibility=100 [2]
+Scene Corona Borealis Label.Visibility=100 [2]
+Scene Cygnus Label.Visibility=100 [2]
+Scene Delphinus Label.Visibility=100 [2]
+Scene Draco Label.Visibility=100 [2]
+Scene Equuleus Label.Visibility=100 [2]
+Scene Hercules Label.Visibility=100 [2]
+Scene Lacerta Label.Visibility=100 [2]
+Scene Leo Minor Label.Visibility=100 [2]
+Scene Lynx Label.Visibility=100 [2]
+Scene Lyra Label.Visibility=100 [2]
+Scene Monoceros Label.Visibility=100 [2]
+Scene Ophiuchus Label.Visibility=100 [2]
+Scene Orion Label.Visibility=100 [2]
+Scene Pegasus Label.Visibility=100 [2]
+Scene Perseus Label.Visibility=100 [2]
+Scene Sagitta Label.Visibility=100 [2]
+Scene Serpens Label.Visibility=100 [2]
+Scene Triangulum Label.Visibility=100 [2]
+Scene Ursa Major Label.Visibility=100 [2]
+Scene Ursa Minor Label.Visibility=100 [2]
+Scene Vulpecula Label.Visibility=100 [2]
+Scene Aquarius Label.Visibility=100 [2]
+Scene Aries Label.Visibility=100 [2]
+Scene Cancer Label.Visibility=100 [2]
+Scene Capricornus Label.Visibility=100 [2]
+Scene Gemini Label.Visibility=100 [2]
+Scene Leo Label.Visibility=100 [2]
+Scene Pisces Label.Visibility=100 [2]
+Scene Libra Label.Visibility=100 [2]
+Scene Sagittarius Label.Visibility=100 [2]
+Scene Scorpius Label.Visibility=100 [2]
+Scene Taurus Label.Visibility=100 [2]
+Scene Virgo Label.Visibility=100 [2]
++3
+Control Text="Fade Down Constellation Labels"
+Control Pause
+Scene Antlia Label.Visibility=0 [2]
+Scene Apus Label.Visibility=0 [2]
+Scene Ara Label.Visibility=0 [2]
+Scene Caelum Label.Visibility=0 [2]
+Scene Canis Major Label.Visibility=0 [2]
+Scene Carina Label.Visibility=0 [2]
+Scene Centaurus Label.Visibility=0 [2]
+Scene Cetus Label.Visibility=0 [2]
+Scene Chamaeleon Label.Visibility=0 [2]
+Scene Circinus Label.Visibility=0 [2]
+Scene Columba Label.Visibility=0 [2]
+Scene Corona Australis Label.Visibility=0 [2]
+Scene Corvus Label.Visibility=0 [2]
+Scene Crater Label.Visibility=0 [2]
+Scene Crux Label.Visibility=0 [2]
+Scene Dorado Label.Visibility=0 [2]
+Scene Eridanus Label.Visibility=0 [2]
+Scene Fornax Label.Visibility=0 [2]
+Scene Grus Label.Visibility=0 [2]
+Scene Horologium Label.Visibility=0 [2]
+Scene Hydra Label.Visibility=0 [2]
+Scene Hydrus Label.Visibility=0 [2]
+Scene Indus Label.Visibility=0 [2]
+Scene Lepus Label.Visibility=0 [2]
+Scene Lupus Label.Visibility=0 [2]
+Scene Mensa Label.Visibility=0 [2]
+Scene Microscopium Label.Visibility=0 [2]
+Scene Musca Label.Visibility=0 [2]
+Scene Norma Label.Visibility=0 [2]
+Scene Octans Label.Visibility=0 [2]
+Scene Pavo Label.Visibility=0 [2]
+Scene Phoenix Label.Visibility=0 [2]
+Scene Pictor Label.Visibility=0 [2]
+Scene Piscis Austrinus Label.Visibility=0 [2]
+Scene Puppis Label.Visibility=0 [2]
+Scene Pyxis Label.Visibility=0 [2]
+Scene Reticulum Label.Visibility=0 [2]
+Scene Sculptor Label.Visibility=0 [2]
+Scene Scutum Label.Visibility=0 [2]
+Scene Sextans Label.Visibility=0 [2]
+Scene Telescopium Label.Visibility=0 [2]
+Scene Triangulum Australe Label.Visibility=0 [2]
+Scene Tucana Label.Visibility=0 [2]
+Scene Vela Label.Visibility=0 [2]
+Scene Volans Label.Visibility=0 [2]
+Scene Andromeda Label.Visibility=0 [2]
+Scene Aquila Label.Visibility=0 [2]
+Scene Auriga Label.Visibility=0 [2]
+Scene Boötes Label.Visibility=0 [2]
+Scene Camelopardalis Label.Visibility=0 [2]
+Scene Canes Venatici Label.Visibility=0 [2]
+Scene Canis Minor Label.Visibility=0 [2]
+Scene Cassiopeia Label.Visibility=0 [2]
+Scene Cepheus Label.Visibility=0 [2]
+Scene Coma Berenices Label.Visibility=0 [2]
+Scene Corona Borealis Label.Visibility=0 [2]
+Scene Cygnus Label.Visibility=0 [2]
+Scene Delphinus Label.Visibility=0 [2]
+Scene Draco Label.Visibility=0 [2]
+Scene Equuleus Label.Visibility=0 [2]
+Scene Hercules Label.Visibility=0 [2]
+Scene Lacerta Label.Visibility=0 [2]
+Scene Leo Minor Label.Visibility=0 [2]
+Scene Lynx Label.Visibility=0 [2]
+Scene Lyra Label.Visibility=0 [2]
+Scene Monoceros Label.Visibility=0 [2]
+Scene Ophiuchus Label.Visibility=0 [2]
+Scene Orion Label.Visibility=0 [2]
+Scene Pegasus Label.Visibility=0 [2]
+Scene Perseus Label.Visibility=0 [2]
+Scene Sagitta Label.Visibility=0 [2]
+Scene Serpens Label.Visibility=0 [2]
+Scene Triangulum Label.Visibility=0 [2]
+Scene Ursa Major Label.Visibility=0 [2]
+Scene Ursa Minor Label.Visibility=0 [2]
+Scene Vulpecula Label.Visibility=0 [2]
+Scene Aquarius Label.Visibility=0 [2]
+Scene Aries Label.Visibility=0 [2]
+Scene Cancer Label.Visibility=0 [2]
+Scene Capricornus Label.Visibility=0 [2]
+Scene  Gemini Label.Visibility=0 [2]
+Scene Leo Label.Visibility=0 [2]
+Scene Pisces Label.Visibility=0 [2]
+Scene Libra Label.Visibility=0 [2]
+Scene Sagittarius Label.Visibility=0 [2]
+Scene Scorpius Label.Visibility=0 [2]
+Scene Taurus Label.Visibility=0 [2]
+Scene Virgo Label.Visibility=0 [2]

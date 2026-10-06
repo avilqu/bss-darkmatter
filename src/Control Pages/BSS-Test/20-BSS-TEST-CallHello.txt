@@ -1,0 +1,9 @@
+;=== BSS-TEST-CallHello ===
+; Page: BSS-Test   Button: "Call Hello by ref"   Length: ~10.5 s
+; Tests that the Reference Name written by build-page.py (FriendlyName) is registered:
+; the Hello text should appear. If nothing happens, open the Hello button, check its
+; Reference Name is BSS-TEST-Hello-10, Save it, and try again.
+Control Text="Calling Hello..."
+Control BSS-TEST-Hello-10.Run()
++10.5
+Control Text="Call Hello by ref"

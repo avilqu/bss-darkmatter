@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Max's LMC photo</Text>
+  <Description />
+  <Created>01/14/24 0:28:42</Created>
+  <Modified>03/05/24 1:39:20</Modified>
+  <Version>42</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Testing.Load(LMC)
++2
+Scene LMC.Visibility=100 [2]
+Control Text=Unload Assets
+Control Pause
+Scene LMC.Visibility=0 [2]
++2
+Assets Testing.Unload(LMC)

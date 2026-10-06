@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Taurus Art</Text>
+  <Description />
+  <Created>02/10/19 20:04:23</Created>
+  <Modified>03/15/23 19:40:56</Modified>
+  <Version>226</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Legacy Constellations.Load(Tau Flamsteed)
++0.5
+Scene Tau Flamsteed.Visibility=100 [0.5]
+Control Text=Unload Taurus Art
+Control Pause
+Scene Tau Flamsteed.Visibility=0 [0.5]
++0.5
+Assets Legacy Constellations.UnLoad(Tau Flamsteed)

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Zodiac Stick</Text>
+  <Description />
+  <Created>02/12/16 13:52:41</Created>
+  <Modified>09/23/23 6:10:30</Modified>
+  <Version>203</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Control Text="Loading ....."
+Assets Constellations.Load(Aquarius Stick)
+Assets Constellations.Load(Aries Stick)
+Assets Constellations.Load(Cancer Stick)
+Assets Constellations.Load(Capricornus Stick)
+Assets Constellations.Load(Gemini Stick)
+Assets Constellations.Load(Leo Stick)
+Assets Constellations.Load(Pisces Stick)
+Assets Constellations.Load(Libra Stick)
+Assets Constellations.Load(Sagittarius Stick)
+Assets Constellations.Load(Scorpius Stick)
+Assets Constellations.Load(Taurus Stick)
+Assets Constellations.Load(Virgo Stick)
++0.5
+Scene Aquarius Stick.Visibility=100 [2]
+Scene Aries Stick.Visibility=100 [2]
+Scene Cancer Stick.Visibility=100 [2]
+Scene Capricornus Stick.Visibility=100 [2]
+Scene  Gemini Stick.Visibility=100 [2]
+Scene Leo Stick.Visibility=100 [2]
+Scene Pisces Stick.Visibility=100 [2]
+Scene Libra Stick.Visibility=100 [2]
+Scene Sagittarius Stick.Visibility=100 [2]
+Scene Scorpius Stick.Visibility=100 [2]
+Scene Taurus Stick.Visibility=100 [2]
+Scene Virgo Stick.Visibility=100 [2]
++2
+Control Text="Fade Down Zodiac Stick Lines"
+Control Pause
+Scene Aquarius Stick.Visibility=0 [2]
+Scene Aries Stick.Visibility=0 [2]
+Scene Cancer Stick.Visibility=0 [2]
+Scene Capricornus Stick.Visibility=0 [2]
+Scene  Gemini Stick.Visibility=0 [2]
+Scene Leo Stick.Visibility=0 [2]
+Scene Pisces Stick.Visibility=0 [2]
+Scene Libra Stick.Visibility=0 [2]
+Scene Sagittarius Stick.Visibility=0 [2]
+Scene Scorpius Stick.Visibility=0 [2]
+Scene Taurus Stick.Visibility=0 [2]
+Scene Virgo Stick.Visibility=0 [2]
++2.2
+Assets Constellations.Unload(Aquarius Stick)
+Assets Constellations.Unload(Aries Stick)
+Assets Constellations.Unload(Cancer Stick)
+Assets Constellations.Unload(Capricornus Stick)
+Assets Constellations.Unload(Gemini Stick)
+Assets Constellations.Unload(Leo Stick)
+Assets Constellations.Unload(Pisces Stick)
+Assets Constellations.Unload(Libra Stick)
+Assets Constellations.Unload(Sagittarius Stick)
+Assets Constellations.Unload(Scorpius Stick)
+Assets Constellations.Unload(Taurus Stick)
+Assets Constellations.Unload(Virgo Stick)

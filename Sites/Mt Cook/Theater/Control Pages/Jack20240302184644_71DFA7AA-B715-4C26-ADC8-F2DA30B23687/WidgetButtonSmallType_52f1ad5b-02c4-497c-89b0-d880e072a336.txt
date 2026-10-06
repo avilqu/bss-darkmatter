@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Lines to Pole</Text>
+  <Description />
+  <Created>05/31/19 16:37:42</Created>
+  <Modified>03/02/24 18:42:29</Modified>
+  <Version>172</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Line and circle.Load(Line to Pole)
+Assets Line and circle.Load(Line to Pole1)
++1
+Scene Line to Pole.Visibility=100 [3]
+Scene Line to Pole1.Visibility=100 [3]
+Control Text=Remove Line
+Control Pause
+Scene Line to Pole.Visibility=0 [1]
+Scene Line to Pole1.Visibility=0 [1]
++1
+Assets Line and circle.Unoad(Line to Pole)
+Assets Line and circle.Unoad(Line to Pole1)

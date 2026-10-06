@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Betelgeuse </Text>
+  <Description />
+  <Created>09/22/15 11:38:39</Created>
+  <Modified>09/24/23 6:16:52</Modified>
+  <Version>514</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Betelgeuse Circle)
+Assets Constellations.Load(Betelgeuse Ori)
++0.1
+Scene Betelgeuse Ori.DomeAlign=On
+Scene Betelgeuse Circle.Scale=0
+Scene Betelgeuse Circle.Visibility=100 
++0.1
+Scene Betelgeuse Circle.Scale=1.5 [0.3]
++0.3
+Scene Betelgeuse Ori.Visibility=100 [0.5]
+Scene Betelgeuse Ori.Text.String="\n Betelgeuse"
+Scene Betelgeuse Ori.Text.LineSpacing=1.5
+Scene Betelgeuse Ori.FontHeight=1.5
++0.5
+Control Text="Fade down Betelgeuse"
+Control Pause
+Scene Betelgeuse Circle.Scale=0 [0.5]
+Scene Betelgeuse Circle.Visibility=0 [0.5]
+Scene Betelgeuse Ori.Visibility=0 [0.5]
++0.6
+Assets Constellations.Unload(Betelgeuse Circle)
+Assets Constellations.UnLoad(Betelgeuse Ori)

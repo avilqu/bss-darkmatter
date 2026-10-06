@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Solar System Surfaces</Text>
+  <Description />
+  <Created>03/23/23 5:25:25</Created>
+  <Modified>09/23/23 6:03:27</Modified>
+  <Version>154</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Jack.Load(01-Viking-Lander-2)
+Assets Jack.Load(02-Apollo-15-Lunar-Module-and-Rover)
+Assets Jack.Load(03-Venera-14-March-1982)
+Assets Jack.Load(04-67P-Churyumov-Gerasimenko)
+Assets Jack.Load(05-titan-surface-huygens)
+Assets Jack.Load(06-Taylor-Glacier)
++2
+Scene  01-Viking-Lander-2.Visibility=100 [2]
+Control Text=Viking-2-(1976)
+Control Pause
+Scene  02-Apollo-15-Lunar-Module-and-Rover.Visibility=100 [2]
+Control Text=Apollo-15-(1971)
+Control Pause
+Scene  04-67P-Churyumov-Gerasimenko.Visibility=100 [2]
+Control Text=67P-Churyumov-Gerasimenko (2014)
+Control Pause
+Scene  05-titan-surface-huygens.Visibility=100 [2]
+Control Text=Huygens (2005)
+Control Pause
+Scene  03-Venera-14-March-1982.Visibility=100 [2]
+Control Text=Venera-14 (1982)
+Control Pause
+Scene  06-Taylor-Glacier.Visibility=100 [2]
+Control Text=Taylor-Glacier (2013)
+Control Pause
+Control Text=Unload
+Scene  01-Viking-Lander-2.Visibility=0 [2]
+Scene  02-Apollo-15-Lunar-Module-and-Rover.Visibility=0 [2]
+Scene  03-Venera-14-March-1982.Visibility=0 [2]
+Scene  04-67P-Churyumov-Gerasimenko.Visibility=0 [2]
+Scene  05-titan-surface-huygens.Visibility=0 [2]
+Scene  06-Taylor-Glacier.Visibility=0 [2]
++2
+Assets Jack.Unload(01-Viking-Lander-2)
+Assets Jack.Unload(02-Apollo-15-Lunar-Module-and-Rover)
+Assets Jack.Unload(03-Venera-14-March-1982)
+Assets Jack.Unload(04-67P-Churyumov-Gerasimenko)
+Assets Jack.Unload(05-titan-surface-huygens)
+Assets Jack.Unload(06-Taylor-Glacier)

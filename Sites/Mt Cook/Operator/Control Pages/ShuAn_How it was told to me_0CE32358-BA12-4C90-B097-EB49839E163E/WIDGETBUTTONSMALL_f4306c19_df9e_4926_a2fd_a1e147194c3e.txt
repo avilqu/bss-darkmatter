@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Load GIS Moon</Text>
+  <Description />
+  <Created>06/09/25 15:25:04</Created>
+  <Modified>10/05/26 18:13:15</Modified>
+  <Version>40</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Terrain.Load(GISMoon)
+Control Text=Unload Assets
+Control Pause
+Assets Terrain.Unload GISMoon(GISMoon)

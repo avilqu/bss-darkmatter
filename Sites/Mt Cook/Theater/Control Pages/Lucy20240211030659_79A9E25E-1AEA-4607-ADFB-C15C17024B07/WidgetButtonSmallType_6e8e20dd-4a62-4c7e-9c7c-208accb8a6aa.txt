@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Earth and Moon</Text>
+  <Description>Flies to Earth</Description>
+  <Created>11/17/18 4:55:11</Created>
+  <Modified>02/11/24 3:05:39</Modified>
+  <Version>360</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>Fly Go to Earth</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+; Go to the Earth
+	
+Scene Camera.FlyTo(Earth, Altitude=199000000, Orient=SouthAndDown) [10]
+Scene MoonOrbit.Visibility = 100	
+Control Text="Going to Earth..."
++22

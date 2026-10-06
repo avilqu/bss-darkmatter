@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Scale planets - overview</Text>
+  <Description>Scales up Mercury to 2000 times</Description>
+  <Created>02/09/19 17:57:19</Created>
+  <Modified>12/17/24 19:43:00</Modified>
+  <Version>624</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>Zoom Scale Mercury </Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Venus.Cloud.Visibility=0
+Scene Earth.Cloud.Visibility=0
+Scene Earth.Atmosphere.RSH=0.35
+Scene Venus.Atmosphere.RSH=0.35
+Scene Earth.Atmosphere.Visibility=100 [2]
+Scene Mercury  { Xscale=3400  Yscale=3400  Zscale=3400 } [1]
+Scene Venus  { Xscale=3400  Yscale=3400  Zscale=3400 } [1]
+Scene Earth  { Xscale=3400  Yscale=3400  Zscale=3400 } [1]
+Scene Mars  { Xscale=3400  Yscale=3400  Zscale=3400 } [1]
+Control Text= Inner Planets Scale 1
+Control Pause
+Scene Mercury  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Venus  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Earth  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Mars  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Jupiter  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Saturn  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Uranus  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Neptune  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Control Text=All Planets Scale Up
+Control Pause
+Scene Mercury  { Xscale=3400  Yscale=3400  Zscale=3400 } [1]
+Scene Venus  { Xscale=3400  Yscale=3400  Zscale=3400 } [1]
+Scene Earth  { Xscale=3400  Yscale=3400  Zscale=3400 } [1]
+Scene Mars  { Xscale=3400  Yscale=3400  Zscale=3400 } [1]
+Scene Jupiter  { Xscale=3400  Yscale=3400  Zscale=3400 } [1]
+Scene Saturn  { Xscale=3400  Yscale=3400  Zscale=3400 } [1]
+Scene Uranus  { Xscale=3400  Yscale=3400  Zscale=3400 } [1]
+Scene Neptune  { Xscale=3400  Yscale=3400  Zscale=3400 } [1]
+Control Text=All planets scale 1
+Control Pause
+Scene Mercury  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Venus  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Earth  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Mars  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Jupiter  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Saturn  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Uranus  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Neptune  { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Venus.Cloud.Visibility=100

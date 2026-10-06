@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Galilean Moons Scale 50</Text>
+  <Description />
+  <Created>02/22/19 20:35:12</Created>
+  <Modified>09/24/23 6:16:52</Modified>
+  <Version>144</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Io { Xscale=50  Yscale=50  Zscale=50 } [1]
+Scene Europa { Xscale=50  Yscale=50  Zscale=50 } [1]
+Scene Ganymede { Xscale=50  Yscale=50  Zscale=50 } [1]
+Scene Callisto { Xscale=50  Yscale=50  Zscale=50 } [1]
+Control Text=Scale Galilean Moons to 1
+Control Pause
+Scene Io { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Europa { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Ganymede { Xscale=1  Yscale=1  Zscale=1 } [1]
+Scene Callisto { Xscale=1  Yscale=1  Zscale=1 } [1]

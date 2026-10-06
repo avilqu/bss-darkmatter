@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Star Trails</Text>
+  <Description />
+  <Created>04/04/16 15:06:37</Created>
+  <Modified>02/03/24 2:37:31</Modified>
+  <Version>332</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info>WIDGETBUTTON_1877f6ed_c69a_476f_9ce8_e18e29dc6d8b</Info>
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Camera.Exposure.Visibility=0 [0.5]
++0.5
+Scene Camera.Exposure.Clear()
+Scene Camera.Exposure=On
+Scene Camera.Exposure.addAsset(Stars)
+Scene Visible Milky Way.Visibility=0 [3]
+Scene Camera.Exposure.Visibility=90 [3]
+	
+Control Pause
+Scene Camera.Exposure.Visibility=0 [3]
+;============ Change below ==============
+Scene Visible Milky Way.Visibility=60 [3]
++2
+Scene Camera.Exposure.removeAsset(Stars)
+Scene Camera.Exposure.Clear()
+Scene Camera.Exposure=Off
+Control ExpSun.Reset()
+Control camExpButton.Reset()
+	

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Eridanus Stick</Text>
+  <Description />
+  <Created>02/10/19 20:04:18</Created>
+  <Modified>11/23/23 5:05:01</Modified>
+  <Version>365</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Eridanus Stick)
++0.5
+Scene Eridanus Stick.Visibility=100 [0.2]
++0.2
+Control Text=Unload Eridanus Stick
+Control Pause
+Scene Eridanus Stick.Visibility=0 [0.2]

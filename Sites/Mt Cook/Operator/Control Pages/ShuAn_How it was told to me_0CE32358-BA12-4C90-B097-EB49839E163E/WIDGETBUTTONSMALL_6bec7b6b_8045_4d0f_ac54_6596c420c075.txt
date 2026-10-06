@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>The southern alps</Text>
+  <Description>Camera State on Earth</Description>
+  <Created>09/06/26 19:53:51</Created>
+  <Modified>10/05/26 18:13:15</Modified>
+  <Version>78</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords>Camera,Camera</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Camera.ConvertInPlace(Earth, Position Rotate)
++0.1
+Scene Camera { Xpos=-4537579.71247475  Ypos=820054.61257808  Zpos=-4496473.62063505  Xrot=59.1493195349112  Yrot=-57.6160221659382  Zrot=-48.423642991443 }[5:20:5]

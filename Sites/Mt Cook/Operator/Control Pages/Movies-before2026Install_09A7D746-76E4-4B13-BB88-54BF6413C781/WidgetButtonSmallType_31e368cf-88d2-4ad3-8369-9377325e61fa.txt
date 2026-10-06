@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Phantom Of The Universe</Text>
+  <Description />
+  <Created>06/07/23 20:07:18</Created>
+  <Modified>05/04/26 22:25:35</Modified>
+  <Version>18</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>PhantomOfTheUniverse,Media,</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Mt Cook.Theater.Skyvision.Load(PhantomOfTheUniverse)
+Control Text="Loading..."
++7
+Scene PhantomOfTheUniverse.Seek=00:00:00.00
++3
+Control Text="Play Phantom of the Universe"
+Control Pause
+; fade out cove leds over 5 seconds
+Spice SendCue(0 fade 0 lamp i)
++0.1
+Spice SendCue(2 fade 0 lamp a)
++2	
+Spice SendCue(5 fadecolor 0 0 0 cove a)
++3
+Scene PhantomOfTheUniverse.Play()
++1
+Scene Video.Source="Media:PhantomOfTheUniverse"
+Scene Camera.Visibility=0 [1]
+Scene Video.Visibility=99 [3]
++1474
+Scene PhantomOfTheUniverse.Volume=60 [10]
++3
+Spice SendCue(10 fadecolor 75 0 0 cove a)
++3
+Spice SendCue(0 fade 100 lamp i)
++15
+Spice SendCue(10 fade 100 lamp ab)
++155
+Scene Camera.Visibility=100 [1]
+Scene Video.Visibility=0 [1]
+Scene PhantomOfTheUniverse.Volume=0 [1]
++1
+Assets Mt Cook.Theater.Skyvision.Unload(PhantomOfTheUniverse)

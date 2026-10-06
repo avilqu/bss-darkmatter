@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Assets Reset</Text>
+  <Description>Resets all locked Assets, unloads any unlocked assets, and puts you back on Earth.</Description>
+  <Created>02/11/16 17:55:49</Created>
+  <Modified>09/13/26 23:09:45</Modified>
+  <Version>71</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords>reset</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Control Text="Reset All?"
+Control Pause
+; fade down scene
+Control Text="Assets Reset running..."
+Scene Visibility=0 [0.5]
++1
+Control Text="Resetting All Assets..."
+Assets Reset
++1
+Control Text="..... ..... ....."
++1
+Control Text="..... ..... ...."
++1
+Control Text="..... ..... ..."
++1
+Control Text="..... ..... .."
++1
+Control Text="..... ..... ."
++1
+Control Text="..... ....."
++1
+Control Text="..... ...."
++1
+Control Text="..... ..."
++1
+Control Text="..... .."
++1
+Control Text="..... ."
++1
+Control Text="....."
++1
+Control Text="...."
++1
+Control Text="..."
++1
+Control Text=".."
++1
+Control Text="."
++1
+; Land on Earth
+Control Text="Fly to here..."
+Scene Camera.FlyTo(Here, Orient=SouthAndUp) [0]
+Scene Camera.SS.Azimuth=180.0
+Scene Camera.SS.Elevation=90.0
++1
+Control Text=".."
++1
+Control Text="."
++1
+Control Text="Set Day and Time..."
+Scene Scene.DateTime=Now
+;star profile (global)
+Scene Stars.HaloBrightness=30
+Scene Stars.HaloScale=100
+Scene Stars.MaxHalo=0.03
+Scene Stars.MinHalo=0.003
+Scene Stars.MaxPoint=0.01
+Scene Stars.FadePoint=0.008
+Scene Stars.MinPoint=0.0001
+Scene Stars.AbsShift=-1.8
+Scene Stars.Lum=1.2
+Scene Visible Milky Way.Visibility=50
++0.5
+;loading Slide Dropper JavaScripts
+Control Text="Loading interactive assets"
+Assets JavaScript Library.Load(vpSlideDropper)
+Navigator AddDropTemplate(vpSlideDropper,bmp,dds,png,jpg)
+Assets JavaScript Library.Load(vpSlideInteract)
+Navigator AddInteractionTemplate(vpSlideInteract,Slide,SlideText)
++0.5
+Control Text="Loading Additional Assets..."
+Assets Constellations.Load(88Sticks)
++1
+; locking the Javacript library
+Assets JavaScript Library.LoadLock=true
++0.1
+Control Text="Set Scene Visibility..."
+; fade up scene
+Control Text="Set Scene Visibility..."
+Scene Visibility=100 [2]
++1
+Control Text="Assets Reset ending..."
++1
+Control Text="."
++1
+Control Abort

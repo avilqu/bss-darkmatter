@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>OFF MtCook Pan </Text>
+  <Description />
+  <Created>06/10/19 16:19:23</Created>
+  <Modified>03/02/24 18:42:29</Modified>
+  <Version>250</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets pano.Load(hermitage pano_test1)
++2
+Scene hermitage pano_test1.Visibility=80 [3]
+Control Text=OFF MtCook Pan
+Control Pause
+Scene hermitage pano_test1.Visibility=0 [5]
++5
+Assets pano.Unload(hermitage pano_test1)

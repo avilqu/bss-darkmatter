@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Unload Ram </Text>
+  <Description />
+  <Created>05/14/20 10:51:49</Created>
+  <Modified>05/17/20 15:16:44</Modified>
+  <Version>8</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>How Ram_DS5,Media,</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Mt Cook.Theater.Skyvision.Load(How Ram_DS1)
+Assets Mt Cook.Theater.Skyvision.Load(How Ram_DS2)
+Assets Mt Cook.Theater.Skyvision.Load(How Ram_DS3)
+Assets Mt Cook.Theater.Skyvision.Load(How Ram_DS4)
+Assets Mt Cook.Theater.Skyvision.Load(How Ram_DS5)
+Assets Skyvision.Load(Ram_DS1)
+Assets Skyvision.Load(Ram_DS2)
+Assets Skyvision.Load(Ram_DS3)
+Assets Skyvision.Load(Ram_DS4)
++2
+Scene How Ram_DS1.Play()
+Scene How Ram_DS2.Play()
+Scene How Ram_DS3.Play()
+Scene How Ram_DS4.Play()
+Scene How Ram_DS5.Play()
++1
+Scene Video.Source="Media:How Ram_DS1"
+Scene Video.Source="Media:How Ram_DS2"
+Scene Video.Source="Media:How Ram_DS3"
+Scene Video.Source="Media:How Ram_DS4"
+Scene Video.Source="Media:How Ram_DS5"
+Scene Camera.Visibility=0 [1]
+Scene Video.Visibility=100 [1]
+Control Text="Unload Ram"
+Control Pause
+Scene Camera.Visibility=100 [1]
+Scene Video.Visibility=0 [1]
+Scene How Ram_DS1.Volume=0 [1]
++1
+Control Text="Unload How Ram_DS1"
+Control Text="Unload How Ram_DS2"
+Control Text="Unload How Ram_DS3"
+Control Text="Unload How Ram_DS4"
+Control Text="Unload How Ram_DS5"
+Assets Mt Cook.Theater.Skyvision.Unload(How Ram_DS1)
+Assets Mt Cook.Theater.Skyvision.Unload(How Ram_DS2)
+Assets Mt Cook.Theater.Skyvision.Unload(How Ram_DS3)
+Assets Mt Cook.Theater.Skyvision.Unload(How Ram_DS4)
+Assets Mt Cook.Theater.Skyvision.Unload(How Ram_DS5)
+Assets Skyvision.Unload(Ram_DS1)
+Assets Skyvision.Unload(Ram_DS2)
+Assets Skyvision.Unload(Ram_DS3)
+Assets Skyvision.Unload(Ram_DS4)

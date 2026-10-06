@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Play  Waka</Text>
+  <Description />
+  <Created>05/14/20 11:08:36</Created>
+  <Modified>06/25/20 12:14:37</Modified>
+  <Version>11</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>How Waka_DS5,Media,</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Mt Cook.Theater.Skyvision.Load(How Waka_DS1)
+Assets Mt Cook.Theater.Skyvision.Load(How Waka_DS2)
+Assets Mt Cook.Theater.Skyvision.Load(How Waka_DS3)
+Assets Mt Cook.Theater.Skyvision.Load(How Waka_DS4)
+Assets Mt Cook.Theater.Skyvision.Load(How Waka_DS5)
+Assets Skyvision.Load(Waka_DS1)
+Assets Skyvision.Load(Waka_DS2)
+Assets Skyvision.Load(Waka_DS3)
+Assets Skyvision.Load(Waka_DS4)
++2
+Scene How Waka_DS1.Play()
+Scene How Waka_DS2.Play()
+Scene How Waka_DS3.Play()
+Scene How Waka_DS4.Play()
+Scene How Waka_DS5.Play()
++1
+Scene Video.Source="Media:How Waka_DS1"
+Scene Video.Source="Media:How Waka_DS3"
+Scene Video.Source="Media:How Waka_DS2"
+Scene Video.Source="Media:How Waka_DS4"
+Scene Video.Source="Media:How Waka_DS5"
+Scene Camera.Visibility=0 [1]
+Scene Video.Visibility=100 [1]
+Control Text="Unload Waka"
+Control Pause
+Scene Camera.Visibility=100 [1]
+Scene Video.Visibility=0 [1]
+Scene How Waka_DS1.Volume=0 [1]
++1
+Assets Mt Cook.Theater.Skyvision.Unload(How Waka_DS1)
+Assets Mt Cook.Theater.Skyvision.Unload(How Waka_DS2)
+Assets Mt Cook.Theater.Skyvision.Unload(How Waka_DS3)
+Assets Mt Cook.Theater.Skyvision.Unload(How Waka_DS4)
+Assets Mt Cook.Theater.Skyvision.Unload(How Waka_DS5)
+Assets Skyvision.Unload(Waka_DS1)
+Assets Skyvision.Unload(Waka_DS2)
+Assets Skyvision.Unload(Waka_DS3)
+Assets Skyvision.Unload(Waka_DS4)

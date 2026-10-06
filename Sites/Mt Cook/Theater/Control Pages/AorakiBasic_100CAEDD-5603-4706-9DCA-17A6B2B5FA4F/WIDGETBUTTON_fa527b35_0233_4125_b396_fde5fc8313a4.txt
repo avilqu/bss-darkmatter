@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Show Magnetic Field</Text>
+  <Description />
+  <Created>07/09/25 22:26:00</Created>
+  <Modified>08/30/25 22:41:13</Modified>
+  <Version>65</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Aoraki.Load(magFieldCentreA, magFieldCentreB, magFieldCentreC)
++0.5
+Assets Aoraki.Load(magFieldRingA1, magFieldRingA2, magFieldRingB1, magFieldRingB2, magFieldRingC1, magFieldRingC2)
++1
+
+Scene magFieldRingA1.Visibility=100 [3]
+Scene magFieldRingA2.Visibility=100 [3]
+Scene magFieldRingB1.Visibility=100 [3]
+Scene magFieldRingB2.Visibility=100 [3]
+Scene magFieldRingC1.Visibility=100 [3]
+Scene magFieldRingC2.Visibility=100 [3]
+
+Control Text="Remove Magnetic Field"
+Control Pause
+
+Scene magFieldRingA1.Visibility=0 [3]
+Scene magFieldRingA2.Visibility=0 [3]
+Scene magFieldRingB1.Visibility=0 [3]
+Scene magFieldRingB2.Visibility=0 [3]
+Scene magFieldRingC1.Visibility=0 [3]
+Scene magFieldRingC2.Visibility=0 [3]
+
++3
+
+Assets Aoraki.UnLoad(magFieldCentreA, magFieldCentreB, magFieldCentreC)
+Assets Aoraki.UnLoad(magFieldRingA1, magFieldRingA2, magFieldRingB1, magFieldRingB2, magFieldRingC1, magFieldRingC2)

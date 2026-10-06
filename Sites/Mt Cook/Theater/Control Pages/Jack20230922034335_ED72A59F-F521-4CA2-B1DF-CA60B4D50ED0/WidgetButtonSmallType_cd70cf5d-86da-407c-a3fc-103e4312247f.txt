@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Label Arcturus</Text>
+  <Description />
+  <Created>09/14/15 10:41:48</Created>
+  <Modified>09/22/23 3:38:40</Modified>
+  <Version>93</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Constellations.Load(Arcturus Circle)
+Assets Constellations.Load(Arcturus Boo)
++0.1
+Scene Arcturus Boo.DomeAlign=On
+Scene Arcturus Circle.Scale=0
+Scene Arcturus Circle.Visibility=100 
++0.1
+Scene Arcturus Circle.Scale=1.5 [0.3]
++0.3
+Scene Arcturus Boo.Visibility=100 [0.5]
++0.5
+Control Text="Fade down Arcturus"
+Control Pause
+Scene Arcturus Circle.Scale=0 [0.5]
+Scene Arcturus Circle.Visibility=0 [0.5]
+Scene Arcturus Boo.Visibility=0 [0.5]
++0.6
+Assets Constellations.Unload(Arcturus Circle)
+Assets Constellations.UnLoad(Arcturus Boo)

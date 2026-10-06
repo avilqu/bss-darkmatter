@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Check Start Conditions</Text>
+  <Description />
+  <Created>05/31/25 23:57:00</Created>
+  <Modified>06/21/25 21:25:04</Modified>
+  <Version>19</Version>
+  <FriendlyName>dCamStartCheck</FriendlyName>
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+JS AddEngine(dCamStartChecker)
++1
+JS dCamStartChecker.Execute(@"
+
+	

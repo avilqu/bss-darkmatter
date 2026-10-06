@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>NZ close bird eye view</Text>
+  <Description>Camera State on Earth</Description>
+  <Created>09/06/26 19:57:11</Created>
+  <Modified>10/05/26 18:13:15</Modified>
+  <Version>67</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Operator</Author>
+  <Keywords>Camera,Camera</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Scene Camera.ConvertInPlace(Earth, Position Rotate)
++0.1
+Scene Camera { Xpos=-4904151.57824923  Ypos=1148592.86077947  Zpos=-5446504.69843909  Xrot=29.5656660126072  Yrot=-31.0499222073037  Zrot=-68.5355745042105 }[10:3:5]
+Scene Scene.DateTime="06:00" [5:10:5]
++5
+Assets Terrain.Load(GISEarthBing)
++15
+Scene GISEarthBing.HDRScale=2.1[3:5:3]

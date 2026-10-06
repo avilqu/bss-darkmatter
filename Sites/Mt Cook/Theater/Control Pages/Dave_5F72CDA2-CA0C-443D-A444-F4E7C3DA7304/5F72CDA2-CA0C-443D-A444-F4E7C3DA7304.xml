@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMButtonPageConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Dave</Name>
+  <Prefix>5F72CDA2-CA0C-443D-A444-F4E7C3DA7304</Prefix>
+  <SUGW>0606</SUGW>
+  <KeyWords />
+  <Group />
+  <Type>ControlPage</Type>
+  <MatrixTransformX>0</MatrixTransformX>
+  <MatrixTransformY>0</MatrixTransformY>
+  <BackgroundImageFile IsTiled="false">ControlPageBackground_iss052e063378_lrg.jpg</BackgroundImageFile>
+  <Widgets>
+    <Widget>
+      <Prefix>WIDGETRESIZABLERECTANGLE_cdc4b774_69d3_4c7d_b5d5_4cce8867ac4c</Prefix>
+      <Type>WidgetResizableRectangleType</Type>
+      <OffsetLeft>950</OffsetLeft>
+      <OffsetRight>1445</OffsetRight>
+      <OffsetTop>0</OffsetTop>
+      <OffsetBottom>250</OffsetBottom>
+      <Height>250</Height>
+      <Width>495</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETRESIZABLERECTANGLE_cdc4b774_69d3_4c7d_b5d5_4cce8867ac4c.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETRESIZABLERECTANGLE_cdc4b774_69d3_4c7d_b5d5_4cce8867ac4c</ImageButtonImageFilePath>
+      <SerializableParams>
+        <Key>RGBRGB</Key>
+        <Value>24:65:112:19:113:196</Value>
+      </SerializableParams>
+      <SerializableParams>
+        <Key>Opacity</Key>
+        <Value>100:50</Value>
+      </SerializableParams>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETRESIZABLERECTANGLE_63c8e314_177c_4446_bdfc_1641544c243d</Prefix>
+      <Type>WidgetResizableRectangleType</Type>
+      <OffsetLeft>1445</OffsetLeft>
+      <OffsetRight>1895</OffsetRight>
+      <OffsetTop>0</OffsetTop>
+      <OffsetBottom>1000</OffsetBottom>
+      <Height>1000</Height>
+      <Width>450</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETRESIZABLERECTANGLE_63c8e314_177c_4446_bdfc_1641544c243d.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETRESIZABLERECTANGLE_63c8e314_177c_4446_bdfc_1641544c243d</ImageButtonImageFilePath>
+      <SerializableParams>
+        <Key>RGBRGB</Key>
+        <Value>14.9019607843137:14.9019607843137:14.9019607843137:60.7843137254902:73.3333333333333:34.9019607843137</Value>
+      </SerializableParams>
+      <SerializableParams>
+        <Key>Opacity</Key>
+        <Value>100:100</Value>
+      </SerializableParams>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETBUTTONSMALL_30cb69aa_9672_4217_9b89_f94aeb749292</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>1450</OffsetLeft>
+      <OffsetRight>1570</OffsetRight>
+      <OffsetTop>5</OffsetTop>
+      <OffsetBottom>50</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETBUTTONSMALL_30cb69aa_9672_4217_9b89_f94aeb749292.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETBUTTONSMALL_30cb69aa_9672_4217_9b89_f94aeb749292</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETBUTTONSMALL_4341779c_c585_4ed5_b28c_85ddef3013a8</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>1450</OffsetLeft>
+      <OffsetRight>1570</OffsetRight>
+      <OffsetTop>50</OffsetTop>
+      <OffsetBottom>95</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETBUTTONSMALL_4341779c_c585_4ed5_b28c_85ddef3013a8.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETBUTTONSMALL_4341779c_c585_4ed5_b28c_85ddef3013a8</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETSLIDERTHIN_e6f7df2e_cb4d_4d6d_9476_f1c97b22c604</Prefix>
+      <Type>WidgetSliderThinType</Type>
+      <OffsetLeft>1450</OffsetLeft>
+      <OffsetRight>1510</OffsetRight>
+      <OffsetTop>95</OffsetTop>
+      <OffsetBottom>275</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETSLIDERTHIN_e6f7df2e_cb4d_4d6d_9476_f1c97b22c604.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETSLIDERTHIN_e6f7df2e_cb4d_4d6d_9476_f1c97b22c604</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETSLIDERTHIN_b2a4f856_7e39_44c7_9901_6fa6ec48b25c</Prefix>
+      <Type>WidgetSliderThinType</Type>
+      <OffsetLeft>1510</OffsetLeft>
+      <OffsetRight>1570</OffsetRight>
+      <OffsetTop>95</OffsetTop>
+      <OffsetBottom>275</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETSLIDERTHIN_b2a4f856_7e39_44c7_9901_6fa6ec48b25c.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETSLIDERTHIN_b2a4f856_7e39_44c7_9901_6fa6ec48b25c</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETSLIDERTHIN_40d92bce_6281_48fa_894e_5048d517294f</Prefix>
+      <Type>WidgetSliderThinType</Type>
+      <OffsetLeft>1570</OffsetLeft>
+      <OffsetRight>1630</OffsetRight>
+      <OffsetTop>95</OffsetTop>
+      <OffsetBottom>275</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETSLIDERTHIN_40d92bce_6281_48fa_894e_5048d517294f.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETSLIDERTHIN_40d92bce_6281_48fa_894e_5048d517294f</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETSLIDERTHIN_f8595858_0985_4d80_aead_c277f307e090</Prefix>
+      <Type>WidgetSliderThinType</Type>
+      <OffsetLeft>1630</OffsetLeft>
+      <OffsetRight>1690</OffsetRight>
+      <OffsetTop>95</OffsetTop>
+      <OffsetBottom>275</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETSLIDERTHIN_f8595858_0985_4d80_aead_c277f307e090.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETSLIDERTHIN_f8595858_0985_4d80_aead_c277f307e090</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETSLIDERTHIN_f5598a77_95e2_4ad5_a2f9_49b4e2019138</Prefix>
+      <Type>WidgetSliderThinType</Type>
+      <OffsetLeft>1690</OffsetLeft>
+      <OffsetRight>1750</OffsetRight>
+      <OffsetTop>95</OffsetTop>
+      <OffsetBottom>275</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETSLIDERTHIN_f5598a77_95e2_4ad5_a2f9_49b4e2019138.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETSLIDERTHIN_f5598a77_95e2_4ad5_a2f9_49b4e2019138</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETSLIDERTHIN_a9733258_8e45_4f06_91a9_ac48eab7a2d0</Prefix>
+      <Type>WidgetSliderThinType</Type>
+      <OffsetLeft>1750</OffsetLeft>
+      <OffsetRight>1810</OffsetRight>
+      <OffsetTop>95</OffsetTop>
+      <OffsetBottom>275</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETSLIDERTHIN_a9733258_8e45_4f06_91a9_ac48eab7a2d0.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETSLIDERTHIN_a9733258_8e45_4f06_91a9_ac48eab7a2d0</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETSLIDERTHIN_05cba66f_3069_416f_b0b4_5597e284b5bf</Prefix>
+      <Type>WidgetSliderThinType</Type>
+      <OffsetLeft>1810</OffsetLeft>
+      <OffsetRight>1870</OffsetRight>
+      <OffsetTop>95</OffsetTop>
+      <OffsetBottom>275</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETSLIDERTHIN_05cba66f_3069_416f_b0b4_5597e284b5bf.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETSLIDERTHIN_05cba66f_3069_416f_b0b4_5597e284b5bf</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETBUTTON_88380dda_fd2b_4282_8b0a_e75cdbbaa67f</Prefix>
+      <Type>WidgetButtonType</Type>
+      <OffsetLeft>1770</OffsetLeft>
+      <OffsetRight>1890</OffsetRight>
+      <OffsetTop>935</OffsetTop>
+      <OffsetBottom>995</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETBUTTON_88380dda_fd2b_4282_8b0a_e75cdbbaa67f.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETBUTTON_88380dda_fd2b_4282_8b0a_e75cdbbaa67f</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETBUTTONSMALL_b62f1dda_8022_47c7_931c_7fa19077ea17</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>1450</OffsetLeft>
+      <OffsetRight>1570</OffsetRight>
+      <OffsetTop>275</OffsetTop>
+      <OffsetBottom>320</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETBUTTONSMALL_b62f1dda_8022_47c7_931c_7fa19077ea17.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETBUTTONSMALL_b62f1dda_8022_47c7_931c_7fa19077ea17</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETBUTTONSMALL_c27131f2_2daa_4f46_80e2_3726d7313440</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>1450</OffsetLeft>
+      <OffsetRight>1570</OffsetRight>
+      <OffsetTop>320</OffsetTop>
+      <OffsetBottom>365</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETBUTTONSMALL_c27131f2_2daa_4f46_80e2_3726d7313440.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETBUTTONSMALL_c27131f2_2daa_4f46_80e2_3726d7313440</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETBUTTON_16216555_ad3f_465e_b785_6df0d6d95623</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>1750</OffsetLeft>
+      <OffsetRight>1870</OffsetRight>
+      <OffsetTop>275</OffsetTop>
+      <OffsetBottom>320</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETBUTTON_16216555_ad3f_465e_b785_6df0d6d95623.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETBUTTON_16216555_ad3f_465e_b785_6df0d6d95623</ImageButtonImageFilePath>
+    </Widget>
+    <Widget>
+      <Prefix>WIDGETBUTTON_65052e86_d2f9_474b_a582_ed986b52e6d4</Prefix>
+      <Type>WidgetButtonSmallType</Type>
+      <OffsetLeft>1570</OffsetLeft>
+      <OffsetRight>1690</OffsetRight>
+      <OffsetTop>5</OffsetTop>
+      <OffsetBottom>50</OffsetBottom>
+      <Height>0</Height>
+      <Width>0</Width>
+      <WidgetStyle />
+      <ScriptFilePath>WIDGETBUTTON_65052e86_d2f9_474b_a582_ed986b52e6d4.txt</ScriptFilePath>
+      <ImageButtonImageFilePath>Button Images\WIDGETBUTTON_65052e86_d2f9_474b_a582_ed986b52e6d4</ImageButtonImageFilePath>
+    </Widget>
+  </Widgets>
+</DMButtonPageConfiguration>

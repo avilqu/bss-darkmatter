@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>jsDistance</Text>
+  <Description />
+  <Created>03/31/16 12:29:48</Created>
+  <Modified>09/24/23 5:57:08</Modified>
+  <Version>22</Version>
+  <FriendlyName />
+  <Author>DefaultUser</Author>
+  <Keywords>Javascript, JS</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+var running = 0;
+var rate = 0.1;
+var referenceObj1 = null;
+var referenceObj2 = null;
+var transNow = new Transition(0,0,0);
+var transFade = new Transition(0,2,0);
+var RefDistance = DigitalSky.CreateAssetInstance("SlideText", "refDistance");
+	
+RefDistance.SetProperty("Visibility", 0, transNow);
+RefDistance.SetProperty("Azimuth", 200, transNow);
+RefDistance.SetProperty("Elevation", 10, transNow);
+RefDistance.SetProperty("FontHeight", 4, transNow);
+RefDistance.SetProperty("Text.String", " ", transNow);
+RefDistance.SetProperty("Text.TextColor", "#FFFF0000", transNow);
+RefDistance.SetProperty("Text.BackgroundVis", 0, transNow);
+	
+function Distance(p1, p2)
+{
+	var dx = p2.X-p1.X;
+	var dy = p2.Y-p1.Y;
+	var dz = p2.Z-p1.Z;
+	var ds = dx*dx+dy*dy+dz*dz;
+	if (ds > 0)
+		ds = Math.sqrt(ds);
+	return ds; 
+}
+function formatDistanceString(distance)
+{
+	var value = distance;
+	var unit = "M";
+	if (distance > 9.461e14)
+	{
+		value /= 9.461e15;
+		value = Math.round(value*10)/10;
+		unit = "ly";
+	}
+	else if (distance > 149.6e8)
+	{
+		value /= 149.6e9;
+		value = Math.round(value*10)/10;
+		unit = "AU";
+	}
+	else if (distance > 1000)
+	{
+		value /= 1000;
+		value = Math.round(value*1)/1;
+		unit = "KM";
+	}
+	
+	var theString = value + " " + unit;
+	return theString;
+}
+function InformDistance(refObj1, refObj2, Azimuth, Elevation, FontHeight, timeColor, tFadeUp)
+{  
+	referenceObj1 = DigitalSky.GetAssetInstance(refObj1);
+	referenceObj2 = DigitalSky.GetAssetInstance(refObj2);
+	if (referenceObj1 == null)
+	{
+		DigitalSky.LogError("refObj1 was not found");
+	}
+    var transFadeUp = new Transition(0,tFadeUp,0);
+	RefDistance.SetProperty("Visibility", 100, transFade);
+	if (Azimuth === undefined) {
+          Azimuth = 180;
+    }
+	if (Elevation === undefined) {
+          Elevation = 20;
+    }
+	if (FontHeight === undefined) {
+          FontHeight = 4;
+    }
+	if (timeColor === undefined) {
+          timeColor = "green";
+    } 
+	RefDistance.SetProperty("Azimuth", Azimuth, transNow);
+	RefDistance.SetProperty("Elevation", Elevation, transNow);
+	RefDistance.SetProperty("FontHeight", FontHeight, transNow);
+	RefDistance.SetProperty("Text.TextColor", timeColor, transNow);
+	running = 1;
+	while (running == 1)
+	{
+    
+		// get distance
+		var distance;
+		if (referenceObj2 == null)
+			distance = referenceObj1.GetPropertyInstance("OrbitDistance").Value;
+		else
+		{
+			var cp = referenceObj1.GetPropertyInstance("WorldPosition").Value;
+			var rp = referenceObj2.GetPropertyInstance("WorldPosition").Value;
+			distance = Distance(cp, rp);
+		}
+       
+         
+		var theDist = Math.round(distance);
+        var theDistS = formatDistanceString(theDist);
+		//	Send updated string to slide
+		RefDistance.SetProperty("Text.String", theDistS, transNow);
+		
+		DigitalSky.Wait(rate);
+		
+	}
+	CleanUp(0.5);
+}
+function CleanUp(tFadeDown)
+{
+	var transFadeDown = new Transition(0,tFadeDown,0);
+	RefDistance.SetProperty("Visibility", 0, transFadeDown);
+	DigitalSky.Wait(tFadeDown);
+	RefDistance.Unload();
+}
+function Close()
+{
+    running = 0;
+    DigitalSky.Wait(1.0);
+}

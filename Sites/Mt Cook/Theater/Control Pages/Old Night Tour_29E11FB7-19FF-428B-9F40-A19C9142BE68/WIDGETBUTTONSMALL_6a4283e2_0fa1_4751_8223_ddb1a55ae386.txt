@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>orion_CHN</Text>
+  <Description />
+  <Created>09/28/19 20:58:38</Created>
+  <Modified>02/04/20 19:39:58</Modified>
+  <Version>40</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords />
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Assets Shaun.Load(orion_CHN)
++0.2
+Scene orion_CHN.Visibility=50 [1]
++1.1
+Control Text=Unload orion_CHN
+Control Pause
+Scene orion_CHN.Visibility=0 [1]
++1.2
+Assets Shaun.Unload(orion_CHN)

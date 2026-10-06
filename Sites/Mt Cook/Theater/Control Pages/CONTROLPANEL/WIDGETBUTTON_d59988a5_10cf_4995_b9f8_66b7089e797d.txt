@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Text>Assets Reset</Text>
+  <Description>Resets all locked Assets, unloads any unlocked assets, and puts you back on Earth.</Description>
+  <Created>02/11/16 17:55:49</Created>
+  <Modified>07/15/25 20:03:58</Modified>
+  <Version>75</Version>
+  <FriendlyName />
+  <Author>Mt Cook.Theater</Author>
+  <Keywords>reset</Keywords>
+  <Info />
+  <MinValue>0</MinValue>
+  <MaxValue>100</MaxValue>
+  <InitialValue>0</InitialValue>
+  <AssetTracking />
+  <ImageButtonImagePath />
+</DMScriptHeader>
+Control Text="Reset All?"
+Control Pause
+; fade down scene
+Control Text="Assets Reset running..."
+Scene Visibility=0 [0.5]
++1
+Control Text="Resetting All Assets..."
+Assets Reset
++1
+Control Text="..... ..... ....."
++1
+Control Text="..... ..... ...."
++1
+Control Text="..... ..... ..."
++1
+Control Text="..... ..... .."
++1
+Control Text="..... ..... ."
++1
+Control Text="..... ....."
++1
+Control Text="..... ...."
++1
+Control Text="..... ..."
++1
+Control Text="..... .."
++1
+Control Text="..... ."
++1
+Control Text="....."
++1
+Control Text="...."
++1
+Control Text="..."
++1
+Control Text=".."
++1
+Control Text="."
++1
+; Land on Earth
+Control Text="Fly to here..."
+Scene Camera.FlyTo(Here, Orient=SouthAndUp) [0]
+Scene Camera.SS.Azimuth=180.0
+Scene Camera.SS.Elevation=90.0
++1
+Control Text=".."
++1
+Control Text="."
++1
+Control Text="Set Star profile (global)..."
+Scene Stars.MinPoint=5E-05
+Scene Stars.FadePoint=0.00676
+Scene Stars.MaxPoint=0.0105
+Scene Stars.MinHalo=0.001
+Scene Stars.MaxHalo=0.01
+Scene Stars.HaloScale=1
+Scene Stars.HaloBrightness=0
+Scene Stars.AbsShift=-1.9
+Scene Stars.RedAbsShift=-0.1
+Scene Stars.Lum=1
+Scene Visible Milky Way.Visibility=60
++0.5
+Control Text="Set Day and Time..."
+Scene Scene.DateTime=Now
++1
+; fade up scene
+Control Text="Set Scene Visibility..."
+Scene Visibility=100 [2]
++1
+Control Text="Assets Reset ending..."
++1
+Control Text="."
++1
+Control Abort
