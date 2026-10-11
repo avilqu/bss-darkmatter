@@ -29,6 +29,8 @@ Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
 | `85-BSS-Lib-SCPOff.txt` | `BSS-Lib-SCPOff` | SCP off | 3 s | idem, removes the ring |
 | `86-BSS-Lib-AtmosphereOff.txt` | `BSS-Lib-AtmosphereOff` | Atmosphere off | 3 s | Theater/Adrien "Atmosphere" (second half) |
 | `87-BSS-Lib-AtmosphereOn.txt` | `BSS-Lib-AtmosphereOn` | Atmosphere on | 3.1 s | Theater/Adrien "Atmosphere" (first half) |
+| `88-BSS-Lib-CloudsOn.txt` | `BSS-Lib-CloudsOn` | Clouds on | 3 s | Theater/Adrien "Clouds" (first half) |
+| `89-BSS-Lib-CloudsOff.txt` | `BSS-Lib-CloudsOff` | Clouds off | 3 s | Theater/Adrien "Clouds" (second half) |
 
 Live toggles from the dome (with `Control Pause`) are split into On/Off pairs with fixed lengths,
 so they work from a master script as well as by hand.

@@ -118,6 +118,18 @@
       "kind": "small",
       "left": 10,
       "top": 205
+    },
+    "88-BSS-Lib-CloudsOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_dfa40a97_e5ec_4e20_b118_6eef8038a61b",
+      "kind": "small",
+      "left": 135,
+      "top": 205
+    },
+    "89-BSS-Lib-CloudsOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_e7669f3c_96a6_41bd_9be8_6857264588ca",
+      "kind": "small",
+      "left": 260,
+      "top": 205
     }
   }
 }

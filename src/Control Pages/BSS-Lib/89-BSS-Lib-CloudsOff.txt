@@ -1,0 +1,8 @@
+;=== BSS-Lib-CloudsOff ===
+; Page: BSS-Lib   Button: "Clouds off"   Length: 3 s
+; Fades out Earth's cloud layer.
+; Split from Theater/Adrien "Clouds" (second half); [2] -> [1:1:1], added the final wait.
+Control Text="Clouds: off..."
+Scene Earth.Cloud.Visibility=0 [1:1:1]
++3
+Control Text="Clouds off"
