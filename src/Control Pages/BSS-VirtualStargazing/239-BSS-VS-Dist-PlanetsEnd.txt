@@ -1,0 +1,15 @@
+;=== BSS-VS-Dist-PlanetsEnd ===
+; Page: BSS-VirtualStargazing   Button: "2.3 Planets end"   Length: 4 s
+; Chapter 2: planets back to normal after the planet segments. No voiceover.
+; Starts from: planets enlarged (Sprite.LumAdj=4).
+; Ends with:   planets normal (Sprite.LumAdj=1).
+; UNVERIFIED: default Sprite.LumAdj assumed to be 1, see 23-BSS-VS-Dist-Planets.
+Control Text="2.3 Planets back..."
+Scene Mercury.Sprite.LumAdj=1 [1:2:1]
+Scene Venus.Sprite.LumAdj=1 [1:2:1]
+Scene Mars.Sprite.LumAdj=1 [1:2:1]
+Scene Jupiter.Sprite.LumAdj=1 [1:2:1]
+Scene Saturn.Sprite.LumAdj=1 [1:2:1]
++4
+; 4 s
+Control Text="2.3 Planets end"

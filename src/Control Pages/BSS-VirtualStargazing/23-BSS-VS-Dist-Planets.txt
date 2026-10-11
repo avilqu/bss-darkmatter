@@ -1,0 +1,44 @@
+;=== BSS-VS-Dist-Planets ===
+; Page: BSS-VirtualStargazing   Button: "2.3 Planets"   Length: ~12 s
+; Chapter 2 segment 3 (only if at least one naked-eye planet is up): the five naked-eye
+; planets get bigger and brighter, "second closest layer". Followed by one 231-235
+; segment per planet that is up, then 239-BSS-VS-Dist-PlanetsEnd.
+; Visuals only, no text on the dome. Run by the chapter-2 sequencer, or alone for testing.
+; Starts from: ground, bright sky, real time, planets normal.
+; Ends with:   same, but planet sprites enlarged (Sprite.LumAdj=4). 239-PlanetsEnd restores them.
+;
+; UNVERIFIED: Sprite.LumAdj (from the forum notes) makes the planet sprite brighter, which
+; should also make it look bigger; the default is assumed to be 1. Check: drag Jupiter >
+; Sprite > LumAdj from the Asset Manager into the ScriptPad to see its current value.
+; If it doesn't look bigger, try Scene Jupiter.Sprite.Scale or similar from the same panel.
+;
+; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
+; voiceover starts. When the recording exists, set the waits from its timecodes
+; and update LEN in src/JavaScript/BSS-VS-Sequencer.js.
+; AUDIO PLACEHOLDER: the file below doesn't exist yet. Until it does, Event Viewer
+; will report a load error for DistPlanetsVO-BSS-VS; the visuals still run.
+;
+Control Text="2.3 Planets: loading..."
+Scene Remove(DistPlanetsVO-BSS-VS)
++0.1
+Scene Add(DistPlanetsVO-BSS-VS, Media, Volume=100)
++0.1
+Scene DistPlanetsVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-23-DistPlanets.mp3"
++1
+;
+; ----- @0:00  planets grow (6 s); "Orbiting the Sun alongside the Earth, the planets are the second closest layer in our sky" -----
+Control Text="1/1 Second layer"
+Scene DistPlanetsVO-BSS-VS.Play()
+Scene Mercury.Sprite.LumAdj=4 [2:2:2]
+Scene Venus.Sprite.LumAdj=4 [2:2:2]
+Scene Mars.Sprite.LumAdj=4 [2:2:2]
+Scene Jupiter.Sprite.LumAdj=4 [2:2:2]
+Scene Saturn.Sprite.LumAdj=4 [2:2:2]
++9
+;
+; ----- @0:09  end of segment: fade out and remove the voiceover (planets stay enlarged) -----
+Scene DistPlanetsVO-BSS-VS.Volume=0 [1:0:1]
++2
+Scene Remove(DistPlanetsVO-BSS-VS)
+; 1.2 + 9+2 = 12.2 s
+Control Text="2.3 Planets"

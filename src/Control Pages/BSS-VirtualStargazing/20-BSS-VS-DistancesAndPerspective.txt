@@ -1,31 +1,19 @@
 ;=== BSS-VS-DistancesAndPerspective ===
-; Page: BSS-VirtualStargazing   Button: "2 Distances"   Length: TODO
-; Chapter 2 (distances and perspective): TODO.
+; Page: BSS-VirtualStargazing   Button: "2 Distances"   Length: variable, ~90-200 s (see below)
+; Chapter 2 (distances and perspective): starts the BSS-VS-Seq sequencer, which checks the
+; live sky and runs the segment buttons 21-26 one after the other:
+;   21 Intro, [22 Moon], [23 Planets, 231-235 one per planet up, 239 PlanetsEnd],
+;   24 Stars, [25 Core], 26 Magellan       [ ] = only if up, or forced by the toggles 02-04
 ; Visuals only, no text on the dome.
 ; Starts from: BSS-VS-DarkSkies (ground at Mount Cook Village, bright sky, real time, logo off).
-; Ends with:   TODO
-; Needs the BSS-Lib page loaded.
+; Ends with:   same state.
+; Needs: BSS-VS-Seq loaded (Setup does it) and the BSS-Lib page loaded.
 ;
-; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
-; voiceover starts. When the recording exists, set the waits from its timecodes.
-; AUDIO PLACEHOLDER: the file below doesn't exist yet. Until it does, Event Viewer
-; will report a load error for DistancesVO-BSS-VS; the visuals still run.
-;
-Control Text="Distances: loading..."
-Scene Remove(DistancesVO-BSS-VS)
+; LENGTH: from about 90 s (no Moon, planets or core) to about 200 s (all of them up).
+; "Check sky" logs the exact list and length for now. This button returns at once: the
+; sequencer keeps running in JS, so a master Play button can't wait a fixed time after it.
+; NOT RENDERABLE as a whole with the Playlist Creator (waits are in JS); single segments are.
+Control Text="2 Distances: running..."
+JS BSS-VS-Seq.FunctionAsync(PlayDistances)
 +0.1
-Scene Add(DistancesVO-BSS-VS, Media, Volume=100)
-+0.1
-Scene DistancesVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-20-DistancesAndPerspective.mp3"
-+1
-;
-; ----- @0:00  TODO -----
-Control Text="1/? TODO"
-Scene DistancesVO-BSS-VS.Play()
-;
-; ----- @?:??  end of chapter: fade out and remove the voiceover -----
-Scene DistancesVO-BSS-VS.Volume=0 [1:0:1]
-+2
-Scene Remove(DistancesVO-BSS-VS)
-; 1.2 + ... + 2 = TODO s
 Control Text="2 Distances"

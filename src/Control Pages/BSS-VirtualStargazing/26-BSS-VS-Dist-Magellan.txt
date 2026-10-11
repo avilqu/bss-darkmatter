@@ -1,0 +1,76 @@
+;=== BSS-VS-Dist-Magellan ===
+; Page: BSS-VirtualStargazing   Button: "2.6 Magellan"   Length: ~37 s
+; Chapter 2 segment 6 (always plays; both clouds are circumpolar from Aoraki): rings on the
+; Large and Small Magellanic Clouds, then the stars come back and the closing line.
+; Visuals only, no text on the dome (the rings are plain circles).
+; Starts from: stars hidden (end of 24-BSS-VS-Dist-Stars or 25-BSS-VS-Dist-Core).
+; Ends with:   ground, bright sky, real time, stars back. Same state as the start of chapter 2.
+; Needs the BSS-Lib page loaded (SkyBright).
+;
+; Rings: show-wide ring method, see src/Snippets/vs-ring.txt. LMC: large ring (VS-Ring-L),
+; RA 05h23m35s Dec -69.76, 12 degrees wide. SMC: medium ring (VS-Ring-M), RA 00h52m44s Dec -72.83,
+; 7 degrees wide.
+; UNVERIFIED: Frame=Sidereal on a Slide and Width in degrees, see 24-BSS-VS-Dist-Stars.
+; UNVERIFIED: Stars.Visibility, see 24-BSS-VS-Dist-Stars.
+;
+; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
+; voiceover starts. When the recording exists, set the waits from its timecodes
+; and update LEN in src/JavaScript/BSS-VS-Sequencer.js.
+; AUDIO PLACEHOLDER: the file below doesn't exist yet. Until it does, Event Viewer
+; will report a load error for DistMagellanVO-BSS-VS; the visuals still run.
+;
+Control Text="2.6 Magellan: loading..."
+Scene Remove(DistMagellanVO-BSS-VS)
+Scene Remove(RingLMC-BSS-VS)
+Scene Remove(RingSMC-BSS-VS)
++0.1
+Scene Add(DistMagellanVO-BSS-VS, Media, Volume=100)
+Scene Add(RingLMC-BSS-VS, Slide, Visibility=0)
+Scene Add(RingSMC-BSS-VS, Slide, Visibility=0)
++0.1
+Scene DistMagellanVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-26-DistMagellan.mp3"
+Scene RingLMC-BSS-VS.Picture="<ContentPath>\Assets\BSS\VirtualStargazing\VS-Ring-L.png"
+Scene RingLMC-BSS-VS.Slide.Blend=Alpha
+Scene RingLMC-BSS-VS.Slide.TextLock="Height to Width"
+Scene RingLMC-BSS-VS { Frame=Sidereal Azimuth=80.89 Elevation=-69.76 Width=12 }
+Scene RingSMC-BSS-VS.Picture="<ContentPath>\Assets\BSS\VirtualStargazing\VS-Ring-M.png"
+Scene RingSMC-BSS-VS.Slide.Blend=Alpha
+Scene RingSMC-BSS-VS.Slide.TextLock="Height to Width"
+Scene RingSMC-BSS-VS { Frame=Sidereal Azimuth=13.19 Elevation=-72.83 Width=7 }
++1
+;
+; ----- @0:00  rings on both clouds (3 s); "The Clouds of Magellan are the furthest objects you can see with your naked eye" -----
+Control Text="1/5 Furthest objects"
+Scene DistMagellanVO-BSS-VS.Play()
+Scene RingLMC-BSS-VS.Visibility=100 [1:1:1]
+Scene RingSMC-BSS-VS.Visibility=100 [1:1:1]
++6
+;
+; ----- @0:06  "160,000 (Large) and 210,000 (Small) light years away" -----
+Control Text="2/5 Distances"
++6
+;
+; ----- @0:12  "They're deep in the southern sky, only visible from the southern hemisphere" -----
+Control Text="3/5 Southern only"
++6
+;
+; ----- @0:18  rings off (3 s), stars back (6 s) and bright sky profile (5 s, BSS-Lib-SkyBright) -----
+Control Text="4/5 Stars back"
+Scene RingLMC-BSS-VS.Visibility=0 [1:1:1]
+Scene RingSMC-BSS-VS.Visibility=0 [1:1:1]
+Scene Stars.Visibility=100 [2:2:2]
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
++6
+;
+; ----- @0:24  "In the southern hemisphere, you see at a glance the closest neighbouring star and the furthest objects visible to the naked eye, 4 to 200,000 light years" -----
+Control Text="5/5 At a glance"
++10
+;
+; ----- @0:34  end of segment: fade out the voiceover, remove everything added -----
+Scene DistMagellanVO-BSS-VS.Volume=0 [1:0:1]
++2
+Scene Remove(DistMagellanVO-BSS-VS)
+Scene Remove(RingLMC-BSS-VS)
+Scene Remove(RingSMC-BSS-VS)
+; 1.2 + 6+6+6+6+10+2 = 37.2 s
+Control Text="2.6 Magellan"

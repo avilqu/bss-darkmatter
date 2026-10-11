@@ -1,0 +1,8 @@
+;=== BSS-VS-StopSeq ===
+; Page: BSS-VirtualStargazing   Button: "Stop chapter"   Length: 0.1 s
+; Stops the chapter-2 sequencer before the next segment (within 0.5 s). The segment
+; already running finishes on its own; abort it from its button if needed.
+; If stopped after 24-Stars, the stars stay hidden: run 26-Magellan or Scene Stars.Visibility=100.
+JS BSS-VS-Seq.Stop()
++0.1
+Control Text="Stop chapter"

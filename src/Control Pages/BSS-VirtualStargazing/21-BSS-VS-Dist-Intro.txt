@@ -1,0 +1,31 @@
+;=== BSS-VS-Dist-Intro ===
+; Page: BSS-VirtualStargazing   Button: "2.1 Intro"   Length: ~10 s
+; Chapter 2 segment 1 (always plays): opening line of "Distances & perspective".
+; Visuals only, no text on the dome. Run by the chapter-2 sequencer, or alone for testing.
+; Starts from: ground at Mount Cook Village, bright sky, real time (end of BSS-VS-DarkSkies).
+; Ends with:   same state (nothing changed on the dome).
+;
+; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
+; voiceover starts. When the recording exists, set the waits from its timecodes.
+; AUDIO PLACEHOLDER: the file below doesn't exist yet. Until it does, Event Viewer
+; will report a load error for DistIntroVO-BSS-VS; the visuals still run.
+;
+Control Text="2.1 Intro: loading..."
+Scene Remove(DistIntroVO-BSS-VS)
++0.1
+Scene Add(DistIntroVO-BSS-VS, Media, Volume=100)
++0.1
+Scene DistIntroVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-21-DistIntro.mp3"
++1
+;
+; ----- @0:00  "From Aoraki looking south, you get a unique depth of field" -----
+Control Text="1/1 Depth of field"
+Scene DistIntroVO-BSS-VS.Play()
++7
+;
+; ----- @0:07  end of segment: fade out and remove the voiceover -----
+Scene DistIntroVO-BSS-VS.Volume=0 [1:0:1]
++2
+Scene Remove(DistIntroVO-BSS-VS)
+; 1.2 + 7+2 = 10.2 s
+Control Text="2.1 Intro"

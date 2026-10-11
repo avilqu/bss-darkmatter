@@ -1,0 +1,36 @@
+;=== BSS-VS-Dist-Venus ===
+; Page: BSS-VirtualStargazing   Button: "2.3 Venus"   Length: ~11 s
+; Chapter 2 planet segment (only if Venus is up): Venus stands out, one short fact.
+; Visuals only, no text on the dome. Run by the chapter-2 sequencer after 23-BSS-VS-Dist-Planets.
+; Starts from: planets enlarged (Sprite.LumAdj=4, set by 23-BSS-VS-Dist-Planets).
+; Ends with:   same state.
+; UNVERIFIED: Sprite.LumAdj, see 23-BSS-VS-Dist-Planets.
+; Suggested fact (to be recorded): "Venus is the hottest planet, about 460 degrees under its thick clouds"
+;
+; TIMING: estimated (no recording yet). @m:ss = time since the voiceover starts.
+; When the recording exists, set the waits from its timecodes and update LEN in
+; src/JavaScript/BSS-VS-Sequencer.js.
+; AUDIO PLACEHOLDER: the file below doesn't exist yet. Until it does, Event Viewer
+; will report a load error for DistVenusVO-BSS-VS; the visuals still run.
+;
+Control Text="2.3 Venus: loading..."
+Scene Remove(DistVenusVO-BSS-VS)
++0.1
+Scene Add(DistVenusVO-BSS-VS, Media, Volume=100)
++0.1
+Scene DistVenusVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-232-DistVenus.mp3"
++1
+;
+; ----- @0:00  Venus brightens (3 s); one short fact -----
+Control Text="1/1 Venus fact"
+Scene DistVenusVO-BSS-VS.Play()
+Scene Venus.Sprite.LumAdj=8 [1:1:1]
++8
+;
+; ----- @0:08  Venus back to the group level, fade out and remove the voiceover -----
+Scene Venus.Sprite.LumAdj=4 [1:0:1]
+Scene DistVenusVO-BSS-VS.Volume=0 [1:0:1]
++2
+Scene Remove(DistVenusVO-BSS-VS)
+; 1.2 + 8+2 = 11.2 s
+Control Text="2.3 Venus"

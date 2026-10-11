@@ -1,0 +1,36 @@
+;=== BSS-VS-Dist-Mercury ===
+; Page: BSS-VirtualStargazing   Button: "2.3 Mercury"   Length: ~11 s
+; Chapter 2 planet segment (only if Mercury is up): Mercury stands out, one short fact.
+; Visuals only, no text on the dome. Run by the chapter-2 sequencer after 23-BSS-VS-Dist-Planets.
+; Starts from: planets enlarged (Sprite.LumAdj=4, set by 23-BSS-VS-Dist-Planets).
+; Ends with:   same state.
+; UNVERIFIED: Sprite.LumAdj, see 23-BSS-VS-Dist-Planets.
+; Suggested fact (to be recorded): "Mercury is the closest planet to the Sun: its year lasts only 88 days"
+;
+; TIMING: estimated (no recording yet). @m:ss = time since the voiceover starts.
+; When the recording exists, set the waits from its timecodes and update LEN in
+; src/JavaScript/BSS-VS-Sequencer.js.
+; AUDIO PLACEHOLDER: the file below doesn't exist yet. Until it does, Event Viewer
+; will report a load error for DistMercuryVO-BSS-VS; the visuals still run.
+;
+Control Text="2.3 Mercury: loading..."
+Scene Remove(DistMercuryVO-BSS-VS)
++0.1
+Scene Add(DistMercuryVO-BSS-VS, Media, Volume=100)
++0.1
+Scene DistMercuryVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-231-DistMercury.mp3"
++1
+;
+; ----- @0:00  Mercury brightens (3 s); one short fact -----
+Control Text="1/1 Mercury fact"
+Scene DistMercuryVO-BSS-VS.Play()
+Scene Mercury.Sprite.LumAdj=8 [1:1:1]
++8
+;
+; ----- @0:08  Mercury back to the group level, fade out and remove the voiceover -----
+Scene Mercury.Sprite.LumAdj=4 [1:0:1]
+Scene DistMercuryVO-BSS-VS.Volume=0 [1:0:1]
++2
+Scene Remove(DistMercuryVO-BSS-VS)
+; 1.2 + 8+2 = 11.2 s
+Control Text="2.3 Mercury"

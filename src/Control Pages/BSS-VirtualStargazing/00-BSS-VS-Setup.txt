@@ -3,6 +3,7 @@
 ; Same for every season: dim sky, real date/time running at real speed,
 ; camera in space 1000 km straight above Aoraki/Mount Cook Village, Hermitage logo up.
 ; Needs the BSS-Lib page loaded in the workspace (calls BSS-Lib-SkyDim and BSS-Lib-LogoIn).
+; Also loads the BSS-VS-Seq JS engine used by chapter 2 (01-BSS-VS-LoadSeq).
 Control Text="Setting up..."
 Scene Visibility=0 [1:0:1]
 +2
@@ -15,6 +16,17 @@ Scene DateTime.Rate=1 [0]
 ; 1000 km above Mount Cook Village, same lat/long as BSS-Lib-HomePosition (Altitude in metres).
 ; Orient=SouthAndDown looks down at Earth; SS.Elevation=45 as in BSS-Lib-TakeOff.
 Scene Camera { Parent=Earth Orient=SouthAndDown SS.Elevation=45 Latitude=-43.7357 Longitude=170.0962 Altitude=1000000 }
+; undo anything chapter 2 changes, in case a previous run was stopped halfway
+; (UNVERIFIED: Sprite.LumAdj default 1, see 23-BSS-VS-Dist-Planets)
+Scene Stars.Visibility=100
+Scene Moon { Xscale=2.5 Yscale=2.5 Zscale=2.5 }
+Scene Mercury.Sprite.LumAdj=1
+Scene Venus.Sprite.LumAdj=1
+Scene Mars.Sprite.LumAdj=1
+Scene Jupiter.Sprite.LumAdj=1
+Scene Saturn.Sprite.LumAdj=1
+; (re)load the chapter sequencer JS engine (~0.3 s); this resets the Moon/Planets/Core toggles to auto
+Control BSS-VS-LoadSeq.Run()
 Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyDim.Run()
 ; SkyDim is 2 s
 +2

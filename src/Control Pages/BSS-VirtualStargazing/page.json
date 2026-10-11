@@ -16,6 +16,120 @@
       "kind": "small",
       "left": 135,
       "top": 10
+    },
+    "01-BSS-VS-LoadSeq.txt": {
+      "prefix": "WIDGETBUTTONSMALL_55b6fbc6_4b04_486a_91d0_e817f2735506",
+      "kind": "small",
+      "left": 260,
+      "top": 10
+    },
+    "02-BSS-VS-ForceMoon.txt": {
+      "prefix": "WIDGETBUTTONSMALL_e8df8ade_ab27_4e54_8148_5eb362c38af9",
+      "kind": "small",
+      "left": 385,
+      "top": 10
+    },
+    "03-BSS-VS-ForcePlanets.txt": {
+      "prefix": "WIDGETBUTTONSMALL_c6305df1_2c7e_44c1_9092_20ecc5b7e3de",
+      "kind": "small",
+      "left": 510,
+      "top": 10
+    },
+    "04-BSS-VS-ForceCore.txt": {
+      "prefix": "WIDGETBUTTONSMALL_fed05ba6_1de8_4000_b6c1_3d545184be03",
+      "kind": "small",
+      "left": 635,
+      "top": 10
+    },
+    "05-BSS-VS-CheckSky.txt": {
+      "prefix": "WIDGETBUTTONSMALL_a5fbb783_7e12_47d9_82cd_1c6a64a8bb07",
+      "kind": "small",
+      "left": 10,
+      "top": 75
+    },
+    "06-BSS-VS-StopSeq.txt": {
+      "prefix": "WIDGETBUTTONSMALL_1e995d05_2e53_410f_bd2c_bcc57f1b37d6",
+      "kind": "small",
+      "left": 135,
+      "top": 75
+    },
+    "20-BSS-VS-DistancesAndPerspective.txt": {
+      "prefix": "WIDGETBUTTONSMALL_4b75d008_d529_4188_8493_2e8727207265",
+      "kind": "small",
+      "left": 260,
+      "top": 75
+    },
+    "21-BSS-VS-Dist-Intro.txt": {
+      "prefix": "WIDGETBUTTONSMALL_397fff0c_481a_4455_bc83_99b9bd2649b8",
+      "kind": "small",
+      "left": 385,
+      "top": 75
+    },
+    "22-BSS-VS-Dist-Moon.txt": {
+      "prefix": "WIDGETBUTTONSMALL_9ddf4ad3_8eaf_46d8_b3a4_4662f7135153",
+      "kind": "small",
+      "left": 510,
+      "top": 75
+    },
+    "23-BSS-VS-Dist-Planets.txt": {
+      "prefix": "WIDGETBUTTONSMALL_eabe0376_8970_43e6_b7a5_2fc87581c1ce",
+      "kind": "small",
+      "left": 635,
+      "top": 75
+    },
+    "231-BSS-VS-Dist-Mercury.txt": {
+      "prefix": "WIDGETBUTTONSMALL_d0b1533f_9735_43df_ae0b_1e7568689e17",
+      "kind": "small",
+      "left": 10,
+      "top": 140
+    },
+    "232-BSS-VS-Dist-Venus.txt": {
+      "prefix": "WIDGETBUTTONSMALL_ab63ea11_dacc_43ef_93e1_1c34d24f2e7b",
+      "kind": "small",
+      "left": 135,
+      "top": 140
+    },
+    "233-BSS-VS-Dist-Mars.txt": {
+      "prefix": "WIDGETBUTTONSMALL_0052d690_a856_41bf_b88c_ef32e17ace35",
+      "kind": "small",
+      "left": 260,
+      "top": 140
+    },
+    "234-BSS-VS-Dist-Jupiter.txt": {
+      "prefix": "WIDGETBUTTONSMALL_e3b20c88_ddae_4f01_9867_9610756ec72a",
+      "kind": "small",
+      "left": 385,
+      "top": 140
+    },
+    "235-BSS-VS-Dist-Saturn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_bede881b_ab54_4e40_9c11_4dfe4cdeae2a",
+      "kind": "small",
+      "left": 510,
+      "top": 140
+    },
+    "239-BSS-VS-Dist-PlanetsEnd.txt": {
+      "prefix": "WIDGETBUTTONSMALL_a664f523_9491_49f6_9f72_c6cb5feb32ff",
+      "kind": "small",
+      "left": 635,
+      "top": 140
+    },
+    "24-BSS-VS-Dist-Stars.txt": {
+      "prefix": "WIDGETBUTTONSMALL_d8cef9a6_8844_47df_912c_c7790f7a9918",
+      "kind": "small",
+      "left": 10,
+      "top": 205
+    },
+    "25-BSS-VS-Dist-Core.txt": {
+      "prefix": "WIDGETBUTTONSMALL_19a6a948_d41e_417b_a9f8_0ca2810b9e17",
+      "kind": "small",
+      "left": 135,
+      "top": 205
+    },
+    "26-BSS-VS-Dist-Magellan.txt": {
+      "prefix": "WIDGETBUTTONSMALL_32a98112_38e9_4fd9_8afe_4d76930724bb",
+      "kind": "small",
+      "left": 260,
+      "top": 205
     }
   }
 }

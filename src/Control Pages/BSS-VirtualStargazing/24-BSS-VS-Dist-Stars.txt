@@ -1,0 +1,79 @@
+;=== BSS-VS-Dist-Stars ===
+; Page: BSS-VirtualStargazing   Button: "2.4 Stars"   Length: ~41 s
+; Chapter 2 segment 4 (always plays): ring on Alpha Centauri, then on Beta Centauri,
+; star distances, then the stars fade out to leave the Milky Way glow.
+; Visuals only, no text on the dome (the rings are plain circles).
+; Starts from: ground, bright sky, real time.
+; Ends with:   same, but STARS HIDDEN (Stars.Visibility=0). 26-BSS-VS-Dist-Magellan brings them back.
+;
+; Rings: show-wide ring method, see src/Snippets/vs-ring.txt. Small ring (VS-Ring-S, 3 deg) on a
+; Slide fixed to the stars. Alpha Cen RA 14h39m36s Dec -60.83, Beta Cen RA 14h03m49s Dec -60.37.
+; UNVERIFIED: Frame=Sidereal on a Slide (from the skill), Width in degrees, and whether the
+; ring is centred on the star. Check on the dome; nudge Azimuth/Elevation if it's off.
+; UNVERIFIED: Stars.Visibility=0 hides all the stars. If not, use Scene Stars.Lum=0 here and
+; Lum=2 in 26-Magellan. If the Gaia StarCatalog is loaded, it must be hidden too.
+;
+; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
+; voiceover starts. When the recording exists, set the waits from its timecodes
+; and update LEN in src/JavaScript/BSS-VS-Sequencer.js.
+; AUDIO PLACEHOLDER: the file below doesn't exist yet. Until it does, Event Viewer
+; will report a load error for DistStarsVO-BSS-VS; the visuals still run.
+;
+Control Text="2.4 Stars: loading..."
+Scene Remove(DistStarsVO-BSS-VS)
+Scene Remove(RingAlphaCen-BSS-VS)
+Scene Remove(RingBetaCen-BSS-VS)
++0.1
+Scene Add(DistStarsVO-BSS-VS, Media, Volume=100)
+Scene Add(RingAlphaCen-BSS-VS, Slide, Visibility=0)
+Scene Add(RingBetaCen-BSS-VS, Slide, Visibility=0)
++0.1
+Scene DistStarsVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-24-DistStars.mp3"
+Scene RingAlphaCen-BSS-VS.Picture="<ContentPath>\Assets\BSS\VirtualStargazing\VS-Ring-S.png"
+Scene RingAlphaCen-BSS-VS.Slide.Blend=Alpha
+Scene RingAlphaCen-BSS-VS.Slide.TextLock="Height to Width"
+Scene RingAlphaCen-BSS-VS { Frame=Sidereal Azimuth=219.90 Elevation=-60.83 Width=3 }
+Scene RingBetaCen-BSS-VS.Picture="<ContentPath>\Assets\BSS\VirtualStargazing\VS-Ring-S.png"
+Scene RingBetaCen-BSS-VS.Slide.Blend=Alpha
+Scene RingBetaCen-BSS-VS.Slide.TextLock="Height to Width"
+Scene RingBetaCen-BSS-VS { Frame=Sidereal Azimuth=210.96 Elevation=-60.37 Width=3 }
++1
+;
+; ----- @0:00  ring on Alpha Cen (3 s); "Alpha Centauri is our closest neighbour, 40 trillion km, 4.3 light years" -----
+Control Text="1/6 Alpha Centauri"
+Scene DistStarsVO-BSS-VS.Play()
+Scene RingAlphaCen-BSS-VS.Visibility=100 [1:1:1]
++7
+;
+; ----- @0:07  "1 light year = 10 trillion km" -----
+Control Text="2/6 Light year"
++4
+;
+; ----- @0:11  ring on Beta Cen (3 s); "Beta Centauri is 390 light years away, 100x further than Alpha Cen" -----
+Control Text="3/6 Beta Centauri"
+Scene RingBetaCen-BSS-VS.Visibility=100 [1:1:1]
++6
+;
+; ----- @0:17  "It is still bright because it's more massive, 10 solar masses" -----
+Control Text="4/6 Massive"
++5
+;
+; ----- @0:22  rings off (3 s); "All stars range from 4 to a few thousand light years. Removing stars reveals the more distant background" -----
+Control Text="5/6 Star distances"
+Scene RingAlphaCen-BSS-VS.Visibility=0 [1:1:1]
+Scene RingBetaCen-BSS-VS.Visibility=0 [1:1:1]
++8
+;
+; ----- @0:30  stars fade out (6 s); "The Milky Way glow is the combined light of stars up to 30,000 light years" -----
+Control Text="6/6 Milky Way glow"
+Scene Stars.Visibility=0 [2:2:2]
++8
+;
+; ----- @0:38  end of segment: fade out the voiceover, remove everything added (stars stay hidden) -----
+Scene DistStarsVO-BSS-VS.Volume=0 [1:0:1]
++2
+Scene Remove(DistStarsVO-BSS-VS)
+Scene Remove(RingAlphaCen-BSS-VS)
+Scene Remove(RingBetaCen-BSS-VS)
+; 1.2 + 7+4+6+5+8+8+2 = 41.2 s
+Control Text="2.4 Stars"

@@ -1,0 +1,13 @@
+;=== BSS-VS-ForceMoon ===
+; Page: BSS-VirtualStargazing   Button: "Moon: auto"   Length: 0.2 s
+; Operator override for the chapter-2 Moon segment(s). Each press cycles:
+;   auto = play if above 10 degrees (computed from the PC clock)
+;   on   = play if above the horizon at all
+;   off  = never play
+; Setup reloads the sequencer, which resets this to auto: set overrides AFTER Setup.
+; The new mode is always logged in Event Viewer > JavaScript Processor ("BSS-VS-Seq: ...").
+; UNVERIFIED: $VSMoon (a JS variable from DigitalSky.AddVariable) inside Control Text. If the
+; caption shows "$VSMoon" literally, rely on the Event Viewer log or the "Check sky" button.
+JS BSS-VS-Seq.Execute("Cycle('Moon')")
++0.2
+Control Text="Moon: $VSMoon"

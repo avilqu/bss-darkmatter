@@ -1,0 +1,36 @@
+;=== BSS-VS-Dist-Jupiter ===
+; Page: BSS-VirtualStargazing   Button: "2.3 Jupiter"   Length: ~11 s
+; Chapter 2 planet segment (only if Jupiter is up): Jupiter stands out, one short fact.
+; Visuals only, no text on the dome. Run by the chapter-2 sequencer after 23-BSS-VS-Dist-Planets.
+; Starts from: planets enlarged (Sprite.LumAdj=4, set by 23-BSS-VS-Dist-Planets).
+; Ends with:   same state.
+; UNVERIFIED: Sprite.LumAdj, see 23-BSS-VS-Dist-Planets.
+; Suggested fact (to be recorded): "Jupiter is the largest planet: more than 1,300 Earths would fit inside"
+;
+; TIMING: estimated (no recording yet). @m:ss = time since the voiceover starts.
+; When the recording exists, set the waits from its timecodes and update LEN in
+; src/JavaScript/BSS-VS-Sequencer.js.
+; AUDIO PLACEHOLDER: the file below doesn't exist yet. Until it does, Event Viewer
+; will report a load error for DistJupiterVO-BSS-VS; the visuals still run.
+;
+Control Text="2.3 Jupiter: loading..."
+Scene Remove(DistJupiterVO-BSS-VS)
++0.1
+Scene Add(DistJupiterVO-BSS-VS, Media, Volume=100)
++0.1
+Scene DistJupiterVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-234-DistJupiter.mp3"
++1
+;
+; ----- @0:00  Jupiter brightens (3 s); one short fact -----
+Control Text="1/1 Jupiter fact"
+Scene DistJupiterVO-BSS-VS.Play()
+Scene Jupiter.Sprite.LumAdj=8 [1:1:1]
++8
+;
+; ----- @0:08  Jupiter back to the group level, fade out and remove the voiceover -----
+Scene Jupiter.Sprite.LumAdj=4 [1:0:1]
+Scene DistJupiterVO-BSS-VS.Volume=0 [1:0:1]
++2
+Scene Remove(DistJupiterVO-BSS-VS)
+; 1.2 + 8+2 = 11.2 s
+Control Text="2.3 Jupiter"

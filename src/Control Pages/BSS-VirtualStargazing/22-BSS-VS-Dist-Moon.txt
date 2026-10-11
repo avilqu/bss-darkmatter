@@ -1,0 +1,38 @@
+;=== BSS-VS-Dist-Moon ===
+; Page: BSS-VirtualStargazing   Button: "2.2 Moon"   Length: ~18 s
+; Chapter 2 segment 2 (only if the Moon is up): the Moon grows, "closest object", back to normal.
+; Visuals only, no text on the dome. Run by the chapter-2 sequencer, or alone for testing.
+; Starts from: ground, bright sky, real time, Moon at normal scale (2.5, as in BSS-Lib-ResetSoft).
+; Ends with:   same state.
+;
+; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
+; voiceover starts. When the recording exists, set the waits from its timecodes
+; and update LEN in src/JavaScript/BSS-VS-Sequencer.js.
+; AUDIO PLACEHOLDER: the file below doesn't exist yet. Until it does, Event Viewer
+; will report a load error for DistMoonVO-BSS-VS; the visuals still run.
+;
+Control Text="2.2 Moon: loading..."
+Scene Remove(DistMoonVO-BSS-VS)
++0.1
+Scene Add(DistMoonVO-BSS-VS, Media, Volume=100)
++0.1
+Scene DistMoonVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-22-DistMoon.mp3"
++1
+;
+; ----- @0:00  Moon grows (6 s); "Orbiting the Earth, the Moon is our closest celestial object" -----
+Control Text="1/2 Closest object"
+Scene DistMoonVO-BSS-VS.Play()
+Scene Moon { Xscale=8 Yscale=8 Zscale=8 } [2:2:2]
++9
+;
+; ----- @0:09  Moon back to normal (6 s) -----
+Control Text="2/2 Moon back"
+Scene Moon { Xscale=2.5 Yscale=2.5 Zscale=2.5 } [2:2:2]
++6
+;
+; ----- @0:15  end of segment: fade out and remove the voiceover -----
+Scene DistMoonVO-BSS-VS.Volume=0 [1:0:1]
++2
+Scene Remove(DistMoonVO-BSS-VS)
+; 1.2 + 9+6+2 = 18.2 s
+Control Text="2.2 Moon"

@@ -1,0 +1,8 @@
+;=== BSS-VS-CheckSky ===
+; Page: BSS-VirtualStargazing   Button: "Check sky"   Length: 0.1 s
+; Logs what chapter 2 would play right now, without playing it: altitude of the Moon,
+; each naked-eye planet and the galactic core, the override modes, the segment list and
+; the total length. Read it in Event Viewer > JavaScript Processor ("BSS-VS-Seq: ...").
+JS BSS-VS-Seq.FunctionAsync(Report)
++0.1
+Control Text="Check sky"
