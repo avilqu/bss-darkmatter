@@ -1,0 +1,87 @@
+{
+  "site": "Mt Cook",
+  "user": "Theater",
+  "pageName": "BSS-Lib",
+  "pageGuid": "55D75456-F4C9-47D7-BC5E-B417F69F8FD8",
+  "created": "10/11/26 16:49:45",
+  "buttons": {
+    "10-BSS-Lib-SetupGround.txt": {
+      "prefix": "WIDGETBUTTONSMALL_ea8463c5_7a0d_4b85_9fa5_2fa7dac426d4",
+      "kind": "small",
+      "left": 10,
+      "top": 10
+    },
+    "20-BSS-Lib-ResetSoft.txt": {
+      "prefix": "WIDGETBUTTONSMALL_3b485963_542d_49ac_b890_29b6d2d8edb9",
+      "kind": "small",
+      "left": 135,
+      "top": 10
+    },
+    "30-BSS-Lib-FadeOut.txt": {
+      "prefix": "WIDGETBUTTONSMALL_1d6bb63f_bf82_478d_ad33_abf58f3513b1",
+      "kind": "small",
+      "left": 260,
+      "top": 10
+    },
+    "40-BSS-Lib-LoadHelpers.txt": {
+      "prefix": "WIDGETBUTTONSMALL_3e1458b2_96f4_4850_87f2_08be4c171706",
+      "kind": "small",
+      "left": 385,
+      "top": 10
+    },
+    "50-BSS-Lib-SkyDim.txt": {
+      "prefix": "WIDGETBUTTONSMALL_5b534819_e167_4c14_989d_37e5c2ab31e6",
+      "kind": "small",
+      "left": 510,
+      "top": 10
+    },
+    "51-BSS-Lib-SkyBright.txt": {
+      "prefix": "WIDGETBUTTONSMALL_aa5980e2_456d_4ac6_aada_1e2368ba432c",
+      "kind": "small",
+      "left": 635,
+      "top": 10
+    },
+    "60-BSS-Lib-LogoIn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_e2bd10fa_0dac_484b_ba55_647a97374877",
+      "kind": "small",
+      "left": 10,
+      "top": 75
+    },
+    "61-BSS-Lib-LogoOut.txt": {
+      "prefix": "WIDGETBUTTONSMALL_fedadd95_dacc_499f_b1f9_e12c4ce4d7ab",
+      "kind": "small",
+      "left": 135,
+      "top": 75
+    },
+    "70-BSS-Lib-TakeOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_edfa916b_a3c1_4e8f_89df_a69159e0c119",
+      "kind": "small",
+      "left": 260,
+      "top": 75
+    },
+    "71-BSS-Lib-Land.txt": {
+      "prefix": "WIDGETBUTTONSMALL_d75b610c_59e6_466c_8729_21db673b466b",
+      "kind": "small",
+      "left": 385,
+      "top": 75
+    },
+    "72-BSS-Lib-HomePosition.txt": {
+      "prefix": "WIDGETBUTTONSMALL_70f4becd_621c_4b09_85b8_e543b7cdceed",
+      "kind": "small",
+      "left": 510,
+      "top": 75
+    },
+    "80-BSS-Lib-StarTrailsOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_88f1b664_2bf3_4135_8c7d_b7089a611678",
+      "kind": "small",
+      "left": 635,
+      "top": 75
+    },
+    "81-BSS-Lib-StarTrailsOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_4ad9e7f0_85a0_4ce7_9796_e4981f2702e7",
+      "kind": "small",
+      "left": 10,
+      "top": 140
+    }
+  }
+}
