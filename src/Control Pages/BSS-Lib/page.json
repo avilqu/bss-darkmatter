@@ -76,6 +76,48 @@
       "kind": "small",
       "left": 10,
       "top": 140
+    },
+    "55-BSS-Lib-TimeNow.txt": {
+      "prefix": "WIDGETBUTTONSMALL_dab6c993_64b8_4735_86de_ae9d742b5b3a",
+      "kind": "small",
+      "left": 10,
+      "top": 10
+    },
+    "82-BSS-Lib-CardinalOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_2f69c152_541b_4a71_af2d_35de8c57d371",
+      "kind": "small",
+      "left": 135,
+      "top": 140
+    },
+    "83-BSS-Lib-CardinalOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_23f7c523_ca18_40c3_8c8d_7b10a561b7e5",
+      "kind": "small",
+      "left": 260,
+      "top": 140
+    },
+    "84-BSS-Lib-SCPOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_75d4ef75_a989_4ec7_9da9_46d783b7d934",
+      "kind": "small",
+      "left": 385,
+      "top": 140
+    },
+    "85-BSS-Lib-SCPOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_af164595_7d73_456b_a818_5111342ca9b7",
+      "kind": "small",
+      "left": 510,
+      "top": 140
+    },
+    "86-BSS-Lib-AtmosphereOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_35fb4220_d8b1_4296_8d18_e91c4800ab37",
+      "kind": "small",
+      "left": 635,
+      "top": 140
+    },
+    "87-BSS-Lib-AtmosphereOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_95b1a8ba_24ee_49da_aafc_922b7afaccc0",
+      "kind": "small",
+      "left": 10,
+      "top": 205
     }
   }
 }

@@ -17,12 +17,18 @@ Files used by this page. Each must be at the same path on **DS-Master and every 
 | `VS-24-DistStars.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `24-BSS-VS-Dist-Stars` (voiceover, ch. 2 stars) | placeholder, not recorded yet |
 | `VS-25-DistCore.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `25-BSS-VS-Dist-Core` (voiceover, ch. 2 galactic core) | placeholder, not recorded yet |
 | `VS-26-DistMagellan.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `26-BSS-VS-Dist-Magellan` (voiceover, ch. 2 Magellanic Clouds) | placeholder, not recorded yet |
-| `VS-Ring-S.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | ring, stars ~2–4° (`24`) | in repo: `Assets/BSS/VirtualStargazing/` |
+| `VS-30-CelestialNav.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `30-BSS-VS-CelestialNav` (voiceover, ch. 3) | placeholder, not recorded yet |
+| `VS-Ring-S.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | ring, stars ~2–4° (`24`, `30`) | in repo: `Assets/BSS/VirtualStargazing/` |
 | `VS-Ring-M.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | ring, objects ~5–10° (`26` SMC) | in repo: `Assets/BSS/VirtualStargazing/` |
 | `VS-Ring-L.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | ring, objects ~10–25° (`25` core, `26` LMC) | in repo: `Assets/BSS/VirtualStargazing/` |
+| `Lib-Ring-M.png` | `<ContentPath>\Assets\BSS\Lib\` | SCP ring, `BSS-Lib-SCPOn` (called by `30`) | in repo: `Assets/BSS/Lib/` |
 
 Asset Manager assets (not files, must exist for user Theater):
 
 | Asset | Used by |
 |---|---|
 | `Development > hermitageLogo` | `BSS-Lib-LogoIn/Out`, called by Setup and ch. 1 |
+| `Constellations > Crux Stick`, `Crux Art` | `30-BSS-VS-CelestialNav` |
+| `Line and circle > Stick False Crux`, `Stick False Crux1`, `Stick diamond Crux`, `Stick diamond Crux1` | `30-BSS-VS-CelestialNav` (false crosses) |
+| `Line and circle > Line to Pole`, `Line to Pole1` | `30-BSS-VS-CelestialNav` (Crux/Achernar to SCP, unverified) |
+| `Line and circle > Circumpolar Region` | `30-BSS-VS-CelestialNav` |

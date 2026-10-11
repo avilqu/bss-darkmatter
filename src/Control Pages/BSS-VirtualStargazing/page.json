@@ -130,6 +130,12 @@
       "kind": "small",
       "left": 260,
       "top": 205
+    },
+    "30-BSS-VS-CelestialNav.txt": {
+      "prefix": "WIDGETBUTTONSMALL_f37926d0_e13b_493b_af96_7d91c7f28566",
+      "kind": "small",
+      "left": 385,
+      "top": 205
     }
   }
 }
