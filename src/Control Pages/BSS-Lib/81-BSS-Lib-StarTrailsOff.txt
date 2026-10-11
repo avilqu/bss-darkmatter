@@ -1,0 +1,15 @@
+;=== BSS-Lib-StarTrailsOff ===
+; Page: BSS-Lib   Button: "Star trails off"   Length: 3 s
+; Fades out the trails and brings the Milky Way back to the BSS-Lib-SkyBright level (80).
+; Does not stop time: do that in the calling script.
+; Split from Theater/Adrien "Star trails". The original also ran
+; Control ExpSun.Reset() and Control camExpButton.Reset() (buttons on another page):
+; left out here.
+Control Text="Star trails: stopping..."
+Scene Camera.Exposure.Visibility=0 [1:1:1]
+Scene Visible Milky Way.Visibility=80 [1:1:1]
++3
+Scene Camera.Exposure.removeAsset(Stars)
+Scene Camera.Exposure.Clear()
+Scene Camera.Exposure=Off
+Control Text="Star trails off"

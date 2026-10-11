@@ -1,0 +1,12 @@
+;=== BSS-Lib-TakeOff ===
+; Page: BSS-Lib   Button: "Take off"   Length: 10 s
+; From the ground: climb to 10,000 km, tilt to look down at Earth (SS.Elevation 45).
+; Copied from Theater/Adrien "Take off"; added the final wait so the length is known.
+Control Text="Taking off..."
+Scene Camera{Altitude=10000000} [4:3:3]
++1
+Scene Camera.Orient=SouthAndDown [3:3:3]
+Scene Camera.SS.Elevation=45.00 [3:3:3]
+; 1+9 = 10 s
++9
+Control Text="Take off"

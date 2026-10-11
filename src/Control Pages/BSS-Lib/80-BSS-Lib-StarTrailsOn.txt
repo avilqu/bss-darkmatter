@@ -1,0 +1,15 @@
+;=== BSS-Lib-StarTrailsOn ===
+; Page: BSS-Lib   Button: "Star trails on"   Length: 3.5 s
+; Starts star trails (camera exposure on Stars) and hides the Milky Way.
+; Trails only grow while time runs: set e.g. Scene DateTime.Rate=600 [3::] after this.
+; Split from Theater/Adrien "Star trails"; [3] -> [1:1:1]. Stop with BSS-Lib-StarTrailsOff.
+Control Text="Star trails: starting..."
+Scene Camera.Exposure.Visibility=0 [0.5]
++0.5
+Scene Camera.Exposure.Clear()
+Scene Camera.Exposure=On
+Scene Camera.Exposure.addAsset(Stars)
+Scene Visible Milky Way.Visibility=0 [1:1:1]
+Scene Camera.Exposure.Visibility=90 [1:1:1]
++3
+Control Text="Star trails on"

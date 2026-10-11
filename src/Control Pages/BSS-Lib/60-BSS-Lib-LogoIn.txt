@@ -1,0 +1,13 @@
+;=== BSS-Lib-LogoIn ===
+; Page: BSS-Lib   Button: "Logo in"   Length: 2.1 s
+; Fades in the Hermitage logo. Leave it up, then run BSS-Lib-LogoOut.
+; Split from Operator/CONTROLPANEL "Hermitage logo" (same button on several pages); [2] -> [1:0:1].
+; Uses the Asset Manager asset Development > hermitageLogo, not a Scene Add slide:
+; it must exist in the Asset Manager of the workspace user.
+Control Text="Logo: fading in..."
+Assets Development.Load(hermitageLogo)
+Scene hermitageLogo.Visibility=0
++0.1
+Scene hermitageLogo.Visibility=100 [1:0:1]
++2
+Control Text="Logo in"

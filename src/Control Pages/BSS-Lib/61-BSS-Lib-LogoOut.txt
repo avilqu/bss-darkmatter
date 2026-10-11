@@ -1,0 +1,8 @@
+;=== BSS-Lib-LogoOut ===
+; Page: BSS-Lib   Button: "Logo out"   Length: 2 s
+; Fades out and unloads the Hermitage logo shown by BSS-Lib-LogoIn.
+Control Text="Logo: fading out..."
+Scene hermitageLogo.Visibility=0 [1:0:1]
++2
+Assets Development.Unload(hermitageLogo)
+Control Text="Logo out"

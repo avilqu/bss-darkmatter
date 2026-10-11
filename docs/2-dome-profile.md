@@ -23,7 +23,7 @@
 ## Naming conventions
 - Asset prefix / suffix: TODO (e.g. `-BSS`, giving names like `MWSlide-BSS`)
 - Button reference names: TODO (e.g. `BSS-<ShowAcronym>-<ButtonText>`)
-- Site / user / control-page names: TODO (for fully qualified `Control Site.User.Page.Ref.Run()`)
+- Site / user / control-page names: site `Mt Cook`, user `Theater` for all BSS pages (fully qualified: `Control Mt Cook.Theater.<Page>.<Ref>.Run()`)
 - JS engine names: TODO
 
 ## Site and show context

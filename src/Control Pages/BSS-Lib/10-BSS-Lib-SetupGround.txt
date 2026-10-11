@@ -11,8 +11,7 @@ Scene Earth.AnnualReference="Sun"
 Scene Camera { Parent=Earth Orient=SouthAndUp SS.Elevation=90 Latitude=-43.7357 Longitude=170.0962 Altitude=760 }
 ; SS.Elevation=90 suits a concentric dome; lower it (e.g. 30) for a tilted/unidirectional dome.
 ;
-; --- BSS star profile: paste Stars.* values here (e.g. copied from the Webinar 3 page) ---
-; Scene Stars { Lum=... AbsShift=... HaloScale=... }
+; Star profile is not set here: run BSS-Lib-SkyDim or BSS-Lib-SkyBright after this button.
 ;
 +0.5
 Scene Visibility=100 [2]

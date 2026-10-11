@@ -32,7 +32,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("page_dir", type=Path)
     ap.add_argument("--site", help="DM site for a new page.json (default: Mt Cook)")
-    ap.add_argument("--user", help="DM user for a new page.json (default: Operator)")
+    ap.add_argument("--user", help="DM user for a new page.json (default: Theater)")
     ap.add_argument("--columns", type=int, default=6, help="grid width for new buttons (default 6)")
     ap.add_argument("--out", type=Path, default=dm.REPO / "build", help="output folder (default build/)")
     ap.add_argument("--folder", action="store_true", help="also write the native page folder under <out>/Sites/")
@@ -47,7 +47,7 @@ def main():
     if pj is None:
         pj = {
             "site": args.site or "Mt Cook",
-            "user": args.user or "Operator",
+            "user": args.user or "Theater",
             "pageName": page_dir.name,
             "pageGuid": dm.new_page_guid(),
             "created": dm.dm_date(dm.now()),

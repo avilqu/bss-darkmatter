@@ -1,0 +1,74 @@
+;=== BSS-VS-DarkSkies ===
+; Page: BSS-VirtualStargazing   Button: "1 Dark skies"   Length: ~112 s
+; Chapter 1 (introduction): logo off, slow approach from 1000 km, landing at Aoraki,
+; dark adaptation then bright sky. Visuals only, no text on the dome.
+; Starts from: BSS-VS-Setup (1000 km above Aoraki, dim sky, real time, logo up).
+; Ends with:   on the ground at Mount Cook Village, bright sky, real time, logo off.
+; Needs the BSS-Lib page loaded (LogoOut, Land, SkyBright).
+;
+; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
+; voiceover starts. When the recording exists, set the waits from its timecodes.
+; AUDIO PLACEHOLDER: the file below doesn't exist yet. Until it does, Event Viewer
+; will report a load error for DarkSkiesVO-BSS-VS; the visuals still run.
+;
+Control Text="Dark skies: loading..."
+Scene Remove(DarkSkiesVO-BSS-VS)
++0.1
+Scene Add(DarkSkiesVO-BSS-VS, Media, Volume=100)
++0.1
+Scene DarkSkiesVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-10-DarkSkies.mp3"
++1
+;
+; ----- @0:00  "Welcome to the Aoraki Mackenzie Dark Sky Reserve" -----
+Control Text="1/8 Welcome"
+Scene DarkSkiesVO-BSS-VS.Play()
++6
+;
+; ----- @0:06  logo off (2 s), then the approach starts -----
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-LogoOut.Run()
++2
+;
+; ----- @0:08  "NZ is very dark from above compared to the Australian east coast" -----
+Control Text="2/8 NZ vs Australia"
+; very slow approach: 1000 km -> 500 km, @0:08 to @1:10 (62 s)
+Scene Camera { Altitude=500000 } [10:40:12]
++12
+;
+; ----- @0:20  "Light pollution impacts more than our ability to see the sky..." -----
+Control Text="3/8 Light pollution"
++15
+;
+; ----- @0:35  "A set of rules is in place... streetlights... skylights" -----
+Control Text="4/8 Rules"
++20
+;
+; ----- @0:55  "Recognised as a Dark Sky Reserve in 2012" -----
+Control Text="5/8 Reserve 2012"
++8
+;
+; ----- @1:03  "In this show, we'll take advantage of that darkness..." -----
+Control Text="6/8 Southern sky"
++7
+;
+; ----- @1:10  landing at Mount Cook Village (approach has just settled at 500 km) -----
+; BSS-Lib-Land (10.5 s): 500 km -> 500 m, then turns to look up (SouthAndUp, SS.Elevation=90).
+; SS.Elevation=90 to be replaced by the inclined-dome value once tested (see sweet-spot test).
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-Land.Run()
+; 10.5 s landing + 9.5 s on the ground before the next line, @1:10 to @1:30
++20
+;
+; ----- @1:30  "It takes about 15 minutes for eyes to adjust to darkness" -----
+Control Text="7/8 Dark adaptation"
++10
+;
+; ----- @1:40  sky to bright (5 s), "Now your eyes are adjusted, let's start stargazing" -----
+Control Text="8/8 Let's stargaze"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
++8
+;
+; ----- @1:48  end of chapter: fade out and remove the voiceover -----
+Scene DarkSkiesVO-BSS-VS.Volume=0 [1:0:1]
++2
+Scene Remove(DarkSkiesVO-BSS-VS)
+; 1.2 + 6+2+12+15+20+8+7+20+10+8+2 = 111.2 s
+Control Text="1 Dark skies"

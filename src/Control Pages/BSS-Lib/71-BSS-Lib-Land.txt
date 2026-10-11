@@ -1,0 +1,16 @@
+;=== BSS-Lib-Land ===
+; Page: BSS-Lib   Button: "Land"   Length: 10.5 s
+; From space: descend to 500 m on the point of Earth below the camera, end on the ground looking up.
+; Position the camera above the landing site first (e.g. over Aoraki).
+; Copied from Theater/Adrien "Land"; added the final wait so the length is known.
+; Note: BSS-Lib-SetupGround uses Altitude=760 (Mt Cook Village).
+Control Text="Landing..."
+Scene Camera.ConvertInPlace(Earth)
++0.5
+Scene Camera{Altitude=500} [4:3:3]
++1
+Scene Camera.Orient=SouthAndUp [3:3:3]
+Scene Camera.SS.Elevation=90.00 [3:3:3]
+; 0.5+1+9 = 10.5 s
++9
+Control Text="Land"

@@ -1,0 +1,27 @@
+;=== BSS-VS-Setup ===
+; Page: BSS-VirtualStargazing   Button: "Setup"   Length: 7 s
+; Same for every season: dim sky, real date/time running at real speed,
+; camera in space 1000 km straight above Aoraki/Mount Cook Village, Hermitage logo up.
+; Needs the BSS-Lib page loaded in the workspace (calls BSS-Lib-SkyDim and BSS-Lib-LogoIn).
+Control Text="Setting up..."
+Scene Visibility=0 [1:0:1]
++2
+; --- everything below happens while the dome is dark ---
+Scene Earth.RotationModel=Diurnal
+Scene Earth.AnnualReference="Sun"
+; real time, real speed (1 s per s)
+Scene DateTime=Now
+Scene DateTime.Rate=1 [0]
+; 1000 km above Mount Cook Village, same lat/long as BSS-Lib-SetupGround (Altitude in metres).
+; Orient=SouthAndDown looks down at Earth; SS.Elevation=45 as in BSS-Lib-TakeOff.
+Scene Camera { Parent=Earth Orient=SouthAndDown SS.Elevation=45 Latitude=-43.7357 Longitude=170.0962 Altitude=1000000 }
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyDim.Run()
+; SkyDim is 2 s
++2
+; scene and Hermitage logo fade in together (LogoIn is 2.1 s, inside the 3 s fade).
+; The logo stays up: the first show segment removes it with BSS-Lib-LogoOut.
+Scene Visibility=100 [1:1:1]
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-LogoIn.Run()
++3
+; 2+2+3 = 7 s
+Control Text="Setup"

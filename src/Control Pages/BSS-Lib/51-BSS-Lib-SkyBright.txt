@@ -1,0 +1,20 @@
+;=== BSS-Lib-SkyBright ===
+; Page: BSS-Lib   Button: "Sky: bright"   Length: 5 s
+; Bright star profile: dark-adapted eyes. Stars Lum 2, Milky Way 80, Local Group 60.
+; Copied from Theater/Adrien "Sky settings (bright)"; timing [5] -> eased [2:1:2].
+; Same Stars.* values as BSS-Lib-SkyDim except Lum: change both together.
+Control Text="Sky: brightening..."
+Scene Stars.MinPoint=5E-05 [2:1:2]
+Scene Stars.FadePoint=0.00676 [2:1:2]
+Scene Stars.MaxPoint=0.0105 [2:1:2]
+Scene Stars.MinHalo=0.001 [2:1:2]
+Scene Stars.MaxHalo=0.01 [2:1:2]
+Scene Stars.HaloScale=1 [2:1:2]
+Scene Stars.HaloBrightness=0 [2:1:2]
+Scene Stars.AbsShift=-1.9 [2:1:2]
+Scene Stars.RedAbsShift=-0.1 [2:1:2]
+Scene Stars.Lum=2 [2:1:2]
+Scene Visible Milky Way.Visibility=80 [2:1:2]
+Scene LocalGroup.Visibility=60 [2:1:2]
++5
+Control Text="Sky: bright"

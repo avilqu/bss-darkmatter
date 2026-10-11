@@ -35,8 +35,8 @@ The repo mirrors Dark Matter's own folders, so files map 1:1 to the dome PCs.
 - **Filenames:** `src/Control Pages/<Page>/NN-<RefName>.txt` (NN = running order on the page).
 - **Segments are self-contained:** Remove → Add → animate → Remove. They must run correctly on their own or from play-all.
 - Every `Control Pause` is preceded by `Control Text="..."`; each button resets its own caption when done.
-- Cross-page calls to BSS-Lib use the full path `Control SITE.USER.BSS-Lib.<RefName>.Run()`.
-  **Replace `SITE.USER` with your real Site and User names** (Control Page Manager) — it is a deliberate placeholder.
+- Cross-page calls to BSS-Lib use the full path `Control Mt Cook.Theater.BSS-Lib.<RefName>.Run()`
+  (site `Mt Cook`, user `Theater`: all BSS pages live there).
   The BSS-Lib page must be loaded in every workspace that uses it.
 
 ## Deploying a page
@@ -48,7 +48,7 @@ know the page and buttons by those IDs.
 
 1. Write or edit the button `.txt` files. First line `;=== <RefName> ===`, second line has `Button: "<label>"`.
 2. Build: `tools/build-page.py "src/Control Pages/<Page>"` → `build/<Page>.dmz` (not in git; rebuild any time).
-   New pages default to site `Mt Cook`, user `Operator` (`--user Theater` to change on the first build).
+   New pages default to site `Mt Cook`, user `Theater` (`--user` to change on the first build).
    Positions: edit `left`/`top` in `page.json`, or move buttons in DM and pull.
 3. Commit (`src/` + `page.json`), copy the `.dmz` to DS-Master, File > Import.
 4. Copy any media to every PC (see the page's `media.md`).
