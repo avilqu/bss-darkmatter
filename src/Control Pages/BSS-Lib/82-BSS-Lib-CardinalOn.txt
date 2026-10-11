@@ -1,0 +1,9 @@
+;=== BSS-Lib-CardinalOn ===
+; Page: BSS-Lib   Button: "Cardinal on"   Length: 3 s
+; Red cardinal points (N, E, S, W) on the horizon, at 75. Hide with BSS-Lib-CardinalOff.
+; Split from Theater/Adrien "Cardinal points"; [1] -> [1:1:1], added the final wait.
+Control Text="Cardinal: on..."
+Scene Earth.Cardinal.Color=Red
+Scene Earth.Cardinal.Visibility=75 [1:1:1]
++3
+Control Text="Cardinal on"

@@ -1,0 +1,184 @@
+;=== BSS-VS-CelestialNav ===
+; Page: BSS-VirtualStargazing   Button: "3 Celestial nav"   Length: ~95 s
+; Chapter 3 (celestial navigation): star trails, the south celestial pole, finding it with
+; the Southern Cross, the pointers and Achernar, then a 24 h time-lapse with the circumpolar region.
+; Visuals only, no text on the dome (rings are plain circles; the cardinal points are the only letters).
+; Starts from: ground at Mount Cook Village, bright sky, real time (end of chapter 2).
+; Ends with:   same state.
+; Needs the BSS-Lib page loaded (StarTrailsOn/Off, SCPOn/Off, CardinalOn/Off, TimeNow, AtmosphereOff/On).
+;
+; Reused from Theater/Adrien through BSS-Lib: Star trails, Poles (now a ring, BSS-Lib-SCPOn/Off),
+; Cardinal points, Time now, Atmosphere. Still inline (Asset Manager assets, to move to BSS-Lib once
+; exported): Crux stick, Wrong crosses stick, Crux Art (as in All art), Circumpolar Region.
+; Alpha Cen, Beta Cen and Achernar use the show-wide ring (src/Snippets/vs-ring.txt) instead of
+; Adrien's labelled circles (no text on the dome).
+; Asset Manager assets (not created by script), see media.md:
+;   Constellations: Crux Stick, Crux Art
+;   Line and circle: Stick False Crux, Stick False Crux1, Stick diamond Crux, Stick diamond Crux1,
+;                    Line to Pole, Line to Pole1, Circumpolar Region
+; UNVERIFIED: Line to Pole / Line to Pole1 (from Theater/Jack "Lines to Pole", not Adrien's page)
+; are assumed to be the Crux -> SCP and Achernar -> SCP lines. Check them on the dome; if they're
+; something else, delete their lines below.
+; UNVERIFIED: the atmosphere is ON in the bright-sky ground state (BSS-Lib-AtmosphereOn at the end).
+; Adrien's "Atmosphere" button switches it on from off, so check: if it is normally off, drop that call.
+; UNVERIFIED: Frame=Sidereal on a Slide and Width in degrees, see 24-BSS-VS-Dist-Stars.
+;
+; Time: trails run at 900x (15 min per s, ~2.5 h of trails), then the sky sweeps back to Now
+; (as Adrien's "Time now"). The time-lapse moves one sidereal day (23h56m04s, "24 h" in the
+; voiceover) so the stars end where they started; the final jump back to Now then only moves the
+; Moon and planets (Moon ~13 deg), while the overlays fade out.
+;
+; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
+; voiceover starts. When the recording exists, set the waits from its timecodes.
+; AUDIO PLACEHOLDER: the file below doesn't exist yet. Until it does, Event Viewer
+; will report a load error for CelestialNavVO-BSS-VS; the visuals still run.
+;
+Control Text="3 Celestial nav: loading..."
+Scene Remove(CelestialNavVO-BSS-VS)
+Scene Remove(RingAlphaCen-BSS-VS)
+Scene Remove(RingBetaCen-BSS-VS)
+Scene Remove(RingAchernar-BSS-VS)
++0.1
+Scene Add(CelestialNavVO-BSS-VS, Media, Volume=100)
+Scene Add(RingAlphaCen-BSS-VS, Slide, Visibility=0)
+Scene Add(RingBetaCen-BSS-VS, Slide, Visibility=0)
+Scene Add(RingAchernar-BSS-VS, Slide, Visibility=0)
++0.1
+Scene CelestialNavVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-30-CelestialNav.mp3"
+; pointers: same rings as 24-BSS-VS-Dist-Stars
+Scene RingAlphaCen-BSS-VS.Picture="<ContentPath>\Assets\BSS\VirtualStargazing\VS-Ring-S.png"
+Scene RingAlphaCen-BSS-VS.Slide.Blend=Alpha
+Scene RingAlphaCen-BSS-VS.Slide.TextLock="Height to Width"
+Scene RingAlphaCen-BSS-VS { Frame=Sidereal Azimuth=219.90 Elevation=-60.83 Width=3 }
+Scene RingBetaCen-BSS-VS.Picture="<ContentPath>\Assets\BSS\VirtualStargazing\VS-Ring-S.png"
+Scene RingBetaCen-BSS-VS.Slide.Blend=Alpha
+Scene RingBetaCen-BSS-VS.Slide.TextLock="Height to Width"
+Scene RingBetaCen-BSS-VS { Frame=Sidereal Azimuth=210.96 Elevation=-60.37 Width=3 }
+; Achernar: RA 01h37m43s Dec -57.24
+Scene RingAchernar-BSS-VS.Picture="<ContentPath>\Assets\BSS\VirtualStargazing\VS-Ring-S.png"
+Scene RingAchernar-BSS-VS.Slide.Blend=Alpha
+Scene RingAchernar-BSS-VS.Slide.TextLock="Height to Width"
+Scene RingAchernar-BSS-VS { Frame=Sidereal Azimuth=24.43 Elevation=-57.24 Width=3 }
+; Asset Manager assets, loaded hidden (as on Adrien's page, they load at Visibility 0)
+Assets Constellations.Load(Crux Stick)
+Assets Constellations.Load(Crux Art)
+Assets Line and circle.Load(Stick False Crux)
+Assets Line and circle.Load(Stick False Crux1)
+Assets Line and circle.Load(Stick diamond Crux)
+Assets Line and circle.Load(Stick diamond Crux1)
+Assets Line and circle.Load(Line to Pole)
+Assets Line and circle.Load(Line to Pole1)
+Assets Line and circle.Load(Circumpolar Region)
++1
+;
+; ----- @0:00  "Looking at the sky long enough reveals an apparent motion" -----
+Control Text="1/12 Apparent motion"
+Scene CelestialNavVO-BSS-VS.Play()
++6
+;
+; ----- @0:06  star trails on (3.5 s, BSS-Lib-StarTrailsOn), time speeds up to 900x (3 s ramp);
+;              "A star trail is a long-exposure photograph..." -----
+Control Text="2/12 Star trails"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-StarTrailsOn.Run()
+Scene DateTime.Rate=900 [3::]
++8
+;
+; ----- @0:14  time back to real speed (4 s ramp), trails stay; "The only motion this shows is the Earth's spin" -----
+Control Text="3/12 Earth's spin"
+Scene DateTime.Rate=1 [4::]
++8
+;
+; ----- @0:22  SCP ring (4.2 s, BSS-Lib-SCPOn); "The SCP is at the centre of that motion, the point above the South Pole" -----
+Control Text="4/12 SCP"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SCPOn.Run()
++8
+;
+; ----- @0:30  cardinal points on (3 s, BSS-Lib-CardinalOn), trails off (3 s, BSS-Lib-StarTrailsOff); "That point is always above south" -----
+Control Text="5/12 Always south"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-CardinalOn.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-StarTrailsOff.Run()
++4
+;
+; ----- @0:34  sky sweeps back to the real time (9 s, BSS-Lib-TimeNow, around the SCP); "There is nothing visible at that location" -----
+Control Text="6/12 Nothing there"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-TimeNow.Run()
++6
+;
+; ----- @0:40  "In the southern hemisphere, we need to rely on the Southern Cross" -----
+Control Text="7/12 Southern Cross"
++5
+;
+; ----- @0:45  Crux and false crosses sticks (3 s); "Many asterisms look like crosses.
+;              The correct one can be identified thanks to the pointer stars" -----
+Control Text="8/12 False crosses"
+Scene Crux Stick.Visibility=100 [1:1:1]
+Scene Stick False Crux.Visibility=100 [1:1:1]
+Scene Stick False Crux1.Visibility=100 [1:1:1]
+Scene Stick diamond Crux.Visibility=100 [1:1:1]
+Scene Stick diamond Crux1.Visibility=100 [1:1:1]
++10
+;
+; ----- @0:55  pointer rings on, false crosses and Crux stick off (3 s), Crux art on (6 s);
+;              "Extend the long axis until Achernar" -----
+Control Text="9/12 Pointers, long axis"
+Scene RingAlphaCen-BSS-VS.Visibility=100 [1:1:1]
+Scene RingBetaCen-BSS-VS.Visibility=100 [1:1:1]
+Scene Stick False Crux.Visibility=0 [1:1:1]
+Scene Stick False Crux1.Visibility=0 [1:1:1]
+Scene Stick diamond Crux.Visibility=0 [1:1:1]
+Scene Stick diamond Crux1.Visibility=0 [1:1:1]
+Scene Crux Stick.Visibility=0 [1:1:1]
+Scene Crux Art.Visibility=100 [2:2:2]
++7
+;
+; ----- @1:02  Achernar ring (3 s) and lines to the pole (6 s); "The SCP is halfway between the Cross and Achernar" -----
+Control Text="10/12 Halfway"
+Scene RingAchernar-BSS-VS.Visibility=100 [1:1:1]
+Scene Line to Pole.Visibility=100 [2:2:2]
+Scene Line to Pole1.Visibility=100 [2:2:2]
++8
+;
+; ----- @1:10  Crux art and pointer rings off (3 s); "This method works any time of the year or night" -----
+; (SCP ring, Achernar ring, lines and cardinal points stay up through the time-lapse)
+Control Text="11/12 Any time"
+Scene Crux Art.Visibility=0 [1:1:1]
+Scene RingAlphaCen-BSS-VS.Visibility=0 [1:1:1]
+Scene RingBetaCen-BSS-VS.Visibility=0 [1:1:1]
++6
+;
+; ----- @1:16  atmosphere off (3 s, BSS-Lib-AtmosphereOff) and circumpolar region on (3 s), then one sidereal day in 10 s;
+;              "Define circumpolar region" -----
+Control Text="12/12 Circumpolar"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-AtmosphereOff.Run()
+Scene Circumpolar Region.Visibility=10 [1:1:1]
++3
+Scene DateTime+=23h56m4s [2:6:2]
++12
+;
+; ----- @1:31  end of chapter: overlays off (3 s), atmosphere back (3.1 s, BSS-Lib-AtmosphereOn), voiceover fades out -----
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SCPOff.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-CardinalOff.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-AtmosphereOn.Run()
+Scene RingAchernar-BSS-VS.Visibility=0 [1:1:1]
+Scene Line to Pole.Visibility=0 [1:1:1]
+Scene Line to Pole1.Visibility=0 [1:1:1]
+Scene Circumpolar Region.Visibility=0 [1:1:1]
+Scene CelestialNavVO-BSS-VS.Volume=0 [1:1:1]
++3.2
+; back to the real time (stars don't move, see header)
+Scene DateTime=Now
+Scene Remove(CelestialNavVO-BSS-VS)
+Scene Remove(RingAlphaCen-BSS-VS)
+Scene Remove(RingBetaCen-BSS-VS)
+Scene Remove(RingAchernar-BSS-VS)
+Assets Constellations.Unload(Crux Stick)
+Assets Constellations.Unload(Crux Art)
+Assets Line and circle.Unload(Stick False Crux)
+Assets Line and circle.Unload(Stick False Crux1)
+Assets Line and circle.Unload(Stick diamond Crux)
+Assets Line and circle.Unload(Stick diamond Crux1)
+Assets Line and circle.Unload(Line to Pole)
+Assets Line and circle.Unload(Line to Pole1)
+Assets Line and circle.Unload(Circumpolar Region)
+; 1.2 + 6+8+8+8+4+6+5+10+7+8+6+3+12+3.2 = 95.4 s
+Control Text="3 Celestial nav"

@@ -1,0 +1,8 @@
+;=== BSS-Lib-CardinalOff ===
+; Page: BSS-Lib   Button: "Cardinal off"   Length: 3 s
+; Fades out the cardinal points (the colour stays red).
+; Split from Theater/Adrien "Cardinal points"; [1] -> [1:1:1], added the final wait.
+Control Text="Cardinal: off..."
+Scene Earth.Cardinal.Visibility=0 [1:1:1]
++3
+Control Text="Cardinal off"

@@ -1,0 +1,9 @@
+;=== BSS-Lib-TimeNow ===
+; Page: BSS-Lib   Button: "Time now"   Length: 9 s
+; Eased sweep of the sky back (or forward) to the real date/time. Doesn't change the time rate:
+; set Scene DateTime.Rate=1 first if time was running faster.
+; Copied from Theater/Adrien "Time now" (Scene.DateTime -> DateTime, as in BSS-VS-Setup); added the final wait.
+Control Text="Time: back to now..."
+Scene DateTime=Now [2:5:2]
++9
+Control Text="Time now"

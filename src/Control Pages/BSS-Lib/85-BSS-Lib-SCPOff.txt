@@ -1,0 +1,8 @@
+;=== BSS-Lib-SCPOff ===
+; Page: BSS-Lib   Button: "SCP off"   Length: 3 s
+; Fades out and removes the SCP ring added by BSS-Lib-SCPOn. Harmless if it isn't there.
+Control Text="SCP: off..."
+Scene SCPRing-BSS-Lib.Visibility=0 [1:1:1]
++3
+Scene Remove(SCPRing-BSS-Lib)
+Control Text="SCP off"
