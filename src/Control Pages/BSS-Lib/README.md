@@ -10,8 +10,7 @@ Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
 
 | File | Reference name | Button label | Length | Source |
 |---|---|---|---|---|
-| `10-BSS-Lib-SetupGround.txt` | `BSS-Lib-SetupGround` | Ground: Aoraki | ~4 s | new |
-| `20-BSS-Lib-ResetSoft.txt` | `BSS-Lib-ResetSoft` | Soft reset | ~7 s | new |
+| `20-BSS-Lib-ResetSoft.txt` | `BSS-Lib-ResetSoft` | Soft reset | 11.2 s | new |
 | `30-BSS-Lib-FadeOut.txt` | `BSS-Lib-FadeOut` | Fade out | 3 s | new |
 | `40-BSS-Lib-LoadHelpers.txt` | `BSS-Lib-LoadHelpers` | Load BSS-Helpers | ~0.5 s | generated from `src/JavaScript/BSS-Helpers.js` |
 | `50-BSS-Lib-SkyDim.txt` | `BSS-Lib-SkyDim` | Sky: dim | 2 s | Theater/Adrien "Sky settings (dim)" |
@@ -20,7 +19,7 @@ Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
 | `61-BSS-Lib-LogoOut.txt` | `BSS-Lib-LogoOut` | Logo out | 2 s | Operator/CONTROLPANEL "Hermitage logo" (second half) |
 | `70-BSS-Lib-TakeOff.txt` | `BSS-Lib-TakeOff` | Take off | 10 s | Theater/Adrien "Take off" |
 | `71-BSS-Lib-Land.txt` | `BSS-Lib-Land` | Land | 10.5 s | Theater/Adrien "Land" |
-| `72-BSS-Lib-HomePosition.txt` | `BSS-Lib-HomePosition` | Home position | 9 s | Theater/Adrien "Home position" |
+| `72-BSS-Lib-HomePosition.txt` | `BSS-Lib-HomePosition` | Home position | 9.1 s | Theater/Adrien "Home position" (fixed coordinates instead of Here) |
 | `80-BSS-Lib-StarTrailsOn.txt` | `BSS-Lib-StarTrailsOn` | Star trails on | 3.5 s | Theater/Adrien "Star trails" (first half) |
 | `81-BSS-Lib-StarTrailsOff.txt` | `BSS-Lib-StarTrailsOff` | Star trails off | 3 s | Theater/Adrien "Star trails" (second half) |
 

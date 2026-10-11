@@ -3,7 +3,7 @@
 ; From space: descend to 500 m on the point of Earth below the camera, end on the ground looking up.
 ; Position the camera above the landing site first (e.g. over Aoraki).
 ; Copied from Theater/Adrien "Land"; added the final wait so the length is known.
-; Note: BSS-Lib-SetupGround uses Altitude=760 (Mt Cook Village).
+; Note: BSS-Lib-HomePosition uses Altitude=760 (Mt Cook Village).
 Control Text="Landing..."
 Scene Camera.ConvertInPlace(Earth)
 +0.5

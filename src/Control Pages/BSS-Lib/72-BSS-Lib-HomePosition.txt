@@ -1,9 +1,23 @@
 ;=== BSS-Lib-HomePosition ===
-; Page: BSS-Lib   Button: "Home position"   Length: 9 s
-; Flies back to the observer location (Here), on the ground looking up.
-; Copied from Theater/Adrien "Home position"; added the final wait.
+; Page: BSS-Lib   Button: "Home position"   Length: 9.1 s
+; Flies back to the ground at Aoraki/Mount Cook Village, looking up, with normal diurnal
+; Earth rotation. No fade: from the ground it's a no-op, from space an eased descent.
+; Coordinates hardcoded (not $Here) so it doesn't depend on the site's Location asset.
+; Does NOT set date/time or the star profile: shows do that.
+; Copied from Theater/Adrien "Home position" (was FlyTo(Here)); added the final wait.
 Control Text="Flying home..."
-Scene Camera.FlyTo(Here, Orient=SouthAndUp) [2:5:2]
+Scene Earth.RotationModel=Diurnal
+Scene Earth.AnnualReference="Sun"
+; re-parent to Earth without moving, so the move below starts from where we are
+Scene Camera.ConvertInPlace(Earth)
++0.1
+; Mount Cook Village, 760 m (BSS-Lib-Land lands at 500 m)
+; UNVERIFIED: eased transition on Latitude/Longitude (Altitude is used this way in Land).
+; Check by running it from space: the camera should glide, not jump, to the village.
+Scene Camera { Latitude=-43.7357 Longitude=170.0962 Altitude=760 } [2:5:2]
+Scene Camera.Orient=SouthAndUp [2:5:2]
+; SS.Elevation=90 suits a concentric dome; lower it (e.g. 30) for a tilted/unidirectional dome.
 Scene Camera.SS.Elevation=90 [2:5:2]
+; 0.1+9 = 9.1 s
 +9
 Control Text="Home position"

@@ -12,7 +12,7 @@ Scene Earth.AnnualReference="Sun"
 ; real time, real speed (1 s per s)
 Scene DateTime=Now
 Scene DateTime.Rate=1 [0]
-; 1000 km above Mount Cook Village, same lat/long as BSS-Lib-SetupGround (Altitude in metres).
+; 1000 km above Mount Cook Village, same lat/long as BSS-Lib-HomePosition (Altitude in metres).
 ; Orient=SouthAndDown looks down at Earth; SS.Elevation=45 as in BSS-Lib-TakeOff.
 Scene Camera { Parent=Earth Orient=SouthAndDown SS.Elevation=45 Latitude=-43.7357 Longitude=170.0962 Altitude=1000000 }
 Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyDim.Run()

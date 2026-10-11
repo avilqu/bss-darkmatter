@@ -5,12 +5,6 @@
   "pageGuid": "55D75456-F4C9-47D7-BC5E-B417F69F8FD8",
   "created": "10/11/26 16:49:45",
   "buttons": {
-    "10-BSS-Lib-SetupGround.txt": {
-      "prefix": "WIDGETBUTTONSMALL_ea8463c5_7a0d_4b85_9fa5_2fa7dac426d4",
-      "kind": "small",
-      "left": 10,
-      "top": 10
-    },
     "20-BSS-Lib-ResetSoft.txt": {
       "prefix": "WIDGETBUTTONSMALL_3b485963_542d_49ac_b890_29b6d2d8edb9",
       "kind": "small",

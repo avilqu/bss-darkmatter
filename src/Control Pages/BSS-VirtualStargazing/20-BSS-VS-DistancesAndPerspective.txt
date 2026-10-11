@@ -1,0 +1,31 @@
+;=== BSS-VS-DistancesAndPerspective ===
+; Page: BSS-VirtualStargazing   Button: "2 Distances"   Length: TODO
+; Chapter 2 (distances and perspective): TODO.
+; Visuals only, no text on the dome.
+; Starts from: BSS-VS-DarkSkies (ground at Mount Cook Village, bright sky, real time, logo off).
+; Ends with:   TODO
+; Needs the BSS-Lib page loaded.
+;
+; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
+; voiceover starts. When the recording exists, set the waits from its timecodes.
+; AUDIO PLACEHOLDER: the file below doesn't exist yet. Until it does, Event Viewer
+; will report a load error for DistancesVO-BSS-VS; the visuals still run.
+;
+Control Text="Distances: loading..."
+Scene Remove(DistancesVO-BSS-VS)
++0.1
+Scene Add(DistancesVO-BSS-VS, Media, Volume=100)
++0.1
+Scene DistancesVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-20-DistancesAndPerspective.mp3"
++1
+;
+; ----- @0:00  TODO -----
+Control Text="1/? TODO"
+Scene DistancesVO-BSS-VS.Play()
+;
+; ----- @?:??  end of chapter: fade out and remove the voiceover -----
+Scene DistancesVO-BSS-VS.Volume=0 [1:0:1]
++2
+Scene Remove(DistancesVO-BSS-VS)
+; 1.2 + ... + 2 = TODO s
+Control Text="2 Distances"
