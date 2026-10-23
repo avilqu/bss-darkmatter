@@ -1,0 +1,7 @@
+;=== BSS-Lib-EclipticOff ===
+; Page: BSS-Lib   Button: "Ecliptic off"   Length: 3 s
+; Split from Theater/Adrien "Ecliptic" (second half); [1] -> [1:1:1], added the final wait.
+Control Text="Ecliptic: off..."
+Scene Earth.Ecliptic.Visibility=0 [1:1:1]
++3
+Control Text="Ecliptic off"

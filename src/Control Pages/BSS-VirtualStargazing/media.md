@@ -18,6 +18,7 @@ Files used by this page. Each must be at the same path on **DS-Master and every 
 | `VS-25-DistCore.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `25-BSS-VS-Dist-Core` (voiceover, ch. 2 galactic core) | placeholder, not recorded yet |
 | `VS-26-DistMagellan.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `26-BSS-VS-Dist-Magellan` (voiceover, ch. 2 Magellanic Clouds) | placeholder, not recorded yet |
 | `VS-30-CelestialNav.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `30-BSS-VS-CelestialNav` (voiceover, ch. 3) | placeholder, not recorded yet |
+| `VS-40-Constellations.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `40-BSS-VS-Constellations` (voiceover, ch. 4) | placeholder, not recorded yet |
 | `VS-Ring-S.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | ring, stars ~2–4° (`24`, `30`) | in repo: `Assets/BSS/VirtualStargazing/` |
 | `VS-Ring-M.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | ring, objects ~5–10° (`26` SMC) | in repo: `Assets/BSS/VirtualStargazing/` |
 | `VS-Ring-L.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | ring, objects ~10–25° (`25` core, `26` LMC) | in repo: `Assets/BSS/VirtualStargazing/` |
@@ -32,3 +33,4 @@ Asset Manager assets (not files, must exist for user Theater):
 | `Line and circle > Stick False Crux`, `Stick False Crux1`, `Stick diamond Crux`, `Stick diamond Crux1` | `30-BSS-VS-CelestialNav` (false crosses) |
 | `Line and circle > Line to Pole`, `Line to Pole1` | `30-BSS-VS-CelestialNav` (Crux/Achernar to SCP, unverified) |
 | `Line and circle > Circumpolar Region` | `30-BSS-VS-CelestialNav` |
+| `MaoriConstellations > MauisFishHook` | `40-BSS-VS-Constellations` (Te Matau a Maui). TODO: export the folder (DMZ) and convert to Scene Add + file |

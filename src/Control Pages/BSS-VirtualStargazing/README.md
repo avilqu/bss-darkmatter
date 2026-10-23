@@ -26,6 +26,7 @@ Names: references `BSS-VS-<What>`, assets `<Name>-BSS-VS`. Needs the **BSS-Lib**
 | `25-BSS-VS-Dist-Core.txt` | `BSS-VS-Dist-Core` | 2.5 Core | ~17 s | stars hidden → same |
 | `26-BSS-VS-Dist-Magellan.txt` | `BSS-VS-Dist-Magellan` | 2.6 Magellan | ~37 s | stars hidden → bright sky, stars back |
 | `30-BSS-VS-CelestialNav.txt` | `BSS-VS-CelestialNav` | 3 Celestial nav | ~95 s | ground, bright sky, real time → same |
+| `40-BSS-VS-Constellations.txt` | `BSS-VS-Constellations` | 4 Constellations | ~149 s | ground facing south, bright sky, real time → same (cuts to 10 Jul 2026 for Scorpius, back to Now) |
 
 Chapter timings are estimates until the voiceover is recorded (see `media.md`).
 

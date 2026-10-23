@@ -16,11 +16,17 @@ Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
 | `50-BSS-Lib-SkyDim.txt` | `BSS-Lib-SkyDim` | Sky: dim | 2 s | Theater/Adrien "Sky settings (dim)" |
 | `51-BSS-Lib-SkyBright.txt` | `BSS-Lib-SkyBright` | Sky: bright | 5 s | Theater/Adrien "Sky settings (bright)" |
 | `55-BSS-Lib-TimeNow.txt` | `BSS-Lib-TimeNow` | Time now | 9 s | Theater/Adrien "Time now" |
+| `56-BSS-Lib-EquatorOn.txt` | `BSS-Lib-EquatorOn` | Equator on | 3 s | Theater/Jack "Equatorial ON" |
+| `57-BSS-Lib-EquatorOff.txt` | `BSS-Lib-EquatorOff` | Equator off | 3 s | idem |
+| `58-BSS-Lib-EclipticOn.txt` | `BSS-Lib-EclipticOn` | Ecliptic on | 3 s | Theater/Adrien "Ecliptic" (first half) |
+| `59-BSS-Lib-EclipticOff.txt` | `BSS-Lib-EclipticOff` | Ecliptic off | 3 s | Theater/Adrien "Ecliptic" (second half) |
 | `60-BSS-Lib-LogoIn.txt` | `BSS-Lib-LogoIn` | Logo in | 2.1 s | Operator/CONTROLPANEL "Hermitage logo" (first half) |
 | `61-BSS-Lib-LogoOut.txt` | `BSS-Lib-LogoOut` | Logo out | 2 s | Operator/CONTROLPANEL "Hermitage logo" (second half) |
 | `70-BSS-Lib-TakeOff.txt` | `BSS-Lib-TakeOff` | Take off | 10 s | Theater/Adrien "Take off" |
 | `71-BSS-Lib-Land.txt` | `BSS-Lib-Land` | Land | 10.5 s | Theater/Adrien "Land" |
 | `72-BSS-Lib-HomePosition.txt` | `BSS-Lib-HomePosition` | Home position | 9.1 s | Theater/Adrien "Home position" (fixed coordinates instead of Here) |
+| `73-BSS-Lib-FaceNorth.txt` | `BSS-Lib-FaceNorth` | Face north | 11 s | Theater/Adrien "Spin dome" (first half) |
+| `74-BSS-Lib-FaceSouth.txt` | `BSS-Lib-FaceSouth` | Face south | 11 s | Theater/Adrien "Spin dome" (second half) |
 | `80-BSS-Lib-StarTrailsOn.txt` | `BSS-Lib-StarTrailsOn` | Star trails on | 3.5 s | Theater/Adrien "Star trails" (first half) |
 | `81-BSS-Lib-StarTrailsOff.txt` | `BSS-Lib-StarTrailsOff` | Star trails off | 3 s | Theater/Adrien "Star trails" (second half) |
 | `82-BSS-Lib-CardinalOn.txt` | `BSS-Lib-CardinalOn` | Cardinal on | 3 s | Theater/Adrien "Cardinal points" (first half) |
@@ -31,11 +37,25 @@ Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
 | `87-BSS-Lib-AtmosphereOn.txt` | `BSS-Lib-AtmosphereOn` | Atmosphere on | 3.1 s | Theater/Adrien "Atmosphere" (first half) |
 | `88-BSS-Lib-CloudsOn.txt` | `BSS-Lib-CloudsOn` | Clouds on | 3 s | Theater/Adrien "Clouds" (first half) |
 | `89-BSS-Lib-CloudsOff.txt` | `BSS-Lib-CloudsOff` | Clouds off | 3 s | Theater/Adrien "Clouds" (second half) |
+| `90-BSS-Lib-ConstLoad.txt` | `BSS-Lib-ConstLoad` | Const: load | 1.5 s | Theater/Adrien "Load assets" + sticks |
+| `91-BSS-Lib-ConstUnload.txt` | `BSS-Lib-ConstUnload` | Const: unload | 0.5 s | new |
+| `92-BSS-Lib-SticksOn.txt` | `BSS-Lib-SticksOn` | Sticks on | 3 s | Theater/Adrien "All sticks" (first half) |
+| `93-BSS-Lib-SticksOff.txt` | `BSS-Lib-SticksOff` | Sticks off | 3 s | Theater/Adrien "All sticks" (second half) |
+| `94-BSS-Lib-ArtNorthOn.txt` | `BSS-Lib-ArtNorthOn` | Art north on | 3 s | Theater/Adrien "All art", northern group |
+| `95-BSS-Lib-ArtNorthOff.txt` | `BSS-Lib-ArtNorthOff` | Art north off | 3 s | idem |
+| `96-BSS-Lib-ArtZodiacOn.txt` | `BSS-Lib-ArtZodiacOn` | Art zodiac on | 3 s | Theater/Adrien "Zodiac art" |
+| `97-BSS-Lib-ArtZodiacOff.txt` | `BSS-Lib-ArtZodiacOff` | Art zodiac off | 3 s | idem |
+| `98-BSS-Lib-ArtSouthOn.txt` | `BSS-Lib-ArtSouthOn` | Art south on | 3 s | Theater/Adrien "All art", southern group |
+| `99-BSS-Lib-ArtSouthOff.txt` | `BSS-Lib-ArtSouthOff` | Art south off | 3 s | idem |
 
 Live toggles from the dome (with `Control Pause`) are split into On/Off pairs with fixed lengths,
 so they work from a master script as well as by hand.
 
 ## Requirements
+
+- The constellation buttons (92–99) need `BSS-Lib-ConstLoad` first and `BSS-Lib-ConstUnload` after.
+  They use the Sky-Skan **Constellations** folder (`<Name> Stick`, `<Name> Art`). Groups follow Adrien's
+  "All art" order: north 31 (incl. Orion, Monoceros, Ophiuchus), zodiac 12, south 45 (incl. Cetus).
 
 - `BSS-Lib-LogoIn/Out` use the Asset Manager asset **Development > hermitageLogo** (not created
   by script). It must exist for the user whose workspace runs the show.

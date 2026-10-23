@@ -1,0 +1,9 @@
+;=== BSS-Lib-FaceNorth ===
+; Page: BSS-Lib   Button: "Face north"   Length: 11 s
+; On the ground: turns the dome half a turn so its front faces north. Back with BSS-Lib-FaceSouth.
+; Split from Theater/Adrien "Spin dome" (first half); added the final wait.
+; Camera.Yaw is absolute: running it twice does nothing.
+Control Text="Face north..."
+Scene Camera.Yaw=-180 [3:5:3]
++11
+Control Text="Face north"

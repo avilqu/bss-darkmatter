@@ -1,0 +1,8 @@
+;=== BSS-Lib-FaceSouth ===
+; Page: BSS-Lib   Button: "Face south"   Length: 11 s
+; On the ground: turns the dome back to its normal orientation (front faces south).
+; Split from Theater/Adrien "Spin dome" (second half); added the final wait.
+Control Text="Face south..."
+Scene Camera.Yaw=0 [3:5:3]
++11
+Control Text="Face south"

@@ -1,0 +1,9 @@
+;=== BSS-Lib-EquatorOn ===
+; Page: BSS-Lib   Button: "Equator on"   Length: 3 s
+; Celestial equator line (green, at 75). Hide with BSS-Lib-EquatorOff.
+; From the "Equatorial ON" buttons on Theater/Jack and Date Time Location pages; [2] -> [1:1:1].
+Control Text="Equator: on..."
+Scene Earth.Equatorial.Color=Green
+Scene Earth.Equatorial.Visibility=75 [1:1:1]
++3
+Control Text="Equator on"

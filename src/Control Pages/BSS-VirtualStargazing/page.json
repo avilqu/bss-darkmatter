@@ -136,6 +136,12 @@
       "kind": "small",
       "left": 385,
       "top": 205
+    },
+    "40-BSS-VS-Constellations.txt": {
+      "prefix": "WIDGETBUTTONSMALL_1e0f8a84_e2f4_4252_a595_5b46b4c03264",
+      "kind": "small",
+      "left": 510,
+      "top": 205
     }
   }
 }

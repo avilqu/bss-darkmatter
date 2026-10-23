@@ -130,6 +130,102 @@
       "kind": "small",
       "left": 260,
       "top": 205
+    },
+    "56-BSS-Lib-EquatorOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_7e34d02b_6bd1_4f7c_8511_3b4939270336",
+      "kind": "small",
+      "left": 385,
+      "top": 205
+    },
+    "57-BSS-Lib-EquatorOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_a812d88a_496e_49ec_bad3_96ecc5b88872",
+      "kind": "small",
+      "left": 510,
+      "top": 205
+    },
+    "58-BSS-Lib-EclipticOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_52d00387_46cd_4a70_bbd3_496e9142533f",
+      "kind": "small",
+      "left": 635,
+      "top": 205
+    },
+    "59-BSS-Lib-EclipticOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_1a7f0679_d6e8_4215_92f4_8b4de6bc68af",
+      "kind": "small",
+      "left": 10,
+      "top": 270
+    },
+    "73-BSS-Lib-FaceNorth.txt": {
+      "prefix": "WIDGETBUTTONSMALL_cba33520_5098_454e_b34e_c772ec30303c",
+      "kind": "small",
+      "left": 135,
+      "top": 270
+    },
+    "74-BSS-Lib-FaceSouth.txt": {
+      "prefix": "WIDGETBUTTONSMALL_6e69c915_ed27_4ac0_a32a_e88d5ac9717b",
+      "kind": "small",
+      "left": 260,
+      "top": 270
+    },
+    "90-BSS-Lib-ConstLoad.txt": {
+      "prefix": "WIDGETBUTTONSMALL_29a81702_6a1f_45c5_ae07_e50f46b56697",
+      "kind": "small",
+      "left": 385,
+      "top": 270
+    },
+    "91-BSS-Lib-ConstUnload.txt": {
+      "prefix": "WIDGETBUTTONSMALL_052e11c1_fc67_4f3b_a81b_595946fb9752",
+      "kind": "small",
+      "left": 510,
+      "top": 270
+    },
+    "92-BSS-Lib-SticksOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_1b11dec7_ff71_45c1_92ac_b4a1cb12b121",
+      "kind": "small",
+      "left": 635,
+      "top": 270
+    },
+    "93-BSS-Lib-SticksOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_678c7a02_8544_4fef_87bf_6da1268682c0",
+      "kind": "small",
+      "left": 10,
+      "top": 335
+    },
+    "94-BSS-Lib-ArtNorthOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_88bafde9_dbb1_4229_907d_79ae1d130fc7",
+      "kind": "small",
+      "left": 135,
+      "top": 335
+    },
+    "95-BSS-Lib-ArtNorthOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_62c8313b_beb3_4c69_ad33_e6d91611a651",
+      "kind": "small",
+      "left": 260,
+      "top": 335
+    },
+    "96-BSS-Lib-ArtZodiacOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_cac643c7_55f3_4b86_8312_9cfc063bb38c",
+      "kind": "small",
+      "left": 385,
+      "top": 335
+    },
+    "97-BSS-Lib-ArtZodiacOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_d699a446_48ac_4168_92dd_311827bc2945",
+      "kind": "small",
+      "left": 510,
+      "top": 335
+    },
+    "98-BSS-Lib-ArtSouthOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_90143bf2_599f_4371_8859_f4b900a9ac82",
+      "kind": "small",
+      "left": 635,
+      "top": 335
+    },
+    "99-BSS-Lib-ArtSouthOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_a598ba7b_c61b_47bb_bc62_17cbef53f4ca",
+      "kind": "small",
+      "left": 10,
+      "top": 400
     }
   }
 }

@@ -1,0 +1,7 @@
+;=== BSS-Lib-EquatorOff ===
+; Page: BSS-Lib   Button: "Equator off"   Length: 3 s
+; Hides the celestial equator line shown by BSS-Lib-EquatorOn.
+Control Text="Equator: off..."
+Scene Earth.Equatorial.Visibility=0 [1:1:1]
++3
+Control Text="Equator off"

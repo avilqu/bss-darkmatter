@@ -1,0 +1,222 @@
+;=== BSS-VS-Constellations ===
+; Page: BSS-VirtualStargazing   Button: "4 Constellations"   Length: ~149 s
+; Chapter 4 (constellations): all stick figures, then all art; northern (tinted orange, with the
+; celestial equator), southern, then the zodiac and the ecliptic; time-lapse to Scorpius high
+; overhead, Scorpius alone, then Te Matau a Maui. Visuals only, no text on the dome.
+; Starts from: ground at Mount Cook Village, facing south, bright sky, real time (end of chapter 3).
+; Ends with:   same state.
+; Needs the BSS-Lib page loaded (ConstLoad/Unload, SticksOn/Off, ArtNorth/Zodiac/SouthOn/Off,
+; EquatorOn/Off, EclipticOn/Off, FaceNorth/South).
+;
+; Reused from Theater/Adrien through BSS-Lib: All sticks, All art / Load assets, Zodiac art,
+; Ecliptic, Spin dome. Scorpius art/stick and Te Matau a Maui are inline.
+; TODO (repo self-sufficient): Te Matau a Maui is still the custom Asset Manager asset
+; MaoriConstellations > MauisFishHook (as on Adrien's page). Export that folder (DMZ) so it can be
+; converted to a Scene Add + file in Assets/BSS/.
+; UNVERIFIED: Red/Green/Blue on constellation Art assets (the orange tint of the northern art).
+; Check by dragging a property of "Orion Art" from the Asset Manager into a ScriptPad. If Art has
+; no colour, delete the two tint blocks; the northern art then just shows on its own.
+; UNVERIFIED: Scene Visibility fades the whole realtime scene, ground included (skill notes).
+;
+; Time: 10x from the start. Scorpius only passes overhead at night from about April to August,
+; so the Scorpius part cuts (2 s fade out / in) to a fixed winter night, 10 Jul 2026 19:20 NZST
+; (Moon down), then sweeps 3 h to 22:20 NZST when Scorpius culminates (tail ~10 deg from the
+; zenith). The end cuts back to Now the same way: a sweep over months would spin the sky ~90 times.
+;
+; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
+; voiceover starts. When the recording exists, set the waits from its timecodes.
+; AUDIO PLACEHOLDER: the file below doesn't exist yet. Until it does, Event Viewer
+; will report a load error for ConstellationsVO-BSS-VS; the visuals still run.
+;
+Control Text="4 Constellations: loading..."
+Scene Remove(ConstellationsVO-BSS-VS)
++0.1
+Scene Add(ConstellationsVO-BSS-VS, Media, Volume=100)
++0.1
+Scene ConstellationsVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-40-Constellations.mp3"
+; all 88 sticks + art, hidden (1.5 s)
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-ConstLoad.Run()
+Assets MaoriConstellations.Load(MauisFishHook)
++1.6
+Scene MauisFishHook.Visibility=0
+;
+; ----- @0:00  time 10x (2 s ramp), all sticks on (3 s, BSS-Lib-SticksOn);
+;              "Humans like to see familiar figures in the sky, but it takes a lot of imagination...
+;              Pick one constellation, at random, and try to guess what it could be" (+ guessing time) -----
+Control Text="1/10 Sticks: guess"
+Scene ConstellationsVO-BSS-VS.Play()
+Scene DateTime.Rate=10 [2::]
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SticksOn.Run()
++20
+;
+; ----- @0:20  sticks off, all art on (3 s); "Did you guess any of it?" -----
+Control Text="2/10 All art"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SticksOff.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-ArtNorthOn.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-ArtZodiacOn.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-ArtSouthOn.Run()
++8
+;
+; ----- @0:28  face north (11 s), celestial equator on, zodiac and southern art off (3 s),
+;              northern art turns orange (6 s); "The constellations in orange are located further in the
+;              northern half of the sky... Ancient Greece... named mostly after Greek mythology" -----
+Control Text="3/10 Northern"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-FaceNorth.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-EquatorOn.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-ArtZodiacOff.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-ArtSouthOff.Run()
+; UNVERIFIED: Art colour (see header)
+Scene Andromeda Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Aquila Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Auriga Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Boötes Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Camelopardalis Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Canes Venatici Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Canis Minor Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Cassiopeia Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Cepheus Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Coma Berenices Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Corona Borealis Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Cygnus Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Delphinus Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Draco Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Equuleus Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Hercules Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Lacerta Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Leo Minor Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Lynx Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Lyra Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Monoceros Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Ophiuchus Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Orion Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Pegasus Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Perseus Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Sagitta Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Serpens Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Triangulum Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Ursa Major Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Ursa Minor Art { Red=100 Green=55 Blue=15 } [2:2:2]
+Scene Vulpecula Art { Red=100 Green=55 Blue=15 } [2:2:2]
++18
+;
+; ----- @0:46  face south (11 s), northern art off, southern art on (3 s);
+;              "The constellations of the southern sky were named... era of discoveries" -----
+Control Text="4/10 Southern"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-FaceSouth.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-ArtNorthOff.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-ArtSouthOn.Run()
++14
+;
+; ----- @1:00  face north (11 s), equator and southern art off, zodiac art on (3 s);
+;              "Zodiac are the 12 most famous constellations... we only see half of them at a given time" -----
+Control Text="5/10 Zodiac"
+; northern art is hidden now: back to its normal colour
+Scene Andromeda Art { Red=100 Green=100 Blue=100 }
+Scene Aquila Art { Red=100 Green=100 Blue=100 }
+Scene Auriga Art { Red=100 Green=100 Blue=100 }
+Scene Boötes Art { Red=100 Green=100 Blue=100 }
+Scene Camelopardalis Art { Red=100 Green=100 Blue=100 }
+Scene Canes Venatici Art { Red=100 Green=100 Blue=100 }
+Scene Canis Minor Art { Red=100 Green=100 Blue=100 }
+Scene Cassiopeia Art { Red=100 Green=100 Blue=100 }
+Scene Cepheus Art { Red=100 Green=100 Blue=100 }
+Scene Coma Berenices Art { Red=100 Green=100 Blue=100 }
+Scene Corona Borealis Art { Red=100 Green=100 Blue=100 }
+Scene Cygnus Art { Red=100 Green=100 Blue=100 }
+Scene Delphinus Art { Red=100 Green=100 Blue=100 }
+Scene Draco Art { Red=100 Green=100 Blue=100 }
+Scene Equuleus Art { Red=100 Green=100 Blue=100 }
+Scene Hercules Art { Red=100 Green=100 Blue=100 }
+Scene Lacerta Art { Red=100 Green=100 Blue=100 }
+Scene Leo Minor Art { Red=100 Green=100 Blue=100 }
+Scene Lynx Art { Red=100 Green=100 Blue=100 }
+Scene Lyra Art { Red=100 Green=100 Blue=100 }
+Scene Monoceros Art { Red=100 Green=100 Blue=100 }
+Scene Ophiuchus Art { Red=100 Green=100 Blue=100 }
+Scene Orion Art { Red=100 Green=100 Blue=100 }
+Scene Pegasus Art { Red=100 Green=100 Blue=100 }
+Scene Perseus Art { Red=100 Green=100 Blue=100 }
+Scene Sagitta Art { Red=100 Green=100 Blue=100 }
+Scene Serpens Art { Red=100 Green=100 Blue=100 }
+Scene Triangulum Art { Red=100 Green=100 Blue=100 }
+Scene Ursa Major Art { Red=100 Green=100 Blue=100 }
+Scene Ursa Minor Art { Red=100 Green=100 Blue=100 }
+Scene Vulpecula Art { Red=100 Green=100 Blue=100 }
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-FaceNorth.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-EquatorOff.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-ArtSouthOff.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-ArtZodiacOn.Run()
++14
+;
+; ----- @1:14  ecliptic on (3 s, BSS-Lib-EclipticOn); "That belt corresponds to the line of the ecliptic.
+;              This is where the Sun moves throughout the year" -----
+Control Text="6/10 Ecliptic"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-EclipticOn.Run()
++8
+;
+; ----- @1:22  cut to the winter night (2 s out, 0.5 s, 2 s in), then sweep 3 h (10 s);
+;              "One of those constellations isn't like the others: it looks much better" -----
+Control Text="7/10 To Scorpius"
+Scene Visibility=0 [1:0:1]
++2
+Scene DateTime.Rate=1
+Scene DateTime="2026/07/10 07:20:00"
++0.5
+Scene Visibility=100 [1:0:1]
++2
+Scene DateTime+=3h [3:4:3]
++10
+Scene DateTime.Rate=10 [2::]
+;
+; ----- @1:36.5  other zodiac art off, Scorpius stick on (3 s); "Scorpius is very easily identifiable,
+;                and it lies right next to the galactic core. You can easily spot this question mark pattern" -----
+Control Text="8/10 Scorpius"
+Scene Aquarius Art.Visibility=0 [1:1:1]
+Scene Aries Art.Visibility=0 [1:1:1]
+Scene Cancer Art.Visibility=0 [1:1:1]
+Scene Capricornus Art.Visibility=0 [1:1:1]
+Scene Gemini Art.Visibility=0 [1:1:1]
+Scene Leo Art.Visibility=0 [1:1:1]
+Scene Pisces Art.Visibility=0 [1:1:1]
+Scene Libra Art.Visibility=0 [1:1:1]
+Scene Sagittarius Art.Visibility=0 [1:1:1]
+Scene Taurus Art.Visibility=0 [1:1:1]
+Scene Virgo Art.Visibility=0 [1:1:1]
+Scene Scorpius Stick.Visibility=100 [1:1:1]
++12
+;
+; ----- @1:48.5  Scorpius and ecliptic off (3 s); "Every civilization sees different things in the sky.
+;                In the Maori star lore, the tail of Scorpius becomes Te Matau a Maui" -----
+Control Text="9/10 Other cultures"
+Scene Scorpius Art.Visibility=0 [1:1:1]
+Scene Scorpius Stick.Visibility=0 [1:1:1]
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-EclipticOff.Run()
++10
+;
+; ----- @1:58.5  Te Matau a Maui on (6 s), held 10 s -----
+Control Text="10/10 Te Matau a Maui"
+Scene MauisFishHook.Visibility=100 [2:2:2]
++10
+;
+; ----- @2:08.5  face south (11 s), Te Matau a Maui stays up -----
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-FaceSouth.Run()
++11
+;
+; ----- @2:19.5  end of chapter: Te Matau a Maui off, time back to 1x, voiceover fades out (3 s);
+;                cut back to Now (2 s out, 0.5 s, 2 s in) -----
+Scene MauisFishHook.Visibility=0 [1:1:1]
+Scene DateTime.Rate=1 [1:1:1]
+Scene ConstellationsVO-BSS-VS.Volume=0 [1:1:1]
++3
+Scene Visibility=0 [1:0:1]
++2
+Scene DateTime=Now
+Scene Remove(ConstellationsVO-BSS-VS)
+Assets MaoriConstellations.Unload(MauisFishHook)
+; all figures are hidden by now (0.5 s)
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-ConstUnload.Run()
++0.5
+Scene Visibility=100 [1:0:1]
++2
+; 1.8 + 20+8+18+14+14+8+14.5+12+10+10+11+3+4.5 = 148.8 s
+Control Text="4 Constellations"
