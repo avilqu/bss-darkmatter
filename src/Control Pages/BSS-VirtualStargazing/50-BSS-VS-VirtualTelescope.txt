@@ -1,0 +1,125 @@
+;=== BSS-VS-VirtualTelescope ===
+; Page: BSS-VirtualStargazing   Button: "5 Virtual telescope"   Length: ~150 s
+; Chapter 5 (virtual telescope): the life of stars through southern telescope targets. Ring on the
+; Carina Nebula, then its photo and a zoom on a Bok globule; ring on the Jewel Box, its photo, then the
+; Wishing Well next to it (older open cluster); ring on 47 Tucanae, then its photo.
+; Visuals only, no text on the dome (the rings are plain circles).
+; Starts from: ground at Mount Cook Village, bright sky, real time (end of chapter 4).
+; Ends with:   ground facing south, bright sky, real time.
+; Needs the BSS-Lib page loaded (SkyBright, TimeNow, FaceSouth, Carina/JewelBox/WishingWell/47Tuc
+; On/Off, Carina/JewelBox/47Tuc RingOn/Off).
+;
+; Reused from Theater/Adrien through BSS-Lib: NGC3372, NGC4755, NGC3532, NGC104 (photos, still the
+; DeepSkyPhoto Asset Manager assets, see BSS-Lib README), Sky settings (bright), Time now, Spin dome.
+; The opening runs SkyBright/TimeNow/FaceSouth so the chapter also starts cleanly on its own; after
+; chapter 4 they change nothing (all three set absolute values).
+; Adrien's "<NGC> label" buttons (circle + name) are replaced by the BSS-Lib rings (no text on the dome).
+; UNVERIFIED: Scale on the DeepSkyPhoto photos (Adrien uses it on the ngc..._circle assets of the
+; same folder). The zoom adds 3 to Scale (x4 if it starts at 1) and takes it back off once the photo
+; is hidden, before BSS-Lib-CarinaOff unloads it.
+; UNVERIFIED: the zoom grows around the photo centre. To zoom on a given globule (e.g. near the
+; Keyhole, about 10' north-west of the centre), uncomment the Azimuth/Elevation lines in steps 4 and 5
+; and set them to -3 x the globule's offset from the centre, in degrees. Find the photo's properties by
+; dragging ngc3372 from the Asset Manager into a ScriptPad.
+;
+; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
+; voiceover starts. When the recording exists, set the waits from its timecodes.
+; AUDIO PLACEHOLDER: the file below doesn't exist yet. Until it does, Event Viewer
+; will report a load error for VirtualTelescopeVO-BSS-VS; the visuals still run.
+;
+Control Text="5 Virtual telescope: loading..."
+Scene Remove(VirtualTelescopeVO-BSS-VS)
++0.1
+Scene Add(VirtualTelescopeVO-BSS-VS, Media, Volume=100)
++0.1
+Scene VirtualTelescopeVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-50-VirtualTelescope.mp3"
++1
+;
+; ----- @0:00  bright sky (5 s, BSS-Lib-SkyBright), sky back to real time (9 s, BSS-Lib-TimeNow),
+;              face south (11 s, BSS-Lib-FaceSouth);
+;              "The southern sky has many interesting targets for telescopes, let's explore some of them" -----
+Control Text="1/11 Southern targets"
+Scene VirtualTelescopeVO-BSS-VS.Play()
+Scene DateTime.Rate=1
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-TimeNow.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-FaceSouth.Run()
++12
+;
+; ----- @0:12  Carina ring on (4.2 s, BSS-Lib-CarinaRingOn), held ~10 s;
+;              "Starting with a star forming region, where stars are born" -----
+Control Text="2/11 Carina Nebula"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-CarinaRingOn.Run()
++11
+;
+; ----- @0:23  ring off (3 s, BSS-Lib-CarinaRingOff), Carina photo on (7 s, BSS-Lib-CarinaOn);
+;              "Brief explanation of star forming regions" -----
+Control Text="3/11 Star forming region"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-CarinaRingOff.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-CarinaOn.Run()
++20
+;
+; ----- @0:43  zoom on a Bok globule (15 s); "Bok globules: the last stage before a star is born" -----
+Control Text="4/11 Bok globule"
+; UNVERIFIED: Scale and the zoom centre (see header)
+Scene ngc3372.Scale+=3 [3:4:8]
+;Scene ngc3372.Azimuth+=0 [3:4:8]
+;Scene ngc3372.Elevation+=0 [3:4:8]
++20
+;
+; ----- @1:03  Carina photo off (3 s), zoom undone while hidden, then unloaded (3 s, BSS-Lib-CarinaOff);
+;              "The next step in star formation is the open cluster stage" -----
+Control Text="5/11 Open clusters"
+Scene ngc3372.Visibility=0 [1:1:1]
++3
+Scene ngc3372.Scale-=3
+;Scene ngc3372.Azimuth-=0
+;Scene ngc3372.Elevation-=0
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-CarinaOff.Run()
++3
+;
+; ----- @1:09  Jewel Box ring on (4.2 s, BSS-Lib-JewelBoxRingOn), held ~10 s -----
+Control Text="6/11 Jewel Box"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-JewelBoxRingOn.Run()
++11
+;
+; ----- @1:20  ring off (3 s, BSS-Lib-JewelBoxRingOff), Jewel Box photo on (7 s, BSS-Lib-JewelBoxOn);
+;              "Stars in open clusters are only loosely gravitationally bound, so clusters seem to expand over time" -----
+Control Text="7/11 Loosely bound"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-JewelBoxRingOff.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-JewelBoxOn.Run()
++15
+;
+; ----- @1:35  Wishing Well photo on (7 s, BSS-Lib-WishingWellOn), Jewel Box stays up for comparison;
+;              "An example of an older cluster: the Wishing Well" -----
+Control Text="8/11 Wishing Well"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-WishingWellOn.Run()
++12
+;
+; ----- @1:47  Wishing Well and Jewel Box photos off (3 s, BSS-Lib-WishingWellOff, BSS-Lib-JewelBoxOff);
+;              "All of these objects relate to baby or teenage stars. Globular clusters, on the other end,
+;              are very old stars" -----
+Control Text="9/11 Old stars"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-WishingWellOff.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-JewelBoxOff.Run()
++8
+;
+; ----- @1:55  47 Tuc ring on (4.2 s, BSS-Lib-47TucRingOn), held ~10 s -----
+Control Text="10/11 47 Tucanae"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-47TucRingOn.Run()
++11
+;
+; ----- @2:06  ring off (3 s, BSS-Lib-47TucRingOff), 47 Tuc photo on (7 s, BSS-Lib-47TucOn);
+;              "Description of globular clusters" -----
+Control Text="11/11 Globular clusters"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-47TucRingOff.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-47TucOn.Run()
++20
+;
+; ----- @2:26  end of chapter: 47 Tuc photo off (3 s, BSS-Lib-47TucOff), voiceover fades out -----
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-47TucOff.Run()
+Scene VirtualTelescopeVO-BSS-VS.Volume=0 [1:1:1]
++3.2
+Scene Remove(VirtualTelescopeVO-BSS-VS)
+; 1.2 + 12+11+20+20+3+3+11+15+12+8+11+20+3.2 = 150.4 s
+Control Text="5 Virtual telescope"

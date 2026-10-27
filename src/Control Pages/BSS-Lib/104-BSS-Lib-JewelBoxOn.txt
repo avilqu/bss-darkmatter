@@ -1,0 +1,14 @@
+;=== BSS-Lib-JewelBoxOn ===
+; Page: BSS-Lib   Button: "Jewel Box on"   Length: 7 s
+; Loads the photo of the Jewel Box cluster (NGC 4755) and fades it in. Hide with BSS-Lib-JewelBoxOff, which also unloads it.
+; Copied from Theater/Adrien "NGC4755" (first half); load wait 0.1 -> 1 s, fade [1] -> eased [2:2:2].
+; TODO (repo self-sufficient): Asset Manager asset DeepSkyPhoto > ngc4755. Export that folder (DMZ)
+; so it can be converted to a Scene Add + file in Assets/BSS/Lib/.
+Control Text="Jewel Box: on..."
+Assets DeepSkyPhoto.Load(ngc4755)
+Scene ngc4755.Visibility=0
++1
+Scene ngc4755.Visibility=100 [2:2:2]
+; 1+6 = 7 s
++6
+Control Text="Jewel Box on"

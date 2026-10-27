@@ -1,0 +1,14 @@
+;=== BSS-Lib-WishingWellOn ===
+; Page: BSS-Lib   Button: "Wishing Well on"   Length: 7 s
+; Loads the photo of the Wishing Well cluster (NGC 3532) and fades it in. Hide with BSS-Lib-WishingWellOff, which also unloads it.
+; Copied from Theater/Adrien "NGC3532" (first half); load wait 0.1 -> 1 s, fade [1] -> eased [2:2:2].
+; TODO (repo self-sufficient): Asset Manager asset DeepSkyPhoto > ngc3532. Export that folder (DMZ)
+; so it can be converted to a Scene Add + file in Assets/BSS/Lib/.
+Control Text="Wishing Well: on..."
+Assets DeepSkyPhoto.Load(ngc3532)
+Scene ngc3532.Visibility=0
++1
+Scene ngc3532.Visibility=100 [2:2:2]
+; 1+6 = 7 s
++6
+Control Text="Wishing Well on"

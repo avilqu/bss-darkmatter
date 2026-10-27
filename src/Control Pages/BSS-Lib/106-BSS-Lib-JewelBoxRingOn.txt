@@ -1,0 +1,23 @@
+;=== BSS-Lib-JewelBoxRingOn ===
+; Page: BSS-Lib   Button: "Jewel Box ring on"   Length: 4.2 s
+; Plain ring (no text) around the Jewel Box cluster (NGC 4755), fixed to the stars: RA 12h53m39s Dec -60.36,
+; small ring (Lib-Ring-S), 1.5 degrees wide: a 2 degree ring would run through Mimosa, 1 degree away.
+; Hide with BSS-Lib-JewelBoxRingOff, which also removes the ring.
+; Replaces Theater/Adrien "NGC4755 label" (circle + name) with a self-contained ring, same method
+; as src/Snippets/vs-ring.txt.
+; File: Assets/BSS/Lib/Lib-Ring-S.png -> <ContentPath>\Assets\BSS\Lib\ on DS-Master and every renderer.
+; UNVERIFIED: Frame=Sidereal on a Slide, Width in degrees.
+Control Text="Jewel Box ring: on..."
+Scene Remove(JewelBoxRing-BSS-Lib)
++0.1
+Scene Add(JewelBoxRing-BSS-Lib, Slide, Visibility=0)
++0.1
+Scene JewelBoxRing-BSS-Lib.Picture="<ContentPath>\Assets\BSS\Lib\Lib-Ring-S.png"
+Scene JewelBoxRing-BSS-Lib.Slide.Blend=Alpha
+Scene JewelBoxRing-BSS-Lib.Slide.TextLock="Height to Width"
+Scene JewelBoxRing-BSS-Lib { Frame=Sidereal Azimuth=193.41 Elevation=-60.36 Width=1.5 }
++1
+Scene JewelBoxRing-BSS-Lib.Visibility=100 [1:1:1]
+; 0.1+0.1+1+3 = 4.2 s
++3
+Control Text="Jewel Box ring on"

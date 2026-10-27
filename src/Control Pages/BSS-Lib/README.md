@@ -47,6 +47,20 @@ Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
 | `97-BSS-Lib-ArtZodiacOff.txt` | `BSS-Lib-ArtZodiacOff` | Art zodiac off | 3 s | idem |
 | `98-BSS-Lib-ArtSouthOn.txt` | `BSS-Lib-ArtSouthOn` | Art south on | 3 s | Theater/Adrien "All art", southern group |
 | `99-BSS-Lib-ArtSouthOff.txt` | `BSS-Lib-ArtSouthOff` | Art south off | 3 s | idem |
+| `100-BSS-Lib-CarinaOn.txt` | `BSS-Lib-CarinaOn` | Carina on | 7 s | Theater/Adrien "NGC3372" (first half) |
+| `101-BSS-Lib-CarinaOff.txt` | `BSS-Lib-CarinaOff` | Carina off | 3 s | idem (second half) |
+| `102-BSS-Lib-CarinaRingOn.txt` | `BSS-Lib-CarinaRingOn` | Carina ring on | 4.2 s | replaces Theater/Adrien "NGC3372 label" (self-contained ring) |
+| `103-BSS-Lib-CarinaRingOff.txt` | `BSS-Lib-CarinaRingOff` | Carina ring off | 3 s | idem, removes the ring |
+| `104-BSS-Lib-JewelBoxOn.txt` | `BSS-Lib-JewelBoxOn` | Jewel Box on | 7 s | Theater/Adrien "NGC4755" (first half) |
+| `105-BSS-Lib-JewelBoxOff.txt` | `BSS-Lib-JewelBoxOff` | Jewel Box off | 3 s | idem (second half) |
+| `106-BSS-Lib-JewelBoxRingOn.txt` | `BSS-Lib-JewelBoxRingOn` | Jewel Box ring on | 4.2 s | replaces Theater/Adrien "NGC4755 label" (self-contained ring) |
+| `107-BSS-Lib-JewelBoxRingOff.txt` | `BSS-Lib-JewelBoxRingOff` | Jewel Box ring off | 3 s | idem, removes the ring |
+| `108-BSS-Lib-WishingWellOn.txt` | `BSS-Lib-WishingWellOn` | Wishing Well on | 7 s | Theater/Adrien "NGC3532" (first half) |
+| `109-BSS-Lib-WishingWellOff.txt` | `BSS-Lib-WishingWellOff` | Wishing Well off | 3 s | idem (second half) |
+| `110-BSS-Lib-47TucOn.txt` | `BSS-Lib-47TucOn` | 47 Tuc on | 7 s | Theater/Adrien "NGC104" (first half) |
+| `111-BSS-Lib-47TucOff.txt` | `BSS-Lib-47TucOff` | 47 Tuc off | 3 s | idem (second half) |
+| `112-BSS-Lib-47TucRingOn.txt` | `BSS-Lib-47TucRingOn` | 47 Tuc ring on | 4.2 s | replaces Theater/Adrien "NGC104 label" (self-contained ring) |
+| `113-BSS-Lib-47TucRingOff.txt` | `BSS-Lib-47TucRingOff` | 47 Tuc ring off | 3 s | idem, removes the ring |
 
 Live toggles from the dome (with `Control Pause`) are split into On/Off pairs with fixed lengths,
 so they work from a master script as well as by hand.
@@ -59,5 +73,9 @@ so they work from a master script as well as by hand.
 
 - `BSS-Lib-LogoIn/Out` use the Asset Manager asset **Development > hermitageLogo** (not created
   by script). It must exist for the user whose workspace runs the show.
-- `BSS-Lib-SCPOn` uses `Lib-Ring-M.png`: repo `Assets/BSS/Lib/` → `<ContentPath>\Assets\BSS\Lib\`
-  on DS-Master and every renderer.
+- `BSS-Lib-SCPOn` and the deep-sky rings (102–113) use `Lib-Ring-M.png` (SCP, Carina) and `Lib-Ring-S.png`
+  (Jewel Box, 47 Tuc): repo `Assets/BSS/Lib/` → `<ContentPath>\Assets\BSS\Lib\` on DS-Master and every renderer.
+- The deep-sky photos (100–111) use the Asset Manager assets **DeepSkyPhoto > ngc3372, ngc4755, ngc3532,
+  ngc104** (as Adrien's NGC buttons). TODO: export the folder (DMZ) and convert to Scene Add + files.
+  The "On" button loads the photo, the "Off" button unloads it: anything a show changes on the photo
+  (e.g. a zoom with Scale) must be undone before calling "Off".

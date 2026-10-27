@@ -226,6 +226,90 @@
       "kind": "small",
       "left": 10,
       "top": 400
+    },
+    "100-BSS-Lib-CarinaOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_ba1afef2_fffe_4987_950a_3c2c87eff0d1",
+      "kind": "small",
+      "left": 135,
+      "top": 400
+    },
+    "101-BSS-Lib-CarinaOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_1c3f0305_7dee_45e8_add8_8ca20dd99f63",
+      "kind": "small",
+      "left": 260,
+      "top": 400
+    },
+    "102-BSS-Lib-CarinaRingOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_788ac50a_be4f_4c92_8092_f078200df003",
+      "kind": "small",
+      "left": 385,
+      "top": 400
+    },
+    "103-BSS-Lib-CarinaRingOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_a9efc921_1ed9_400d_8ef3_3648f22f6f88",
+      "kind": "small",
+      "left": 510,
+      "top": 400
+    },
+    "104-BSS-Lib-JewelBoxOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_fd21bcce_32c1_4989_93ca_0cba07e723c1",
+      "kind": "small",
+      "left": 635,
+      "top": 400
+    },
+    "105-BSS-Lib-JewelBoxOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_f8ef10d3_b0ab_4eea_9578_eaba9d5481e7",
+      "kind": "small",
+      "left": 10,
+      "top": 465
+    },
+    "106-BSS-Lib-JewelBoxRingOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_2dc5d5a0_87dd_4c26_b454_2d2c8b49eb87",
+      "kind": "small",
+      "left": 135,
+      "top": 465
+    },
+    "107-BSS-Lib-JewelBoxRingOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_c2d792f3_f223_4890_a61d_61b024a282fb",
+      "kind": "small",
+      "left": 260,
+      "top": 465
+    },
+    "108-BSS-Lib-WishingWellOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_e763b82d_a57e_43c5_becd_203291e5da32",
+      "kind": "small",
+      "left": 385,
+      "top": 465
+    },
+    "109-BSS-Lib-WishingWellOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_70ba3ba6_c09b_4860_ac83_b0bcd5180fd1",
+      "kind": "small",
+      "left": 510,
+      "top": 465
+    },
+    "110-BSS-Lib-47TucOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_e992b28f_88b9_42d7_9450_c97ffc894091",
+      "kind": "small",
+      "left": 635,
+      "top": 465
+    },
+    "111-BSS-Lib-47TucOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_8ef8acd9_c78f_4ccf_ba51_908789620693",
+      "kind": "small",
+      "left": 10,
+      "top": 530
+    },
+    "112-BSS-Lib-47TucRingOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_f4bc3a5d_ce0d_44f0_a739_8d1c7fe262a0",
+      "kind": "small",
+      "left": 135,
+      "top": 530
+    },
+    "113-BSS-Lib-47TucRingOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_e7e8ea91_ea7c_42ac_9104_c38e04cebc3e",
+      "kind": "small",
+      "left": 260,
+      "top": 530
     }
   }
 }

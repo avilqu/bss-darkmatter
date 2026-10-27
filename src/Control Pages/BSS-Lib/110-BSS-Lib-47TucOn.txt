@@ -1,0 +1,14 @@
+;=== BSS-Lib-47TucOn ===
+; Page: BSS-Lib   Button: "47 Tuc on"   Length: 7 s
+; Loads the photo of the globular cluster 47 Tucanae (NGC 104) and fades it in. Hide with BSS-Lib-47TucOff, which also unloads it.
+; Copied from Theater/Adrien "NGC104" (first half); load wait 0.1 -> 1 s, fade [1] -> eased [2:2:2].
+; TODO (repo self-sufficient): Asset Manager asset DeepSkyPhoto > ngc104. Export that folder (DMZ)
+; so it can be converted to a Scene Add + file in Assets/BSS/Lib/.
+Control Text="47 Tuc: on..."
+Assets DeepSkyPhoto.Load(ngc104)
+Scene ngc104.Visibility=0
++1
+Scene ngc104.Visibility=100 [2:2:2]
+; 1+6 = 7 s
++6
+Control Text="47 Tuc on"

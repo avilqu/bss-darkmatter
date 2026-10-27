@@ -1,0 +1,9 @@
+;=== BSS-Lib-47TucOff ===
+; Page: BSS-Lib   Button: "47 Tuc off"   Length: 3 s
+; Fades out and unloads the globular cluster 47 Tucanae (NGC 104) photo loaded by BSS-Lib-47TucOn.
+; Copied from Theater/Adrien "NGC104" (second half); fade [1] -> eased [1:1:1].
+Control Text="47 Tuc: off..."
+Scene ngc104.Visibility=0 [1:1:1]
++3
+Assets DeepSkyPhoto.Unload(ngc104)
+Control Text="47 Tuc off"

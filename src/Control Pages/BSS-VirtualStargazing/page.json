@@ -142,6 +142,12 @@
       "kind": "small",
       "left": 510,
       "top": 205
+    },
+    "50-BSS-VS-VirtualTelescope.txt": {
+      "prefix": "WIDGETBUTTONSMALL_d7ffd97c_d47d_4071_99c2_b1f37e2d4fde",
+      "kind": "small",
+      "left": 635,
+      "top": 205
     }
   }
 }

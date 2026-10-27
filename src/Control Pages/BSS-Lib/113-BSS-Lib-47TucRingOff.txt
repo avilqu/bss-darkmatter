@@ -1,0 +1,8 @@
+;=== BSS-Lib-47TucRingOff ===
+; Page: BSS-Lib   Button: "47 Tuc ring off"   Length: 3 s
+; Fades out and removes the ring added by BSS-Lib-47TucRingOn. Harmless if it isn't there.
+Control Text="47 Tuc ring: off..."
+Scene 47TucRing-BSS-Lib.Visibility=0 [1:1:1]
++3
+Scene Remove(47TucRing-BSS-Lib)
+Control Text="47 Tuc ring off"

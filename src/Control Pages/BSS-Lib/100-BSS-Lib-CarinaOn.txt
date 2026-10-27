@@ -1,0 +1,14 @@
+;=== BSS-Lib-CarinaOn ===
+; Page: BSS-Lib   Button: "Carina on"   Length: 7 s
+; Loads the photo of the Carina Nebula (NGC 3372) and fades it in. Hide with BSS-Lib-CarinaOff, which also unloads it.
+; Copied from Theater/Adrien "NGC3372" (first half); load wait 0.1 -> 1 s, fade [1] -> eased [2:2:2].
+; TODO (repo self-sufficient): Asset Manager asset DeepSkyPhoto > ngc3372. Export that folder (DMZ)
+; so it can be converted to a Scene Add + file in Assets/BSS/Lib/.
+Control Text="Carina: on..."
+Assets DeepSkyPhoto.Load(ngc3372)
+Scene ngc3372.Visibility=0
++1
+Scene ngc3372.Visibility=100 [2:2:2]
+; 1+6 = 7 s
++6
+Control Text="Carina on"

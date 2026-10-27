@@ -19,10 +19,12 @@ Files used by this page. Each must be at the same path on **DS-Master and every 
 | `VS-26-DistMagellan.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `26-BSS-VS-Dist-Magellan` (voiceover, ch. 2 Magellanic Clouds) | placeholder, not recorded yet |
 | `VS-30-CelestialNav.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `30-BSS-VS-CelestialNav` (voiceover, ch. 3) | placeholder, not recorded yet |
 | `VS-40-Constellations.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `40-BSS-VS-Constellations` (voiceover, ch. 4) | placeholder, not recorded yet |
+| `VS-50-VirtualTelescope.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `50-BSS-VS-VirtualTelescope` (voiceover, ch. 5) | placeholder, not recorded yet |
 | `VS-Ring-S.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | ring, stars ~2–4° (`24`, `30`) | in repo: `Assets/BSS/VirtualStargazing/` |
 | `VS-Ring-M.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | ring, objects ~5–10° (`26` SMC) | in repo: `Assets/BSS/VirtualStargazing/` |
 | `VS-Ring-L.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | ring, objects ~10–25° (`25` core, `26` LMC) | in repo: `Assets/BSS/VirtualStargazing/` |
-| `Lib-Ring-M.png` | `<ContentPath>\Assets\BSS\Lib\` | SCP ring, `BSS-Lib-SCPOn` (called by `30`) | in repo: `Assets/BSS/Lib/` |
+| `Lib-Ring-M.png` | `<ContentPath>\Assets\BSS\Lib\` | SCP ring, `BSS-Lib-SCPOn` (called by `30`); Carina ring, `BSS-Lib-CarinaRingOn` (called by `50`) | in repo: `Assets/BSS/Lib/` |
+| `Lib-Ring-S.png` | `<ContentPath>\Assets\BSS\Lib\` | Jewel Box and 47 Tuc rings, `BSS-Lib-JewelBoxRingOn`, `BSS-Lib-47TucRingOn` (called by `50`) | in repo: `Assets/BSS/Lib/` |
 
 Asset Manager assets (not files, must exist for user Theater):
 
@@ -34,3 +36,4 @@ Asset Manager assets (not files, must exist for user Theater):
 | `Line and circle > Line to Pole`, `Line to Pole1` | `30-BSS-VS-CelestialNav` (Crux/Achernar to SCP, unverified) |
 | `Line and circle > Circumpolar Region` | `30-BSS-VS-CelestialNav` |
 | `MaoriConstellations > MauisFishHook` | `40-BSS-VS-Constellations` (Te Matau a Maui). TODO: export the folder (DMZ) and convert to Scene Add + file |
+| `DeepSkyPhoto > ngc3372`, `ngc4755`, `ngc3532`, `ngc104` | `BSS-Lib-CarinaOn`, `-JewelBoxOn`, `-WishingWellOn`, `-47TucOn` (called by `50`). TODO: export the folder (DMZ) and convert to Scene Add + files |

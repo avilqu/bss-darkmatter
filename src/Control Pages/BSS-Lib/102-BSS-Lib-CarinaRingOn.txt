@@ -1,0 +1,23 @@
+;=== BSS-Lib-CarinaRingOn ===
+; Page: BSS-Lib   Button: "Carina ring on"   Length: 4.2 s
+; Plain ring (no text) around the Carina Nebula (NGC 3372), fixed to the stars: RA 10h45m08s Dec -59.87,
+; medium ring (Lib-Ring-M), 5 degrees wide.
+; Hide with BSS-Lib-CarinaRingOff, which also removes the ring.
+; Replaces Theater/Adrien "NGC3372 label" (circle + name) with a self-contained ring, same method
+; as src/Snippets/vs-ring.txt.
+; File: Assets/BSS/Lib/Lib-Ring-M.png -> <ContentPath>\Assets\BSS\Lib\ on DS-Master and every renderer.
+; UNVERIFIED: Frame=Sidereal on a Slide, Width in degrees.
+Control Text="Carina ring: on..."
+Scene Remove(CarinaRing-BSS-Lib)
++0.1
+Scene Add(CarinaRing-BSS-Lib, Slide, Visibility=0)
++0.1
+Scene CarinaRing-BSS-Lib.Picture="<ContentPath>\Assets\BSS\Lib\Lib-Ring-M.png"
+Scene CarinaRing-BSS-Lib.Slide.Blend=Alpha
+Scene CarinaRing-BSS-Lib.Slide.TextLock="Height to Width"
+Scene CarinaRing-BSS-Lib { Frame=Sidereal Azimuth=161.29 Elevation=-59.87 Width=5 }
++1
+Scene CarinaRing-BSS-Lib.Visibility=100 [1:1:1]
+; 0.1+0.1+1+3 = 4.2 s
++3
+Control Text="Carina ring on"
