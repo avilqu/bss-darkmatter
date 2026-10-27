@@ -148,6 +148,12 @@
       "kind": "small",
       "left": 635,
       "top": 205
+    },
+    "60-BSS-VS-SouthernLights.txt": {
+      "prefix": "WIDGETBUTTONSMALL_c129ea8c_a77d_4e57_978c_acf44e09532e",
+      "kind": "small",
+      "left": 10,
+      "top": 270
     }
   }
 }

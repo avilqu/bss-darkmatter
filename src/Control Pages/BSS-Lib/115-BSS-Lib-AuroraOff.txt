@@ -1,0 +1,14 @@
+;=== BSS-Lib-AuroraOff ===
+; Page: BSS-Lib   Button: "Aurora off"   Length: 3 s
+; Stops the BSS-Lib-AuroraOn animation if it is still running, fades out and unloads the aurorae.
+; Copied from Theater/Adrien "Aurora" (second half); fade [3] -> eased [1:1:1].
+Control Text="Aurora: off..."
+; so the rest of AuroraOn doesn't set properties on unloaded assets
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-AuroraOn.Abort()
+Scene southernLights1.Visibility=0 [1:1:1]
+Scene southernLights2.Visibility=0 [1:1:1]
+Scene northernLights1.Visibility=0 [1:1:1]
+Scene northernLights2.Visibility=0 [1:1:1]
++3
+Assets Aoraki.Unload(southernLights1, southernLights2, northernLights1, northernLights2)
+Control Text="Aurora off"

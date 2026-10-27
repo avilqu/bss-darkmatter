@@ -1,0 +1,62 @@
+;=== BSS-Lib-AuroraOn ===
+; Page: BSS-Lib   Button: "Aurora on"   Length: 7.5 s (then animates 60 s in the background)
+; Loads the four 3D aurora ovals (two around each pole, attached to Earth: visible from the ground and
+; from space) and fades them in. The button keeps running for 60 s after the fade-in, slowly varying
+; Activity and ColorShift, then holds. Hide with BSS-Lib-AuroraOff, which stops it and unloads them.
+; Copied from Theater/Adrien "Aurora" (first half); load wait kept, fade [3] -> eased [2:2:2],
+; [10] -> [3:4:3], [30] -> [5:20:5].
+; TODO (repo self-sufficient): Asset Manager assets Aoraki > southernLights1, southernLights2,
+; northernLights1, northernLights2. Export that folder (DMZ) so they can be converted to
+; Scene Add(..., Aurora, ...) (Parent=Earth, Unit=Megameter, EarthMagneticNorthPole.ctr, south Zscale=-1).
+Control Text="Aurora: on..."
+Assets Aoraki.Load(southernLights1, southernLights2, northernLights1, northernLights2)
++1
+; as Adrien: Altitude set at once, start hidden and calm
+Scene southernLights1 { Altitude=0 Visibility=0 Activity=0.9 ColorShift=1 }
+Scene southernLights2 { Altitude=0 Visibility=0 Activity=0.9 ColorShift=1 }
+Scene northernLights1 { Altitude=0 Visibility=0 Activity=0.9 ColorShift=1 }
+Scene northernLights2 { Altitude=0 Visibility=0 Activity=0.9 ColorShift=1 }
++0.5
+Scene southernLights1.Visibility=100 [2:2:2]
+Scene southernLights2.Visibility=100 [2:2:2]
+Scene northernLights1.Visibility=100 [2:2:2]
+Scene northernLights2.Visibility=100 [2:2:2]
+Scene southernLights1.Activity=1.1 [5:20:5]
+Scene southernLights2.Activity=1.1 [5:20:5]
+Scene northernLights1.Activity=1.1 [5:20:5]
+Scene northernLights2.Activity=1.1 [5:20:5]
+Scene southernLights1.ColorShift=0.8 [3:4:3]
+Scene southernLights2.ColorShift=0.8 [3:4:3]
+Scene northernLights1.ColorShift=0.8 [3:4:3]
+Scene northernLights2.ColorShift=0.8 [3:4:3]
++6
+; 1+0.5+6 = 7.5 s: fully visible
+Control Text="Aurora on (animating)"
++4
+Scene southernLights1.ColorShift=1 [3:4:3]
+Scene southernLights2.ColorShift=1 [3:4:3]
+Scene northernLights1.ColorShift=1 [3:4:3]
+Scene northernLights2.ColorShift=1 [3:4:3]
++10
+Scene southernLights1.ColorShift=0.8 [3:4:3]
+Scene southernLights2.ColorShift=0.8 [3:4:3]
+Scene northernLights1.ColorShift=0.8 [3:4:3]
+Scene northernLights2.ColorShift=0.8 [3:4:3]
++10
+Scene southernLights1.Activity=0.9 [5:20:5]
+Scene southernLights2.Activity=0.9 [5:20:5]
+Scene northernLights1.Activity=0.9 [5:20:5]
+Scene northernLights2.Activity=0.9 [5:20:5]
++10
+Scene southernLights1.ColorShift=1 [3:4:3]
+Scene southernLights2.ColorShift=1 [3:4:3]
+Scene northernLights1.ColorShift=1 [3:4:3]
+Scene northernLights2.ColorShift=1 [3:4:3]
++10
+Scene southernLights1.ColorShift=0.8 [3:4:3]
+Scene southernLights2.ColorShift=0.8 [3:4:3]
+Scene northernLights1.ColorShift=0.8 [3:4:3]
+Scene northernLights2.ColorShift=0.8 [3:4:3]
++10
+; 1.5 + 6+4+10+10+10+10+10 = 61.5 s
+Control Text="Aurora on"

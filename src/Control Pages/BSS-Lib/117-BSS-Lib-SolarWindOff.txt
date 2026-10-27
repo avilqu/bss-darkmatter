@@ -1,0 +1,10 @@
+;=== BSS-Lib-SolarWindOff ===
+; Page: BSS-Lib   Button: "Solar wind off"   Length: 3 s
+; Fades out and unloads the solar wind loaded by BSS-Lib-SolarWindOn.
+; Copied from Theater/Adrien "Stellar wind" (second half); fade [3] -> eased [1:1:1].
+Control Text="Solar wind: off..."
+Scene stellarWindPart.Visibility=0 [1:1:1]
++3
+Assets Aoraki.Unload(stellarWindPart)
+Assets Aoraki.Unload(sunSpawn)
+Control Text="Solar wind off"

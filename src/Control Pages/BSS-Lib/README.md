@@ -61,6 +61,12 @@ Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
 | `111-BSS-Lib-47TucOff.txt` | `BSS-Lib-47TucOff` | 47 Tuc off | 3 s | idem (second half) |
 | `112-BSS-Lib-47TucRingOn.txt` | `BSS-Lib-47TucRingOn` | 47 Tuc ring on | 4.2 s | replaces Theater/Adrien "NGC104 label" (self-contained ring) |
 | `113-BSS-Lib-47TucRingOff.txt` | `BSS-Lib-47TucRingOff` | 47 Tuc ring off | 3 s | idem, removes the ring |
+| `114-BSS-Lib-AuroraOn.txt` | `BSS-Lib-AuroraOn` | Aurora on | 7.5 s (animates 60 s more) | Theater/Adrien "Aurora" (first half) |
+| `115-BSS-Lib-AuroraOff.txt` | `BSS-Lib-AuroraOff` | Aurora off | 3 s | idem (second half), aborts AuroraOn |
+| `116-BSS-Lib-SolarWindOn.txt` | `BSS-Lib-SolarWindOn` | Solar wind on | 4 s | Theater/Adrien "Stellar wind" (first half) |
+| `117-BSS-Lib-SolarWindOff.txt` | `BSS-Lib-SolarWindOff` | Solar wind off | 3 s | idem (second half) |
+| `118-BSS-Lib-MagFieldOn.txt` | `BSS-Lib-MagFieldOn` | Mag field on | 4.5 s | Theater/Adrien "Magnetic field" (first half) |
+| `119-BSS-Lib-MagFieldOff.txt` | `BSS-Lib-MagFieldOff` | Mag field off | 3 s | idem (second half) |
 
 Live toggles from the dome (with `Control Pause`) are split into On/Off pairs with fixed lengths,
 so they work from a master script as well as by hand.
@@ -79,3 +85,8 @@ so they work from a master script as well as by hand.
   ngc104** (as Adrien's NGC buttons). TODO: export the folder (DMZ) and convert to Scene Add + files.
   The "On" button loads the photo, the "Off" button unloads it: anything a show changes on the photo
   (e.g. a zoom with Scale) must be undone before calling "Off".
+- The aurora, solar wind and magnetic field buttons (114–119) use the Asset Manager folder **Aoraki**
+  (`southernLights1/2`, `northernLights1/2`, `sunSpawn`, `stellarWindPart`, `magFieldCentreA/B/C`,
+  `magFieldRingA1…C2`), as Adrien's buttons. TODO: export the folder (DMZ) and convert to Scene Add + files.
+  `BSS-Lib-AuroraOn` keeps running 60 s after its fade-in (slow Activity/ColorShift changes);
+  `BSS-Lib-AuroraOff` aborts it first.

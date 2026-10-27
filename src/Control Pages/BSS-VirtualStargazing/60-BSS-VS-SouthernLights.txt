@@ -1,0 +1,91 @@
+;=== BSS-VS-SouthernLights ===
+; Page: BSS-VirtualStargazing   Button: "6 Southern lights"   Length: ~84 s
+; Chapter 6 (southern lights): animated aurora from the ground, take off, orbit to the North Pole to
+; show its aurora too, then the solar wind with a slow zoom out and orbit, and Earth's magnetic field.
+; Visuals only, no text on the dome.
+; Starts from: ground facing south, bright sky, real time (end of chapter 5).
+; Ends with:   in space, ~22,000 km above 70 deg N, camera still, real time, aurora off.
+;              The next chapter must bring the camera home (BSS-Lib-Land or BSS-Lib-HomePosition).
+; Needs the BSS-Lib page loaded (SkyBright, TimeNow, FaceSouth, TakeOff, AuroraOn/Off,
+; SolarWindOn/Off, MagFieldOn/Off).
+;
+; Reused from Theater/Adrien through BSS-Lib: Aurora, Stellar wind, Magnetic field (Asset Manager
+; folder Aoraki, see BSS-Lib README), Take off, Sky settings (bright), Time now, Spin dome.
+; The opening runs SkyBright/TimeNow/FaceSouth so the chapter also starts cleanly on its own; after
+; chapter 5 they change nothing (all three set absolute values).
+; BSS-Lib-AuroraOn keeps animating the aurorae for 60 s in the background (done by @1:02).
+; UNVERIFIED: the southern aurora is visible from Mount Cook Village, low in the south, with
+; Adrien's settings (Activity up to 1.1). If it isn't, it first shows during the take-off.
+; UNVERIFIED: where Adrien's solar wind emitter (sunSpawn) sits and which way the stream flows.
+; Check that it crosses the view from the polar orbit; if not, change the target Latitude in step 3.
+; UNVERIFIED: Altitude.Rate in m/s and Longitude.Rate in deg/s, stopped by easing the rate back to 0
+; (as DateTime.Rate in chapter 3).
+;
+; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
+; voiceover starts. When the recording exists, set the waits from its timecodes.
+; AUDIO PLACEHOLDER: the file below doesn't exist yet. Until it does, Event Viewer
+; will report a load error for SouthernLightsVO-BSS-VS; the visuals still run.
+;
+Control Text="6 Southern lights: loading..."
+Scene Remove(SouthernLightsVO-BSS-VS)
++0.1
+Scene Add(SouthernLightsVO-BSS-VS, Media, Volume=100)
++0.1
+Scene SouthernLightsVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-60-SouthernLights.mp3"
++1
+;
+; ----- @0:00  bright sky (5 s, BSS-Lib-SkyBright), real time (9 s, BSS-Lib-TimeNow), face south
+;              (11 s, BSS-Lib-FaceSouth), aurora on (7.5 s, BSS-Lib-AuroraOn, then animates);
+;              "Aurorae are another feature of the sky that we see sometimes in the South" -----
+Control Text="1/6 Aurora"
+Scene SouthernLightsVO-BSS-VS.Play()
+Scene DateTime.Rate=1
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-TimeNow.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-FaceSouth.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-AuroraOn.Run()
++16
+;
+; ----- @0:16  take off to 10,000 km (10 s, BSS-Lib-TakeOff);
+;              "Aurorae take place at the North Pole and the South Pole simultaneously" -----
+Control Text="2/6 Both poles"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-TakeOff.Run()
++14
+;
+; ----- @0:30  orbit north over the Pacific to 70 deg N, same altitude (17 s); "Aurorae are due to solar wind" -----
+Control Text="3/6 North Pole"
+Scene Camera { Latitude=70 } [3:10:4]
++18
+;
+; ----- @0:48  solar wind on (4 s, BSS-Lib-SolarWindOn), slow zoom out (400 km/s) and orbit
+;              (1.5 deg/s of longitude), both eased in over 4 s and kept until the end;
+;              "Solar wind is something we want to be protected from" -----
+Control Text="4/6 Solar wind"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SolarWindOn.Run()
+; UNVERIFIED: rate units (see header)
+Scene Camera.Altitude.Rate=400000 [4::]
+Scene Camera.Longitude.Rate=1.5 [4::]
++12
+;
+; ----- @1:00  magnetic field on (4.5 s, BSS-Lib-MagFieldOn);
+;              "Thankfully Earth has a built-in protective mechanism" -----
+Control Text="5/6 Magnetic field"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-MagFieldOn.Run()
++14
+;
+; ----- @1:14  magnetic field and solar wind off (3 s, BSS-Lib-MagFieldOff, BSS-Lib-SolarWindOff) -----
+Control Text="6/6 Field and wind off"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-MagFieldOff.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SolarWindOff.Run()
++5
+;
+; ----- @1:19  end of chapter: aurora off (3 s, BSS-Lib-AuroraOff), camera eases to a stop (4 s),
+;              voiceover fades out -----
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-AuroraOff.Run()
+Scene Camera.Altitude.Rate=0 [4::]
+Scene Camera.Longitude.Rate=0 [4::]
+Scene SouthernLightsVO-BSS-VS.Volume=0 [1:1:1]
++4.2
+Scene Remove(SouthernLightsVO-BSS-VS)
+; 1.2 + 16+14+18+12+14+5+4.2 = 84.4 s
+Control Text="6 Southern lights"

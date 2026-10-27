@@ -1,0 +1,15 @@
+;=== BSS-Lib-MagFieldOff ===
+; Page: BSS-Lib   Button: "Mag field off"   Length: 3 s
+; Fades out and unloads the magnetic field loaded by BSS-Lib-MagFieldOn.
+; Copied from Theater/Adrien "Magnetic field" (second half); fade [3] -> eased [1:1:1].
+Control Text="Mag field: off..."
+Scene magFieldRingA1.Visibility=0 [1:1:1]
+Scene magFieldRingA2.Visibility=0 [1:1:1]
+Scene magFieldRingB1.Visibility=0 [1:1:1]
+Scene magFieldRingB2.Visibility=0 [1:1:1]
+Scene magFieldRingC1.Visibility=0 [1:1:1]
+Scene magFieldRingC2.Visibility=0 [1:1:1]
++3
+Assets Aoraki.Unload(magFieldRingA1, magFieldRingA2, magFieldRingB1, magFieldRingB2, magFieldRingC1, magFieldRingC2)
+Assets Aoraki.Unload(magFieldCentreA, magFieldCentreB, magFieldCentreC)
+Control Text="Mag field off"

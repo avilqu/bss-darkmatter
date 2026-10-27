@@ -28,6 +28,7 @@ Names: references `BSS-VS-<What>`, assets `<Name>-BSS-VS`. Needs the **BSS-Lib**
 | `30-BSS-VS-CelestialNav.txt` | `BSS-VS-CelestialNav` | 3 Celestial nav | ~95 s | ground, bright sky, real time → same |
 | `40-BSS-VS-Constellations.txt` | `BSS-VS-Constellations` | 4 Constellations | ~149 s | ground facing south, bright sky, real time → same (cuts to 10 Jul 2026 for Scorpius, back to Now) |
 | `50-BSS-VS-VirtualTelescope.txt` | `BSS-VS-VirtualTelescope` | 5 Virtual telescope | ~150 s | ground, bright sky, real time → same, facing south |
+| `60-BSS-VS-SouthernLights.txt` | `BSS-VS-SouthernLights` | 6 Southern lights | ~84 s | ground facing south, bright sky, real time → **in space** ~22,000 km above 70° N, camera still (next chapter must land) |
 
 Chapter timings are estimates until the voiceover is recorded (see `media.md`).
 

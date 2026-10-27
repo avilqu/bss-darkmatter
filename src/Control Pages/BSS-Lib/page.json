@@ -310,6 +310,42 @@
       "kind": "small",
       "left": 260,
       "top": 530
+    },
+    "114-BSS-Lib-AuroraOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_ce2a4430_7d4d_4e75_ba5c_d16cff84194d",
+      "kind": "small",
+      "left": 385,
+      "top": 530
+    },
+    "115-BSS-Lib-AuroraOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_21643e15_8b72_4835_b6fc_e83e80bc65f7",
+      "kind": "small",
+      "left": 510,
+      "top": 530
+    },
+    "116-BSS-Lib-SolarWindOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_34123741_c290_46a7_a87e_2968af1cf164",
+      "kind": "small",
+      "left": 635,
+      "top": 530
+    },
+    "117-BSS-Lib-SolarWindOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_ec9bc126_2e69_405b_b28a_736664743eff",
+      "kind": "small",
+      "left": 10,
+      "top": 595
+    },
+    "118-BSS-Lib-MagFieldOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_0d59d52d_a7a2_4321_bb72_39945ef68aea",
+      "kind": "small",
+      "left": 135,
+      "top": 595
+    },
+    "119-BSS-Lib-MagFieldOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_dec0b287_6f81_4885_a68c_8bd8ed1a77fd",
+      "kind": "small",
+      "left": 260,
+      "top": 595
     }
   }
 }

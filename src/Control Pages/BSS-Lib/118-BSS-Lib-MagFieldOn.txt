@@ -1,0 +1,22 @@
+;=== BSS-Lib-MagFieldOn ===
+; Page: BSS-Lib   Button: "Mag field on"   Length: 4.5 s
+; Loads Earth's magnetic field lines (three centres, then two rings on each) and fades the rings in.
+; Hide with BSS-Lib-MagFieldOff, which also unloads them.
+; Copied from Theater/Adrien "Magnetic field" (first half); fade [3] -> eased [1:1:1].
+; TODO (repo self-sufficient): Asset Manager assets Aoraki > magFieldCentreA/B/C,
+; magFieldRingA1/A2/B1/B2/C1/C2. Export that folder (DMZ) so they can be converted to Scene Add + files.
+Control Text="Mag field: on..."
+; centres first: the rings are attached to them
+Assets Aoraki.Load(magFieldCentreA, magFieldCentreB, magFieldCentreC)
++0.5
+Assets Aoraki.Load(magFieldRingA1, magFieldRingA2, magFieldRingB1, magFieldRingB2, magFieldRingC1, magFieldRingC2)
++1
+Scene magFieldRingA1.Visibility=100 [1:1:1]
+Scene magFieldRingA2.Visibility=100 [1:1:1]
+Scene magFieldRingB1.Visibility=100 [1:1:1]
+Scene magFieldRingB2.Visibility=100 [1:1:1]
+Scene magFieldRingC1.Visibility=100 [1:1:1]
+Scene magFieldRingC2.Visibility=100 [1:1:1]
+; 1.5+3 = 4.5 s
++3
+Control Text="Mag field on"
