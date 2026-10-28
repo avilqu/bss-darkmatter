@@ -4,9 +4,9 @@
 ; show its aurora too, then the solar wind with a slow zoom out and orbit, and Earth's magnetic field.
 ; Visuals only, no text on the dome.
 ; Starts from: ground facing south, bright sky, real time (end of chapter 5).
-; Ends with:   in space, ~22,000 km above 70 deg N, camera still, real time, aurora off.
+; Ends with:   in space, ~22,000 km above 70 deg N, camera still, real time, aurora off, clouds on.
 ;              The next chapter must bring the camera home (BSS-Lib-Land or BSS-Lib-HomePosition).
-; Needs the BSS-Lib page loaded (SkyBright, TimeNow, FaceSouth, TakeOff, AuroraOn/Off,
+; Needs the BSS-Lib page loaded (SkyBright, TimeNow, FaceSouth, TakeOff, CloudsOn/Off, AuroraOn/Off,
 ; SolarWindOn/Off, MagFieldOn/Off).
 ;
 ; Reused from Theater/Adrien through BSS-Lib: Aurora, Stellar wind, Magnetic field (Asset Manager
@@ -44,13 +44,19 @@ Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
 Control Mt Cook.Theater.BSS-Lib.BSS-Lib-TimeNow.Run()
 Control Mt Cook.Theater.BSS-Lib.BSS-Lib-FaceSouth.Run()
 Control Mt Cook.Theater.BSS-Lib.BSS-Lib-AuroraOn.Run()
+; clouds off on the ground (3 s); changes nothing after chapter 5, which already has them off
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-CloudsOff.Run()
 +16
 ;
 ; ----- @0:16  take off to 10,000 km (10 s, BSS-Lib-TakeOff);
 ;              "Aurorae take place at the North Pole and the South Pole simultaneously" -----
 Control Text="2/6 Both poles"
 Control Mt Cook.Theater.BSS-Lib.BSS-Lib-TakeOff.Run()
-+14
++3
+; @0:19  clouds on (3 s, BSS-Lib-CloudsOn) once we've left the ground and the view tilts down;
+; they stay on for chapters 7-9 (in space)
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-CloudsOn.Run()
++11
 ;
 ; ----- @0:30  orbit north over the Pacific to 70 deg N, same altitude (17 s); "Aurorae are due to solar wind" -----
 Control Text="3/6 North Pole"

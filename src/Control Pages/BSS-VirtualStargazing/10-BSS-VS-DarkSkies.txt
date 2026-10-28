@@ -2,9 +2,9 @@
 ; Page: BSS-VirtualStargazing   Button: "1 Dark skies"   Length: ~112 s
 ; Chapter 1 (introduction): logo off, slow approach from 1000 km, landing at Aoraki,
 ; dark adaptation then bright sky. Visuals only, no text on the dome.
-; Starts from: BSS-VS-Setup (1000 km above Aoraki, dim sky, real time, logo up).
-; Ends with:   on the ground at Mount Cook Village, bright sky, real time, logo off.
-; Needs the BSS-Lib page loaded (LogoOut, DSRMarkerOn/Off, Land, SkyBright).
+; Starts from: BSS-VS-Setup (1000 km above Aoraki, dim sky, real time, clouds on, logo up).
+; Ends with:   on the ground at Mount Cook Village, bright sky, real time, clouds off, logo off.
+; Needs the BSS-Lib page loaded (LogoOut, DSRMarkerOn/Off, Land, CloudsOff, SkyBright).
 ;
 ; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
 ; voiceover starts. When the recording exists, set the waits from its timecodes.
@@ -59,8 +59,12 @@ Control Mt Cook.Theater.BSS-Lib.BSS-Lib-DSRMarkerOff.Run()
 ; BSS-Lib-Land (10.5 s): 500 km -> 500 m, then turns to look up (SouthAndUp, SS.Elevation=90).
 ; SS.Elevation=90 to be replaced by the inclined-dome value once tested (see sweet-spot test).
 Control Mt Cook.Theater.BSS-Lib.BSS-Lib-Land.Run()
-; 10.5 s landing + 9.5 s on the ground before the next line, @1:10 to @1:30
-+20
++5
+; @1:15  clouds off (3 s, BSS-Lib-CloudsOff) in the second half of the descent, while the view
+; turns up to the sky, so they're gone before we stargaze from the ground
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-CloudsOff.Run()
+; 10.5 s landing + 9.5 s on the ground before the next line, @1:10 to @1:30 (5+15)
++15
 ;
 ; ----- @1:30  "It takes about 15 minutes for eyes to adjust to darkness" -----
 Control Text="7/8 Dark adaptation"

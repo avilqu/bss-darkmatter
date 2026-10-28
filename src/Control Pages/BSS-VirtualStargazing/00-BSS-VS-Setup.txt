@@ -1,8 +1,8 @@
 ;=== BSS-VS-Setup ===
 ; Page: BSS-VirtualStargazing   Button: "Setup"   Length: 12 s
 ; Same for every season: dim sky, real date/time running at real speed,
-; camera in space 1000 km straight above Aoraki/Mount Cook Village, Hermitage logo up.
-; Needs the BSS-Lib page loaded in the workspace (calls BSS-Lib-LoadAssets, -SkyDim and -LogoIn).
+; camera in space 1000 km straight above Aoraki/Mount Cook Village, clouds on, Hermitage logo up.
+; Needs the BSS-Lib page loaded in the workspace (calls BSS-Lib-CloudsOn, -LoadAssets, -SkyDim and -LogoIn).
 ; BSS-Lib-LoadAssets: Milky Way image, Earth 16K textures, LocalGroup, Vol Milky Way and LEDA200Mpc
 ; (hidden), so chapter 9 finds them loaded.
 ; Also loads the BSS-VS-Seq JS engine used by chapter 2 (01-BSS-VS-LoadSeq).
@@ -10,6 +10,8 @@ Control Text="Setting up..."
 Scene Visibility=0 [1:0:1]
 +2
 ; --- everything below happens while the dome is dark ---
+; clouds on while above Earth (3 s fade, done in the dark); ch. 1 turns them off when landing
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-CloudsOn.Run()
 Scene Earth.RotationModel=Diurnal
 Scene Earth.AnnualReference="Sun"
 ; real time, real speed (1 s per s)
