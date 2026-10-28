@@ -1,8 +1,10 @@
 ;=== BSS-VS-Setup ===
-; Page: BSS-VirtualStargazing   Button: "Setup"   Length: 7 s
+; Page: BSS-VirtualStargazing   Button: "Setup"   Length: 12 s
 ; Same for every season: dim sky, real date/time running at real speed,
 ; camera in space 1000 km straight above Aoraki/Mount Cook Village, Hermitage logo up.
-; Needs the BSS-Lib page loaded in the workspace (calls BSS-Lib-SkyDim and BSS-Lib-LogoIn).
+; Needs the BSS-Lib page loaded in the workspace (calls BSS-Lib-LoadAssets, -SkyDim and -LogoIn).
+; BSS-Lib-LoadAssets: Milky Way image, Earth 16K textures, LocalGroup, Vol Milky Way and LEDA200Mpc
+; (hidden), so chapter 9 finds them loaded.
 ; Also loads the BSS-VS-Seq JS engine used by chapter 2 (01-BSS-VS-LoadSeq).
 Control Text="Setting up..."
 Scene Visibility=0 [1:0:1]
@@ -13,6 +15,8 @@ Scene Earth.AnnualReference="Sun"
 ; real time, real speed (1 s per s)
 Scene DateTime=Now
 Scene DateTime.Rate=1 [0]
+; chapter 9 ends with the camera still orbiting: stop it before moving it
+Scene Camera.Longitude.Rate=0
 ; 1000 km above Mount Cook Village, same lat/long as BSS-Lib-HomePosition (Altitude in metres).
 ; Orient=SouthAndDown looks down at Earth; SS.Elevation=45 as in BSS-Lib-TakeOff.
 Scene Camera { Parent=Earth Orient=SouthAndDown SS.Elevation=45 Latitude=-43.7357 Longitude=170.0962 Altitude=1000000 }
@@ -27,6 +31,10 @@ Scene Jupiter.Sprite.LumAdj=1
 Scene Saturn.Sprite.LumAdj=1
 ; (re)load the chapter sequencer JS engine (~0.3 s); this resets the Moon/Planets/Core toggles to auto
 Control BSS-VS-LoadSeq.Run()
+; also undoes chapter 9: Vol Milky Way and LEDA200Mpc back to 0 (5 s)
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-LoadAssets.Run()
++5
+; Visible Milky Way and LocalGroup back to the dim profile
 Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyDim.Run()
 ; SkyDim is 2 s
 +2
@@ -35,5 +43,5 @@ Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyDim.Run()
 Scene Visibility=100 [1:1:1]
 Control Mt Cook.Theater.BSS-Lib.BSS-Lib-LogoIn.Run()
 +3
-; 2+2+3 = 7 s
+; 2+5+2+3 = 12 s
 Control Text="Setup"

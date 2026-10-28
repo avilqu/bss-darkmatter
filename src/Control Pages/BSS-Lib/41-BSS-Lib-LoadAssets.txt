@@ -1,0 +1,33 @@
+;=== BSS-Lib-LoadAssets ===
+; Page: BSS-Lib   Button: "Load assets"   Length: 5 s
+; Better textures and the extragalactic assets, loaded hidden. Run once while the dome is dark
+; (BSS-VS-Setup does it); running it again is harmless.
+; From Theater/Adrien "Load assets" (same as Theater/Shu-An "Assets loaded" and Max's "Max's
+; MilkyWay"), without:
+;   - the constellations: BSS-Lib-ConstLoad does them, when needed;
+;   - Mars_16K and Jupiter_14K: the planets are only seen as dots in our shows, and Jupiter_14K
+;     is in Jack's asset folder, not in core content.
+; Visible Milky Way: the 4K x 2K MWPAN2 panorama everyone on the dome uses instead of the default
+; MilkyWayMellingerDM_Cleaned_16K. UNVERIFIED: it may show its own stars on top of the Stars
+; asset; compare both on the dome (the Mellinger one is the line to swap back to).
+; Earth 16K surface, clouds and city lights: seen in space in Southern lights and Moon chapters.
+; LocalGroup must be loaded for BSS-Lib-SkyDim/SkyBright to set it (Magellanic Clouds, Andromeda).
+; LocalGroup, Vol Milky Way and LEDA200Mpc come from the Sky-Skan Extragalactic and Milky Way
+; folders (core content). Vol Milky Way and LEDA200Mpc are hidden here; a show fades them in.
+; UNVERIFIED: whether they load visible; if so, a short flash before the Visibility=0.
+Control Text="Assets: loading..."
+Scene Visible Milky Way.Image="<ContentPath>\Core\Astronomy\AllSky\MWPAN2_4KX2K.JPG"
+;Scene Visible Milky Way.Image="<ContentPath>\Core\Astronomy\AllSky\MilkyWayMellingerDM_Cleaned_16K.dds"
+Scene Earth.SurfaceMap1="<ContentPath>\Core\Astronomy\SolarSystem\Earth\Earth_16K-Surface.dds"
+Scene Earth.CloudMap="<ContentPath>\Core\Astronomy\SolarSystem\Earth\Earth_16K-Clouds.dds"
+Scene Earth.EmissiveMap="<ContentPath>\Core\Astronomy\SolarSystem\Earth\Earth_16K-CityLights.dds"
+Assets Extragalactic.Load(LocalGroup)
+Assets Milky Way.Load(Vol Milky Way)
+Assets Extragalactic.Load(LEDA200Mpc)
++0.1
+Scene Vol Milky Way.Visibility=0
+Scene LEDA200Mpc.Visibility=0
+Scene LocalGroup.Visibility=40
+; heavy textures: give them time to load before the dome fades in (Adrien waits 2-3 s per step)
++4.9
+Control Text="Load assets"

@@ -13,6 +13,7 @@ Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
 | `20-BSS-Lib-ResetSoft.txt` | `BSS-Lib-ResetSoft` | Soft reset | 11.2 s | new |
 | `30-BSS-Lib-FadeOut.txt` | `BSS-Lib-FadeOut` | Fade out | 3 s | new |
 | `40-BSS-Lib-LoadHelpers.txt` | `BSS-Lib-LoadHelpers` | Load BSS-Helpers | ~0.5 s | generated from `src/JavaScript/BSS-Helpers.js` |
+| `41-BSS-Lib-LoadAssets.txt` | `BSS-Lib-LoadAssets` | Load assets | 5 s | Theater/Adrien "Load assets" (textures + extragalactic; no constellations, Mars/Jupiter maps) |
 | `50-BSS-Lib-SkyDim.txt` | `BSS-Lib-SkyDim` | Sky: dim | 2 s | Theater/Adrien "Sky settings (dim)" |
 | `51-BSS-Lib-SkyBright.txt` | `BSS-Lib-SkyBright` | Sky: bright | 5 s | Theater/Adrien "Sky settings (bright)" |
 | `55-BSS-Lib-TimeNow.txt` | `BSS-Lib-TimeNow` | Time now | 9 s | Theater/Adrien "Time now" |

@@ -1,0 +1,133 @@
+;=== BSS-VS-MilkyWay ===
+; Page: BSS-VirtualStargazing   Button: "9 Milky Way"   Length: ~172 s
+; Chapter 9 (the Milky Way and beyond, last chapter): orbit until Scorpius is behind the Sun, zoom out
+; to 10,000 light years with the constellation sticks on (3D shapes), full orbit, then out to
+; 100,000 ly while orbiting out of the galactic plane, full orbit around the disc, LEDA galaxies up,
+; and a last zoom out to 200 million ly, still orbiting slowly.
+; Visuals only, no text on the dome.
+; Starts from: in space, ~20 AU from the Sun in the plane of the ecliptic, camera parented to
+;              Ecliptic (position only), planet orbits ON, real time (end of chapter 8).
+; Ends with:   in space, 200 million ly from the Sun, camera parented to Galactic (position only),
+;              STILL ORBITING (Longitude.Rate 2), LEDA galaxies at 100, Vol Milky Way at 100,
+;              Visible Milky Way at 0, planet orbits off, constellations unloaded, real time.
+;              Setup resets all of it (rate, LEDA, Vol Milky Way, sky profile).
+; Needs the BSS-Lib page loaded (SkyBright, OrbitsOff, ConstLoad/Unload, SticksOn/Off), and
+; LocalGroup, Vol Milky Way and LEDA200Mpc loaded at 0 by Setup (BSS-Lib-LoadAssets).
+;
+; Reused from Theater/Adrien: Sky settings (bright), Planets orbits, All sticks, Load assets
+; (through BSS-Lib), and the LEDA slider (LEDA200Mpc.Visibility, inline here).
+; Scorpius view: Antares is at ecliptic longitude 249.8, latitude -4.6. The camera goes to the
+; opposite point (69.8, +4.6) looking at the Sun, so Scorpius sits behind the Sun, and the zoom-outs
+; move straight away from it (towards galactic l 172, b -15, close to the anticentre).
+; 1 ly = 9.4607e15 m: 10,000 ly = 9.4607e19, 100,000 ly = 9.4607e20, 200 million ly = 1.892e24.
+; Zooms are linear in metres: the long acceleration ramps (8 s, 20 s) make them roughly logarithmic
+; at the start (zoom 1: 100 ly after ~1.5 s, 1,000 ly after ~5 s; zoom 3: 10 Mly after ~5.5 s).
+; Latitude -75, not -90: avoids Orient flips at the pole while Longitude keeps turning. South side of
+; the plane, where the Magellanic Clouds are.
+; UNVERIFIED: Camera.Longitude after chapter 8's Longitude.Rate may be unwrapped (above 360). If
+; step 1 spins more than a turn, check Camera.Longitude in the Asset Manager and adjust 69.8.
+; UNVERIFIED: Galactic (Coordinate Systems) is centred on the Sun, with Latitude/Longitude/Altitude =
+; galactic b, l and distance. Check Camera.Altitude right after the ConvertInPlace of step 2: it
+; should read ~3e12. If it reads ~2.5e20, Galactic is centred on the galactic centre: tell me.
+; UNVERIFIED: Constellation Stick assets are drawn in 3D (real star distances), so they distort
+; when seen from outside the Solar System.
+; UNVERIFIED: Visible Milky Way (sky image) doesn't fade by itself with distance, so it is crossfaded
+; to Vol Milky Way (3D) during the first zoom. If DM already does it, remove the two lines in step 2.
+; UNVERIFIED: the Magellanic Clouds still show at 10,000 ly once Visible Milky Way is at 0
+; (LocalGroup, 60 from SkyBright). If they don't, keep Visible Milky Way at ~30 until step 5.
+; UNVERIFIED: Camera.Longitude+=360 turns a full orbit (steps 3 and 6). If DM wraps Longitude so
+; nothing moves, use Longitude.Rate instead: step 3 "Rate=36 [3::]" +9 "Rate=0 [3::]" (about 1 turn).
+;
+; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
+; voiceover starts. When the recording exists, set the waits from its timecodes.
+; AUDIO PLACEHOLDER: the file below doesn't exist yet. Until it does, Event Viewer
+; will report a load error for MilkyWayVO-BSS-VS; the visuals still run.
+;
+Control Text="9 Milky Way: loading..."
+Scene Remove(MilkyWayVO-BSS-VS)
++0.1
+Scene Add(MilkyWayVO-BSS-VS, Media, Volume=100)
++0.1
+Scene MilkyWayVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-90-MilkyWay.mp3"
++1
+;
+; ----- @0:00  bright sky (5 s, BSS-Lib-SkyBright), planet orbits out (3 s, BSS-Lib-OrbitsOff),
+;              constellations loaded hidden (1.5 s, BSS-Lib-ConstLoad); orbit until Scorpius is
+;              behind the Sun (14 s); "Now let's leave the Milky Way" -----
+Control Text="1/9 Scorpius"
+Scene MilkyWayVO-BSS-VS.Play()
+Scene DateTime.Rate=1
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-OrbitsOff.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-ConstLoad.Run()
+Scene Camera.Longitude.Rate=0
+Scene Camera { Latitude=4.6 Longitude=69.8 } [3:6:5]
++15
+;
+; ----- @0:15  zoom out to 10,000 ly (20 s), north up in galactic coordinates (10 s); sticks in
+;              from 1 s (3 s, BSS-Lib-SticksOn); Milky Way image -> 3D Milky Way from 6 s (12 s) -----
+Control Text="2/9 Zoom to 10,000 ly"
+Scene Camera.ConvertInPlace(Galactic, Position)
++0.5
+Scene Camera.Orient=NorthAndDown [3:3:4]
+Scene Camera.Altitude=9.4607e19 [8:4:8]
++1
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SticksOn.Run()
++5
+Scene Visible Milky Way.Visibility=0 [3:6:3]
+Scene Vol Milky Way.Visibility=100 [3:6:3]
++14.5
+;
+; ----- @0:36  "We're now 10,000 light years away from Earth. Here is what our constellations
+;              look like at that distance" (6 s); full orbit (12 s) -----
+Control Text="3/9 Orbit at 10,000 ly"
++6
+Scene Camera.Longitude+=360 [3:6:3]
++13
+;
+; ----- @0:55  sticks out (3 s, BSS-Lib-SticksOff), constellations unloaded (0.5 s,
+;              BSS-Lib-ConstUnload); "At that distance, constellations are unrecognizable, but the
+;              night sky still feels familiar: Milky Way, Clouds of Magellan" -----
+Control Text="4/9 Familiar sky"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SticksOff.Run()
++3.5
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-ConstUnload.Run()
++9.5
+;
+; ----- @1:08  zoom out to 100,000 ly (28 s); past 20,000 ly (5 s in), orbit out of the galactic
+;              plane to 75 deg south (23 s); "Our Milky Way Galaxy is shaped like a flat disc. When we
+;              see its band across the sky on a dark night, we're simply seeing it from the edge" -----
+Control Text="5/9 Zoom to 100,000 ly"
+Scene Camera.Altitude=9.4607e20 [5:15:8]
++5
+Scene Camera.Latitude=-75 [5:12:6]
++24
+;
+; ----- @1:37  full orbit around the disc (20 s) -----
+Control Text="6/9 Orbit the Milky Way"
+Scene Camera.Longitude+=360 [4:12:4]
++21
+;
+; ----- @1:58  camera still; "Everything you see in the sky with your naked eye, Milky Way stars,
+;              Clouds of Magellan, is here" -----
+Control Text="7/9 Naked-eye sky"
++10
+;
+; ----- @2:08  LEDA galaxies up (8 s); "But there is a lot more to this" -----
+Control Text="8/9 LEDA"
+Scene LEDA200Mpc.Visibility=100 [2:4:2]
++10
+;
+; ----- @2:18  zoom out to 200 million ly (30 s), slow orbit from now on (2 deg/s, never stopped:
+;              Setup stops it) -----
+Control Text="9/9 200 million ly"
+Scene Camera.Altitude=1.892e24 [20:0:10]
+Scene Camera.Longitude.Rate=2 [5::]
++31
+;
+; ----- @2:49  end of show: voiceover fades out, clean up (camera keeps orbiting) -----
+Scene MilkyWayVO-BSS-VS.Volume=0 [1:1:1]
++2.2
+Scene Remove(MilkyWayVO-BSS-VS)
+; 1.2 + 15+21+19+13+29+21+10+10+31+2.2 = 172.4 s
+Control Text="9 Milky Way"

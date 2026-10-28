@@ -166,6 +166,18 @@
       "kind": "small",
       "left": 260,
       "top": 270
+    },
+    "90-BSS-VS-MilkyWay.txt": {
+      "prefix": "WIDGETBUTTONSMALL_7a9204c3_e917_4367_9e05_31cffffd3b70",
+      "kind": "small",
+      "left": 385,
+      "top": 270
+    },
+    "07-BSS-VS-PlayAll.txt": {
+      "prefix": "WIDGETBUTTONSMALL_0bd1d6d7_39c8_4ecb_ab53_436fb2a647ab",
+      "kind": "small",
+      "left": 510,
+      "top": 270
     }
   }
 }

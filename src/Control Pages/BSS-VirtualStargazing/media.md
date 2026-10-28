@@ -23,6 +23,7 @@ Files used by this page. Each must be at the same path on **DS-Master and every 
 | `VS-60-SouthernLights.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `60-BSS-VS-SouthernLights` (voiceover, ch. 6) | placeholder, not recorded yet |
 | `VS-70-Moon.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `70-BSS-VS-Moon` (voiceover, ch. 7) | placeholder, not recorded yet |
 | `VS-80-SolarSystem.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `80-BSS-VS-SolarSystem` (voiceover, ch. 8) | placeholder, not recorded yet |
+| `VS-90-MilkyWay.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `90-BSS-VS-MilkyWay` (voiceover, ch. 9) | placeholder, not recorded yet |
 | `VS-MoonRabbit.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `70-BSS-VS-Moon` (rabbit outline over the Full Moon, step 7) | **missing**: transparent PNG, square, Moon disc filling the frame, south up as seen from NZ |
 | `VS-Ring-S.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | ring, stars ~2–4° (`24`, `30`) | in repo: `Assets/BSS/VirtualStargazing/` |
 | `VS-Ring-M.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | ring, objects ~5–10° (`26` SMC) | in repo: `Assets/BSS/VirtualStargazing/` |
@@ -44,3 +45,9 @@ Asset Manager assets (not files, must exist for user Theater):
 | `Aoraki > southernLights1`, `southernLights2`, `northernLights1`, `northernLights2`, `sunSpawn`, `stellarWindPart`, `magFieldCentreA/B/C`, `magFieldRingA1/A2/B1/B2/C1/C2` | `BSS-Lib-AuroraOn/Off`, `-SolarWindOn/Off`, `-MagFieldOn/Off` (called by `60`). TODO: export the folder (DMZ) and convert to Scene Add + files |
 | `Constellations > <12 zodiac> Art` (via `BSS-Lib-ConstLoad`) | `80-BSS-VS-SolarSystem` |
 | `Asteroids > Main Belt Asteroids` | `BSS-Lib-AsteroidsOn/Off` (called by `80`). TODO: check if Sky-Skan core; if not, export (DMZ) and convert |
+| `Milky Way > Vol Milky Way`, `Extragalactic > LEDA200Mpc`, `Extragalactic > LocalGroup` | `90-BSS-VS-MilkyWay`; loaded hidden by `BSS-Lib-LoadAssets` (called by Setup). Sky-Skan core folders |
+| `Constellations > <88> Stick` (via `BSS-Lib-ConstLoad`) | `90-BSS-VS-MilkyWay` |
+
+Core content files (Sky-Skan install, already on every PC), set by `BSS-Lib-LoadAssets` (called by Setup):
+`<ContentPath>\Core\Astronomy\AllSky\MWPAN2_4KX2K.JPG` (Visible Milky Way image) and
+`<ContentPath>\Core\Astronomy\SolarSystem\Earth\Earth_16K-Surface.dds`, `Earth_16K-Clouds.dds`, `Earth_16K-CityLights.dds`.

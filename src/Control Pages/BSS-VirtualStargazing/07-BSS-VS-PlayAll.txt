@@ -1,0 +1,22 @@
+;=== BSS-VS-PlayAll ===
+; Page: BSS-VirtualStargazing   Button: "Play all"   Length: variable, ~20-22 min (see below)
+; Plays chapters 1 to 9 one after the other: the BSS-VS-Seq sequencer runs each chapter button,
+; waits its length (table CHAPTERS in src/JavaScript/BSS-VS-Sequencer.js) + 0.5 s, and runs the
+; chapter 2 segments itself, so the variable length of chapter 2 is handled.
+; Starts from: Setup (press it first, with the dome dark or the logo up).
+; Ends with:   the end of chapter 9 (camera still orbiting 200 million ly out).
+; Needs: BSS-VS-Seq loaded (Setup does it) and the BSS-Lib page loaded.
+; Set the chapter 2 toggles (02-04) before pressing. Progress is in Event Viewer >
+; JavaScript Processor ("BSS-VS-Seq: chapter ...").
+; Stop: "Stop chapter" ends it before the next chapter (or chapter 2 segment); the chapter
+; already running finishes. To restart from chapter N, run JS BSS-VS-Seq.PlayShow(N) in a ScriptPad
+; (after the end state of chapter N-1).
+; LENGTH: chapters 1 and 3-9 = 1130 s + 0.5 s per chapter, plus chapter 2 (~90-200 s).
+; Chapter lengths come from each button's last comment line: after changing a chapter, update
+; CHAPTERS in the .js and regenerate 01-BSS-VS-LoadSeq.txt (see README).
+; NOT RENDERABLE with the Playlist Creator (waits are in JS): add the chapter buttons one by one
+; instead (chapter 2 as its segments).
+Control Text="Play all: running..."
+JS BSS-VS-Seq.FunctionAsync(PlayShow, 1)
++0.1
+Control Text="Play all"

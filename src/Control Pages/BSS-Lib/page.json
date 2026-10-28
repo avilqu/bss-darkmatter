@@ -376,6 +376,12 @@
       "kind": "small",
       "left": 135,
       "top": 660
+    },
+    "41-BSS-Lib-LoadAssets.txt": {
+      "prefix": "WIDGETBUTTONSMALL_1aa4a460_555e_441c_9025_741962ea5f4d",
+      "kind": "small",
+      "left": 260,
+      "top": 660
     }
   }
 }

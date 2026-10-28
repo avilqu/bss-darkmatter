@@ -40,6 +40,21 @@ var LEN = {
 var GAP = 0.5;
 var PLANETS = ["Mercury", "Venus", "Mars", "Jupiter", "Saturn"];
 
+// Play all: chapter buttons in order, with their lengths in seconds.
+// Keep equal to the total on the last comment line of each chapter button.
+// Chapter 2 has no length here: PlayShow runs its segments itself.
+var CHAPTERS = [
+    ["DarkSkies", 111.2],
+    ["DistancesAndPerspective", 0],
+    ["CelestialNav", 95.4],
+    ["Constellations", 148.8],
+    ["VirtualTelescope", 150.4],
+    ["SouthernLights", 84.4],
+    ["Moon", 223.4],
+    ["SolarSystem", 144.2],
+    ["MilkyWay", 172.4]
+];
+
 // ---------- DM helpers ----------
 
 function dm(s) {
@@ -224,13 +239,37 @@ function plan() {
 
 // ---------- functions called by buttons ----------
 
+// Runs the chapter 2 segments; the caller sets running
+function distances() {
+    var list = plan();
+    for (var i = 0; i < list.length; i++) seg(list[i]);
+    log("chapter 2 done");
+}
+
 // Chapter 2 button
 function PlayDistances() {
-    var list = plan();
     running = 1;
-    for (var i = 0; i < list.length; i++) seg(list[i]);
+    distances();
     running = 0;
-    log("chapter 2 done");
+}
+
+// Play all button: chapters from number first to 9, one after the other.
+// Stop ends it before the next chapter or chapter 2 segment.
+function PlayShow(first) {
+    running = 1;
+    for (var i = first - 1; i < CHAPTERS.length && running; i++) {
+        var name = CHAPTERS[i][0];
+        log("chapter " + (i + 1) + " " + name);
+        if (name == "DistancesAndPerspective") {
+            distances();
+        } else {
+            dm(PAGE + "BSS-VS-" + name + ".Run()");
+            waitStep(CHAPTERS[i][1] + GAP);
+        }
+    }
+    if (running) log("show done");
+    else log("show stopped");
+    running = 0;
 }
 
 // Check button: log the plan without playing
@@ -277,7 +316,7 @@ function MoonView(offset, alt, ta, tc, td) {
     }
 }
 
-// Stops between segments; the segment already running finishes
+// Stops between segments and chapters; the one already running finishes
 function Stop() {
     running = 0;
 }
