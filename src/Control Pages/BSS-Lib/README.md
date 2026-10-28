@@ -51,17 +51,17 @@ Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
 | `99-BSS-Lib-ArtSouthOff.txt` | `BSS-Lib-ArtSouthOff` | Art south off | 3 s | idem |
 | `100-BSS-Lib-CarinaOn.txt` | `BSS-Lib-CarinaOn` | Carina on | 7 s | Theater/Adrien "NGC3372" (first half) |
 | `101-BSS-Lib-CarinaOff.txt` | `BSS-Lib-CarinaOff` | Carina off | 3 s | idem (second half) |
-| `102-BSS-Lib-CarinaRingOn.txt` | `BSS-Lib-CarinaRingOn` | Carina ring on | 4.2 s | replaces Theater/Adrien "NGC3372 label" (self-contained ring) |
+| `102-BSS-Lib-CarinaRingOn.txt` | `BSS-Lib-CarinaRingOn` | Carina ring on | 4.2 s | replaces Theater/Adrien "NGC3372 label" (self-contained ring + label) |
 | `103-BSS-Lib-CarinaRingOff.txt` | `BSS-Lib-CarinaRingOff` | Carina ring off | 3 s | idem, removes the ring |
 | `104-BSS-Lib-JewelBoxOn.txt` | `BSS-Lib-JewelBoxOn` | Jewel Box on | 7 s | Theater/Adrien "NGC4755" (first half) |
 | `105-BSS-Lib-JewelBoxOff.txt` | `BSS-Lib-JewelBoxOff` | Jewel Box off | 3 s | idem (second half) |
-| `106-BSS-Lib-JewelBoxRingOn.txt` | `BSS-Lib-JewelBoxRingOn` | Jewel Box ring on | 4.2 s | replaces Theater/Adrien "NGC4755 label" (self-contained ring) |
+| `106-BSS-Lib-JewelBoxRingOn.txt` | `BSS-Lib-JewelBoxRingOn` | Jewel Box ring on | 4.2 s | replaces Theater/Adrien "NGC4755 label" (self-contained ring + label) |
 | `107-BSS-Lib-JewelBoxRingOff.txt` | `BSS-Lib-JewelBoxRingOff` | Jewel Box ring off | 3 s | idem, removes the ring |
 | `108-BSS-Lib-WishingWellOn.txt` | `BSS-Lib-WishingWellOn` | Wishing Well on | 7 s | Theater/Adrien "NGC3532" (first half) |
 | `109-BSS-Lib-WishingWellOff.txt` | `BSS-Lib-WishingWellOff` | Wishing Well off | 3 s | idem (second half) |
 | `110-BSS-Lib-47TucOn.txt` | `BSS-Lib-47TucOn` | 47 Tuc on | 7 s | Theater/Adrien "NGC104" (first half) |
 | `111-BSS-Lib-47TucOff.txt` | `BSS-Lib-47TucOff` | 47 Tuc off | 3 s | idem (second half) |
-| `112-BSS-Lib-47TucRingOn.txt` | `BSS-Lib-47TucRingOn` | 47 Tuc ring on | 4.2 s | replaces Theater/Adrien "NGC104 label" (self-contained ring) |
+| `112-BSS-Lib-47TucRingOn.txt` | `BSS-Lib-47TucRingOn` | 47 Tuc ring on | 4.2 s | replaces Theater/Adrien "NGC104 label" (self-contained ring + label) |
 | `113-BSS-Lib-47TucRingOff.txt` | `BSS-Lib-47TucRingOff` | 47 Tuc ring off | 3 s | idem, removes the ring |
 | `114-BSS-Lib-AuroraOn.txt` | `BSS-Lib-AuroraOn` | Aurora on | 7.5 s (animates 60 s more) | Theater/Adrien "Aurora" (first half) |
 | `115-BSS-Lib-AuroraOff.txt` | `BSS-Lib-AuroraOff` | Aurora off | 3 s | idem (second half), aborts AuroraOn |

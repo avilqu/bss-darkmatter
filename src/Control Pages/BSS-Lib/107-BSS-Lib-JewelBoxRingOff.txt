@@ -1,8 +1,10 @@
 ;=== BSS-Lib-JewelBoxRingOff ===
 ; Page: BSS-Lib   Button: "Jewel Box ring off"   Length: 3 s
-; Fades out and removes the ring added by BSS-Lib-JewelBoxRingOn. Harmless if it isn't there.
+; Fades out and removes the ring and label added by BSS-Lib-JewelBoxRingOn. Harmless if it isn't there.
 Control Text="Jewel Box ring: off..."
 Scene JewelBoxRing-BSS-Lib.Visibility=0 [1:1:1]
+Scene JewelBoxLabel-BSS-Lib.Visibility=0 [1:1:1]
 +3
 Scene Remove(JewelBoxRing-BSS-Lib)
+Scene Remove(JewelBoxLabel-BSS-Lib)
 Control Text="Jewel Box ring off"

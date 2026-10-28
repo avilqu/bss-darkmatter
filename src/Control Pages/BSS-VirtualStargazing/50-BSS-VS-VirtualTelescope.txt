@@ -3,7 +3,7 @@
 ; Chapter 5 (virtual telescope): the life of stars through southern telescope targets. Ring on the
 ; Carina Nebula, then its photo and a zoom on a Bok globule; ring on the Jewel Box, its photo, then the
 ; Wishing Well next to it (older open cluster); ring on 47 Tucanae, then its photo.
-; Visuals only, no text on the dome (the rings are plain circles).
+; Visuals only, except name labels with the rings (from the BSS-Lib ring buttons).
 ; Starts from: ground at Mount Cook Village, bright sky, real time (end of chapter 4).
 ; Ends with:   ground facing south, bright sky, real time.
 ; Needs the BSS-Lib page loaded (SkyBright, TimeNow, FaceSouth, Carina/JewelBox/WishingWell/47Tuc

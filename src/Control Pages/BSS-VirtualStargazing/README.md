@@ -2,7 +2,8 @@
 
 Control page: **BSS-VirtualStargazing** (site Mt Cook, user Theater). Automated show narrated by a
 recorded voiceover, one button per chapter. No text on the dome, except name labels next to the
-rings in chapter 2 (24 Alpha/Beta Cen, 25 Galactic Centre, 26 Magellanic Clouds).
+rings in chapter 2 (24 Alpha/Beta Cen, 25 Galactic Centre, 26 Magellanic Clouds) and chapter 5
+(Carina Nebula, Jewel Box, 47 Tucanae, from the BSS-Lib ring buttons).
 Names: references `BSS-VS-<What>`, assets `<Name>-BSS-VS`. Needs the **BSS-Lib** page loaded.
 
 ## Buttons
