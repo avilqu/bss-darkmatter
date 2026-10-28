@@ -4,7 +4,7 @@
 ; dark adaptation then bright sky. Visuals only, no text on the dome.
 ; Starts from: BSS-VS-Setup (1000 km above Aoraki, dim sky, real time, logo up).
 ; Ends with:   on the ground at Mount Cook Village, bright sky, real time, logo off.
-; Needs the BSS-Lib page loaded (LogoOut, Land, SkyBright).
+; Needs the BSS-Lib page loaded (LogoOut, DSRMarkerOn/Off, Land, SkyBright).
 ;
 ; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
 ; voiceover starts. When the recording exists, set the waits from its timecodes.
@@ -44,10 +44,15 @@ Control Text="4/8 Rules"
 ;
 ; ----- @0:55  "Recognised as a Dark Sky Reserve in 2012" -----
 Control Text="5/8 Reserve 2012"
+; ring around the reserve (BSS-Lib-DSRMarkerOn, 4.3 s, visible from ~@0:56); it has a real size,
+; so it grows with the landscape as the approach continues
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-DSRMarkerOn.Run()
 +8
 ;
 ; ----- @1:03  "In this show, we'll take advantage of that darkness..." -----
 Control Text="6/8 Southern sky"
+; ring off (BSS-Lib-DSRMarkerOff, 3 s), gone well before the landing at @1:10
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-DSRMarkerOff.Run()
 +7
 ;
 ; ----- @1:10  landing at Mount Cook Village (approach has just settled at 500 km) -----

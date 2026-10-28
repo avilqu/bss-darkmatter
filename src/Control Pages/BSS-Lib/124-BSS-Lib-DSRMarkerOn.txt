@@ -1,0 +1,29 @@
+;=== BSS-Lib-DSRMarkerOn ===
+; Page: BSS-Lib   Button: "Reserve marker on"   Length: 4.3 s
+; Plain ring (no text) on the ground around the Aoraki Mackenzie Dark Sky Reserve, for views
+; from space. It has a real size (100 km across), so it grows on the dome as the camera descends
+; (~6 deg from 1000 km, ~11 deg from 500 km). Hide with BSS-Lib-DSRMarkerOff, which also removes it.
+; Centre -43.95, 170.35 (approx., between Aoraki and Lake Tekapo); the reserve is ~100 x 50 km.
+; File: Assets/BSS/Lib/Lib-Ring-M.png -> <ContentPath>\Assets\BSS\Lib\ on DS-Master and every renderer.
+; UNVERIFIED: Location asset as a parent and its Altitude (metres?), PlaneXZ base size 1 unit,
+; LookAt=Camera turning the plane to face the camera, PNG alpha on TopEmissiveMap with
+; Solidness=Transparent. Check in the Asset Manager / Event Viewer > Renderers.
+; If Location can't be a parent: Scene Add(DSRPos-BSS-Lib, Virtual, Parent=Earth) and set
+; Latitude/Longitude/Altitude as on the Camera.
+; Lifted 10 km so the mountains don't cut through it (the plane is slightly tilted to the ground).
+Control Text="Reserve marker: on..."
+Scene Remove(DSRRing-BSS-Lib)
+Scene Remove(DSRPos-BSS-Lib)
++0.1
+Scene Add(DSRPos-BSS-Lib, Location, Parent=Earth, Latitude=-43.95, Longitude=170.35, Altitude=10000)
++0.1
+Scene Add(DSRRing-BSS-Lib, PlaneXZ, Visibility=0)
++0.1
+Scene DSRRing-BSS-Lib { Parent=DSRPos-BSS-Lib Unit=KM Xscale=100 Yscale=100 Zscale=100 LookAt=Camera }
+Scene DSRRing-BSS-Lib { LightSource=Self Solidness=Transparent TopColor=Black TopEmissive=White }
+Scene DSRRing-BSS-Lib.TopEmissiveMap="<ContentPath>\Assets\BSS\Lib\Lib-Ring-M.png"
++1
+Scene DSRRing-BSS-Lib.Visibility=100 [1:1:1]
+; 0.1+0.1+0.1+1+3 = 4.3 s
++3
+Control Text="Reserve marker on"

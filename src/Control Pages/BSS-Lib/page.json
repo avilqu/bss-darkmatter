@@ -382,6 +382,18 @@
       "kind": "small",
       "left": 260,
       "top": 660
+    },
+    "124-BSS-Lib-DSRMarkerOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_e8cc49d3_25a5_4d10_95c9_f89687866aec",
+      "kind": "small",
+      "left": 385,
+      "top": 660
+    },
+    "125-BSS-Lib-DSRMarkerOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_cb1b07c8_039f_4ae0_8c11_951c4502925e",
+      "kind": "small",
+      "left": 510,
+      "top": 660
     }
   }
 }

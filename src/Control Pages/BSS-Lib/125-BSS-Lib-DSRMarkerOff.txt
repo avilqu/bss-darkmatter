@@ -1,0 +1,9 @@
+;=== BSS-Lib-DSRMarkerOff ===
+; Page: BSS-Lib   Button: "Reserve marker off"   Length: 3 s
+; Fades out and removes the Dark Sky Reserve ring added by BSS-Lib-DSRMarkerOn. Harmless if it isn't there.
+Control Text="Reserve marker: off..."
+Scene DSRRing-BSS-Lib.Visibility=0 [1:1:1]
++3
+Scene Remove(DSRRing-BSS-Lib)
+Scene Remove(DSRPos-BSS-Lib)
+Control Text="Reserve marker off"

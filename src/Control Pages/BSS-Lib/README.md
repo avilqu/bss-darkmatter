@@ -73,6 +73,8 @@ Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
 | `121-BSS-Lib-OrbitsOff.txt` | `BSS-Lib-OrbitsOff` | Orbits off | 3 s | idem (second half) |
 | `122-BSS-Lib-AsteroidsOn.txt` | `BSS-Lib-AsteroidsOn` | Asteroids on | 4 s | Theater/Adrien "Main asteroid belt" (first half) |
 | `123-BSS-Lib-AsteroidsOff.txt` | `BSS-Lib-AsteroidsOff` | Asteroids off | 3.5 s | idem (second half), unloads it |
+| `124-BSS-Lib-DSRMarkerOn.txt` | `BSS-Lib-DSRMarkerOn` | Reserve marker on | 4.3 s | new: ring on the ground around the Dark Sky Reserve (views from space) |
+| `125-BSS-Lib-DSRMarkerOff.txt` | `BSS-Lib-DSRMarkerOff` | Reserve marker off | 3 s | idem, removes the ring |
 
 Live toggles from the dome (with `Control Pause`) are split into On/Off pairs with fixed lengths,
 so they work from a master script as well as by hand.
@@ -87,6 +89,8 @@ so they work from a master script as well as by hand.
   by script). It must exist for the user whose workspace runs the show.
 - `BSS-Lib-SCPOn` and the deep-sky rings (102–113) use `Lib-Ring-M.png` (SCP, Carina) and `Lib-Ring-S.png`
   (Jewel Box, 47 Tuc): repo `Assets/BSS/Lib/` → `<ContentPath>\Assets\BSS\Lib\` on DS-Master and every renderer.
+  `BSS-Lib-DSRMarkerOn` (124) also uses `Lib-Ring-M.png`, on a 100 km PlaneXZ placed on Earth (real size,
+  so it grows as the camera descends). Several properties are unverified, see the button header.
 - The deep-sky photos (100–111) use the Asset Manager assets **DeepSkyPhoto > ngc3372, ngc4755, ngc3532,
   ngc104** (as Adrien's NGC buttons). TODO: export the folder (DMZ) and convert to Scene Add + files.
   The "On" button loads the photo, the "Off" button unloads it: anything a show changes on the photo

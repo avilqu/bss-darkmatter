@@ -28,7 +28,7 @@ Files used by this page. Each must be at the same path on **DS-Master and every 
 | `VS-Ring-S.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | ring, stars ~2–4° (`24`, `30`) | in repo: `Assets/BSS/VirtualStargazing/` |
 | `VS-Ring-M.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | ring, objects ~5–10° (`26` SMC) | in repo: `Assets/BSS/VirtualStargazing/` |
 | `VS-Ring-L.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | ring, objects ~10–25° (`25` core, `26` LMC) | in repo: `Assets/BSS/VirtualStargazing/` |
-| `Lib-Ring-M.png` | `<ContentPath>\Assets\BSS\Lib\` | SCP ring, `BSS-Lib-SCPOn` (called by `30`); Carina ring, `BSS-Lib-CarinaRingOn` (called by `50`) | in repo: `Assets/BSS/Lib/` |
+| `Lib-Ring-M.png` | `<ContentPath>\Assets\BSS\Lib\` | Dark Sky Reserve ring, `BSS-Lib-DSRMarkerOn` (called by `10`); SCP ring, `BSS-Lib-SCPOn` (called by `30`); Carina ring, `BSS-Lib-CarinaRingOn` (called by `50`) | in repo: `Assets/BSS/Lib/` |
 | `Lib-Ring-S.png` | `<ContentPath>\Assets\BSS\Lib\` | Jewel Box and 47 Tuc rings, `BSS-Lib-JewelBoxRingOn`, `BSS-Lib-47TucRingOn` (called by `50`) | in repo: `Assets/BSS/Lib/` |
 
 Asset Manager assets (not files, must exist for user Theater):
