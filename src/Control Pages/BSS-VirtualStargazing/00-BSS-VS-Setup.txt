@@ -19,6 +19,8 @@ Scene DateTime=Now
 Scene DateTime.Rate=1 [0]
 ; chapter 9 ends with the camera still orbiting: stop it before moving it
 Scene Camera.Longitude.Rate=0
+; dome turned back to normal (chapters 1-2 face north for a while; a stopped run could leave it there)
+Scene Camera.Yaw=0
 ; 1000 km above Mount Cook Village, same lat/long as BSS-Lib-HomePosition (Altitude in metres).
 ; Orient=SouthAndDown looks down at Earth; SS.Elevation=45 as in BSS-Lib-TakeOff.
 Scene Camera { Parent=Earth Orient=SouthAndDown SS.Elevation=45 Latitude=-43.7357 Longitude=170.0962 Altitude=1000000 }

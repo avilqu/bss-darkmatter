@@ -1,10 +1,10 @@
 ;=== BSS-VS-Dist-Stars ===
-; Page: BSS-VirtualStargazing   Button: "2.4 Stars"   Length: ~41 s
-; Chapter 2 segment 4 (always plays): ring on Alpha Centauri, then on Beta Centauri,
+; Page: BSS-VirtualStargazing   Button: "2.4 Stars"   Length: ~51 s
+; Chapter 2 segment 4 (always plays): turn back to face south, ring on Alpha Centauri, then on Beta Centauri,
 ; star distances, then the stars fade out to leave the Milky Way glow.
 ; Rings with name labels (asked for: the only text in this segment).
-; Starts from: ground, bright sky, real time.
-; Ends with:   same, but STARS HIDDEN (Stars.Visibility=0). 26-BSS-VS-Dist-Magellan brings them back.
+; Starts from: ground, bright sky, real time, facing north (end of chapter 1) or south.
+; Ends with:   same, but FACING SOUTH and STARS HIDDEN (Stars.Visibility=0). 26-BSS-VS-Dist-Magellan brings them back.
 ;
 ; Rings: show-wide ring method, see src/Snippets/vs-ring.txt. Small ring (VS-Ring-S, 3 deg) on a
 ; Slide fixed to the stars. Alpha Cen RA 14h39m36s Dec -60.83, Beta Cen RA 14h03m49s Dec -60.37.
@@ -26,6 +26,9 @@
 ; will report a load error for DistStarsVO-BSS-VS; the visuals still run.
 ;
 Control Text="2.4 Stars: loading..."
+; face south again after the Moon and planets (11 s, BSS-Lib-FaceSouth; does nothing if already south).
+; Needs the BSS-Lib page loaded.
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-FaceSouth.Run()
 Scene Remove(DistStarsVO-BSS-VS)
 Scene Remove(RingAlphaCen-BSS-VS)
 Scene Remove(RingBetaCen-BSS-VS)
@@ -51,6 +54,8 @@ Scene LabelAlphaCen-BSS-VS.Text.String="Alpha Centauri"
 Scene LabelAlphaCen-BSS-VS { Frame=Sidereal Azimuth=219.90 Elevation=-57.8 Scale=0.2 }
 Scene LabelBetaCen-BSS-VS.Text.String="Beta Centauri"
 Scene LabelBetaCen-BSS-VS { Frame=Sidereal Azimuth=210.96 Elevation=-63.4 Scale=0.2 }
+; wait for the turn to finish: 0.1+0.1+9.8 = 10 s, then 1 s more below = 11 s
++9.8
 +1
 ;
 ; ----- @0:00  ring and label on Alpha Cen (3 s); "Alpha Centauri is our closest neighbour, 40 trillion km, 4.3 light years" -----
@@ -95,5 +100,5 @@ Scene Remove(RingAlphaCen-BSS-VS)
 Scene Remove(RingBetaCen-BSS-VS)
 Scene Remove(LabelAlphaCen-BSS-VS)
 Scene Remove(LabelBetaCen-BSS-VS)
-; 1.2 + 7+4+6+5+8+8+2 = 41.2 s
+; 0.2+9.8+1 + 7+4+6+5+8+8+2 = 51 s
 Control Text="2.4 Stars"

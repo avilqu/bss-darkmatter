@@ -33,7 +33,7 @@ var LEN = {
     "Jupiter": 11.2,
     "Saturn": 11.2,
     "PlanetsEnd": 4,
-    "Stars": 41.2,
+    "Stars": 51,
     "Core": 17.2,
     "Magellan": 37.2
 };

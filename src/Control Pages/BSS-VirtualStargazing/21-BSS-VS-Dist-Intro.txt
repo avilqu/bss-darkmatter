@@ -2,7 +2,7 @@
 ; Page: BSS-VirtualStargazing   Button: "2.1 Intro"   Length: ~10 s
 ; Chapter 2 segment 1 (always plays): opening line of "Distances & perspective".
 ; Visuals only, no text on the dome. Run by the chapter-2 sequencer, or alone for testing.
-; Starts from: ground at Mount Cook Village, bright sky, real time (end of BSS-VS-DarkSkies).
+; Starts from: ground at Mount Cook Village, facing north, bright sky, real time (end of BSS-VS-DarkSkies).
 ; Ends with:   same state (nothing changed on the dome).
 ;
 ; TIMING: estimated from the script text (no recording yet). @m:ss = time since the

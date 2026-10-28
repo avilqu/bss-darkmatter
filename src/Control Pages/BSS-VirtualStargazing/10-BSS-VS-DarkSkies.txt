@@ -3,8 +3,8 @@
 ; Chapter 1 (introduction): logo off, slow approach from 1000 km, landing at Aoraki,
 ; dark adaptation then bright sky. Visuals only, no text on the dome.
 ; Starts from: BSS-VS-Setup (1000 km above Aoraki, dim sky, real time, clouds on, logo up).
-; Ends with:   on the ground at Mount Cook Village, bright sky, real time, clouds off, logo off.
-; Needs the BSS-Lib page loaded (LogoOut, DSRMarkerOn/Off, Land, CloudsOff, SkyBright).
+; Ends with:   on the ground at Mount Cook Village, FACING NORTH, bright sky, real time, clouds off, logo off.
+; Needs the BSS-Lib page loaded (LogoOut, DSRMarkerOn/Off, Land, CloudsOff, FaceNorth, SkyBright).
 ;
 ; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
 ; voiceover starts. When the recording exists, set the waits from its timecodes.
@@ -63,8 +63,13 @@ Control Mt Cook.Theater.BSS-Lib.BSS-Lib-Land.Run()
 ; @1:15  clouds off (3 s, BSS-Lib-CloudsOff) in the second half of the descent, while the view
 ; turns up to the sky, so they're gone before we stargaze from the ground
 Control Mt Cook.Theater.BSS-Lib.BSS-Lib-CloudsOff.Run()
-; 10.5 s landing + 9.5 s on the ground before the next line, @1:10 to @1:30 (5+15)
-+15
++6
+; @1:21  just landed (Land ends @1:20.5): face north (11 s, BSS-Lib-FaceNorth, until @1:32), so the
+; Moon and planets are in front for chapter 2. Segment 24 (Alpha Cen) turns back south.
+; Done after the landing, not during it: the Yaw turn would fight Land's Orient change.
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-FaceNorth.Run()
+; 10.5 s landing + 9.5 s on the ground before the next line, @1:10 to @1:30 (5+6+9)
++9
 ;
 ; ----- @1:30  "It takes about 15 minutes for eyes to adjust to darkness" -----
 Control Text="7/8 Dark adaptation"

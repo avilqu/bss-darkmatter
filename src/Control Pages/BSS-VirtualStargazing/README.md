@@ -18,14 +18,14 @@ Names: references `BSS-VS-<What>`, assets `<Name>-BSS-VS`. Needs the **BSS-Lib**
 | `05-BSS-VS-CheckSky.txt` | `BSS-VS-CheckSky` | Check sky | 0.1 s | logs what chapter 2 would play now |
 | `06-BSS-VS-StopSeq.txt` | `BSS-VS-StopSeq` | Stop chapter | 0.1 s | stops the sequencer (chapter 2 or Play all) before the next segment or chapter |
 | `07-BSS-VS-PlayAll.txt` | `BSS-VS-PlayAll` | Play all | ~20–22 min | Setup → end of ch. 9 (runs chapters 1–9 through BSS-VS-Seq, see below) |
-| `10-BSS-VS-DarkSkies.txt` | `BSS-VS-DarkSkies` | 1 Dark skies | ~112 s | Setup → ground at Mt Cook Village, bright sky, **clouds off**, logo off |
-| `20-BSS-VS-DistancesAndPerspective.txt` | `BSS-VS-DistancesAndPerspective` | 2 Distances | ~90–200 s | ground, bright sky → same (runs 21–26) |
+| `10-BSS-VS-DarkSkies.txt` | `BSS-VS-DarkSkies` | 1 Dark skies | ~112 s | Setup → ground at Mt Cook Village, **facing north**, bright sky, **clouds off**, logo off |
+| `20-BSS-VS-DistancesAndPerspective.txt` | `BSS-VS-DistancesAndPerspective` | 2 Distances | ~100–210 s | ground facing north, bright sky → ground facing south (runs 21–26) |
 | `21-BSS-VS-Dist-Intro.txt` | `BSS-VS-Dist-Intro` | 2.1 Intro | ~10 s | ground, bright sky → same |
 | `22-BSS-VS-Dist-Moon.txt` | `BSS-VS-Dist-Moon` | 2.2 Moon | ~18 s | same → same |
 | `23-BSS-VS-Dist-Planets.txt` | `BSS-VS-Dist-Planets` | 2.3 Planets | ~12 s | planets normal → **planets enlarged** |
 | `231`…`235-BSS-VS-Dist-<Planet>.txt` | `BSS-VS-Dist-Mercury` … `-Saturn` | 2.3 \<Planet\> | ~11 s each | enlarged → enlarged |
 | `239-BSS-VS-Dist-PlanetsEnd.txt` | `BSS-VS-Dist-PlanetsEnd` | 2.3 Planets end | 4 s | enlarged → normal |
-| `24-BSS-VS-Dist-Stars.txt` | `BSS-VS-Dist-Stars` | 2.4 Stars | ~41 s | bright sky → **stars hidden** |
+| `24-BSS-VS-Dist-Stars.txt` | `BSS-VS-Dist-Stars` | 2.4 Stars | ~51 s | bright sky, facing north or south → **facing south**, **stars hidden** (turns south first, 11 s) |
 | `25-BSS-VS-Dist-Core.txt` | `BSS-VS-Dist-Core` | 2.5 Core | ~17 s | stars hidden → same |
 | `26-BSS-VS-Dist-Magellan.txt` | `BSS-VS-Dist-Magellan` | 2.6 Magellan | ~37 s | stars hidden → bright sky, stars back |
 | `30-BSS-VS-CelestialNav.txt` | `BSS-VS-CelestialNav` | 3 Celestial nav | ~95 s | ground, bright sky, real time → same |
