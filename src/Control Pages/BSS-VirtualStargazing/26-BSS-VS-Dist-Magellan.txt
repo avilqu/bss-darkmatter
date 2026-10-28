@@ -2,7 +2,7 @@
 ; Page: BSS-VirtualStargazing   Button: "2.6 Magellan"   Length: ~37 s
 ; Chapter 2 segment 6 (always plays; both clouds are circumpolar from Aoraki): rings on the
 ; Large and Small Magellanic Clouds, then the stars come back and the closing line.
-; Visuals only, no text on the dome (the rings are plain circles).
+; Rings with name labels (asked for: the only text in this segment).
 ; Starts from: stars hidden (end of 24-BSS-VS-Dist-Stars or 25-BSS-VS-Dist-Core).
 ; Ends with:   ground, bright sky, real time, stars back. Same state as the start of chapter 2.
 ; Needs the BSS-Lib page loaded (SkyBright).
@@ -12,6 +12,12 @@
 ; 7 degrees wide.
 ; UNVERIFIED: Frame=Sidereal on a Slide and Width in degrees, see 24-BSS-VS-Dist-Stars.
 ; UNVERIFIED: Stars.Visibility, see 24-BSS-VS-Dist-Stars.
+; Labels: white SlideText fixed to the stars (src/Snippets/sidereal-label.txt), just outside the ring,
+; faded in and out with it. Names only; the voiceover gives the distances.
+; UNVERIFIED: Frame=Sidereal and Visibility on SlideText, label size at Scale=0.25 (Scale x10 ~ FontHeight),
+; and how the text is turned on the dome. Adjust Scale or the label Elevation (= Dec) if it overlaps the ring.
+; Labels towards the equator, outside the rings: LMC at Dec -61.3 (ring radius 6 + 2.5),
+; SMC at Dec -67.3 (ring radius 3.5 + 2). Two lines each (\n) to keep them narrow.
 ;
 ; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
 ; voiceover starts. When the recording exists, set the waits from its timecodes
@@ -23,10 +29,14 @@ Control Text="2.6 Magellan: loading..."
 Scene Remove(DistMagellanVO-BSS-VS)
 Scene Remove(RingLMC-BSS-VS)
 Scene Remove(RingSMC-BSS-VS)
+Scene Remove(LabelLMC-BSS-VS)
+Scene Remove(LabelSMC-BSS-VS)
 +0.1
 Scene Add(DistMagellanVO-BSS-VS, Media, Volume=100)
 Scene Add(RingLMC-BSS-VS, Slide, Visibility=0)
 Scene Add(RingSMC-BSS-VS, Slide, Visibility=0)
+Scene Add(LabelLMC-BSS-VS, SlideText, Visibility=0)
+Scene Add(LabelSMC-BSS-VS, SlideText, Visibility=0)
 +0.1
 Scene DistMagellanVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-26-DistMagellan.mp3"
 Scene RingLMC-BSS-VS.Picture="<ContentPath>\Assets\BSS\VirtualStargazing\VS-Ring-L.png"
@@ -37,13 +47,19 @@ Scene RingSMC-BSS-VS.Picture="<ContentPath>\Assets\BSS\VirtualStargazing\VS-Ring
 Scene RingSMC-BSS-VS.Slide.Blend=Alpha
 Scene RingSMC-BSS-VS.Slide.TextLock="Height to Width"
 Scene RingSMC-BSS-VS { Frame=Sidereal Azimuth=13.19 Elevation=-72.83 Width=7 }
+Scene LabelLMC-BSS-VS.Text.String="Large\nMagellanic Cloud"
+Scene LabelLMC-BSS-VS { Frame=Sidereal Azimuth=80.89 Elevation=-61.3 Scale=0.25 }
+Scene LabelSMC-BSS-VS.Text.String="Small\nMagellanic Cloud"
+Scene LabelSMC-BSS-VS { Frame=Sidereal Azimuth=13.19 Elevation=-67.3 Scale=0.25 }
 +1
 ;
-; ----- @0:00  rings on both clouds (3 s); "The Clouds of Magellan are the furthest objects you can see with your naked eye" -----
+; ----- @0:00  rings and labels on both clouds (3 s); "The Clouds of Magellan are the furthest objects you can see with your naked eye" -----
 Control Text="1/5 Furthest objects"
 Scene DistMagellanVO-BSS-VS.Play()
 Scene RingLMC-BSS-VS.Visibility=100 [1:1:1]
 Scene RingSMC-BSS-VS.Visibility=100 [1:1:1]
+Scene LabelLMC-BSS-VS.Visibility=100 [1:1:1]
+Scene LabelSMC-BSS-VS.Visibility=100 [1:1:1]
 +6
 ;
 ; ----- @0:06  "160,000 (Large) and 210,000 (Small) light years away" -----
@@ -54,10 +70,12 @@ Control Text="2/5 Distances"
 Control Text="3/5 Southern only"
 +6
 ;
-; ----- @0:18  rings off (3 s), stars back (6 s) and bright sky profile (5 s, BSS-Lib-SkyBright) -----
+; ----- @0:18  rings and labels off (3 s), stars back (6 s) and bright sky profile (5 s, BSS-Lib-SkyBright) -----
 Control Text="4/5 Stars back"
 Scene RingLMC-BSS-VS.Visibility=0 [1:1:1]
 Scene RingSMC-BSS-VS.Visibility=0 [1:1:1]
+Scene LabelLMC-BSS-VS.Visibility=0 [1:1:1]
+Scene LabelSMC-BSS-VS.Visibility=0 [1:1:1]
 Scene Stars.Visibility=100 [2:2:2]
 Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
 +6
@@ -72,5 +90,7 @@ Scene DistMagellanVO-BSS-VS.Volume=0 [1:0:1]
 Scene Remove(DistMagellanVO-BSS-VS)
 Scene Remove(RingLMC-BSS-VS)
 Scene Remove(RingSMC-BSS-VS)
+Scene Remove(LabelLMC-BSS-VS)
+Scene Remove(LabelSMC-BSS-VS)
 ; 1.2 + 6+6+6+6+10+2 = 37.2 s
 Control Text="2.6 Magellan"

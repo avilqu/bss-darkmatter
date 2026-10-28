@@ -2,7 +2,7 @@
 ; Page: BSS-VirtualStargazing   Button: "2.4 Stars"   Length: ~41 s
 ; Chapter 2 segment 4 (always plays): ring on Alpha Centauri, then on Beta Centauri,
 ; star distances, then the stars fade out to leave the Milky Way glow.
-; Visuals only, no text on the dome (the rings are plain circles).
+; Rings with name labels (asked for: the only text in this segment).
 ; Starts from: ground, bright sky, real time.
 ; Ends with:   same, but STARS HIDDEN (Stars.Visibility=0). 26-BSS-VS-Dist-Magellan brings them back.
 ;
@@ -12,6 +12,12 @@
 ; ring is centred on the star. Check on the dome; nudge Azimuth/Elevation if it's off.
 ; UNVERIFIED: Stars.Visibility=0 hides all the stars. If not, use Scene Stars.Lum=0 here and
 ; Lum=2 in 26-Magellan. If the Gaia StarCatalog is loaded, it must be hidden too.
+; Labels: white SlideText fixed to the stars (src/Snippets/sidereal-label.txt), just outside the ring,
+; faded in and out with it. Names only; the voiceover gives the distances.
+; UNVERIFIED: Frame=Sidereal and Visibility on SlideText, label size at Scale=0.2 (Scale x10 ~ FontHeight),
+; and how the text is turned on the dome. Adjust Scale or the label Elevation (= Dec) if it overlaps the ring.
+; The two stars are only ~4.4 deg apart: Alpha Cen's label sits 3 deg towards the equator (Dec -57.8),
+; Beta Cen's 3 deg towards the pole (Dec -63.4), so they don't run into each other.
 ;
 ; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
 ; voiceover starts. When the recording exists, set the waits from its timecodes
@@ -23,10 +29,14 @@ Control Text="2.4 Stars: loading..."
 Scene Remove(DistStarsVO-BSS-VS)
 Scene Remove(RingAlphaCen-BSS-VS)
 Scene Remove(RingBetaCen-BSS-VS)
+Scene Remove(LabelAlphaCen-BSS-VS)
+Scene Remove(LabelBetaCen-BSS-VS)
 +0.1
 Scene Add(DistStarsVO-BSS-VS, Media, Volume=100)
 Scene Add(RingAlphaCen-BSS-VS, Slide, Visibility=0)
 Scene Add(RingBetaCen-BSS-VS, Slide, Visibility=0)
+Scene Add(LabelAlphaCen-BSS-VS, SlideText, Visibility=0)
+Scene Add(LabelBetaCen-BSS-VS, SlideText, Visibility=0)
 +0.1
 Scene DistStarsVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-24-DistStars.mp3"
 Scene RingAlphaCen-BSS-VS.Picture="<ContentPath>\Assets\BSS\VirtualStargazing\VS-Ring-S.png"
@@ -37,31 +47,39 @@ Scene RingBetaCen-BSS-VS.Picture="<ContentPath>\Assets\BSS\VirtualStargazing\VS-
 Scene RingBetaCen-BSS-VS.Slide.Blend=Alpha
 Scene RingBetaCen-BSS-VS.Slide.TextLock="Height to Width"
 Scene RingBetaCen-BSS-VS { Frame=Sidereal Azimuth=210.96 Elevation=-60.37 Width=3 }
+Scene LabelAlphaCen-BSS-VS.Text.String="Alpha Centauri"
+Scene LabelAlphaCen-BSS-VS { Frame=Sidereal Azimuth=219.90 Elevation=-57.8 Scale=0.2 }
+Scene LabelBetaCen-BSS-VS.Text.String="Beta Centauri"
+Scene LabelBetaCen-BSS-VS { Frame=Sidereal Azimuth=210.96 Elevation=-63.4 Scale=0.2 }
 +1
 ;
-; ----- @0:00  ring on Alpha Cen (3 s); "Alpha Centauri is our closest neighbour, 40 trillion km, 4.3 light years" -----
+; ----- @0:00  ring and label on Alpha Cen (3 s); "Alpha Centauri is our closest neighbour, 40 trillion km, 4.3 light years" -----
 Control Text="1/6 Alpha Centauri"
 Scene DistStarsVO-BSS-VS.Play()
 Scene RingAlphaCen-BSS-VS.Visibility=100 [1:1:1]
+Scene LabelAlphaCen-BSS-VS.Visibility=100 [1:1:1]
 +7
 ;
 ; ----- @0:07  "1 light year = 10 trillion km" -----
 Control Text="2/6 Light year"
 +4
 ;
-; ----- @0:11  ring on Beta Cen (3 s); "Beta Centauri is 390 light years away, 100x further than Alpha Cen" -----
+; ----- @0:11  ring and label on Beta Cen (3 s); "Beta Centauri is 390 light years away, 100x further than Alpha Cen" -----
 Control Text="3/6 Beta Centauri"
 Scene RingBetaCen-BSS-VS.Visibility=100 [1:1:1]
+Scene LabelBetaCen-BSS-VS.Visibility=100 [1:1:1]
 +6
 ;
 ; ----- @0:17  "It is still bright because it's more massive, 10 solar masses" -----
 Control Text="4/6 Massive"
 +5
 ;
-; ----- @0:22  rings off (3 s); "All stars range from 4 to a few thousand light years. Removing stars reveals the more distant background" -----
+; ----- @0:22  rings and labels off (3 s); "All stars range from 4 to a few thousand light years. Removing stars reveals the more distant background" -----
 Control Text="5/6 Star distances"
 Scene RingAlphaCen-BSS-VS.Visibility=0 [1:1:1]
 Scene RingBetaCen-BSS-VS.Visibility=0 [1:1:1]
+Scene LabelAlphaCen-BSS-VS.Visibility=0 [1:1:1]
+Scene LabelBetaCen-BSS-VS.Visibility=0 [1:1:1]
 +8
 ;
 ; ----- @0:30  stars fade out (6 s); "The Milky Way glow is the combined light of stars up to 30,000 light years" -----
@@ -75,5 +93,7 @@ Scene DistStarsVO-BSS-VS.Volume=0 [1:0:1]
 Scene Remove(DistStarsVO-BSS-VS)
 Scene Remove(RingAlphaCen-BSS-VS)
 Scene Remove(RingBetaCen-BSS-VS)
+Scene Remove(LabelAlphaCen-BSS-VS)
+Scene Remove(LabelBetaCen-BSS-VS)
 ; 1.2 + 7+4+6+5+8+8+2 = 41.2 s
 Control Text="2.4 Stars"

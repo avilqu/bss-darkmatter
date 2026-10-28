@@ -2,13 +2,18 @@
 ; Page: BSS-VirtualStargazing   Button: "2.5 Core"   Length: ~17 s
 ; Chapter 2 segment 5 (only if the galactic core is up): ring on the galactic core,
 ; the Milky Way brightens a little, then back.
-; Visuals only, no text on the dome (the ring is a plain circle).
+; Ring with a name label (asked for: the only text in this segment).
 ; Starts from: stars hidden, Milky Way at the bright-sky level (Visible Milky Way.Visibility=80).
 ; Ends with:   same state.
 ;
 ; Ring: show-wide ring method, see src/Snippets/vs-ring.txt. Large ring (VS-Ring-L) around
 ; Sgr A*, RA 17h45m40s Dec -29.01, 20 degrees wide.
 ; UNVERIFIED: Frame=Sidereal on a Slide and Width in degrees, see 24-BSS-VS-Dist-Stars.
+; Labels: white SlideText fixed to the stars (src/Snippets/sidereal-label.txt), just outside the ring,
+; faded in and out with it. Names only; the voiceover gives the distances.
+; UNVERIFIED: Frame=Sidereal and Visibility on SlideText, label size at Scale=0.3 (Scale x10 ~ FontHeight),
+; and how the text is turned on the dome. Adjust Scale or the label Elevation (= Dec) if it overlaps the ring.
+; Label 13 deg towards the equator (Dec -16), outside the 20 deg ring.
 ;
 ; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
 ; voiceover starts. When the recording exists, set the waits from its timecodes
@@ -19,21 +24,26 @@
 Control Text="2.5 Core: loading..."
 Scene Remove(DistCoreVO-BSS-VS)
 Scene Remove(RingCore-BSS-VS)
+Scene Remove(LabelCore-BSS-VS)
 +0.1
 Scene Add(DistCoreVO-BSS-VS, Media, Volume=100)
 Scene Add(RingCore-BSS-VS, Slide, Visibility=0)
+Scene Add(LabelCore-BSS-VS, SlideText, Visibility=0)
 +0.1
 Scene DistCoreVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-25-DistCore.mp3"
 Scene RingCore-BSS-VS.Picture="<ContentPath>\Assets\BSS\VirtualStargazing\VS-Ring-L.png"
 Scene RingCore-BSS-VS.Slide.Blend=Alpha
 Scene RingCore-BSS-VS.Slide.TextLock="Height to Width"
 Scene RingCore-BSS-VS { Frame=Sidereal Azimuth=266.42 Elevation=-29.01 Width=20 }
+Scene LabelCore-BSS-VS.Text.String="Galactic Centre"
+Scene LabelCore-BSS-VS { Frame=Sidereal Azimuth=266.42 Elevation=-16 Scale=0.3 }
 +1
 ;
-; ----- @0:00  ring (3 s) and Milky Way up (6 s); "The Milky Way core gets higher in the southern hemisphere than in the north" -----
+; ----- @0:00  ring and label (3 s) and Milky Way up (6 s); "The Milky Way core gets higher in the southern hemisphere than in the north" -----
 Control Text="1/2 Core high"
 Scene DistCoreVO-BSS-VS.Play()
 Scene RingCore-BSS-VS.Visibility=100 [1:1:1]
+Scene LabelCore-BSS-VS.Visibility=100 [1:1:1]
 Scene Visible Milky Way.Visibility=100 [2:2:2]
 +7
 ;
@@ -41,12 +51,14 @@ Scene Visible Milky Way.Visibility=100 [2:2:2]
 Control Text="2/2 Southern feature"
 +6
 ;
-; ----- @0:13  ring off, Milky Way back (3 s), fade out and remove the voiceover -----
+; ----- @0:13  ring and label off, Milky Way back (3 s), fade out and remove the voiceover -----
 Scene RingCore-BSS-VS.Visibility=0 [1:1:1]
+Scene LabelCore-BSS-VS.Visibility=0 [1:1:1]
 Scene Visible Milky Way.Visibility=80 [1:1:1]
 Scene DistCoreVO-BSS-VS.Volume=0 [1:1:1]
 +3
 Scene Remove(DistCoreVO-BSS-VS)
 Scene Remove(RingCore-BSS-VS)
+Scene Remove(LabelCore-BSS-VS)
 ; 1.2 + 7+6+3 = 17.2 s
 Control Text="2.5 Core"
