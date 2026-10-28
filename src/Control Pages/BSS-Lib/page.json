@@ -346,6 +346,36 @@
       "kind": "small",
       "left": 260,
       "top": 595
+    },
+    "75-BSS-Lib-GoToMoon.txt": {
+      "prefix": "WIDGETBUTTONSMALL_1acf90e6_f961_4653_9e42_4677507c67fb",
+      "kind": "small",
+      "left": 385,
+      "top": 595
+    },
+    "120-BSS-Lib-OrbitsOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_f8b69937_6171_47ee_acdf_5cbd95707283",
+      "kind": "small",
+      "left": 510,
+      "top": 595
+    },
+    "121-BSS-Lib-OrbitsOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_a37517c7_42f3_40cc_919b_a9eed76e7433",
+      "kind": "small",
+      "left": 635,
+      "top": 595
+    },
+    "122-BSS-Lib-AsteroidsOn.txt": {
+      "prefix": "WIDGETBUTTONSMALL_5fb9e057_5924_418d_819e_e17fb3ae558e",
+      "kind": "small",
+      "left": 10,
+      "top": 660
+    },
+    "123-BSS-Lib-AsteroidsOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_fcd6a2e9_026a_4d67_a026_152c43432a96",
+      "kind": "small",
+      "left": 135,
+      "top": 660
     }
   }
 }

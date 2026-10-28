@@ -21,6 +21,9 @@ Files used by this page. Each must be at the same path on **DS-Master and every 
 | `VS-40-Constellations.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `40-BSS-VS-Constellations` (voiceover, ch. 4) | placeholder, not recorded yet |
 | `VS-50-VirtualTelescope.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `50-BSS-VS-VirtualTelescope` (voiceover, ch. 5) | placeholder, not recorded yet |
 | `VS-60-SouthernLights.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `60-BSS-VS-SouthernLights` (voiceover, ch. 6) | placeholder, not recorded yet |
+| `VS-70-Moon.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `70-BSS-VS-Moon` (voiceover, ch. 7) | placeholder, not recorded yet |
+| `VS-80-SolarSystem.mp3` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `80-BSS-VS-SolarSystem` (voiceover, ch. 8) | placeholder, not recorded yet |
+| `VS-MoonRabbit.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | `70-BSS-VS-Moon` (rabbit outline over the Full Moon, step 7) | **missing**: transparent PNG, square, Moon disc filling the frame, south up as seen from NZ |
 | `VS-Ring-S.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | ring, stars ~2–4° (`24`, `30`) | in repo: `Assets/BSS/VirtualStargazing/` |
 | `VS-Ring-M.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | ring, objects ~5–10° (`26` SMC) | in repo: `Assets/BSS/VirtualStargazing/` |
 | `VS-Ring-L.png` | `<ContentPath>\Assets\BSS\VirtualStargazing\` | ring, objects ~10–25° (`25` core, `26` LMC) | in repo: `Assets/BSS/VirtualStargazing/` |
@@ -39,3 +42,5 @@ Asset Manager assets (not files, must exist for user Theater):
 | `MaoriConstellations > MauisFishHook` | `40-BSS-VS-Constellations` (Te Matau a Maui). TODO: export the folder (DMZ) and convert to Scene Add + file |
 | `DeepSkyPhoto > ngc3372`, `ngc4755`, `ngc3532`, `ngc104` | `BSS-Lib-CarinaOn`, `-JewelBoxOn`, `-WishingWellOn`, `-47TucOn` (called by `50`). TODO: export the folder (DMZ) and convert to Scene Add + files |
 | `Aoraki > southernLights1`, `southernLights2`, `northernLights1`, `northernLights2`, `sunSpawn`, `stellarWindPart`, `magFieldCentreA/B/C`, `magFieldRingA1/A2/B1/B2/C1/C2` | `BSS-Lib-AuroraOn/Off`, `-SolarWindOn/Off`, `-MagFieldOn/Off` (called by `60`). TODO: export the folder (DMZ) and convert to Scene Add + files |
+| `Constellations > <12 zodiac> Art` (via `BSS-Lib-ConstLoad`) | `80-BSS-VS-SolarSystem` |
+| `Asteroids > Main Belt Asteroids` | `BSS-Lib-AsteroidsOn/Off` (called by `80`). TODO: check if Sky-Skan core; if not, export (DMZ) and convert |

@@ -154,8 +154,8 @@ function planetAlt(name, d) {
     return altitude(rd.ra, rd.dec, d);
 }
 
-// Low precision Moon, Astronomical Almanac, about 0.3 degree, then parallax
-function moonAlt(d) {
+// Low precision Moon, Astronomical Almanac, about 0.3 degree: geocentric RA, Dec and parallax
+function moonRaDec(d) {
     var T = d / 36525;
     var lam = 218.32 + 481267.881 * T
         + 6.29 * sind(135.0 + 477198.87 * T) - 1.27 * sind(259.3 - 413335.36 * T)
@@ -166,8 +166,15 @@ function moonAlt(d) {
     var par = 0.9508 + 0.0518 * cosd(135.0 + 477198.87 * T) + 0.0095 * cosd(259.3 - 413335.36 * T)
         + 0.0078 * cosd(235.7 + 890534.22 * T) + 0.0028 * cosd(269.9 + 954397.74 * T);
     var rd = eclToRaDec(cosd(bet) * cosd(lam), cosd(bet) * sind(lam), sind(bet));
+    rd.par = par;
+    return rd;
+}
+
+// Moon altitude, corrected for parallax
+function moonAlt(d) {
+    var rd = moonRaDec(d);
     var alt = altitude(rd.ra, rd.dec, d);
-    return alt - par * cosd(alt);
+    return alt - rd.par * cosd(alt);
 }
 
 // Galactic centre, Sgr A* J2000
@@ -184,6 +191,7 @@ function wanted(what, alt) {
 }
 
 function round1(x) { return Math.round(x * 10) / 10; }
+function wrap180(x) { x = norm360(x); if (x > 180) x = x - 360; return x; }
 
 // Returns the list of segment names to play, and logs why
 function plan() {
@@ -241,6 +249,32 @@ function Cycle(what) {
 function SetTestOffset(hours) {
     testOffsetHours = hours;
     log("test offset " + hours + " h");
+}
+
+// Chapter 7 button: orbit Earth to the point opposite the Moon, moved offset degrees north,
+// at altitude alt in metres, with the timing ta:tc:td. Seen from there the Moon hangs just
+// above Earth's north limb. Only sends DM commands and returns at once: the button waits.
+// The longitude is changed with += by the shortest way round, from the current camera value.
+function MoonView(offset, alt, ta, tc, td) {
+    var d = daysJ2000();
+    var m = moonRaDec(d);
+    var gmst = norm360(280.46061837 + 360.98564736629 * d);
+    var lon = wrap180(m.ra - gmst + 180);
+    var lat = round1(-m.dec + offset);
+    var t = " [" + ta + ":" + tc + ":" + td + "]";
+    log("Moon RA " + round1(m.ra) + " Dec " + round1(m.dec) + ", camera to lat " + lat + " lon " + round1(lon));
+    dm("Scene Camera { Latitude=" + lat + " Altitude=" + alt + " }" + t);
+    var cur = NaN;
+    try {
+        cur = parseFloat(DigitalSky.GetAssetInstance("Camera").GetPropertyInstance("Longitude").Value);
+    } catch (e) {
+        log("cannot read Camera.Longitude: " + e);
+    }
+    if (isNaN(cur)) {
+        dm("Scene Camera.Longitude=" + round1(lon) + t);
+    } else {
+        dm("Scene Camera.Longitude+=" + round1(wrap180(lon - cur)) + t);
+    }
 }
 
 // Stops between segments; the segment already running finishes

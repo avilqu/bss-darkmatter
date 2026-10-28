@@ -1,0 +1,10 @@
+;=== BSS-Lib-AsteroidsOff ===
+; Page: BSS-Lib   Button: "Asteroids off"   Length: 3.5 s
+; Fades out and unloads the main asteroid belt.
+; Split from Theater/Adrien "Main asteroid belt" (second half); [2] -> [1:1:1], wait +2 -> +3.
+Control Text="Asteroids: off..."
+Scene Main Belt Asteroids.Visibility=0 [1:1:1]
++3
+Assets Asteroids.Unload(Main Belt Asteroids)
++0.5
+Control Text="Asteroids off"

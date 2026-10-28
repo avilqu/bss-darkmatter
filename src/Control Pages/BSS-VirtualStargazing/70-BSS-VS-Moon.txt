@@ -1,0 +1,124 @@
+;=== BSS-VS-Moon ===
+; Page: BSS-VirtualStargazing   Button: "7 Moon"   Length: ~223 s
+; Chapter 7 (the Moon): orbit Earth until the Moon hangs above the North Pole, fly to the Moon (current
+; phase), time to the next Full Moon, zoom on the Sea of Tranquility (maria), back to the near side and
+; the rabbit, time to the New Moon (tidal locking), then orbit to the sunlit far side.
+; Visuals only, no text on the dome.
+; Starts from: in space, bright sky, real time (end of chapter 6: ~22,000 km above 70 deg N).
+; Ends with:   in space, 10,000 km above the Moon's far side, camera parented to the Moon, sky at about
+;              the next New Moon (NOT real time, rate 1), Moon scale 1. The next chapter must reset the
+;              time (BSS-Lib-TimeNow) and, if it shows the Moon from the ground, its scale (2.5, as Setup).
+; Needs the BSS-Lib page loaded (SkyBright, TimeNow, GoToMoon) and the BSS-VS-Seq JS engine (loaded
+; by Setup, or press "Load BSS-VS-Seq"): its MoonView function places the camera from the PC clock.
+;
+; Reused from Theater/Adrien through BSS-Lib: Go to Moon, Sky settings (bright), Time now.
+; Order change from the outline: the rabbit comes after zooming back out to the whole near side
+; (it spans the whole disc, it can't be seen from the Sea of Tranquility close-up).
+; Moon scale goes from 2.5 (Setup) to 1, the real size, during step 1 while the Moon is far away, so
+; the Earth-Moon view and the close-ups are true to scale.
+; UNVERIFIED: north is at the top of the SouthAndDown view (step 1). If the Moon shows below Earth
+; instead, change 18 to -18 in the MoonView call. If it is hidden behind Earth, raise 18 to 25.
+; UNVERIFIED: Camera Latitude/Longitude/Altitude work with the Moon as parent, in selenographic
+; coordinates (0,0 = centre of the near side) and Altitude above the scaled surface.
+; UNVERIFIED: after ConvertInPlace(Moon, Position Rotate Scale) the camera turns with the Moon, so the
+; near side stays below while the time runs (tidal locking), and Orient may need resetting (step 3).
+; UNVERIFIED: rabbit slide position, the Moon centre on the dome (Azimuth 180, Elevation 45 = sweet
+; spot from SS.Elevation 45) and Width 17 deg (Moon diameter seen from 10,000 km). Tune in a ScriptPad.
+; New Moon = Full Moon + 14d18h (half a mean lunation, within about a day; DM has no $NextNewMoon).
+;
+; TIMING: estimated from the script text (no recording yet). @m:ss = time since the
+; voiceover starts. When the recording exists, set the waits from its timecodes.
+; AUDIO PLACEHOLDER: the file below doesn't exist yet. Until it does, Event Viewer
+; will report a load error for MoonVO-BSS-VS; the visuals still run.
+; IMAGE MISSING: VS-MoonRabbit.png (see media.md). Until it exists, step 7 shows nothing.
+;
+Control Text="7 Moon: loading..."
+Scene Remove(MoonVO-BSS-VS)
+Scene Remove(MoonRabbit-BSS-VS)
++0.1
+Scene Add(MoonVO-BSS-VS, Media, Volume=100)
+Scene Add(MoonRabbit-BSS-VS, Slide, Visibility=0)
++0.1
+Scene MoonVO-BSS-VS.MediaFile="<ContentPath>\Assets\BSS\VirtualStargazing\VS-70-Moon.mp3"
+Scene MoonRabbit-BSS-VS.Picture="<ContentPath>\Assets\BSS\VirtualStargazing\VS-MoonRabbit.png"
+Scene MoonRabbit-BSS-VS.Slide.TextLock="Height to Width"
+Scene MoonRabbit-BSS-VS { Azimuth=180 Elevation=45 Width=17 }
++1
+;
+; ----- @0:00  bright sky (5 s, BSS-Lib-SkyBright), real time (9 s, BSS-Lib-TimeNow), Moon to real
+;              size (8 s); orbit Earth to its night side, 30,000 km up, Moon above the north limb (18 s);
+;              "Let's leave the Earth now. First step, our natural satellite" -----
+Control Text="1/11 Leave Earth"
+Scene MoonVO-BSS-VS.Play()
+Scene DateTime.Rate=1
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-TimeNow.Run()
+Scene Moon { Xscale=1 Yscale=1 Zscale=1 } [2:4:2]
+JS BSS-VS-Seq.Execute("MoonView(18, 30000000, 3, 10, 5)")
++19
+;
+; ----- @0:19  fly to 10,000 km above the Moon (31 s, BSS-Lib-GoToMoon) -----
+Control Text="2/11 Fly to Moon"
+Control Mt Cook.Theater.BSS-Lib.BSS-Lib-GoToMoon.Run()
++31
+;
+; ----- @0:50  ride with the Moon, centre on the near side as seen from Earth (10 s);
+;              "This is the current Moon phase" -----
+Control Text="3/11 Current phase"
+Scene Camera.ConvertInPlace(Moon, Position Rotate Scale)
++0.5
+Scene Camera.Orient=NorthAndDown [1:1:1]
+Scene Camera { Latitude=0 Longitude=0 } [3:3:4]
++11.5
+;
+; ----- @1:02  time to the next Full Moon (20 s) -----
+Control Text="4/11 Full Moon"
+Scene DateTime=$NextFullMoon [4:12:4]
++21
+;
+; ----- @1:23  orbit to the Sea of Tranquility (8.5 N, 31.4 E, 12 s), zoom in to 1,500 km
+;              from 4 s in (20 s); "Definition of lunar maria" -----
+Control Text="5/11 Maria"
+Scene Camera { Latitude=8.5 Longitude=31.4 } [3:4:5]
++4
+Scene Camera.Altitude=1500000 [4:8:8]
++22
+;
+; ----- @1:49  zoom out and centre on the near side again (16 s) -----
+Control Text="6/11 Near side"
+Scene Camera { Latitude=0 Longitude=0 Altitude=10000000 } [4:4:8]
++17
+;
+; ----- @2:06  rabbit outline over the Full Moon (2 s in, 10 s, 2 s out);
+;              "In the Southern hemisphere, people sometimes see a rabbit" -----
+Control Text="7/11 Rabbit"
+Scene MoonRabbit-BSS-VS.Visibility=100 [1:0:1]
++12
+Scene MoonRabbit-BSS-VS.Visibility=0 [1:0:1]
++2
+;
+; ----- @2:20  time to the New Moon (20 s); "At New Moon we can't see it: it's lit from the back" -----
+Control Text="8/11 New Moon"
+Scene DateTime+=14d18h [4:12:4]
++21
+;
+; ----- @2:41  camera still; "Explain tidal locking" -----
+Control Text="9/11 Tidal locking"
++15
+;
+; ----- @2:56  slow orbit to the far side, sunlit at New Moon (32 s) -----
+Control Text="10/11 Far side"
+Scene Camera.Longitude=179 [6:16:10]
++32
+;
+; ----- @3:28  "The far side of the Moon looks different" -----
+Control Text="11/11 Far side looks different"
++12
+;
+; ----- @3:40  end of chapter: voiceover fades out, clean up -----
+Scene MoonVO-BSS-VS.Volume=0 [1:1:1]
++2.2
+Scene Remove(MoonVO-BSS-VS)
+Scene Remove(MoonRabbit-BSS-VS)
+; 1.2 + 19+31+12+21+26+17+14+21+15+32+12+2.2 = 223.4 s
+Control Text="7 Moon"

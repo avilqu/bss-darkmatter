@@ -29,6 +29,8 @@ Names: references `BSS-VS-<What>`, assets `<Name>-BSS-VS`. Needs the **BSS-Lib**
 | `40-BSS-VS-Constellations.txt` | `BSS-VS-Constellations` | 4 Constellations | ~149 s | ground facing south, bright sky, real time → same (cuts to 10 Jul 2026 for Scorpius, back to Now) |
 | `50-BSS-VS-VirtualTelescope.txt` | `BSS-VS-VirtualTelescope` | 5 Virtual telescope | ~150 s | ground, bright sky, real time → same, facing south |
 | `60-BSS-VS-SouthernLights.txt` | `BSS-VS-SouthernLights` | 6 Southern lights | ~84 s | ground facing south, bright sky, real time → **in space** ~22,000 km above 70° N, camera still (next chapter must land) |
+| `70-BSS-VS-Moon.txt` | `BSS-VS-Moon` | 7 Moon | ~223 s | in space, bright sky, real time → **in space** 10,000 km above the Moon's far side, sky at ~next New Moon (**not real time**), Moon scale 1 (next chapter must reset time) |
+| `80-BSS-VS-SolarSystem.txt` | `BSS-VS-SolarSystem` | 8 Solar system | ~144 s | end of ch. 7 (above the Moon) → **in space** ~20 AU from the Sun in the ecliptic plane, camera parented to Ecliptic, **planet orbits on**, real time, Moon scale 1 |
 
 Chapter timings are estimates until the voiceover is recorded (see `media.md`).
 
@@ -46,6 +48,9 @@ any subset chains cleanly. The `2 Distances` button starts the **BSS-VS-Seq** JS
 3. runs 21 Intro, [22 Moon], [23 Planets, one 231–235 per planet up, 239 PlanetsEnd], 24 Stars, [25 Core],
    26 Magellan, waiting each segment's length (table `LEN` in the JS) + 0.5 s;
 4. logs every decision in Event Viewer > JavaScript Processor (`BSS-VS-Seq: ...`).
+
+The same engine also serves chapter 7: `MoonView(offset, alt, a, c, d)` sends the camera to the point of
+Earth opposite the Moon (from the PC clock), `offset` degrees north, so the Moon shows above the north limb.
 
 After changing a segment length, update `LEN` in the .js and regenerate the loader:
 

@@ -1,0 +1,9 @@
+;=== BSS-Lib-GoToMoon ===
+; Page: BSS-Lib   Button: "Go to Moon"   Length: 31 s
+; From anywhere in space: fly to 10,000 km above the Moon, looking down at it.
+; Copied from Theater/Adrien "Go to Moon"; his wait (+22) was shorter than the [8:15:8] flight,
+; so the final wait is now the full 31 s.
+Control Text="Going to the Moon..."
+Scene Camera.FlyTo(Moon, Altitude=10000000, Orient=NorthAndDown) [8:15:8]
++31
+Control Text="Go to Moon"

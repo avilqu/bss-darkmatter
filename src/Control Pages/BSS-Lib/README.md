@@ -27,6 +27,7 @@ Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
 | `72-BSS-Lib-HomePosition.txt` | `BSS-Lib-HomePosition` | Home position | 9.1 s | Theater/Adrien "Home position" (fixed coordinates instead of Here) |
 | `73-BSS-Lib-FaceNorth.txt` | `BSS-Lib-FaceNorth` | Face north | 11 s | Theater/Adrien "Spin dome" (first half) |
 | `74-BSS-Lib-FaceSouth.txt` | `BSS-Lib-FaceSouth` | Face south | 11 s | Theater/Adrien "Spin dome" (second half) |
+| `75-BSS-Lib-GoToMoon.txt` | `BSS-Lib-GoToMoon` | Go to Moon | 31 s | Theater/Adrien "Go to Moon" (wait fixed to the full flight) |
 | `80-BSS-Lib-StarTrailsOn.txt` | `BSS-Lib-StarTrailsOn` | Star trails on | 3.5 s | Theater/Adrien "Star trails" (first half) |
 | `81-BSS-Lib-StarTrailsOff.txt` | `BSS-Lib-StarTrailsOff` | Star trails off | 3 s | Theater/Adrien "Star trails" (second half) |
 | `82-BSS-Lib-CardinalOn.txt` | `BSS-Lib-CardinalOn` | Cardinal on | 3 s | Theater/Adrien "Cardinal points" (first half) |
@@ -67,6 +68,10 @@ Control Mt Cook.Theater.BSS-Lib.BSS-Lib-SkyBright.Run()
 | `117-BSS-Lib-SolarWindOff.txt` | `BSS-Lib-SolarWindOff` | Solar wind off | 3 s | idem (second half) |
 | `118-BSS-Lib-MagFieldOn.txt` | `BSS-Lib-MagFieldOn` | Mag field on | 4.5 s | Theater/Adrien "Magnetic field" (first half) |
 | `119-BSS-Lib-MagFieldOff.txt` | `BSS-Lib-MagFieldOff` | Mag field off | 3 s | idem (second half) |
+| `120-BSS-Lib-OrbitsOn.txt` | `BSS-Lib-OrbitsOn` | Orbits on | 3 s | Theater/Adrien "Planets orbits" (first half) |
+| `121-BSS-Lib-OrbitsOff.txt` | `BSS-Lib-OrbitsOff` | Orbits off | 3 s | idem (second half) |
+| `122-BSS-Lib-AsteroidsOn.txt` | `BSS-Lib-AsteroidsOn` | Asteroids on | 4 s | Theater/Adrien "Main asteroid belt" (first half) |
+| `123-BSS-Lib-AsteroidsOff.txt` | `BSS-Lib-AsteroidsOff` | Asteroids off | 3.5 s | idem (second half), unloads it |
 
 Live toggles from the dome (with `Control Pause`) are split into On/Off pairs with fixed lengths,
 so they work from a master script as well as by hand.
@@ -90,3 +95,5 @@ so they work from a master script as well as by hand.
   `magFieldRingA1…C2`), as Adrien's buttons. TODO: export the folder (DMZ) and convert to Scene Add + files.
   `BSS-Lib-AuroraOn` keeps running 60 s after its fade-in (slow Activity/ColorShift changes);
   `BSS-Lib-AuroraOff` aborts it first.
+- `BSS-Lib-AsteroidsOn/Off` (122–123) load/unload the Asset Manager asset **Asteroids > Main Belt Asteroids**,
+  as Adrien's button. TODO: check whether it is Sky-Skan core content; if not, export it (DMZ) and convert.

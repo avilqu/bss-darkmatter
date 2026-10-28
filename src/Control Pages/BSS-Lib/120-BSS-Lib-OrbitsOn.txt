@@ -1,0 +1,16 @@
+;=== BSS-Lib-OrbitsOn ===
+; Page: BSS-Lib   Button: "Orbits on"   Length: 3 s
+; Shows the orbits of the 8 planets. Hide with BSS-Lib-OrbitsOff.
+; Split from Theater/Adrien "Planets orbits" (first half); [2] -> [1:1:1], added the final wait.
+; The <Planet>Orbit assets are Sky-Skan core scene assets (always loaded, Adrien only sets Visibility).
+Control Text="Orbits: on..."
+Scene MercuryOrbit.Visibility=80 [1:1:1]
+Scene VenusOrbit.Visibility=80 [1:1:1]
+Scene EarthOrbit.Visibility=80 [1:1:1]
+Scene MarsOrbit.Visibility=80 [1:1:1]
+Scene JupiterOrbit.Visibility=80 [1:1:1]
+Scene SaturnOrbit.Visibility=80 [1:1:1]
+Scene UranusOrbit.Visibility=80 [1:1:1]
+Scene NeptuneOrbit.Visibility=80 [1:1:1]
++3
+Control Text="Orbits on"

@@ -154,6 +154,18 @@
       "kind": "small",
       "left": 10,
       "top": 270
+    },
+    "70-BSS-VS-Moon.txt": {
+      "prefix": "WIDGETBUTTONSMALL_27ba7f8a_65fa_4d2d_871a_499c65dfd7be",
+      "kind": "small",
+      "left": 135,
+      "top": 270
+    },
+    "80-BSS-VS-SolarSystem.txt": {
+      "prefix": "WIDGETBUTTONSMALL_a814e6eb_875b_4cdf_a7b5_c11f12f3a369",
+      "kind": "small",
+      "left": 260,
+      "top": 270
     }
   }
 }
