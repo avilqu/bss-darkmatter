@@ -1,0 +1,21 @@
+;=== BSS-Adrien-StarTrails ===
+; Page: BSS-Adrien   Button: "Star trails"
+; Copied unchanged from Theater/Adrien "Star trails".
+Scene Camera.Exposure.Visibility=0 [0.5]
++0.5
+Scene Camera.Exposure.Clear()
+Scene Camera.Exposure=On
+Scene Camera.Exposure.addAsset(Stars)
+Scene Visible Milky Way.Visibility=0 [3]
+Scene Camera.Exposure.Visibility=90 [3]
+
+Control Pause
+Scene Camera.Exposure.Visibility=0 [3]
+;============ Change below ==============
+Scene Visible Milky Way.Visibility=60 [3]
++2
+Scene Camera.Exposure.removeAsset(Stars)
+Scene Camera.Exposure.Clear()
+Scene Camera.Exposure=Off
+Control ExpSun.Reset()
+Control camExpButton.Reset()

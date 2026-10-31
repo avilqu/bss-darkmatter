@@ -1,0 +1,11 @@
+;=== BSS-Adrien-TeMatauAMaui ===
+; Page: BSS-Adrien   Button: "Te Matau a Maui"
+; Copied unchanged from Theater/Adrien "Te Matau a Maui".
+Assets MaoriConstellations.Load(MauisFishHook)
++0.2
+Scene MauisFishHook.Visibility=100 [2]
++1
+Control Pause
+Scene MauisFishHook.Visibility=0 [2]
++1
+Assets MaoriConstellations.Unload(MauisFishHook)

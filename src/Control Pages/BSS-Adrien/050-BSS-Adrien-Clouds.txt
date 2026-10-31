@@ -1,0 +1,6 @@
+;=== BSS-Adrien-Clouds ===
+; Page: BSS-Adrien   Button: "Clouds"
+; Copied unchanged from Theater/Adrien "Clouds" (Reference Name there: CloudsButton).
+Scene Earth.Cloud.Visibility=100 [2]
+Control Pause
+Scene Earth.Cloud.Visibility=0 [2]

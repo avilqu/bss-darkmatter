@@ -1,0 +1,7 @@
+;=== BSS-Adrien-ScorpiusArt ===
+; Page: BSS-Adrien   Button: "Scorpius art"
+; Copied unchanged from Theater/Adrien "Scorpius art".
+Assets Constellations.Load(Scorpius Art)
++0.2
+Control Pause
+Scene Scorpius Art.Visibility=0 [2]

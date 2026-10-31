@@ -1,0 +1,12 @@
+;=== BSS-Adrien-SMC ===
+; Page: BSS-Adrien   Button: "SMC"
+; Copied unchanged from Theater/Adrien "SMC".
+Assets DeepSkyPhoto.Load(smc)
+Scene smc.Visibility=0
++0.1
+Scene smc.Visibility=100 [1]
+Control Pause
++0.1
+Scene smc.Visibility=0 [1]
++1
+Assets DeepSkyPhoto.Unload(smc)

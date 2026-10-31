@@ -1,0 +1,11 @@
+;=== BSS-Adrien-TeWakaORangi ===
+; Page: BSS-Adrien   Button: "Te Waka o Rangi"
+; Copied unchanged from Theater/Adrien "Te Waka o Rangi".
+Assets MaoriConstellations.Load(TeWakaORangi)
++0.2
+Scene TeWakaORangi.Visibility=100 [1]
++1
+Control Pause
+Scene TeWakaORangi.Visibility=0 [2]
++1
+Assets MaoriConstellations.Unload(TeWakaORangi)

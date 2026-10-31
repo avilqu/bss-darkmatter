@@ -14,8 +14,10 @@ What it does:
   - button moved on the dome           -> updates left/top in page.json
   - button added on the dome           -> new NN-<RefName>.txt + page.json entry
   - button deleted on the dome         -> warning only; delete the src file yourself
-  - sliders, labels, images...         -> warning only; build-page.py does not create them
+  - rectangle moved or resized         -> updates its "shapes" entry in page.json
+  - labels, images...                  -> warning only; build-page.py does not create them
 Button captions (<Text>) are not pulled: DM saves whatever Control Text last displayed.
+Neither are slider ranges, asset tracking or rectangle colours: edit those in page.json.
 """
 
 import argparse
@@ -90,10 +92,18 @@ def main():
 
     _, _, widgets = dm.parse_page_xml(src.read(f"{guid}.xml"))
     by_prefix = {b["prefix"].lower(): n for n, b in pj["buttons"].items()}
+    shapes = {s["prefix"].lower(): s for s in pj.get("shapes", [])}
     seen, changed = set(), 0
     other = {}
 
     for w in widgets:
+        if s := shapes.get(w["prefix"].lower()):
+            now = {k: w[k] for k in ("left", "top", "height", "width")}
+            if any(s[k] != v for k, v in now.items()):
+                print(f"  MOVE  rectangle {w['prefix']}  {now}")
+                s.update(now)
+                changed += 1
+            continue
         kind = dm.BUTTON_TYPES.get(w["type"])
         if not kind:
             other[w["type"]] = other.get(w["type"], 0) + 1

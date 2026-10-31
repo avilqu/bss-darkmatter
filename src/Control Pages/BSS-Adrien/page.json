@@ -1,0 +1,565 @@
+{
+  "site": "Mt Cook",
+  "user": "Theater",
+  "pageName": "BSS-Adrien",
+  "pageGuid": "15979BB5-6EE3-4B9F-B0C4-4636DB0C7A8A",
+  "created": "10/31/26 22:43:14",
+  "buttons": {
+    "010-BSS-Adrien-LoadAssets.txt": {
+      "prefix": "WIDGETBUTTON_3a2cab33_67b2_43ba_b609_26c0f6255a4e",
+      "kind": "large",
+      "left": 20,
+      "top": 15
+    },
+    "020-BSS-Adrien-TimeNow.txt": {
+      "prefix": "WIDGETBUTTONSMALL_a53cc6e8_9757_46e2_8dd2_56575cc075db",
+      "kind": "small",
+      "left": 20,
+      "top": 100
+    },
+    "030-BSS-Adrien-Atmosphere.txt": {
+      "prefix": "WIDGETBUTTONSMALL_20cd1f19_f020_465d_a5ea_e06c6a00c2cc",
+      "kind": "small",
+      "left": 145,
+      "top": 100
+    },
+    "040-BSS-Adrien-TimeMidday.txt": {
+      "prefix": "WIDGETBUTTONSMALL_eb2910c1_6a51_44d2_ad6b_56d5d818ce1b",
+      "kind": "small",
+      "left": 20,
+      "top": 150
+    },
+    "050-BSS-Adrien-Clouds.txt": {
+      "prefix": "WIDGETBUTTONSMALL_cb8cf2b0_396e_414c_a2f9_2fc828421e70",
+      "kind": "small",
+      "left": 145,
+      "top": 150
+    },
+    "060-BSS-Adrien-SkySettingsDim.txt": {
+      "prefix": "WIDGETBUTTONSMALL_72ede668_d401_4b72_86c1_c16c03299c81",
+      "kind": "small",
+      "left": 20,
+      "top": 200
+    },
+    "070-BSS-Adrien-SkySettingsBright.txt": {
+      "prefix": "WIDGETBUTTONSMALL_fd88b77a_c981_47dd_b7be_cc9b3d481058",
+      "kind": "small",
+      "left": 145,
+      "top": 200
+    },
+    "080-BSS-Adrien-HomePosition.txt": {
+      "prefix": "WIDGETBUTTONSMALL_09c7de91_175e_4cd7_bad7_706964d137f2",
+      "kind": "small",
+      "left": 20,
+      "top": 250
+    },
+    "090-BSS-Adrien-SpinDome.txt": {
+      "prefix": "WIDGETBUTTONSMALL_e57a6887_6c88_4f36_9273_4433243dec64",
+      "kind": "small",
+      "left": 145,
+      "top": 250
+    },
+    "100-BSS-Adrien-TakeOff.txt": {
+      "prefix": "WIDGETBUTTONSMALL_ed1d1dfd_efb8_42fb_9186_ece2fbe93dbb",
+      "kind": "small",
+      "left": 20,
+      "top": 300
+    },
+    "110-BSS-Adrien-Land.txt": {
+      "prefix": "WIDGETBUTTONSMALL_5b030ba7_e123_4bcb_aad5_76f9d2c65a55",
+      "kind": "small",
+      "left": 145,
+      "top": 300,
+      "fields": {
+        "Keywords": "land"
+      }
+    },
+    "120-BSS-Adrien-AlphaCen.txt": {
+      "prefix": "WIDGETBUTTONSMALL_2694b5f9_f54c_433d_aed7_92b4b620a4d1",
+      "kind": "small",
+      "left": 20,
+      "top": 390
+    },
+    "130-BSS-Adrien-BetaCen.txt": {
+      "prefix": "WIDGETBUTTONSMALL_7b868197_1bbd_4178_83a3_6de7632db753",
+      "kind": "small",
+      "left": 145,
+      "top": 390
+    },
+    "140-BSS-Adrien-StarTrails.txt": {
+      "prefix": "WIDGETBUTTONSMALL_b15f93fa_f753_453e_9f96_38152aeb593d",
+      "kind": "small",
+      "left": 20,
+      "top": 440
+    },
+    "150-BSS-Adrien-Poles.txt": {
+      "prefix": "WIDGETBUTTONSMALL_8b8aeb43_15a2_444c_908f_2a0041dcfef4",
+      "kind": "small",
+      "left": 145,
+      "top": 440,
+      "fields": {
+        "Keywords": "Pole,Circles"
+      }
+    },
+    "160-BSS-Adrien-CruxStick.txt": {
+      "prefix": "WIDGETBUTTONSMALL_37633f06_4a47_4d05_a6f3_4ff3a1010916",
+      "kind": "small",
+      "left": 20,
+      "top": 490
+    },
+    "170-BSS-Adrien-WrongCrossesStick.txt": {
+      "prefix": "WIDGETBUTTONSMALL_1546362b_ed9b_40db_9cc8_f98819edf391",
+      "kind": "small",
+      "left": 145,
+      "top": 490
+    },
+    "180-BSS-Adrien-Achernar.txt": {
+      "prefix": "WIDGETBUTTONSMALL_f64a9516_7c43_4b60_9511_44f35982473b",
+      "kind": "small",
+      "left": 20,
+      "top": 540
+    },
+    "190-BSS-Adrien-CardinalPoints.txt": {
+      "prefix": "WIDGETBUTTONSMALL_5e3ebd2e_b8a2_46bf_a07f_4b476675babe",
+      "kind": "small",
+      "left": 145,
+      "top": 540,
+      "fields": {
+        "Keywords": "cardinal points, js"
+      }
+    },
+    "200-BSS-Adrien-CircumpolarRegion.txt": {
+      "prefix": "WIDGETBUTTONSMALL_b051dd70_000e_463d_b4bd_8514cd3e7451",
+      "kind": "small",
+      "left": 80,
+      "top": 590
+    },
+    "210-BSS-Adrien-AllBoundaries.txt": {
+      "prefix": "WIDGETBUTTONSMALL_acc18117_f450_4a63_b799_71941efa32c4",
+      "kind": "small",
+      "left": 370,
+      "top": 100
+    },
+    "220-BSS-Adrien-AllSticks.txt": {
+      "prefix": "WIDGETBUTTONSMALL_1e1f2709_4f2d_4815_b8bc_b85b70160eef",
+      "kind": "small",
+      "left": 310,
+      "top": 150
+    },
+    "230-BSS-Adrien-AllArt.txt": {
+      "prefix": "WIDGETBUTTONSMALL_3b1c90e0_82a8_49c8_afdd_1cbd26f78c66",
+      "kind": "small",
+      "left": 435,
+      "top": 150
+    },
+    "240-BSS-Adrien-Ecliptic.txt": {
+      "prefix": "WIDGETBUTTONSMALL_2909e485_1b85_46a8_8f74_59ef61c02741",
+      "kind": "small",
+      "left": 310,
+      "top": 200
+    },
+    "250-BSS-Adrien-ZodiacArt.txt": {
+      "prefix": "WIDGETBUTTONSMALL_c22bae74_0d39_4214_9b56_b5297cf61919",
+      "kind": "small",
+      "left": 435,
+      "top": 200
+    },
+    "260-BSS-Adrien-OrionStick.txt": {
+      "prefix": "WIDGETBUTTONSMALL_1881362f_9a47_455c_9ef3_3b481be027d4",
+      "kind": "small",
+      "left": 310,
+      "top": 250
+    },
+    "270-BSS-Adrien-OrionArt.txt": {
+      "prefix": "WIDGETBUTTONSMALL_a1bbd3a5_16fe_4f0f_a350_db2ce6451210",
+      "kind": "small",
+      "left": 435,
+      "top": 250
+    },
+    "280-BSS-Adrien-ScorpiusStick.txt": {
+      "prefix": "WIDGETBUTTONSMALL_dd7c983b_c7af_446a_9b0a_9b7f73df9551",
+      "kind": "small",
+      "left": 310,
+      "top": 300
+    },
+    "290-BSS-Adrien-ScorpiusArt.txt": {
+      "prefix": "WIDGETBUTTONSMALL_e1ac96ff_2025_454b_8ed7_bce3abf68df7",
+      "kind": "small",
+      "left": 435,
+      "top": 300
+    },
+    "300-BSS-Adrien-TeWakaORangi.txt": {
+      "prefix": "WIDGETBUTTONSMALL_7c48eb9b_2dae_4838_b5fd_3ac3ebd0704b",
+      "kind": "small",
+      "left": 370,
+      "top": 350
+    },
+    "310-BSS-Adrien-TeWakaOTamarereti.txt": {
+      "prefix": "WIDGETBUTTONSMALL_608c988e_3797_4507_98be_e6e114db874f",
+      "kind": "small",
+      "left": 370,
+      "top": 400
+    },
+    "320-BSS-Adrien-TeMatauAMaui.txt": {
+      "prefix": "WIDGETBUTTONSMALL_af9d9041_d45e_476b_903d_59bb602b3ce9",
+      "kind": "small",
+      "left": 370,
+      "top": 450
+    },
+    "330-BSS-Adrien-Mahutonga.txt": {
+      "prefix": "WIDGETBUTTONSMALL_7dc4a736_79b5_47ae_84d7_c9690ff8cdc5",
+      "kind": "small",
+      "left": 370,
+      "top": 500
+    },
+    "340-BSS-Adrien-GalacticEmu.txt": {
+      "prefix": "WIDGETBUTTONSMALL_3235a525_b77a_4970_8743_407ea99e7e09",
+      "kind": "small",
+      "left": 370,
+      "top": 550
+    },
+    "350-BSS-Adrien-Aurora.txt": {
+      "prefix": "WIDGETBUTTONSMALL_cebb1fe4_3233_4f2e_9998_d674e21e7c55",
+      "kind": "small",
+      "left": 600,
+      "top": 100
+    },
+    "360-BSS-Adrien-StellarWind.txt": {
+      "prefix": "WIDGETBUTTONSMALL_4617ae9a_4c3c_49d2_9215_4d6a316b21dc",
+      "kind": "small",
+      "left": 600,
+      "top": 150
+    },
+    "370-BSS-Adrien-MagneticField.txt": {
+      "prefix": "WIDGETBUTTONSMALL_82f61a16_41d4_42e5_9b86_2285ab00e2be",
+      "kind": "small",
+      "left": 600,
+      "top": 200
+    },
+    "380-BSS-Adrien-FulldomeAurora.txt": {
+      "prefix": "WIDGETBUTTONSMALL_09561ed4_73d6_4dd4_9a1c_680691395729",
+      "kind": "small",
+      "left": 600,
+      "top": 250
+    },
+    "390-BSS-Adrien-ScaleUpPlanets.txt": {
+      "prefix": "WIDGETBUTTONSMALL_0fb00cda_a996_48ea_954e_7032e3a23d27",
+      "kind": "small",
+      "left": 600,
+      "top": 340,
+      "fields": {
+        "Description": "Scales up Mercury to 2000 times",
+        "Keywords": "Zoom Scale Mercury "
+      }
+    },
+    "400-BSS-Adrien-GoToMoon.txt": {
+      "prefix": "WIDGETBUTTONSMALL_76401316_0d8a_4127_a8f7_70e1da0a2c01",
+      "kind": "small",
+      "left": 600,
+      "top": 390,
+      "fields": {
+        "Description": "Flies to Moon",
+        "Keywords": "Fly Go to Moon"
+      }
+    },
+    "410-BSS-Adrien-PlanetsOrbits.txt": {
+      "prefix": "WIDGETBUTTONSMALL_55919451_6261_4ab9_aa1c_1c51a39f5dc8",
+      "kind": "small",
+      "left": 600,
+      "top": 440
+    },
+    "420-BSS-Adrien-PlutoOrbit.txt": {
+      "prefix": "WIDGETBUTTONSMALL_2b822b6e_5598_4a6c_bc6a_41a5757dbdc6",
+      "kind": "small",
+      "left": 600,
+      "top": 490,
+      "fields": {
+        "Description": "Fades up Pluto's orbit",
+        "Keywords": "Pluto Orbit PlutoO"
+      }
+    },
+    "430-BSS-Adrien-KuiperOrbits.txt": {
+      "prefix": "WIDGETBUTTONSMALL_c1166a1d_1ca7_46ed_82fc_e7f6dc58b082",
+      "kind": "small",
+      "left": 600,
+      "top": 540,
+      "fields": {
+        "Description": "Fades up Pluto's orbit",
+        "Keywords": "Pluto Orbit PlutoO"
+      }
+    },
+    "440-BSS-Adrien-MainAsteroidBelt.txt": {
+      "prefix": "WIDGETBUTTONSMALL_f4423f14_ae6e_408c_8138_581cd09370e7",
+      "kind": "small",
+      "left": 600,
+      "top": 590,
+      "fields": {
+        "Description": "Fades up Pluto's orbit",
+        "Keywords": "Pluto Orbit PlutoO"
+      }
+    },
+    "450-BSS-Adrien-NGC2070Label.txt": {
+      "prefix": "WIDGETBUTTONSMALL_649a89fc_407b_4e06_91cd_802e53240825",
+      "kind": "small",
+      "left": 765,
+      "top": 100
+    },
+    "460-BSS-Adrien-NGC2070.txt": {
+      "prefix": "WIDGETBUTTONSMALL_490dbe4a_069d_44eb_8abc_2c8cd8f5cf7d",
+      "kind": "small",
+      "left": 890,
+      "top": 100
+    },
+    "470-BSS-Adrien-M42Label.txt": {
+      "prefix": "WIDGETBUTTONSMALL_e7f97b17_15a3_49b2_be84_572d893755c8",
+      "kind": "small",
+      "left": 765,
+      "top": 150
+    },
+    "480-BSS-Adrien-M42.txt": {
+      "prefix": "WIDGETBUTTONSMALL_c7f2482c_3e82_49d9_b07c_c3ccfa440a57",
+      "kind": "small",
+      "left": 890,
+      "top": 150
+    },
+    "490-BSS-Adrien-NGC3372Label.txt": {
+      "prefix": "WIDGETBUTTONSMALL_27bcb101_7ff5_4276_bd3f_281609df5709",
+      "kind": "small",
+      "left": 765,
+      "top": 200
+    },
+    "500-BSS-Adrien-NGC3372.txt": {
+      "prefix": "WIDGETBUTTONSMALL_6389f5fb_5c97_4720_b11c_b0ac4fb31f3c",
+      "kind": "small",
+      "left": 890,
+      "top": 200
+    },
+    "510-BSS-Adrien-NGC4755Label.txt": {
+      "prefix": "WIDGETBUTTONSMALL_c6ed314e_f414_41f5_95c1_27ac66ac15db",
+      "kind": "small",
+      "left": 765,
+      "top": 250
+    },
+    "520-BSS-Adrien-NGC4755.txt": {
+      "prefix": "WIDGETBUTTONSMALL_75d54359_cee8_4214_b767_1113dff7936a",
+      "kind": "small",
+      "left": 890,
+      "top": 250
+    },
+    "530-BSS-Adrien-NGC3532Label.txt": {
+      "prefix": "WIDGETBUTTONSMALL_c75f5365_ce3c_42f0_a61b_a25da6802cf9",
+      "kind": "small",
+      "left": 765,
+      "top": 300
+    },
+    "540-BSS-Adrien-NGC3532.txt": {
+      "prefix": "WIDGETBUTTONSMALL_15a4e91f_7bb8_4e32_9032_73f986497f8c",
+      "kind": "small",
+      "left": 890,
+      "top": 300
+    },
+    "550-BSS-Adrien-NGC104Label.txt": {
+      "prefix": "WIDGETBUTTONSMALL_57d86f6a_4923_4e11_961e_6f1b75bd8032",
+      "kind": "small",
+      "left": 765,
+      "top": 350
+    },
+    "560-BSS-Adrien-NGC104.txt": {
+      "prefix": "WIDGETBUTTONSMALL_fa61cd2d_e65d_4d76_bbcf_56ea729db187",
+      "kind": "small",
+      "left": 890,
+      "top": 350
+    },
+    "570-BSS-Adrien-NGC5128Label.txt": {
+      "prefix": "WIDGETBUTTONSMALL_dcdc2319_27ec_43f4_88ac_376e704b908b",
+      "kind": "small",
+      "left": 765,
+      "top": 400
+    },
+    "580-BSS-Adrien-NGC5128.txt": {
+      "prefix": "WIDGETBUTTONSMALL_86f999e3_2350_4c14_a7b8_4aa493ffdf4e",
+      "kind": "small",
+      "left": 890,
+      "top": 400
+    },
+    "590-BSS-Adrien-M104Label.txt": {
+      "prefix": "WIDGETBUTTONSMALL_222b2f54_6294_4009_9ab5_3c5de85c04e4",
+      "kind": "small",
+      "left": 765,
+      "top": 450
+    },
+    "600-BSS-Adrien-M104.txt": {
+      "prefix": "WIDGETBUTTONSMALL_be5df735_7140_4bb2_a14a_da91c7123163",
+      "kind": "small",
+      "left": 890,
+      "top": 450
+    },
+    "610-BSS-Adrien-NGC253Label.txt": {
+      "prefix": "WIDGETBUTTONSMALL_62a82e44_bee4_4933_b87e_b3c8d45a94c0",
+      "kind": "small",
+      "left": 765,
+      "top": 500
+    },
+    "620-BSS-Adrien-NGC253.txt": {
+      "prefix": "WIDGETBUTTONSMALL_9213786a_5308_4c1c_ba07_b756d2dec319",
+      "kind": "small",
+      "left": 890,
+      "top": 500
+    },
+    "630-BSS-Adrien-NGC7293Label.txt": {
+      "prefix": "WIDGETBUTTONSMALL_6852bad4_b7d4_48c8_af83_144e1f29cc1e",
+      "kind": "small",
+      "left": 765,
+      "top": 550
+    },
+    "640-BSS-Adrien-NGC7293.txt": {
+      "prefix": "WIDGETBUTTONSMALL_97cfefde_8448_4bea_9837_3e979cd8b71f",
+      "kind": "small",
+      "left": 890,
+      "top": 550
+    },
+    "650-BSS-Adrien-SouthernCross.txt": {
+      "prefix": "WIDGETBUTTONSMALL_3c104448_1c3e_4451_a8cf_46d87750cc56",
+      "kind": "small",
+      "left": 825,
+      "top": 600
+    },
+    "660-BSS-Adrien-SMC.txt": {
+      "prefix": "WIDGETBUTTONSMALL_2421be97_46ac_4ac1_841c_c0c900c4ed4f",
+      "kind": "small",
+      "left": 825,
+      "top": 650
+    },
+    "670-BSS-Adrien-StarsSlider.txt": {
+      "prefix": "WIDGETSLIDERTHIN_0d9fddcb_5f03_42f2_a194_3754a48f1ec6",
+      "kind": "slider",
+      "left": 20,
+      "top": 675,
+      "fields": {
+        "MaxValue": 5,
+        "InitialValue": 1
+      },
+      "tracking": [
+        {
+          "AssetName": "Stars",
+          "AssetID": "",
+          "PropertyName": "Lum",
+          "AssetType": "Stars"
+        }
+      ]
+    },
+    "680-BSS-Adrien-MWSlider.txt": {
+      "prefix": "WIDGETSLIDERTHIN_a60064ca_d36f_4315_853c_eec51a051f71",
+      "kind": "slider",
+      "left": 85,
+      "top": 675,
+      "fields": {
+        "InitialValue": 40
+      },
+      "tracking": [
+        {
+          "AssetName": "Visible Milky Way",
+          "AssetID": "",
+          "PropertyName": "Visibility",
+          "AssetType": "SkyMap"
+        }
+      ]
+    },
+    "690-BSS-Adrien-LocalGroupSlider.txt": {
+      "prefix": "WIDGETSLIDERTHIN_cb37025a_9a07_4c3c_95d9_3ca0957e54ef",
+      "kind": "slider",
+      "left": 150,
+      "top": 675,
+      "tracking": [
+        {
+          "AssetName": "LocalGroup",
+          "AssetID": "",
+          "PropertyName": "Visibility",
+          "AssetType": "ParticleTable"
+        }
+      ]
+    },
+    "700-BSS-Adrien-LEDASlider.txt": {
+      "prefix": "WIDGETSLIDERTHIN_d2b4a9db_6fff_444f_9d4b_a7f56995f8fc",
+      "kind": "slider",
+      "left": 215,
+      "top": 675,
+      "tracking": [
+        {
+          "AssetName": "LEDA200Mpc",
+          "AssetID": "",
+          "PropertyName": "Visibility",
+          "AssetType": "ParticleTable"
+        }
+      ]
+    }
+  },
+  "shapes": [
+    {
+      "prefix": "WIDGETRESIZABLERECTANGLE_6d34f0d7_5078_44a3_bc97_4f8fb9f607f2",
+      "left": 10,
+      "top": 90,
+      "height": 265,
+      "width": 265,
+      "params": {
+        "RGBRGB": "30.9803921568627:50.5882352941177:74.1176470588235:30.9803921568627:50.5882352941177:74.1176470588235",
+        "Opacity": "100:100"
+      }
+    },
+    {
+      "prefix": "WIDGETRESIZABLERECTANGLE_1db3d70d_952b_47c5_a5a5_508e48731650",
+      "left": 10,
+      "top": 380,
+      "height": 265,
+      "width": 265,
+      "params": {
+        "RGBRGB": "75.2941176470588:0:0:75.2941176470588:0:0",
+        "Opacity": "100:100"
+      }
+    },
+    {
+      "prefix": "WIDGETRESIZABLERECTANGLE_c02fad93_5a6b_4846_b1c1_39b9cc33df09",
+      "left": 755,
+      "top": 90,
+      "height": 615,
+      "width": 265,
+      "params": {
+        "RGBRGB": "43.921568627451:18.8235294117647:62.7450980392157:43.921568627451:18.8235294117647:62.7450980392157",
+        "Opacity": "100:100"
+      }
+    },
+    {
+      "prefix": "WIDGETRESIZABLERECTANGLE_5d6a9ce0_be47_41e3_a63c_a45a110665f7",
+      "left": 300,
+      "top": 90,
+      "height": 515,
+      "width": 265,
+      "params": {
+        "RGBRGB": "100:75.2941176470588:0:100:75.2941176470588:0",
+        "Opacity": "100:100"
+      }
+    },
+    {
+      "prefix": "WIDGETRESIZABLERECTANGLE_4cb7259d_8466_49d2_bad9_082263d51dc2",
+      "left": 590,
+      "top": 90,
+      "height": 215,
+      "width": 140,
+      "params": {
+        "RGBRGB": "60.7843137254902:73.3333333333333:34.9019607843137:60.7843137254902:73.3333333333333:34.9019607843137",
+        "Opacity": "100:100"
+      }
+    },
+    {
+      "prefix": "WIDGETRESIZABLERECTANGLE_cafb0f84_7726_40a8_be0e_22c4117c0977",
+      "left": 590,
+      "top": 330,
+      "height": 320,
+      "width": 140,
+      "params": {
+        "RGBRGB": "11.3725490196078:10.5882352941176:6.66666666666667:11.3725490196078:10.5882352941176:6.66666666666667",
+        "Opacity": "100:100"
+      }
+    }
+  ]
+}

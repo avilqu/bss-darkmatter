@@ -1,0 +1,29 @@
+;=== BSS-Adrien-ZodiacArt ===
+; Page: BSS-Adrien   Button: "Zodiac art"
+; Copied unchanged from Theater/Adrien "Zodiac art".
+Scene Aquarius Art.Visibility=100 [2]
+Scene Aries Art.Visibility=100 [2]
+Scene Cancer Art.Visibility=100 [2]
+Scene Capricornus Art.Visibility=100 [2]
+Scene  Gemini Art.Visibility=100 [2]
+Scene Leo Art.Visibility=100 [2]
+Scene Pisces Art.Visibility=100 [2]
+Scene Libra Art.Visibility=100 [2]
+Scene Sagittarius Art.Visibility=100 [2]
+Scene Scorpius Art.Visibility=100 [2]
+Scene Taurus Art.Visibility=100 [2]
+Scene Virgo Art.Visibility=100 [2]
++2
+Control Pause
+Scene Aquarius Art.Visibility=0 [2]
+Scene Aries Art.Visibility=0 [2]
+Scene Cancer Art.Visibility=0 [2]
+Scene Capricornus Art.Visibility=0 [2]
+Scene  Gemini Art.Visibility=0 [2]
+Scene Leo Art.Visibility=0 [2]
+Scene Pisces Art.Visibility=0 [2]
+Scene Libra Art.Visibility=0 [2]
+Scene Sagittarius Art.Visibility=0 [2]
+Scene Scorpius Art.Visibility=0 [2]
+Scene Taurus Art.Visibility=0 [2]
+Scene Virgo Art.Visibility=0 [2]

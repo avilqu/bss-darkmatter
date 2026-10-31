@@ -1,0 +1,23 @@
+;=== BSS-Adrien-M104Label ===
+; Page: BSS-Adrien   Button: "M104 label"
+; Copied unchanged from Theater/Adrien "M104 label".
+Assets DeepSkyPhoto.Load(m104_circle)
+Assets DeepSkyPhoto.Load(m104_label)
++0.1
+Scene m104_label.DomeAlign=On
+Scene m104_circle.Scale=10
+Scene m104_circle.Visibility=100
++0.1
+Scene m104_label.Text.String="\n Sombrero Galaxy"
+Scene m104_label.Text.LineSpacing=2
+Scene m104_circle.Scale=1.5 [0.3]
++0.3
+Scene m104_label.Visibility=100 [0.5]
++0.5
+Control Pause
+Scene m104_circle.Scale=0 [0.5]
+Scene m104_circle.Visibility=0 [0.5]
+Scene m104_label.Visibility=0 [0.5]
++0.6
+Assets DeepSkyPhoto.Unload(m104_circle)
+Assets DeepSkyPhoto.Unload(m104_label)

@@ -1,0 +1,12 @@
+;=== BSS-Adrien-NGC4755 ===
+; Page: BSS-Adrien   Button: "NGC4755"
+; Copied unchanged from Theater/Adrien "NGC4755".
+Assets DeepSkyPhoto.Load(ngc4755)
+Scene ngc4755.Visibility=0
++0.1
+Scene ngc4755.Visibility=100 [1]
+Control Pause
++0.1
+Scene ngc4755.Visibility=0 [1]
++1
+Assets DeepSkyPhoto.Unload(ngc4755)

@@ -1,0 +1,23 @@
+;=== BSS-Adrien-AlphaCen ===
+; Page: BSS-Adrien   Button: "Alpha Cen "
+; Copied unchanged from Theater/Adrien "Alpha Cen".
+Assets Constellations.Load(Proxima Circle)
+Assets Constellations.Load(Proxima Cen)
++0.1
+Scene Proxima Cen.DomeAlign=On
+Scene Proxima Circle.Scale=0
+Scene Proxima Circle.Visibility=100
++0.1
+Scene Proxima Cen.Text.String="\n Alpha Centauri"
+Scene Proxima Cen.Text.LineSpacing=2
+Scene Proxima Circle.Scale=1.5 [0.3]
++0.3
+Scene Proxima Cen.Visibility=100 [0.5]
++0.5
+Control Pause
+Scene Proxima Circle.Scale=0 [0.5]
+Scene Proxima Circle.Visibility=0 [0.5]
+Scene Proxima Cen.Visibility=0 [0.5]
++0.6
+Assets Constellations.Unload(Proxima Circle)
+Assets Constellations.UnLoad(Proxima Cen)

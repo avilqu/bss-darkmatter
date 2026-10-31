@@ -1,0 +1,4 @@
+;=== BSS-Adrien-LEDASlider ===
+; Page: BSS-Adrien   Button: "LEDA"
+; Copied unchanged from Theater/Adrien "LEDA".
+Scene LEDA200Mpc.Visibility={f} [0.1]

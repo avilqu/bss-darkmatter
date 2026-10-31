@@ -1,0 +1,9 @@
+;=== BSS-Adrien-ScorpiusStick ===
+; Page: BSS-Adrien   Button: "Scorpius stick"
+; Copied unchanged from Theater/Adrien "Scorpius stick".
+Assets Constellations.Load(Scorpius Stick)
++0.5
+Scene Scorpius Stick.Visibility=100 [2]
++2
+Control Pause
+Scene Scorpius Stick.Visibility=0 [1]

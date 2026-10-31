@@ -1,0 +1,12 @@
+;=== BSS-Adrien-M104 ===
+; Page: BSS-Adrien   Button: "M104"
+; Copied unchanged from Theater/Adrien "M104".
+Assets DeepSkyPhoto.Load(m104)
+Scene m104.Visibility=0
++0.1
+Scene m104.Visibility=100 [1]
+Control Pause
++0.1
+Scene m104.Visibility=0 [1]
++1
+Assets DeepSkyPhoto.Unload(m104)

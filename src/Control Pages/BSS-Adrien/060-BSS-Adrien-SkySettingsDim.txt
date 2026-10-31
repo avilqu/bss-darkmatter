@@ -1,0 +1,15 @@
+;=== BSS-Adrien-SkySettingsDim ===
+; Page: BSS-Adrien   Button: "Sky settings (dim)"
+; Copied unchanged from Theater/Adrien "Sky settings (dim)".
+Scene Stars.MinPoint=5E-05 [1]
+Scene Stars.FadePoint=0.00676 [1]
+Scene Stars.MaxPoint=0.0105 [1]
+Scene Stars.MinHalo=0.001 [1]
+Scene Stars.MaxHalo=0.01 [1]
+Scene Stars.HaloScale=1 [1]
+Scene Stars.HaloBrightness=0 [1]
+Scene Stars.AbsShift=-1.9 [1]
+Scene Stars.RedAbsShift=-0.1 [1]
+Scene Stars.Lum=1 [1]
+Scene Visible Milky Way.Visibility=40 [1]
+Scene LocalGroup.Visibility=40 [1]

@@ -1,0 +1,4 @@
+;=== BSS-Adrien-MWSlider ===
+; Page: BSS-Adrien   Button: "MW"
+; Copied unchanged from Theater/Adrien "MW".
+Scene Visible Milky Way.Visibility={f}

@@ -1,0 +1,5 @@
+;=== BSS-Adrien-HomePosition ===
+; Page: BSS-Adrien   Button: "Home position"
+; Copied unchanged from Theater/Adrien "Home position".
+Scene Camera.FlyTo(Here, Orient=SouthAndUp) [2:5:2]
+Scene Camera.SS.Elevation=90 [2:5:2]

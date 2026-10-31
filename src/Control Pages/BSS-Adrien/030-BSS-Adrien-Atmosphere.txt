@@ -1,0 +1,10 @@
+;=== BSS-Adrien-Atmosphere ===
+; Page: BSS-Adrien   Button: "Atmosphere"
+; Copied unchanged from Theater/Adrien "Atmosphere".
+Scene Earth { Atmosphere=1 }
++0.1
+Scene Earth.Atmosphere.Visibility=100 [2]
+Control Pause
+Scene Earth.Atmosphere.Visibility=0 [2]
++2
+Scene Earth { Atmosphere=0 }

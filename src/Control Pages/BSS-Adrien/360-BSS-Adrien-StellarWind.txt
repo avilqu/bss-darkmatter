@@ -1,0 +1,15 @@
+;=== BSS-Adrien-StellarWind ===
+; Page: BSS-Adrien   Button: "Stellar wind"
+; Copied unchanged from Theater/Adrien "Stellar wind".
+Assets Aoraki.Load(sunSpawn)
++0.5
+Assets Aoraki.Load(stellarWindPart)
++0.5
+Scene stellarWindPart.Visibility=100 [3]
+
+Control Pause
+
+Scene stellarWindPart.Visibility=0 [3]
++3
+Assets Aoraki.UnLoad(sunSpawn)
+Assets Aoraki.UnLoad(stellarWindPart)

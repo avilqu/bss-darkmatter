@@ -1,0 +1,7 @@
+;=== BSS-Adrien-CardinalPoints ===
+; Page: BSS-Adrien   Button: "Cardinal points"
+; Copied unchanged from Theater/Adrien "Cardinal points" (Reference Name there: CarbinalPointsButton).
+Scene Earth.Cardinal.Visibility=75 [1]
+Scene Earth.Cardinal.Color=Red
+Control Pause
+Scene Earth.Cardinal.Visibility=0 [1]

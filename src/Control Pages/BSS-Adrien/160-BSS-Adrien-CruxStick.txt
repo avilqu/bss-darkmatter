@@ -1,0 +1,10 @@
+;=== BSS-Adrien-CruxStick ===
+; Page: BSS-Adrien   Button: "Crux stick "
+; Copied unchanged from Theater/Adrien "Crux stick".
+Assets Constellations.Load(Crux Stick)
++1
+Scene Crux Stick.Visibility=100 [1]
+Control Pause
+Scene Crux Stick.Visibility=0 [1]
++2
+Assets Constellations.Unload(Crux Stick)

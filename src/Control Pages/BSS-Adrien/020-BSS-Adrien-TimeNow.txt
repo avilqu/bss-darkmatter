@@ -1,0 +1,4 @@
+;=== BSS-Adrien-TimeNow ===
+; Page: BSS-Adrien   Button: "Time now"
+; Copied unchanged from Theater/Adrien "Time now".
+Scene Scene.DateTime=Now [2:5:2]

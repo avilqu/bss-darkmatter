@@ -1,0 +1,12 @@
+;=== BSS-Adrien-NGC7293 ===
+; Page: BSS-Adrien   Button: "NGC7293"
+; Copied unchanged from Theater/Adrien "NGC7293".
+Assets DeepSkyPhoto.Load(ngc7293)
+Scene ngc7293.Visibility=0
++0.1
+Scene ngc7293.Visibility=100 [1]
+Control Pause
++0.1
+Scene ngc7293.Visibility=0 [1]
++1
+Assets DeepSkyPhoto.Unload(ngc7293)

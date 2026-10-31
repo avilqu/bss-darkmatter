@@ -1,0 +1,8 @@
+;=== BSS-Adrien-Ecliptic ===
+; Page: BSS-Adrien   Button: "Ecliptic"
+; Copied unchanged from Theater/Adrien "Ecliptic".
+Scene Earth.Ecliptic.Color=CornflowerBlue
+Scene Earth.Ecliptic.Visibility=100 [1]
+Control Pause
+
+Scene Earth.Ecliptic.Visibility=0 [1]

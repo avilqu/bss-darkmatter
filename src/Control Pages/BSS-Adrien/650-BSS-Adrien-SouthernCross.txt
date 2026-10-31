@@ -1,0 +1,12 @@
+;=== BSS-Adrien-SouthernCross ===
+; Page: BSS-Adrien   Button: "Southern Cross"
+; Copied unchanged from Theater/Adrien "Southern Cross".
+Assets DeepSkyPhoto.Load(sc)
+Scene sc.Visibility=0
++0.1
+Scene sc.Visibility=100 [1]
+Control Pause
++0.1
+Scene sc.Visibility=0 [1]
++1
+Assets DeepSkyPhoto.Unload(sc)

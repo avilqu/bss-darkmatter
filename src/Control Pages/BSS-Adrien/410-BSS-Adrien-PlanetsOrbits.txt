@@ -1,0 +1,22 @@
+;=== BSS-Adrien-PlanetsOrbits ===
+; Page: BSS-Adrien   Button: "Planets orbits"
+; Copied unchanged from Theater/Adrien "Planets orbits".
+Scene MercuryOrbit.Visibility=80 [2]
+Scene VenusOrbit.Visibility=80 [2]
+Scene EarthOrbit.Visibility=80 [2]
+Scene MarsOrbit.Visibility=80 [2]
+Scene JupiterOrbit.Visibility=80 [2]
+Scene SaturnOrbit.Visibility=80 [2]
+Scene UranusOrbit.Visibility=80 [2]
+Scene NeptuneOrbit.Visibility=80 [2]
+
+Control Pause
+
+Scene MercuryOrbit.Visibility=0 [2]
+Scene VenusOrbit.Visibility=0 [2]
+Scene EarthOrbit.Visibility=0 [2]
+Scene MarsOrbit.Visibility=0 [2]
+Scene JupiterOrbit.Visibility=0 [2]
+Scene SaturnOrbit.Visibility=0 [2]
+Scene UranusOrbit.Visibility=0 [2]
+Scene NeptuneOrbit.Visibility=0 [2]

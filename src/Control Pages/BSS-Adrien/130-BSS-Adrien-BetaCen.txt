@@ -1,0 +1,23 @@
+;=== BSS-Adrien-BetaCen ===
+; Page: BSS-Adrien   Button: "Beta Cen "
+; Copied unchanged from Theater/Adrien "Beta Cen".
+Assets Constellations.Load(hadar Circle)
+Assets Constellations.Load(hadar Cen)
++0.1
+Scene hadar Cen.DomeAlign=On
+Scene hadar Circle.Scale=0
+Scene hadar Circle.Visibility=100
++0.1
+Scene hadar Cen.Text.String=" \n Beta Centauri"
+Scene hadar Cen.Text.LineSpacing=2
+Scene hadar Circle.Scale=1.5 [0.3]
++0.3
+Scene hadar Cen.Visibility=100 [0.5]
++0.5
+Control Pause
+Scene hadar Circle.Scale=0 [0.5]
+Scene hadar Circle.Visibility=0 [0.5]
+Scene hadar Cen.Visibility=0 [0.5]
++0.6
+Assets Constellations.Unload(hadar Circle)
+Assets Constellations.UnLoad(hadar Cen)

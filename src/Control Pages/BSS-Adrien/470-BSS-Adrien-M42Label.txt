@@ -1,0 +1,23 @@
+;=== BSS-Adrien-M42Label ===
+; Page: BSS-Adrien   Button: "M 42 label"
+; Copied unchanged from Theater/Adrien "M 42 label".
+Assets DeepSkyPhoto.Load(m42_circle)
+Assets DeepSkyPhoto.Load(m42_label)
++0.1
+Scene m42_label.DomeAlign=On
+Scene m42_circle.Scale=10
+Scene m42_circle.Visibility=100
++0.1
+Scene m42_label.Text.String="\n Orion Nebula"
+Scene m42_label.Text.LineSpacing=2
+Scene m42_circle.Scale=1.5 [0.3]
++0.3
+Scene m42_label.Visibility=100 [0.5]
++0.5
+Control Pause
+Scene m42_circle.Scale=0 [0.5]
+Scene m42_circle.Visibility=0 [0.5]
+Scene m42_label.Visibility=0 [0.5]
++0.6
+Assets DeepSkyPhoto.Unload(m42_circle)
+Assets DeepSkyPhoto.Unload(m42_label)

@@ -1,0 +1,22 @@
+;=== BSS-Adrien-WrongCrossesStick ===
+; Page: BSS-Adrien   Button: "Wrong crosses stick"
+; Copied unchanged from Theater/Adrien "Wrong crosses stick".
+Assets Line and circle.Load(Stick False Crux)
+Assets Line and circle.Load(Stick False Crux1)
+Assets Line and circle.Load(Stick diamond Crux)
+Assets Line and circle.Load(Stick diamond Crux1)
++1
+Scene Stick False Crux.Visibility=100 [1]
+Scene Stick False Crux1.Visibility=100 [1]
+Scene Stick diamond Crux1.Visibility=100 [1]
+Scene Stick diamond Crux.Visibility=100 [1]
+Control Pause
+Scene Stick False Crux.Visibility=0 [1]
+Scene Stick False Crux1.Visibility=0 [1]
+Scene Stick diamond Crux.Visibility=0 [1]
+Scene Stick diamond Crux1.Visibility=0 [1]
++1
+Assets Line and circle.Unload(Stick False Crux)
+Assets Line and circle.Unload(Stick False Crux1)
+Assets Line and circle.Unload(Stick diamond Crux)
+Assets Line and circle.Unload(Stick diamond Crux1)

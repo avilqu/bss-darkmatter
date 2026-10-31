@@ -1,0 +1,8 @@
+;=== BSS-Adrien-PlutoOrbit ===
+; Page: BSS-Adrien   Button: "Pluto orbit "
+; Copied unchanged from Theater/Adrien "Pluto orbit".
+Scene PlutoOrbit.Visibility=80 [2]
+
+Control Pause
+
+Scene PlutoOrbit.Visibility=0 [2]

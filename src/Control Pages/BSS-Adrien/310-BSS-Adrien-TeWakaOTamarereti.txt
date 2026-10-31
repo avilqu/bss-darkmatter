@@ -1,0 +1,11 @@
+;=== BSS-Adrien-TeWakaOTamarereti ===
+; Page: BSS-Adrien   Button: "Te Waka o Tamarereti"
+; Copied unchanged from Theater/Adrien "Te Waka o Tamarereti".
+Assets MaoriConstellations.Load(TeWakaoTamarereti)
++0.2
+Scene TeWakaoTamarereti.Visibility=100 [2]
++1
+Control Pause
+Scene TeWakaoTamarereti.Visibility=0 [2]
++1
+Assets MaoriConstellations.Unload(TeWakaoTamarereti)

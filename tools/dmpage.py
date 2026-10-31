@@ -10,6 +10,10 @@ Dark Matter control page format, as found in <ContentPath>\\Sites\\<Site>\\<User
 In the button header, <FriendlyName> is the Reference Name (used by Control Ref.Run())
 and <Text> is the caption. DM saves the caption last set by Control Text, so <Text>
 is not a reliable label.
+
+Sliders are script widgets like buttons, with extra header fields: <MinValue>, <MaxValue>,
+<InitialValue> and <AssetTracking>. Rectangles are decoration: their .txt has no script, and
+their size and colour are in the page .xml.
 """
 
 import json
@@ -17,7 +21,7 @@ import re
 import uuid
 from datetime import datetime
 from pathlib import Path
-from xml.sax.saxutils import escape
+from xml.sax.saxutils import escape, quoteattr
 
 REPO = Path(__file__).resolve().parent.parent
 
@@ -25,8 +29,11 @@ REPO = Path(__file__).resolve().parent.parent
 KINDS = {
     "small": {"type": "WidgetButtonSmallType", "prefix": "WIDGETBUTTONSMALL", "w": 120, "h": 45},
     "large": {"type": "WidgetButtonType", "prefix": "WIDGETBUTTON", "w": 120, "h": 60},
+    "slider": {"type": "WidgetSliderThinType", "prefix": "WIDGETSLIDERTHIN", "w": 0, "h": 0},
+    "rectangle": {"type": "WidgetResizableRectangleType", "prefix": "WIDGETRESIZABLERECTANGLE", "w": 0, "h": 0},
 }
-BUTTON_TYPES = {k["type"]: name for name, k in KINDS.items()}
+# Widgets that have a src file. Rectangles live in the "shapes" list of page.json instead.
+BUTTON_TYPES = {k["type"]: name for name, k in KINDS.items() if name != "rectangle"}
 
 # Default grid for buttons that have no position yet (5 px gap between buttons).
 GRID_X0, GRID_Y0, GRID_DX, GRID_DY = 10, 10, 125, 65
@@ -108,22 +115,39 @@ def free_slot(taken, columns):
 
 # ---------------------------------------------------------------- DM side
 
-def button_txt(script, ref, label, site, user, created, modified, version=1):
+def tag_or_empty(name, value):
+    return f"<{name}>{escape(value)}</{name}>" if value else f"<{name} />"
+
+
+def tracking_xml(tracking):
+    """<AssetTracking> block of a slider. tracking: list of dicts of attribute values."""
+    if not tracking:
+        return "<AssetTracking />"
+    rows = ["<AssetTracking>"]
+    for t in tracking:
+        attrs = " ".join(f"{k}={quoteattr(v)}" for k, v in t.items())
+        rows.append(f"    <TrackingAssetProperty {attrs} />")
+    return "\n  ".join(rows + ["</AssetTracking>"])
+
+
+def button_txt(script, ref, label, site, user, created, modified, version=1, fields=None, tracking=None):
+    """fields: optional Description, Keywords, MinValue, MaxValue, InitialValue."""
+    fields = fields or {}
     header = f"""<?xml version="1.0" encoding="utf-8"?>
 <DMScriptHeader xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Text>{escape(label)}</Text>
-  <Description />
+  {tag_or_empty("Description", fields.get("Description"))}
   <Created>{created}</Created>
   <Modified>{modified}</Modified>
   <Version>{version}</Version>
-  <FriendlyName>{escape(ref)}</FriendlyName>
+  {tag_or_empty("FriendlyName", ref)}
   <Author>{escape(site)}.{escape(user)}</Author>
-  <Keywords />
+  {tag_or_empty("Keywords", fields.get("Keywords"))}
   <Info />
-  <MinValue>0</MinValue>
-  <MaxValue>100</MaxValue>
-  <InitialValue>0</InitialValue>
-  <AssetTracking />
+  <MinValue>{fields.get("MinValue", 0)}</MinValue>
+  <MaxValue>{fields.get("MaxValue", 100)}</MaxValue>
+  <InitialValue>{fields.get("InitialValue", 0)}</InitialValue>
+  {tracking_xml(tracking)}
   <ImageButtonImagePath />
 </DMScriptHeader>
 """
@@ -131,7 +155,7 @@ def button_txt(script, ref, label, site, user, created, modified, version=1):
 
 
 def page_xml(name, guid, widgets):
-    """widgets: list of dicts with prefix, kind, left, top."""
+    """widgets: list of dicts with prefix, kind, left, top; rectangles also height, width, params."""
     parts = [f"""<?xml version="1.0" encoding="utf-8"?>
 <DMButtonPageConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>{escape(name)}</Name>
@@ -152,12 +176,17 @@ def page_xml(name, guid, widgets):
       <OffsetRight>{w['left'] + k['w']}</OffsetRight>
       <OffsetTop>{w['top']}</OffsetTop>
       <OffsetBottom>{w['top'] + k['h']}</OffsetBottom>
-      <Height>0</Height>
-      <Width>0</Width>
+      <Height>{w.get('height', 0)}</Height>
+      <Width>{w.get('width', 0)}</Width>
       <WidgetStyle />
       <ScriptFilePath>{w['prefix']}.txt</ScriptFilePath>
-      <ImageButtonImageFilePath>Button Images\\{w['prefix']}</ImageButtonImageFilePath>
-    </Widget>""")
+      <ImageButtonImageFilePath>Button Images\\{w['prefix']}</ImageButtonImageFilePath>""")
+        for key, value in w.get("params", {}).items():
+            parts.append(f"""      <SerializableParams>
+        <Key>{escape(key)}</Key>
+        <Value>{escape(value)}</Value>
+      </SerializableParams>""")
+        parts.append("    </Widget>")
     parts.append("  </Widgets>\n</DMButtonPageConfiguration>")
     return crlf("\n".join(parts)).encode("utf-8")
 
@@ -184,7 +213,7 @@ def dmz_xml(name, guid, install_to, filenames, description):
 
 def parse_page_xml(data):
     """Return (name, guid, widgets) from a page .xml (bytes). widgets: dicts with prefix,
-    type, left, top, script."""
+    type, left, top, height, width, script, params."""
     text = data.decode("utf-8-sig")
     tag = lambda s, t: (m.group(1) if (m := re.search(rf"<{t}>([^<]*)</{t}>", s)) else None)
     head = text.split("<Widgets>")[0]
@@ -195,7 +224,10 @@ def parse_page_xml(data):
             "type": tag(w, "Type"),
             "left": int(tag(w, "OffsetLeft") or 0),
             "top": int(tag(w, "OffsetTop") or 0),
+            "height": int(tag(w, "Height") or 0),
+            "width": int(tag(w, "Width") or 0),
             "script": tag(w, "ScriptFilePath"),
+            "params": dict(re.findall(r"<Key>([^<]*)</Key>\s*<Value>([^<]*)</Value>", w)),
         })
     return tag(head, "Name"), tag(head, "Prefix"), widgets
 

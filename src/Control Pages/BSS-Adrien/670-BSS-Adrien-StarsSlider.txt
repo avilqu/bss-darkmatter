@@ -1,0 +1,4 @@
+;=== BSS-Adrien-StarsSlider ===
+; Page: BSS-Adrien   Button: "Stars"
+; Copied unchanged from Theater/Adrien "Stars".
+Scene Stars.Lum={f} [1]

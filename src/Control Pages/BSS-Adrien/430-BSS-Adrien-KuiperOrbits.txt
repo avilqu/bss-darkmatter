@@ -1,0 +1,14 @@
+;=== BSS-Adrien-KuiperOrbits ===
+; Page: BSS-Adrien   Button: "Kuiper orbits"
+; Copied unchanged from Theater/Adrien "Kuiper orbits".
+Scene PlutoOrbit.Visibility=80 [2]
+Scene HaumeaOrbit.Visibility=80 [2]
+Scene ErisOrbit.Visibility=80 [2]
+Scene MakemakeOrbit.Visibility=80 [2]
+
+Control Pause
+
+Scene PlutoOrbit.Visibility=0 [2]
+Scene HaumeaOrbit.Visibility=0 [2]
+Scene ErisOrbit.Visibility=0 [2]
+Scene MakemakeOrbit.Visibility=0 [2]

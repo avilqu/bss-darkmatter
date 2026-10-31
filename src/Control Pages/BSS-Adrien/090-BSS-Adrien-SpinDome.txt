@@ -1,0 +1,6 @@
+;=== BSS-Adrien-SpinDome ===
+; Page: BSS-Adrien   Button: "Spin dome"
+; Copied unchanged from Theater/Adrien "Spin dome".
+Scene Camera.Yaw=-180 [3:5:3]
+Control Pause
+Scene Camera.Yaw=0 [3:5:3]

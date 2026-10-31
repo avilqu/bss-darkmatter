@@ -1,0 +1,8 @@
+;=== BSS-Adrien-OrionArt ===
+; Page: BSS-Adrien   Button: "Orion art"
+; Copied unchanged from Theater/Adrien "Orion art".
+Assets Constellations.Load(Orion Art)
++0.2
+Scene Orion Art.Visibility=100 [2]
+Control Pause
+Scene Orion Art.Visibility=0 [2]

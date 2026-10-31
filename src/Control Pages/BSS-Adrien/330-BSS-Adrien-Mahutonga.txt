@@ -1,0 +1,11 @@
+;=== BSS-Adrien-Mahutonga ===
+; Page: BSS-Adrien   Button: "Mahutonga"
+; Copied unchanged from Theater/Adrien "Mahutonga".
+Assets MaoriConstellations.Load(Mahutonga)
++0.2
+Scene Mahutonga.Visibility=100 [2]
++1
+Control Pause
+Scene Mahutonga.Visibility=0 [2]
++1
+Assets MaoriConstellations.Unload(Mahutonga)

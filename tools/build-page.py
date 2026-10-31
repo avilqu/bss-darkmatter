@@ -16,6 +16,11 @@ identify the page and buttons by these IDs, so they must never change.
 Edit "left"/"top" (pixels) or "kind" ("small" 120x45 / "large" 120x60) by hand if you like;
 pull-page.py also copies positions back from the dome.
 
+A button entry can also have "fields" (Description, Keywords, MinValue, MaxValue, InitialValue)
+and, for "kind": "slider", "tracking" (the header's asset tracking). Background rectangles have
+no file: they are listed under "shapes" in page.json (prefix, left, top, height, width, params)
+and are written before the buttons, as on the dome's pages.
+
 Install the .dmz on DS-Master with File > Import, or copy the --folder output into
 <ContentPath>\\Sites (with DM closed). See README.md "Deploying a page".
 """
@@ -86,10 +91,15 @@ def main():
         widgets.append({**b})
         out_files[b["prefix"] + ".txt"] = dm.button_txt(
             f.read_text(encoding="utf-8"), ref, label, site, user,
-            created=pj.get("created", stamp), modified=stamp)
+            created=pj.get("created", stamp), modified=stamp,
+            fields=b.get("fields"), tracking=b.get("tracking"))
+    shapes = [{**s, "kind": "rectangle"} for s in pj.get("shapes", [])]
+    for s in shapes:
+        out_files[s["prefix"] + ".txt"] = dm.button_txt(
+            "", "", "DigitalSky", site, user, created=pj.get("created", stamp), modified=stamp)
 
     page_file = f"{guid}.xml"
-    out_files = {page_file: dm.page_xml(name, guid, widgets), **out_files}
+    out_files = {page_file: dm.page_xml(name, guid, shapes + widgets), **out_files}
     folder = f"{name}_{guid}"
     install_to = f"<ContentPath>\\SITES\\{site}\\{user}\\Control Pages\\{folder}"
     manifest = dm.dmz_xml(name, guid, install_to, list(out_files),

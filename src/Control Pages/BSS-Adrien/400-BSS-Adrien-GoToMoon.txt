@@ -1,0 +1,8 @@
+;=== BSS-Adrien-GoToMoon ===
+; Page: BSS-Adrien   Button: "Go to Moon"
+; Copied unchanged from Theater/Adrien "Go to Moon".
+; Go to the Moon
+
+Scene Camera.FlyTo(Moon, Altitude=10000000, Orient=NorthAndDown) [8:15:8]
+
++22

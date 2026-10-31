@@ -1,0 +1,4 @@
+;=== BSS-Adrien-TimeMidday ===
+; Page: BSS-Adrien   Button: "Time midday"
+; Copied unchanged from Theater/Adrien "Time midday".
+Scene Scene.DateTime="00:00" [2:5:2]

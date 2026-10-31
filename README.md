@@ -30,7 +30,7 @@ The repo mirrors Dark Matter's own folders, so files map 1:1 to the dome PCs.
 
 - **One file per button.** File header gives the Reference Name, the page and the button label.
 - **Reference names:** `BSS-<Page>-<What>[-<seconds>]`, e.g. `BSS-VS-DarkSkies`.
-  Page codes: `Lib` = BSS-Lib, `VS` = Virtual Stargazing.
+  Page codes: `Lib` = BSS-Lib, `VS` = Virtual Stargazing, `Adrien` = BSS-Adrien.
 - **Asset names** created by scripts end with `-BSS-<Page>` (e.g. `DarkSkiesVO-BSS-VS`) so pages never collide.
 - **Filenames:** `src/Control Pages/<Page>/NN-<RefName>.txt` (NN = running order on the page).
 - **Segments are self-contained:** Remove → Add → animate → Remove. They must run correctly on their own or from play-all.
@@ -50,6 +50,8 @@ know the page and buttons by those IDs.
 2. Build: `tools/build-page.py "src/Control Pages/<Page>"` → `build/<Page>.dmz` (not in git; rebuild any time).
    New pages default to site `Mt Cook`, user `Theater` (`--user` to change on the first build).
    Positions: edit `left`/`top` in `page.json`, or move buttons in DM and pull.
+   Sliders are `NN-<RefName>.txt` files too, with `"kind": "slider"`, `fields` and `tracking` in `page.json`;
+   background rectangles have no file and live under `shapes` in `page.json`.
 3. Commit (`src/` + `page.json`), copy the `.dmz` to DS-Master, File > Import.
 4. Copy any media to every PC (see the page's `media.md`).
 
@@ -61,7 +63,7 @@ or (DM closed) copy `build-page.py --folder` output over the page folder in `<Co
 **Edits made on the dome** go back to git with
 `tools/pull-page.py "src/Control Pages/<Page>" --from <Sites\Mt Cook folder or exported .dmz>`
 (`--dry-run` first). It pulls script edits, moved buttons and buttons added on the dome; it only
-warns about deleted buttons and sliders/labels (which the build does not create).
+warns about deleted buttons and labels (which the build does not create).
 
 Single buttons in other pages: paste the `.txt` into ScriptPad, set Name and Reference Name from the
 header, save; bring dome-side changes back the same day. Export pages to `exports/` now and then.

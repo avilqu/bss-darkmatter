@@ -1,0 +1,23 @@
+;=== BSS-Adrien-NGC253Label ===
+; Page: BSS-Adrien   Button: "NGC253 label"
+; Copied unchanged from Theater/Adrien "NGC253 label".
+Assets DeepSkyPhoto.Load(ngc253_circle)
+Assets DeepSkyPhoto.Load(ngc253_label)
++0.1
+Scene ngc253_label.DomeAlign=On
+Scene ngc253_circle.Scale=10
+Scene ngc253_circle.Visibility=100
++0.1
+Scene ngc253_label.Text.String="\n Sculptor Galaxy"
+Scene ngc253_label.Text.LineSpacing=2
+Scene ngc253_circle.Scale=1.5 [0.3]
++0.3
+Scene ngc253_label.Visibility=100 [0.5]
++0.5
+Control Pause
+Scene ngc253_circle.Scale=0 [0.5]
+Scene ngc253_circle.Visibility=0 [0.5]
+Scene ngc253_label.Visibility=0 [0.5]
++0.6
+Assets DeepSkyPhoto.Unload(ngc253_circle)
+Assets DeepSkyPhoto.Unload(ngc253_label)

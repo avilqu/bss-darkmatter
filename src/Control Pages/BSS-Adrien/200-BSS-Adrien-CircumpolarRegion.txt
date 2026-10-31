@@ -1,0 +1,11 @@
+;=== BSS-Adrien-CircumpolarRegion ===
+; Page: BSS-Adrien   Button: "Circumpolar Region"
+; Copied unchanged from Theater/Adrien "Circumpolar Region".
+Assets Line and circle.Load(Circumpolar Region)
++1
+Scene Circumpolar Region.Visibility=10 [2]
+Control Text=Remove Circumpolar
+Control Pause
+Scene Circumpolar Region.Visibility=0 [2]
++1
+Assets Line and circle.Unload(Circumpolar Region)

@@ -1,0 +1,8 @@
+;=== BSS-Adrien-TakeOff ===
+; Page: BSS-Adrien   Button: "Take off"
+; Copied unchanged from Theater/Adrien "Take off" (Reference Name there: LaunchFromHereT1).
+; Launch from here (Earth)
+Scene Camera{Altitude=10000000} [4:3:3]
++1
+Scene Camera.Orient=SouthAndDown [3:3:3]
+Scene Camera.SS.Elevation=45.00 [3:3:3]

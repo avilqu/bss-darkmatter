@@ -1,0 +1,28 @@
+;=== BSS-Adrien-MagneticField ===
+; Page: BSS-Adrien   Button: "Magnetic field"
+; Copied unchanged from Theater/Adrien "Magnetic field".
+Assets Aoraki.Load(magFieldCentreA, magFieldCentreB, magFieldCentreC)
++0.5
+Assets Aoraki.Load(magFieldRingA1, magFieldRingA2, magFieldRingB1, magFieldRingB2, magFieldRingC1, magFieldRingC2)
++1
+
+Scene magFieldRingA1.Visibility=100 [3]
+Scene magFieldRingA2.Visibility=100 [3]
+Scene magFieldRingB1.Visibility=100 [3]
+Scene magFieldRingB2.Visibility=100 [3]
+Scene magFieldRingC1.Visibility=100 [3]
+Scene magFieldRingC2.Visibility=100 [3]
+
+Control Pause
+
+Scene magFieldRingA1.Visibility=0 [3]
+Scene magFieldRingA2.Visibility=0 [3]
+Scene magFieldRingB1.Visibility=0 [3]
+Scene magFieldRingB2.Visibility=0 [3]
+Scene magFieldRingC1.Visibility=0 [3]
+Scene magFieldRingC2.Visibility=0 [3]
+
++3
+
+Assets Aoraki.UnLoad(magFieldCentreA, magFieldCentreB, magFieldCentreC)
+Assets Aoraki.UnLoad(magFieldRingA1, magFieldRingA2, magFieldRingB1, magFieldRingB2, magFieldRingC1, magFieldRingC2)

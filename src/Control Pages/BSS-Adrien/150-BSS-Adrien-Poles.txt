@@ -1,0 +1,10 @@
+;=== BSS-Adrien-Poles ===
+; Page: BSS-Adrien   Button: "Poles"
+; Copied unchanged from Theater/Adrien "Poles" (Reference Name there: PolesButton).
+Assets Basics.Load(PoleCircles)
++0.5
+Scene PoleCircles.Visibility=75 [1]
+Control Pause
+Scene PoleCircles.Visibility=0 [1]
++1
+Assets Basics.Unload(PoleCircles)

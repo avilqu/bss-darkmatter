@@ -1,0 +1,19 @@
+;=== BSS-Adrien-FulldomeAurora ===
+; Page: BSS-Adrien   Button: "Fulldome aurora"
+; Copied unchanged from Theater/Adrien "Fulldome aurora".
+Scene Scene.Visibility=0 [2]
++2
+Assets Taichi.Load(FulldomeAurora)
++4
+Scene FulldomeAurora.Play()
++1
+Scene Video.Source="Media:FulldomeAurora"
+Scene Camera.Visibility=0 [1]
+Scene Video.Visibility=99 [1]
+Scene Scene.Visibility=100 [2]
+Control Pause
+Scene Camera.Visibility=100 [1]
+Scene Video.Visibility=0 [1]
+Scene FulldomeAurora.Volume=0 [1]
++1
+Assets Taichi.Unload(FulldomeAurora)

@@ -1,0 +1,4 @@
+;=== BSS-Adrien-LocalGroupSlider ===
+; Page: BSS-Adrien   Button: "Local Group"
+; Copied unchanged from Theater/Adrien "Local Group".
+Scene LocalGroup.Visibility={f}

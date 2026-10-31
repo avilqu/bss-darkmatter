@@ -1,0 +1,11 @@
+;=== BSS-Adrien-GalacticEmu ===
+; Page: BSS-Adrien   Button: "Galactic Emu"
+; Copied unchanged from Theater/Adrien "Galactic Emu".
+Assets Jack.Load(GreatEmu)
++0.2
+Scene GreatEmu.Visibility=30 [1]
++1.1
+Control Pause
+Scene GreatEmu.Visibility=0 [1]
++1.2
+Assets Jack.Unload(GreatEmu)

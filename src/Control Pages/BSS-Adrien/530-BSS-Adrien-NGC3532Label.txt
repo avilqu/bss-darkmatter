@@ -1,0 +1,23 @@
+;=== BSS-Adrien-NGC3532Label ===
+; Page: BSS-Adrien   Button: "NGC3532 label"
+; Copied unchanged from Theater/Adrien "NGC3532 label".
+Assets DeepSkyPhoto.Load(ngc3532_circle)
+Assets DeepSkyPhoto.Load(ngc3532_label)
++0.1
+Scene ngc3532_label.DomeAlign=On
+Scene ngc3532_circle.Scale=10
+Scene ngc3532_circle.Visibility=100
++0.1
+Scene ngc3532_label.Text.String="\n Wishing Well Cluster"
+Scene ngc3532_label.Text.LineSpacing=2
+Scene ngc3532_circle.Scale=2.5 [0.3]
++0.3
+Scene ngc3532_label.Visibility=100 [0.5]
++0.5
+Control Pause
+Scene ngc3532_circle.Scale=0 [0.5]
+Scene ngc3532_circle.Visibility=0 [0.5]
+Scene ngc3532_label.Visibility=0 [0.5]
++0.6
+Assets DeepSkyPhoto.Unload(ngc3532_circle)
+Assets DeepSkyPhoto.Unload(ngc3532_label)

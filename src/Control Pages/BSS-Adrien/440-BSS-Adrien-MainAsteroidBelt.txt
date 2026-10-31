@@ -1,0 +1,12 @@
+;=== BSS-Adrien-MainAsteroidBelt ===
+; Page: BSS-Adrien   Button: "Main asteroid belt "
+; Copied unchanged from Theater/Adrien "Main asteroid belt".
+Assets Asteroids.Load(Main Belt Asteroids)
++1
+Scene Main Belt Asteroids.Visibility=100 [2]
+
+Control Pause
+
+Scene Main Belt Asteroids.Visibility=0 [2]
++2
+Assets Asteroids.Unload(Main Belt Asteroids)
